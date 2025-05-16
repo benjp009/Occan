@@ -1,4 +1,3 @@
-import React from 'react';
 
 export function Footer() {
   const categories = ['Finance', 'Marketing', 'Vente', 'Contenu', 'Logistique'];

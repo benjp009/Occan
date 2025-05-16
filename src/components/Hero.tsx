@@ -1,5 +1,4 @@
-import React from 'react';
-
+// Description: Footer component for the website
 const popularTags = [
   'Finance', 'Marketing', 'Vente', 'Contenu', 'Logistique'
 ];

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchCompanies } from '../utils/api';
 import { CompanyRow } from '../types';
 import { Link } from 'react-router-dom';
