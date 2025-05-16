@@ -1,4 +1,3 @@
-import React from 'react';
 import { CompanyRow } from '../types';
 
 export function Card({ company }: { company: CompanyRow }) {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export function Header({ onSearch }: { onSearch: (query: string) => void }) {
