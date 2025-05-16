@@ -1,13 +1,125 @@
-body {
+html, body, #root {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Card styles */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 0.5rem;
+  width: 240px;
+}
+
+.card-logo {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+
+.card-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.card h2 {
+  font-size: 1.125rem;
+  margin: 0 0 0.5rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  margin: 0 0 1rem;
+}
+
+.card a {
+  color: #0070f3;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.header,
+.footer {
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem 0;
+}
+
+.header .logo,
+.footer .logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 0.5rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fff;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.hero .tags {
+  margin-top: 1rem;
+}
+.hero .tags span {
+  display: inline-block;
+  background: #e0e0e0;
+  border-radius: 12px;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  font-size: 0.875rem;
 }
