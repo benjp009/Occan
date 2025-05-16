@@ -23,15 +23,15 @@ export default function Home() {
     <>
       <Header onSearch={setSearch} />
       <Hero onSearch={setSearch} />
-      <main className="container mx-auto p-6">
-        <h1 className="text-3xl mb-4">French SaaS Directory</h1>
-        <div className="flex flex-wrap gap-4">
+      <main className="container">
+        <h1 className="title">French SaaS Directory</h1>
+        <div className="card">
           {filtered.map(company => (
             <Card key={company.id} company={company} />
           ))}
         </div>
-        <div className="mt-6">
-          <Link to="/admin" className="text-blue-600">
+        <div className="admin">
+          <Link to="/admin" className="link">
             Admin Login/Edit
           </Link>
         </div>

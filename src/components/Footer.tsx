@@ -5,42 +5,42 @@ export function Footer() {
   const legal = ['Mentions légales', 'Politique de confidentialité', 'Conditions d\'utilisation'];
 
   return (
-    <footer className="bg-white border-t mt-20">
-      <div className="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="footer">
+      <div className="column">
         {/* Column 1 */}
         <div>
-          <div className="text-xl font-bold mb-2">Logo</div>
+          <div>Logo</div>
           <p>Le répertoire le plus complet des logiciels français.</p>
         </div>
         {/* Column 2: Categories */}
         <div>
-          <h4 className="font-semibold mb-2">Catégories</h4>
-          <ul className="space-y-1">
+          <h4>Catégories</h4>
+          <ul>
             {categories.map(cat => (
-              <li key={cat} className="hover:underline cursor-pointer">{cat}</li>
+              <li key={cat} className="link">{cat}</li>
             ))}
           </ul>
         </div>
         {/* Column 3: Ressources */}
         <div>
-          <h4 className="font-semibold mb-2">Ressources</h4>
-          <ul className="space-y-1">
+          <h4>Ressources</h4>
+          <ul>
             {resources.map(res => (
-              <li key={res} className="hover:underline cursor-pointer">{res}</li>
+              <li key={res} className="link">{res}</li>
             ))}
           </ul>
         </div>
         {/* Column 4: Légal */}
         <div>
-          <h4 className="font-semibold mb-2">Légal</h4>
-          <ul className="space-y-1">
+          <h4>Légal</h4>
+          <ul>
             {legal.map(item => (
-              <li key={item} className="hover:underline cursor-pointer">{item}</li>
+              <li key={item} className="link">{item}</li>
             ))}
           </ul>
         </div>
       </div>
-      <div className="bg-gray-50 text-center py-4">
+      <div className="copyright">
         © 2025 Occan. Tous droits réservés.
       </div>
     </footer>
