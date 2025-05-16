@@ -25,7 +25,7 @@ export default function Home() {
       <Hero onSearch={setSearch} />
       <main className="container mx-auto p-6">
         <h1 className="text-3xl mb-4">French SaaS Directory</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="flex flex-wrap gap-4">
           {filtered.map(company => (
             <Card key={company.id} company={company} />
           ))}
