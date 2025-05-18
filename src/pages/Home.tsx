@@ -1,10 +1,11 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { fetchCompanies } from '../utils/api';
 import { CompanyRow } from '../types';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
-import { Card } from '../components/Card';
 import { Hero } from '../components/Hero';
+import { Cards } from '../components/Cards';
 import { Footer } from '../components/Footer';
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
         <h1 className="title">French SaaS Directory</h1>
         <div className="card">
           {filtered.map(company => (
-            <Card key={company.id} company={company} />
+            <Cards key={company.id} company={company} />
           ))}
         </div>
         <div className="admin">
