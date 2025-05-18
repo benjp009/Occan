@@ -1,8 +1,10 @@
+import React from 'react';
 import { CompanyRow } from '../types';
+import Card from '@mui/material/Card';
 
-export function Card({ company }: { company: CompanyRow }) {
+export function Cards({ company }: { company: CompanyRow }) {
   return (
-    <div className="card">
+    <Card >
       {/* Company Logo */}
       {company.logo && (
         <div className="company">
@@ -25,6 +27,6 @@ export function Card({ company }: { company: CompanyRow }) {
       >
         {company.website}
       </a>
-    </div>
+    </Card>
   );
 }
