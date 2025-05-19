@@ -1,4 +1,3 @@
-
 import { CompanyRow } from '../types';
 
 export function Cards({ company }: { company: CompanyRow }) {
