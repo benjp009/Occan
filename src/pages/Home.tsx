@@ -5,6 +5,7 @@ import { CompanyRow } from '../types';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
+import { CategoriesSection } from '../components/Category';
 import { Cards } from '../components/Cards';
 import { Footer } from '../components/Footer';
 
@@ -24,6 +25,8 @@ export default function Home() {
     <>
       <Header onSearch={setSearch} />
       <Hero onSearch={setSearch} />
+      <CategoriesSection />
+
       <main className="container">
         <h1 className="title">French SaaS Directory</h1>
         <div className="card">
