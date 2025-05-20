@@ -19,3 +19,11 @@ export interface CompanyRow {
   hq_city: string;
   hq_country: string;
 }
+
+export interface CategoryRow {
+  id: string;           
+  icon: string;         
+  name: string;    
+  description: string; 
+  count: string;        
+}
