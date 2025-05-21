@@ -361,3 +361,96 @@ html, body, #root {
   text-decoration: none;
 }
 
+/* WaitlistPage */
+:root {
+  --primary-color: #000091;
+  --text-dark: #000000;  
+}
+
+.waitlist__wrapper {
+  background-image: linear-gradient(to bottom right, #E8F3FF, #FFFFFF);
+  max-width: 600px;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.waitlist__hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.waitlist__subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.waitlist__toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.waitlist__toggle button {
+  flex: 1 1 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.waitlist__toggle button:first-child {
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.waitlist__toggle button:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.waitlist__toggle button.active,
+.waitlist__toggle button:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.waitlist__form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.waitlist__form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.waitlist__form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.waitlist__submit {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.waitlist__submit:hover {
+  background: #000091;
+}
+
+.waitlist__thankyou {
+  padding: 4rem 1rem;
+}
