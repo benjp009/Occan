@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
 
-
 export function CategoriesSection() {
   const [categories, setCategories] = useState<CategoryRow[]>([]);
 
@@ -27,8 +26,8 @@ export function CategoriesSection() {
       <div className="categories-grid">
         {categories.map((cat) => (
           <div key={cat.id} className="category-card">
-            <img
-              src={cat.icon}
+             <img
+              src={`/icons/${cat.icon}`}
               alt={`${cat.name} icon`}
               className="category-card__icon"
             />
