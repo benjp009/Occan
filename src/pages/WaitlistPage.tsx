@@ -1,129 +1,35 @@
-import React, { useState } from 'react';
-import logo from '../logo.svg';
-
-type Mode = 'company' | 'info';
+import React from 'react';
+import '../WaitlistPage.css';
+import logo from '../Logo-long.svg'
 
 const WaitlistPage: React.FC = () => {
-  const [mode, setMode] = useState<Mode>('company');
-  const [formData, setFormData] = useState({
-    companyName: '',
-    website: '',
-    contactName: '',
-    email: '',
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: integrate with backend / Google Sheet API or Airtable
-    setSubmitted(true);
-  };
-
-  if (submitted) {
-    return (
-      <section className="waitlist__thankyou">
-        <img
-            src={logo}
-            alt="Occan logo"
-            className="logo"
-        />
-        <h1>Merci !</h1>
-        <p>Nous vous recontacterons très vite.</p>
-      </section>
-    );
-  }
-
   return (
-    <section className="waitlist__wrapper">
-      <div className="waitlist__hero">
-        <img
-          src={logo}
-          alt="Occan logo"
-          className="logo"
-        />
-        <h1>Logiciel France</h1>
-        <h2>Inscrivez vous sans attendre</h2>
-        <p className="waitlist__subtitle">
-          Soyez le premier à découvrir l’annuaire complets <br /> des logiciels technologiques <br /> <b>100%
-          français. </b>
+    <div className="waitlist-page">
+      <div className="left-panel">
+        <img src={logo} alt="Occan Logo" className="logo-long" />
+        <h1 className="title">Le premier répertoire complet des logiciels made in France disponible pour tous</h1>
+        <p className="hero-text">
+          Soyez l'un des premiere à découvrir les logiciels fait en France pour les français. 
+          Rejoignez la liste d'attente pour découvrir les dernières entreprises technologiques françaises !
         </p>
-      </div>
-
-      <div className="waitlist__toggle">
-        <button
-          className={mode === 'company' ? 'active' : ''}
-          onClick={() => setMode('company')}
-        >
-          J'ai un logiciel à partager
-        </button>
-        <button
-          className={mode === 'info' ? 'active' : ''}
-          onClick={() => setMode('info')}
-        >
-          Je veux rester informé·e
-        </button>
-      </div>
-
-      <form className="waitlist__form" onSubmit={handleSubmit}>
-        {mode === 'company' && (
-          <>
-            <label>
-              Nom de la société
-              <input
-                name="companyName"
-                type="text"
-                required
-                value={formData.companyName}
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              Site web
-              <input
-                name="website"
-                type="url"
-                required
-                value={formData.website}
-                onChange={handleChange}
-              />
-            </label>
-            <label>
-              Nom et prénom
-              <input
-                name="contactName"
-                type="text"
-                required
-                value={formData.contactName}
-                onChange={handleChange}
-              />
-            </label>
-          </>
-        )}
-
-        <label>
-          Email
+        <form className="email-form">
           <input
-            name="email"
             type="email"
+            name="email"
+            placeholder="moi@email.com"
             required
-            value={formData.email}
-            onChange={handleChange}
+            className="email-input"
           />
-        </label>
-
-        <button type="submit" className="waitlist__submit">
-          {mode === 'company' ? 'Enregistrer ma société' : 'Rester informé·e'}
-        </button>
-      </form>
-    </section>
+          <button type="submit" className="submit-button">
+            Rejoindre la liste d'attente
+          </button>
+        </form>
+      </div>
+      <div className="right-panel">
+        <div className="image-placeholder">Image placeholder</div>
+      </div>
+    </div>
   );
 };
 
 export default WaitlistPage;
-
-export {}
-
