@@ -9,7 +9,7 @@ Logiciel France est le premier annuaire dédié aux entreprises technologiques f
 * Données centralisées et mises à jour via une feuille de calcul Google Sheets publique.
 
 ## 📂 Structure du projet
-
+ 
 ```
 /Occan
 ├── public/            # Fichiers statiques
