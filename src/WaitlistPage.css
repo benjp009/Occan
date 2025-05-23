@@ -1,0 +1,66 @@
+/* Exemple à ajouter globalement */
+.waitlist-page {
+  display: flex;
+  height: 100vh;
+  padding-top: 30vh;;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #E8F3FF, #FFFFFF);
+}
+
+.logo-long {
+  width: 30%;
+  height: auto;
+}
+
+.left-panel {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+  padding-left: 5vw;;
+}
+
+.right-panel {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+}
+
+.email-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: stretch;
+}
+
+.email-input {
+  width: 40%;
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 10px 0 0 10px;
+  border-style: none;
+  margin: 0%;
+}
+
+.submit-button {
+  margin-left: 0.5rem;
+  padding: 12px;
+  font-size: 12px;
+  background-color: #000091;
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  border-style: none;
+  margin: 0%;
+}
+
+.image-placeholder {
+  width: 80%;
+  height: 40vh;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
