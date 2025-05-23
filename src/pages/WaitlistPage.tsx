@@ -45,7 +45,8 @@ const WaitlistPage: React.FC = () => {
           alt="Occan logo"
           className="logo"
         />
-        <h1>Inscrivez vous maintenant</h1>
+        <h1>Logiciel France</h1>
+        <h2>Inscrivez vous sans attendre</h2>
         <p className="waitlist__subtitle">
           Soyez le premier à découvrir l’annuaire complets <br /> des logiciels technologiques <br /> <b>100%
           français. </b>
@@ -57,7 +58,7 @@ const WaitlistPage: React.FC = () => {
           className={mode === 'company' ? 'active' : ''}
           onClick={() => setMode('company')}
         >
-          Je représente une entreprise
+          J'ai un logiciel à partager
         </button>
         <button
           className={mode === 'info' ? 'active' : ''}
