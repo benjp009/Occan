@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Logiciel France",
+  "name": "Tout les logiciels français au même endroit",
+  "description": "Logiciel France est un site qui regroupe tout les logiciels français dans un site complet.",
   "icons": [
     {
       "src": "favicon.ico",
