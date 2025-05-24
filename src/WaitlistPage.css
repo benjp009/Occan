@@ -1,7 +1,7 @@
 /* Exemple à ajouter globalement */
 .waitlist-page {
   display: flex;
-  height: 100vh;
+  height: 90vh;
   padding-top: 30vh;;
   margin: 0;
   background-image: linear-gradient(to bottom right, #E8F3FF, #FFFFFF);
@@ -18,7 +18,8 @@
   flex-direction: column;
   justify-content: right;
   align-items: right;
-  padding-left: 5vw;;
+  padding-left: 5vw;
+  padding-right: 10vw;;
 }
 
 .right-panel {
@@ -27,6 +28,7 @@
   flex-direction: column;
   justify-content: right;
   align-items: center;
+  padding: 5vw 10vw;
 }
 
 .email-form {
@@ -64,3 +66,8 @@
   align-items: center;
 }
 
+.preview-image {
+  width: 120%;
+  height: auto;
+
+}
