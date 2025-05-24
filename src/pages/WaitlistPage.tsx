@@ -1,11 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import '../WaitlistPage.css';
-import logo from '../Logo-long.svg'
+import logo from '../Logo-long.svg';
 
-// Remplacez cette URL par celle de votre Google Apps Script ou autre endpoint
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxViJAxkMH1c_ALBqio-pGfO2dpR5MkaYnodaX0c6Al-hwRv_xmdSrWnT50TEaNaeIqDA/exec';
+const SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbzLKrgrcQrbfz8cjs4lbzdvVzJlynM1tOgLgfACsJjak09lLMHcvGECETxuTZG1WkzjWA/exec';
 
 const WaitlistPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -17,10 +16,14 @@ const WaitlistPage: React.FC = () => {
 
     setStatus('sending');
     try {
+      // Encodage form-urlencoded
+      const formBody = new URLSearchParams({ email }).toString();
       const response = await fetch(SCRIPT_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+        },
+        body: formBody,
       });
 
       if (response.ok) {
@@ -33,15 +36,17 @@ const WaitlistPage: React.FC = () => {
       console.error(err);
       setStatus('error');
     }
-  };
+  }
 
   return (
     <div className="waitlist-page">
       <div className="left-panel">
         <img src={logo} alt="Occan Logo" className="logo-long" />
-        <h1 className="title">Le premier répertoire complet des logiciels made in France disponible pour tous</h1>
+        <h1 className="title">
+          Le premier répertoire complet des logiciels made in France disponible pour tous
+        </h1>
         <p className="hero-text">
-          Soyez l'un des premiere à découvrir les logiciels fait en France pour les français. 
+          Soyez l'un des premiers à découvrir les logiciels faits en France pour les français.
           Rejoignez la liste d'attente pour découvrir les dernières entreprises technologiques françaises !
         </p>
         <form className="email-form" onSubmit={handleSubmit}>
@@ -51,6 +56,9 @@ const WaitlistPage: React.FC = () => {
             placeholder="moi@email.com"
             required
             className="email-input"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            disabled={status === 'sending'}
           />
           <button type="submit" className="submit-button" disabled={status === 'sending'}>
             {status === 'sending' ? 'Envoi...' : 'Rejoindre la liste d\'attente'}
