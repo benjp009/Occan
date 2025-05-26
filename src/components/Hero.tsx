@@ -1,13 +1,13 @@
 import logo from '../logo.svg';
 // Description: Footer component for the website
 const popularTags = [
-  'CRM', 'Comptabilité', 'Marketing', 
+  'CRM', 'Comptabilité', 'Marketing', 'PME',
 ];
 
 export function Hero({ onSearch }: { onSearch: (query: string) => void }) {
   return (
     <section className="section-hero">
-      <div className="hero-container">
+      <div className="hero-container, container">
         <img
           src={logo}
           alt="Occan logo"
