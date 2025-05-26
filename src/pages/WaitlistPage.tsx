@@ -39,7 +39,7 @@ const WaitlistPage: React.FC = () => {
   }
 
   return (
-    <div className="waitlist-page">
+    <div className="waitlist-page, container">
       <div className="left-panel">
         <img src={logo} alt="Occan Logo" className="logo-long" />
         <h1 className="title">
