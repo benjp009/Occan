@@ -217,6 +217,7 @@ img {
 }
 
 .input {
+  outline: none;
   font-family: "Inter", sans-serif;
   width: 100%;
   padding: 0 0 0 0.5rem;
@@ -224,7 +225,6 @@ img {
   font-size: 14px;
   color: #4E4E4E;
 }
-
 
 /* Hero */
 
@@ -273,6 +273,25 @@ img {
   border: 0.5px solid #4E4E4E;
   border-radius: 5px 0 0 5px;
   min-width: 200px;
+}
+
+.button {
+  background-color: #000091;
+  color: white;
+  padding: 8.6px 2rem;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  border-style: solid;
+  border-width: 0.5px;
+}
+
+.button:hover {
+  background-color: #E8F3FF;
+  color: #000091;
+  border-color: #000091;
+  border-style: solid;
+  border-width: 0.5px;
 }
 
 .search-button {
