@@ -6,15 +6,53 @@ html, body, #root {
   padding: 0;
   font-family: "Inter", sans-serif;
   background-image: linear-gradient(to bottom right, #E8F3FF, #FFFFFF);
+  background-repeat: no-repeat;
   color: #333;
 }
 
-/*
 .container {
-  max-width: 1024px;
+  display: grid;
+  gap: 1rem;
+  width: 90%;
   margin: 0 auto;
-  flex-direction: row;
-  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.element {
+  min-width: 200px;
+  max-width: 800px;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.p-1 { padding: 1rem; }
+
+/* breakpoints.css */
+@media (max-width: 768px) {
+  /* Styles pour cellphone */
+  .container {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+/* breakpoints.css */
+@media (min-width: 768px) {
+  /* Styles pour tablettes */
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Styles pour ordinateurs de bureau */
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .flex {
@@ -28,7 +66,7 @@ html, body, #root {
 .gap-4 {
   gap: 1rem;
 }
-*/
+
 
 /* Card styles */
 /*

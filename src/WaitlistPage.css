@@ -1,34 +1,26 @@
-/* Exemple à ajouter globalement */
-.waitlist-page {
-  display: flex;
-  height: 90vh;
-  padding-top: 30vh;;
-  margin: 0;
-  background-image: linear-gradient(to bottom right, #E8F3FF, #FFFFFF);
-}
-
 .logo-long {
   width: 30%;
   height: auto;
 }
 
 .left-panel {
-  flex: 0.5;
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  align-items: right;
-  padding-left: 5vw;
-  padding-right: 10vw;;
+  justify-content: center;
+  align-items: left;
+  padding-left: 2vw;
+  padding-right: 5vw;
+  height: 100vh;
 }
 
 .right-panel {
-  flex: 0.5;
   display: flex;
   flex-direction: column;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
-  padding: 5vw 10vw;
+  height: 100vh;
+  position: relative;
+
 }
 
 .email-form {
