@@ -11,7 +11,9 @@ html, body, #root {
 }
 
 .container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   width: 90%;
   margin: 0 auto;
@@ -223,17 +225,6 @@ img {
   color: #4E4E4E;
 }
 
-.button {
-  font-family: "Inter", sans-serif;
-  background-color: #000091;
-  color: white;
-  padding: 0.6rem 2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: normal;
-  border-style: none;
-}
 
 /* Hero */
 
@@ -249,6 +240,7 @@ img {
   font-size: 48px;
   font-weight: bold;
   margin-bottom: 1rem;
+  text-align: center;
 
 }
 
@@ -256,10 +248,13 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+
 }
 
 .hero-search {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -277,16 +272,27 @@ img {
   align-content: center;
   border: 0.5px solid #4E4E4E;
   border-radius: 5px 0 0 5px;
+  min-width: 200px;
 }
 
 .search-button {
   background-color: #000091;
   color: white;
-  padding: 0.6rem 2rem;
+  padding: 8.6px 2rem;
   border-radius: 0 5px 5px 0;
   font-size: 14px;
   font-weight: normal;
-  border-style: none;
+  border-style: solid;
+  border-width: 0.5px;
+  
+}
+
+.search-button:hover {
+  background-color: #E8F3FF;
+  color: #000091;
+  border-color: #000091;
+  border-style: solid;
+  border-width: 0.5px;
 }
 
 .popular-tags-container {
@@ -315,6 +321,11 @@ img {
   border: 0.5px solid #4E4E4E;
   margin: 0 14px;
   font-size: 14px;
+}
+
+.tag:hover {
+  background-color: #000091;
+  color: #fff;
 }
 
 /* Categories */
@@ -366,6 +377,12 @@ img {
   max-width: 240px;
   display: flex;
   flex-direction: column;
+}
+
+.category-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #E8F3FF;
+  cursor: pointer;
 }
 
 /* Icon at top */
