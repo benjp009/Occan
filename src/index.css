@@ -292,6 +292,7 @@ img {
   border-color: #000091;
   border-style: solid;
   border-width: 0.5px;
+  cursor: pointer;
 }
 
 .search-button {
@@ -312,6 +313,7 @@ img {
   border-color: #000091;
   border-style: solid;
   border-width: 0.5px;
+  cursor: pointer;
 }
 
 .popular-tags-container {
@@ -345,6 +347,7 @@ img {
 .tag:hover {
   background-color: #000091;
   color: #fff;
+  cursor: pointer;
 }
 
 /* Categories */
