@@ -381,6 +381,7 @@ img {
 
 /* Grid of cards */
 .categories-grid {
+  max-width: 1024px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
