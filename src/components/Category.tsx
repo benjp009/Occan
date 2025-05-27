@@ -9,6 +9,11 @@ export function CategoriesSection() {
     fetchCategories().then((cats) => setCategories(cats));
   }, []);
 
+  // Ensure count is treated as a number: sort descending and take top 8
+  const topCategories = [...categories]
+    .sort((a, b) => Number(b.count) - Number(a.count))
+    .slice(0, 8);
+
   return (
     <section className="categories-section">
       <div className="categories-header">
@@ -24,9 +29,9 @@ export function CategoriesSection() {
       </div>
 
       <div className="categories-grid">
-        {categories.map((cat) => (
+        {topCategories.map((cat) => (
           <div key={cat.id} className="category-card">
-             <img
+            <img
               src={`/icons/${cat.icon}`}
               alt={`${cat.name} icon`}
               className="category-card__icon"
