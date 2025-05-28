@@ -1,4 +1,6 @@
 import logolong from '../logolong.svg';
+import { Link } from 'react-router-dom';
+
 export function Header({ onSearch }: { onSearch: (query: string) => void }) {
   return (
     <header className="header">
@@ -37,9 +39,12 @@ export function Header({ onSearch }: { onSearch: (query: string) => void }) {
         </div>
         
         {/* CTA */}
-        <button className="button" >
-          Ajouter votre produit
-        </button>
+        <Link to="/ajouter-un-nouveau-logiciel">
+
+          <button className="button" >
+            Ajouter votre logiciel
+          </button>
+        </Link>
       </div>
     </header>
   );
