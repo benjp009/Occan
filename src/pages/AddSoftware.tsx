@@ -1,31 +1,83 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../index.css';
+import React, { useState } from 'react';
 
-const AddSoftware: React.FC = () => (
-  <div className="add-software-page">
-    <nav className="breadcrumbs">
-      <Link to="/">Accueil</Link> / <span>Ajouter un logiciel</span>
-    </nav>
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzM-1PpBeDkU_omj61zZiIkEwzwTxFSFWBi_GDA-Sqts3SHiMw34VZfKbojhwobZjPUig/exec";
 
-    <h1>Ajouter un logiciel</h1>
+const AddSoftware: React.FC = () => {
+  const [name,  setName ] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle"|"sending"|"success"|"error">("idle");
 
-    <form className="software-form">
-      <div className="form-group">
-        <label htmlFor="name">Nom</label>
-        <input type="text" id="name" name="name" required />
-      </div>
+    const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("sending");
 
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" required />
-      </div>
+      // 1) Declare the URLSearchParams instance:
+    const formBody = new URLSearchParams();
+    formBody.append("name",  name);
+    formBody.append("email", email);
 
-      <button type="submit" className="button">
-        Envoyer
-      </button>
-    </form>
-  </div>
-);
+  try {
+    const res = await fetch(WEB_APP_URL, {
+      method:  "POST",
+      body:    formBody,  // no JSON.stringify, no custom headers
+    });
+    const json = await res.json();
+    if (json.status === "success") {
+      setStatus("success");
+      setName("");
+      setEmail("");
+    } else {
+      throw new Error(json.message || "Erreur inconnue");
+    }
+  } catch (err) {
+    console.error(err);
+    setStatus("error");
+  }
+};
+
+  return (
+    <div className="add-software-page">
+      <nav className="breadcrumbs">
+        <a href="/">Accueil</a> / <span>Ajouter un logiciel</span>
+      </nav>
+
+      <h1>Ajouter un logiciel</h1>
+
+      <form onSubmit={handleSubmit} className="software-form">
+        <div className="form-group">
+          <label htmlFor="name">Nom</label>
+          <input
+            id="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className="button" disabled={status==="sending"}>
+          {status==="sending" ? "Envoi…" : "Envoyer"}
+        </button>
+
+        {status === "success" && (
+          <p className="status success">Merci ! Votre logiciel a bien été ajouté.</p>
+        )}
+        {status === "error" && (
+          <p className="status error">Oops, une erreur est survenue.</p>
+        )}
+      </form>
+    </div>
+  );
+};
 
 export default AddSoftware;
