@@ -1,16 +1,14 @@
-import logo from '../logo.svg';
+import logolong from '../logolong.svg';
 export function Header({ onSearch }: { onSearch: (query: string) => void }) {
   return (
     <header className="header">
       <div className="header-container">
         <div className="header-logo">
           <img
-            src={logo}
+            src={logolong}
             alt="Occan logo"
             className="logo"
           />
-          {/* Title */}
-          <div>French SaaS</div>
         </div>
         {/* Search bar */}
         <div className="site-header-search, search-container">
