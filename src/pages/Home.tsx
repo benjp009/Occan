@@ -25,6 +25,9 @@ export default function Home() {
     (c.name ?? '').toLowerCase().includes(search.toLowerCase())
   );
 
+  // For the “Sélection du mois” section, we’ll just pick the first 9 companies:
+  const selectionOfTheMonth = companies.slice(0, 9);
+
   return (
     <>
       <Header onSearch={setSearch} />
@@ -45,18 +48,26 @@ export default function Home() {
         <p>Chargement des métriques…</p>
       )}
 
-        <h1 className="title">French SaaS Directory</h1>
-        <div className="card">
-          {filtered.map(company => (
-            <Cards key={company.id} company={company} />
-          ))}
-        </div>
+         <section className="selection-month">
+          {/* Header row: title + “Voir tous les logiciels” */}
+          <div className="selection-header">
+            <h2 className="selection-title">Sélection du mois</h2>
+            {/* 
+              We use a simple <Link> styled as plain text (blue) 
+              Replace `to="/all-softwares"` with whichever route shows “all softwares.” 
+            */}
+            <Link to="/all-softwares" className="selection-see-all">
+              Voir tous les logiciels
+            </Link>
+          </div>
 
-        <div className="admin">
-          <Link to="/admin" className="link">
-            Admin Login/Edit
-          </Link>
-        </div>
+          {/* Grid of 3×3 cards */}
+          <div className="selection-grid">
+            {selectionOfTheMonth.map(company => (
+              <Cards key={company.id} company={company} />
+            ))}
+          </div>
+        </section>
       </main>
       <Footer />
     </>
