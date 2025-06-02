@@ -438,6 +438,54 @@ img {
   text-decoration: none;
 }
 
+/* ───────────────────────────────────────────────────────
+   Styles for the “Sélection du mois” section in Home.tsx
+   ─────────────────────────────────────────────────────── */
+
+.selection-month {
+  padding: 2rem 1rem;      /* Spacing above the section */
+   width: 100%; 
+}
+
+/* Header row: title + “Voir tous les logiciels” side by side */
+.selection-header {
+  display: flex;
+  flex-direction: row; 
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* Title styling */
+.selection-title {
+  font-size: 1.5rem;       /* Adjust as needed */
+  font-weight: 600;
+  margin: 0;               /* Reset default <h2> margins */
+}
+
+/* “Voir tous les logiciels” link styled as plain blue text */
+.selection-see-all {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1e40af;          /* Dark-ish blue: adjust to match your design */
+  text-decoration: none;
+}
+
+.selection-see-all:hover {
+  text-decoration: underline;  /* Optional hover effect */
+}
+
+/* Grid container: 3 columns, wrap if needed, with gap */
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;             /* Space between cards */
+
+}
+
+
+
 /* WaitlistPage */
 :root {
   --primary-color: #000091;
