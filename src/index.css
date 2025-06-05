@@ -69,6 +69,33 @@ img {
   gap: 1rem;
 }
 
+.card {
+  background-color: #ffffff;
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;          /* if your card has child elements that might overflow, this “clips” them */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* prepare for hover */
+}
+
+.category-card {
+  /* base styles… */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #E8F3FF;
+  cursor: pointer;
+}
+
+
+
 
 /* Card styles */
 /*
@@ -370,12 +397,16 @@ img {
   margin-bottom: 1rem;
 }
 
-.categories-header__button {
+.secondary-button {
   font-size: 18px;
   background: none;
   border: none;
   color: #000091;
   cursor: pointer;
+}
+
+.secondary-button:hover {
+  text-decoration: underline;  /* Optional hover effect */
 }
 
 /* Grid of cards */
@@ -443,15 +474,16 @@ img {
    ─────────────────────────────────────────────────────── */
 
 .selection-month {
-  padding: 2rem 1rem;      /* Spacing above the section */
-   width: 100%; 
+  max-width: 1024px;
+  margin: 0 auto;      /* center horizontally */
+  padding: 0 16px;     /* optional horizontal padding for very small screens */
 }
 
 /* Header row: title + “Voir tous les logiciels” side by side */
 .selection-header {
   display: flex;
   flex-direction: row; 
-  width: 80%;
+  width:100%;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5rem;
@@ -459,21 +491,8 @@ img {
 
 /* Title styling */
 .selection-title {
-  font-size: 1.5rem;       /* Adjust as needed */
-  font-weight: 600;
-  margin: 0;               /* Reset default <h2> margins */
-}
-
-/* “Voir tous les logiciels” link styled as plain blue text */
-.selection-see-all {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1e40af;          /* Dark-ish blue: adjust to match your design */
-  text-decoration: none;
-}
-
-.selection-see-all:hover {
-  text-decoration: underline;  /* Optional hover effect */
+  font-size: 24px;
+  margin-bottom: 1rem;
 }
 
 /* Grid container: 3 columns, wrap if needed, with gap */
@@ -482,6 +501,13 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: .5rem;             /* Space between cards */
 
+}
+
+selection-card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;          /* if your card has child elements that might overflow, this “clips” them */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* prepare for hover */
 }
 
 

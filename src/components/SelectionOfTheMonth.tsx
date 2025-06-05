@@ -21,14 +21,14 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
     <section className="selection-month">
       <div className="selection-header">
         <h2 className="selection-title">Sélection du mois</h2>
-        <Link to="/all-softwares" className="selection-see-all">
+        <Link to="/all-softwares" className="secondary-button">
           Voir tous les logiciels
         </Link>
       </div>
 
       <div className="selection-grid">
         {topNine.map(company => (
-          <Cards key={company.id} company={company} />
+          <Cards  key={company.id} company={company}/>
         ))}
       </div>
     </section>
