@@ -69,6 +69,95 @@ img {
   gap: 1rem;
 }
 
+/* Footer.css */
+
+.footer {
+  margin-top: 3.75rem;
+  background-color: #0E121F;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.footer .column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Each direct child <div> of .column becomes one “column” */
+.footer .column > div {
+  flex: 1 1 200px; 
+  min-width: 180px;
+}
+
+/* ----- Column 1: logo + tagline ----- */
+.footer .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Style the <img> inside the first column */
+.footer .logo-container img {
+  /* Adjust as needed for your logo’s aspect ratio */
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* The tagline text under the logo */
+.footer .logo-container p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  max-width: 220px;
+  margin: 0;
+}
+
+/* ----- Column 2/3/4 headers ----- */
+.footer h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Lists inside columns */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each list item as a “link” */
+.footer .link {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+/* Change opacity on hover so the user knows it’s clickable */
+.footer .link:hover {
+  opacity: 0.7;
+}
+
+/* ----- Bottom copyright bar ----- */
+.footer .copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  opacity: 0.8;
+}
+
+.logo-footer {
+max-width: 80px;
+}
+
+
+
+
 .card {
   display: flex;
   flex-direction: column;
@@ -191,37 +280,6 @@ img {
   word-break: break-all;
 }
 
-.header,
-.footer {
-  background: #fff;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 1rem 0;
-}
-
-.header .logo,
-.footer .logo {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.footer-column {
-  flex: 1 1 200px;
-  margin: 0.5rem;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 0.75rem;
-  color: #666;
-  margin-top: 1rem;
-}
 */
 
 /* Hero */
