@@ -1,30 +1,41 @@
+// src/components/Cards.tsx
 import { CompanyRow } from '../types';
 
 export function Cards({ company }: { company: CompanyRow }) {
+  // Truncate description to 100 characters + "…" if longer
+  const truncatedDescription =
+    company.description.length > 100
+      ? company.description.slice(0, 100).trimEnd() + '…'
+      : company.description;
+
   return (
     <div className="card">
-      {/* Company Logo */}
-      {company.logo && (
-        <div className="company">
-          <img
-            src={company.logo}
-            alt={`${company.name} logo`}
-            width={80}
-            height={80}
-            style={{ objectFit: 'contain' }}
-          />
-        </div>
-      )}
-      <h2 className="subtitle">{company.name}</h2>
-      <p className="text">{company.description}</p>
-      <a
-        href={company.referral}
-        target="_blank"
-        rel="noreferrer"
-        className="hyperlink"
-      >
-        {company.website}
-      </a>
+      {/* ─── Header: logo + title + “Visite” button ──────────────────────── */}
+      <div className="card-header">
+        {company.logo && (
+          <div className="company-logo">
+            <img
+              src={company.logo}
+              alt={`${company.name} logo`}
+              className="company-logo-img"
+            />
+          </div>
+        )}
+
+        <h2 className="subtitle">{company.name}</h2>
+
+        <a
+          href={company.referral}
+          target="_blank"
+          rel="noreferrer"
+          className="visit-button"
+        >
+          Visite
+        </a>
+      </div>
+
+      {/* ─── Truncated description ──────────────────────────────────────── */}
+      <p className="text">{truncatedDescription}</p>
     </div>
   );
 }
