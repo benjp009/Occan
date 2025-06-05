@@ -19,7 +19,7 @@ export function CategoriesSection() {
       <div className="categories-header">
         <h2>Catégories populaires</h2>
         <button
-          className="categories-header__button"
+          className="secondary-button"
           onClick={() => {
             /* navigate to /categories or open modal */
           }}
