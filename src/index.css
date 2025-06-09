@@ -799,3 +799,39 @@ selection-card {
 .software-form .button:hover {
   background: #218838;
 }
+
+.container-all-categories {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 1rem;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 60px 0;
+}
+
+.categories-card {
+  padding: 0.5rem;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+}
+
+.categories-count {
+  text-align: right;
+}
+
+.categories-name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.categories-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

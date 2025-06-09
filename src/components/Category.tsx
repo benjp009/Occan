@@ -1,6 +1,9 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
+import { NavLink } from 'react-router-dom';
+
+
 
 export function CategoriesSection() {
   const [categories, setCategories] = useState<CategoryRow[]>([]);
@@ -18,14 +21,14 @@ export function CategoriesSection() {
     <section className="categories-section">
       <div className="categories-header">
         <h2>Catégories populaires</h2>
-        <button
+          <NavLink
+          to="/all-categories"
           className="secondary-button"
-          onClick={() => {
-            /* navigate to /categories or open modal */
-          }}
         >
           Voir toutes les catégories
-        </button>
+        </NavLink>
+
+
       </div>
 
       <div className="categories-grid">
