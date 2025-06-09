@@ -27,7 +27,7 @@ export default function AllCategory() {
           <span className="breadcrumb-current">Toutes les catégories</span>
         </nav>
         <h1 className="page-title">Toutes les catégories de logiciels français</h1>
-        <div className="categories-grid">
+        <div className="all-categories-grid">
           {categories.map((category) => (
             <div className="categories-card" key={category.id}>
               <span className="categories-name">{category.name}</span>

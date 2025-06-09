@@ -1,21 +1,26 @@
 import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
+
 import React from 'react';
 
 export function Footer() {
   const categories = ['Finance', 'Marketing', 'Vente', 'Contenu', 'Logistique'];
   const resources  = ['À propos', 'Blog', 'Contact'];
   const legal      = ['Mentions légales', 'Politique de confidentialité', 'Conditions d\'utilisation'];
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer">
       <div className="column">
         {/* Column 1: Logo + Tagline */}
         <div className="logo-container">
-           <img
+           <Link to="/">
+          <img
             src={logo}
             alt="Occan logo"
-            className="logo logo-footer"
+            className="logo"
           />
+          </Link>
           <p>Le répertoire le plus complet des logiciels français.</p>
         </div>
 
@@ -52,7 +57,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="copyright">
-        © 2025 Occan. Tous droits réservés.
+       © {currentYear} Logiciel France 🇫🇷 - Tous droits réservés.
       </div>
     </footer>
   );
