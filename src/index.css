@@ -835,3 +835,84 @@ selection-card {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* In your global or modal-specific CSS file */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(7px);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 80%;
+  border-radius: 10px;
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 1.5rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modal-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.modal-title {
+  flex-grow: 1;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007acc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.modal-description {
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.modal-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-ad-banner img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
