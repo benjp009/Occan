@@ -806,7 +806,7 @@ selection-card {
   padding: 1rem;
 }
 
-.categories-grid {
+.all-categories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;

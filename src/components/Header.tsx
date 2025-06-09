@@ -6,11 +6,13 @@ export function Header({ onSearch }: { onSearch: (query: string) => void }) {
     <header className="header">
       <div className="header-container">
         <div className="header-logo">
+          <Link to="/">
           <img
             src={logolong}
             alt="Occan logo"
             className="logo"
           />
+        </Link>
         </div>
         {/* Search bar */}
         <div className="site-header-search, search-container">
