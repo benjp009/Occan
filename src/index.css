@@ -916,3 +916,30 @@ selection-card {
   border: none;
   cursor: pointer;
 }
+
+.card-wrapper {
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.7); /* 70% opacity */
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  width: 80%;
+  height: 80%;
+  background: #fff;
+  border: 0.5px solid #000091;
+  border-radius: 10px;
+  position: relative;
+}

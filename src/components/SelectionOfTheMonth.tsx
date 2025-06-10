@@ -1,5 +1,4 @@
-// src/components/SelectionOfTheMonth.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { Cards } from './Cards';
@@ -14,8 +13,13 @@ interface SelectionOfTheMonthProps {
 }
 
 export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ companies }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
   // For now, just take the first 9. Adjust logic as needed.
   const topNine = companies.slice(0, 9);
+  // Open & Close Modal 
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <section className="selection-month">
@@ -28,9 +32,26 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
 
       <div className="selection-grid">
         {topNine.map(company => (
-          <Cards  key={company.id} company={company}/>
+          <div
+            key={company.id}
+            className="card-wrapper"
+            onClick={openModal}
+          >
+            <Cards company={company} />
+          </div>
         ))}
       </div>
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div
+            className="modal-content"
+            onClick={e => e.stopPropagation()}
+          >
+            {/* Contenu de la popup vide */}
+          </div>
+        </div>
+      )}
     </section>
   );
 };
