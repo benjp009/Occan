@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { Cards } from './Cards';
+import Company from './Company';
 
 interface SelectionOfTheMonthProps {
   /** 
@@ -14,12 +15,20 @@ interface SelectionOfTheMonthProps {
 
 export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ companies }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCompany, setSelectedCompany] = useState<CompanyRow | null>(null);
   
   // For now, just take the first 9. Adjust logic as needed.
   const topNine = companies.slice(0, 9);
+  
   // Open & Close Modal 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = (company: CompanyRow) => {
+    setSelectedCompany(company);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedCompany(null);
+  };
 
   return (
     <section className="selection-month">
@@ -34,21 +43,28 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
         {topNine.map(company => (
           <div
             key={company.id}
-            className="card-wrapper"
-            onClick={openModal}
+            className={`card-wrapper ${selectedCompany?.id === company.id && isModalOpen ? 'active' : ''}`}
+            onClick={() => openModal(company)}
           >
             <Cards company={company} />
           </div>
         ))}
       </div>
 
-      {isModalOpen && (
+      {isModalOpen && selectedCompany && (
         <div className="modal-overlay" onClick={closeModal}>
           <div
             className="modal-content"
             onClick={e => e.stopPropagation()}
           >
-            {/* Contenu de la popup vide */}
+            <h3 className="modal-company-name">{selectedCompany.name}</h3>
+            <Company company={selectedCompany} />
+            <button
+              className="modal-close-button"
+              onClick={closeModal}
+            >
+              ✕
+            </button>
           </div>
         </div>
       )}

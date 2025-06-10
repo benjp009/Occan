@@ -859,7 +859,7 @@ selection-card {
   background: #fff;
   width: 80%;
   border-radius: 10px;
-  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  border: 16px solid rgba(0, 0, 0, 0.1);
   position: relative;
   padding: 1.5rem;
   max-height: 90vh;
@@ -885,12 +885,8 @@ selection-card {
 }
 
 .modal-button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #007acc;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
+  padding: 10px 10px;
+  margin: 5px 10px;
 }
 
 .modal-description {
