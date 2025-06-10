@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export function CategoriesSection() {
+
   const [categories, setCategories] = useState<CategoryRow[]>([]);
 
   useEffect(() => {
@@ -32,20 +33,27 @@ export function CategoriesSection() {
       </div>
 
       <div className="categories-grid">
-        {topCategories.map((cat) => (
-          <div key={cat.id} className="category-card">
-            <img
-              src={`/icons/${cat.icon}`}
-              alt={`${cat.name} icon`}
-              className="category-card__icon"
-            />
-            <h3 className="category-card__title">{cat.name}</h3>
-            <p className="category-card__desc">{cat.description}</p>
-            <p className="category-card__count">
-              {cat.count} logiciels
-            </p>
-          </div>
-        ))}
+        {topCategories.map((cat) => {
+          const truncatedDescription =
+            cat.description.length > 50
+              ? cat.description.slice(0, 50).trimEnd() + '…'
+              : cat.description;
+
+          return (
+            <div key={cat.id} className="category-card">
+              <img
+                src={`/icons/${cat.icon}`}
+                alt={`${cat.name} icon`}
+                className="category-card__icon"
+              />
+              <h3 className="category-card__title">{cat.name}</h3>
+              <p className="category-card__desc">{truncatedDescription}</p>
+              <p className="category-card__count">
+                {cat.count} logiciels
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
