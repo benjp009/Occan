@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { Cards } from './Cards';
@@ -30,6 +30,19 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
     setSelectedCompany(null);
   };
 
+  // Close on ESC
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isModalOpen) {
+        closeModal();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   return (
     <section className="selection-month">
       <div className="selection-header">
@@ -53,16 +66,10 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
 
       {isModalOpen && selectedCompany && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div
-            className="modal-content"
-            onClick={e => e.stopPropagation()}
-          >
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
             <h3 className="modal-company-name">{selectedCompany.name}</h3>
             <Company company={selectedCompany} />
-            <button
-              className="modal-close-button"
-              onClick={closeModal}
-            >
+            <button className="modal-close-button" onClick={closeModal}>
               ✕
             </button>
           </div>
