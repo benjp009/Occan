@@ -4,8 +4,8 @@ import { CompanyRow } from '../types';
 export function Cards({ company }: { company: CompanyRow }) {
   // Truncate description to 100 characters + "…" if longer
   const truncatedDescription =
-    company.description.length > 100
-      ? company.description.slice(0, 100).trimEnd() + '…'
+    company.description.length > 80
+      ? company.description.slice(0, 80).trimEnd() + '…'
       : company.description;
 
   return (
