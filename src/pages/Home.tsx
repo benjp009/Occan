@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { fetchCompanies } from '../utils/api';
+import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
@@ -9,6 +10,7 @@ import MetricsBanner from '../components/MetricsBanner';
 import { useMetrics } from '../utils/useMetrics';
 import { SelectionOfTheMonth } from '../components/SelectionOfTheMonth';
 import { Footer } from '../components/Footer';
+
 
 export default function Home() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
@@ -20,9 +22,7 @@ export default function Home() {
     fetchCompanies().then(data => setCompanies(data));
   }, []);
 
-  const filteredCompanies = companies.filter((company) =>
-    company.name.toLowerCase().includes(search.toLowerCase())
-  );
+  const filteredCompanies = filterCompanies(search, companies);
 
   return (
     <>
