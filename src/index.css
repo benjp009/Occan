@@ -190,7 +190,6 @@ max-width: 80px;
 .company-logo {
   width: 80px;
   height: 80px;
-  flex-shrink: 0;            /* don’t let the logo shrink below 80×80 */
 }
 
 .company-logo-img {
@@ -856,13 +855,13 @@ selection-card {
 }
 
 .modal-content {
+  width: 50%;
+  height: 50%;
   background: #fff;
-  width: 80%;
-  border-radius: 10px;
-  border: 16px solid rgba(0, 0, 0, 0.1);
-  position: relative;
-  padding: 1.5rem;
-  max-height: 90vh;
+  border: 0.5px solid #000091;
+  border-radius: 16px;
+  position:relative;
+  padding: 30px;
   overflow-y: auto;
 }
 
@@ -872,16 +871,15 @@ selection-card {
   gap: 1rem;
 }
 
-.modal-logo {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
 .modal-title {
   flex-grow: 1;
   margin: 0;
   font-size: 1.5rem;
+}
+
+.modal-logo {
+  height: 60px;
+  width: auto;
 }
 
 .modal-button {
@@ -906,11 +904,11 @@ selection-card {
   border-radius: 5px;
 }
 
-.modal-close {
+.modal-close-button {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 20px;
   background: none;
   border: none;
   cursor: pointer;
@@ -934,11 +932,10 @@ selection-card {
   z-index: 1000;
 }
 
-.modal-content {
-  width: 80%;
-  height: 80%;
-  background: #fff;
-  border: 0.5px solid #000091;
-  border-radius: 10px;
-  position: relative;
+
+.company-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
