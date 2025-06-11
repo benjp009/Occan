@@ -67,11 +67,11 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
       {isModalOpen && selectedCompany && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <h3 className="modal-company-name">{selectedCompany.name}</h3>
-            <Company company={selectedCompany} />
             <button className="modal-close-button" onClick={closeModal}>
               ✕
             </button>
+            <Company company={selectedCompany} />
+            
           </div>
         </div>
       )}
