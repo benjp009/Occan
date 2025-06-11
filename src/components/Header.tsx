@@ -8,6 +8,8 @@ interface HeaderProps {
   search?: string;
   onSearch?: (query: string) => void;
   results?: CompanyRow[];
+  onFocus?: () => void;   // ▼ NEW
+  active?: boolean;       // ▼ NEW
 }
 
 export function Header({
