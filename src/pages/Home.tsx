@@ -26,8 +26,12 @@ export default function Home() {
 
   return (
     <>
-      <Header onSearch={setSearch} />
-      <Hero onSearch={setSearch} />
+      <Header
+      search={search}
+      onSearch={setSearch}
+      results={filteredCompanies}   // ⬅️ new prop
+      />
+      <Hero onSearch={setSearch} /> 
       <CategoriesSection />
 
       <main className="container, banner-container">
