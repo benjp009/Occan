@@ -1,7 +1,24 @@
 import logolong from '../logolong.svg';
 import { Link } from 'react-router-dom';
+import { CompanyRow } from '../types';
 
-export function Header({ onSearch }: { onSearch: (query: string) => void }) {
+const noop = () => {};
+
+interface HeaderProps {
+  search?: string;
+  onSearch?: (query: string) => void;
+  results?: CompanyRow[];
+  onFocus?: () => void;   // ▼ NEW
+  active?: boolean;       // ▼ NEW
+}
+
+export function Header({
+  search = '',
+  onSearch = noop,
+  results = [],
+}: HeaderProps) {
+  const show = search.trim() && results.length > 0;
+
   return (
     <header className="header">
       <div className="header-container">
@@ -38,6 +55,22 @@ export function Header({ onSearch }: { onSearch: (query: string) => void }) {
             placeholder="Rechercher un logiciel..."
             onChange={e => onSearch(e.target.value)}
           />
+
+          {/* ▾ dropdown */}
+          {show && (
+            <ul className="search-results">
+              {results.slice(0, 10).map(row => (
+                <li key={row.id} className="result-item">
+                  <Link to={`/logiciel/${row.id}`}>
+                    <strong className="result-item-text">{row.name}</strong>
+                  </Link>
+                </li>
+              ))}
+              {results.length > 10 && (
+                <li className="result-more">…{results.length - 10} autres résultats</li>
+              )}
+            </ul>
+          )}
         </div>
         
         {/* CTA */}

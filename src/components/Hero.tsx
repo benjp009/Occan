@@ -1,10 +1,28 @@
 import logo from '../logo.svg';
+import { CompanyRow } from '../types';
+
 // Description: Footer component for the website
 const popularTags = [
   'CRM', 'Comptabilité', 'Marketing', 'PME',
 ];
 
-export function Hero({ onSearch }: { onSearch: (query: string) => void }) {
+interface HeroProps {
+  search: string;
+  onSearch: (q: string) => void;
+  results: CompanyRow[];
+  onFocus: () => void;
+  active: boolean;
+}
+
+export function Hero({
+  search,
+  onSearch,
+  results,
+  onFocus,
+  active,
+}: HeroProps) {
+  const show = active && search.trim() && results.length > 0;
+
   return (
     <section className="section-hero">
       <div className="hero-container, container">
@@ -53,6 +71,13 @@ export function Hero({ onSearch }: { onSearch: (query: string) => void }) {
           >
             Rechercher
           </button>
+          {show && (
+          <ul className="search-results">
+            {results.slice(0, 10).map(r => (
+              <li key={r.id}>{r.name}</li>
+            ))}
+          </ul>
+        )}
           
         </div>
         <div className="popular-tags-container">
