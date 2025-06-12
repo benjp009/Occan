@@ -65,18 +65,20 @@ export function Header({
 
           {/* ▾ dropdown */}
           {show && (
-            <ul className="search-results">
-              {results.slice(0, 10).map(row => (
-                <li key={row.id} className="result-item">
-                  <Link to={`/logiciel/${row.id}`}>
-                    <strong className="result-item-text">{row.name}</strong>
-                  </Link>
-                </li>
-              ))}
-              {results.length > 10 && (
-                <li className="result-more">…{results.length - 10} autres résultats</li>
-              )}
-            </ul>
+            <div className="search-wrapper">
+              <ul className="search-results">
+                {results.slice(0, 10).map(row => (
+                  <li key={row.id} className="result-item">
+                    <Link to={`/logiciel/${row.id}`}>
+                      <strong className="result-item-text">{row.name}</strong>
+                    </Link>
+                  </li>
+                ))}
+                {results.length > 10 && (
+                  <li className="result-more">…{results.length - 10} autres résultats</li>
+                )}
+              </ul>
+            </div>
           )}
         </div>
         
