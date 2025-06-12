@@ -54,8 +54,8 @@ export default function Home() {
       /> 
       <CategoriesSection />
 
-      <main className="container banner-container">
-      
+      <main className="banner-container">
+
         
       {metrics ? (
         <MetricsBanner
@@ -65,7 +65,7 @@ export default function Home() {
           frenchPercentage={metrics.frenchPercentage}
         />
       ) : (
-        <p>Chargement des métriques…</p>
+        <p>Chargement des données</p>
       )}
 
       <SelectionOfTheMonth companies={filteredCompanies} />
