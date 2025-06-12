@@ -39,11 +39,11 @@ export function Hero({
         </p>
         <div className="hero-search">
             <div className="hero-search-container">
-              <svg 
-              width="20px" 
-              height="20px" 
-              viewBox="0 0 24 24" 
-              fill="none" 
+              <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_15_152)">
               <rect width="24" height="24" fill="white"/>
@@ -61,7 +61,15 @@ export function Hero({
               placeholder="Rechercher par nom. catégorie, fonction, etc ..."
               onChange={e => onSearch(e.target.value)}
             />
+            {show && (
+                <ul className="search-results">
+                  {results.slice(0, 10).map(r => (
+                    <li key={r.id}>{r.name}</li>
+                  ))}
+                </ul>
+            )}  
             </div>
+            
             <button
             type="button"
             className="search-button"
@@ -71,13 +79,7 @@ export function Hero({
           >
             Rechercher
           </button>
-          {show && (
-          <ul className="search-results">
-            {results.slice(0, 10).map(r => (
-              <li key={r.id}>{r.name}</li>
-            ))}
-          </ul>
-        )}
+          
           
         </div>
         <div className="popular-tags-container">
