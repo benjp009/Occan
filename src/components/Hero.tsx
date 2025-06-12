@@ -38,12 +38,15 @@ export function Hero({
           Découvrez les meilleurs solutions logicielles françaises pour votre entreprise, organisées par catégorie. 
         </p>
         <div className="hero-search">
-            <div className="hero-search-container">
-              <svg 
-              width="20px" 
-              height="20px" 
-              viewBox="0 0 24 24" 
-              fill="none" 
+            <div
+              className="hero-search-container"
+              onClick={e => e.stopPropagation()}
+            >
+              <svg
+              width="20px"
+              height="20px"
+              viewBox="0 0 24 24"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_15_152)">
               <rect width="24" height="24" fill="white"/>
@@ -56,11 +59,20 @@ export function Hero({
               </clipPath>
               </defs>
             </svg>
-            <input className="input"
+            <input
+              className="input"
               type="text"
               placeholder="Rechercher par nom. catégorie, fonction, etc ..."
               onChange={e => onSearch(e.target.value)}
+              onFocus={onFocus}
             />
+            {show && (
+            <ul className="search-results">
+              {results.slice(0, 10).map(r => (
+                <li key={r.id}>{r.name}</li>
+              ))}
+            </ul>
+          )}
             </div>
             <button
             type="button"
@@ -71,13 +83,6 @@ export function Hero({
           >
             Rechercher
           </button>
-          {show && (
-          <ul className="search-results">
-            {results.slice(0, 10).map(r => (
-              <li key={r.id}>{r.name}</li>
-            ))}
-          </ul>
-        )}
           
         </div>
         <div className="popular-tags-container">
