@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Footer } from '../components/Footer';
+import { Header } from '../components/Header';
 
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzM-1PpBeDkU_omj61zZiIkEwzwTxFSFWBi_GDA-Sqts3SHiMw34VZfKbojhwobZjPUig/exec";
 
@@ -36,6 +38,7 @@ const AddSoftware: React.FC = () => {
 };
 
   return (
+    
     <div className="add-software-page">
       <nav className="breadcrumbs">
         <a href="/">Accueil</a> / <span>Ajouter un logiciel</span>
