@@ -1,26 +1,33 @@
+import { useEffect, useState } from 'react';
 import logo from '../logo.svg';
+import { fetchCompanies } from '../utils/api';
+import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
+import { Link } from 'react-router-dom';
 
 // Description: Footer component for the website
 const popularTags = [
   'CRM', 'Comptabilité', 'Marketing', 'PME',
 ];
 
-interface HeroProps {
-  search: string;
-  onSearch: (q: string) => void;
-  results: CompanyRow[];
-  onFocus: () => void;
-  active: boolean;
-}
+export function Hero() {
+  const [companies, setCompanies] = useState<CompanyRow[]>([]);
+  const [search, setSearch] = useState('');
+  const [active, setActive] = useState(false);
 
-export function Hero({
-  search,
-  onSearch,
-  results,
-  onFocus,
-  active,
-}: HeroProps) {
+  useEffect(() => {
+      fetchCompanies().then(data => setCompanies(data));
+    }, []);
+
+    useEffect(() => {
+      function handleClickAway() {
+        setActive(false);
+      }
+      document.addEventListener('click', handleClickAway);
+      return () => document.removeEventListener('click', handleClickAway);
+  }, []);
+
+  const results = filterCompanies(search, companies);
   const show = active && search.trim() && results.length > 0;
 
   return (
@@ -59,20 +66,31 @@ export function Hero({
               </clipPath>
               </defs>
             </svg>
-            <input 
+            <input
               className="input"
               type="text"
               placeholder="Rechercher par nom. catégorie, fonction, etc ..."
-              onChange={e => onSearch(e.target.value)}
-              onFocus={() => onFocus()}
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onFocus={() => setActive(true)}
             />
-            {show && (
-                <ul className="search-results">
-                  {results.slice(0, 10).map(r => (
-                    <li key={r.id}>{r.name}</li>
-                  ))}
-                </ul>
-            )}  
+            {/* ▾ dropdown */}
+                      {show && (
+                        <div className="search-wrapper">
+                          <ul className="search-results">
+                            {results.slice(0, 10).map(row => (
+                              <li key={row.id} className="result-item">
+                                <Link to={`/logiciel/${row.id}`}>
+                                  <strong className="result-item-text">{row.name}</strong>
+                                </Link>
+                              </li>
+                            ))}
+                            {results.length > 10 && (
+                              <li className="result-more">…{results.length - 10} autres résultats</li>
+                            )}
+                          </ul>
+                        </div>
+                      )}  
             </div>
             
             <button
@@ -96,7 +114,10 @@ export function Hero({
             <button
               className="tag"
               key={tag}
-              onClick={() => onSearch(tag)}
+              onClick={() => {
+                setSearch(tag);
+                setActive(true);
+              }}
             >
               {tag}
             </button>
