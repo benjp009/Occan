@@ -3,11 +3,15 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { slugify } from '../utils/slugify';
+
 
 
 export default function AllCategory() {
   const [categories, setCategories] = useState<CategoryRow[]>([]);
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     fetchCategories().then((data) => {
@@ -28,10 +32,16 @@ export default function AllCategory() {
         </nav>
         <h1 className="page-title">Toutes les catégories de logiciels français</h1>
         <div className="all-categories-grid">
-          {categories.map((category) => (
+          {categories.map(category => (
+            <div
+              key={category.id}
+              className="categories-card"
+              onClick={() => navigate(`/category/${slugify(category.name)}`)}
+            >
             <div className="categories-card" key={category.id}>
               <span className="categories-name">{category.name}</span>
               <span className="categories-count">{category.count} logiciels</span>
+            </div>
             </div>
           ))}
         </div>

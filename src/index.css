@@ -806,6 +806,12 @@ selection-card {
   padding: 1rem;
 }
 
+.container-category {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 1rem;
+}
+
 .all-categories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -823,6 +829,10 @@ selection-card {
 
 .categories-count {
   text-align: right;
+}
+
+.category-description {
+  margin-bottom: 1.5rem;
 }
 
 .categories-name {
