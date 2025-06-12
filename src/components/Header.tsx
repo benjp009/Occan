@@ -8,18 +8,16 @@ interface HeaderProps {
   search?: string;
   onSearch?: (query: string) => void;
   results?: CompanyRow[];
-  onFocus?: () => void;
-  active?: boolean;
+  onFocus?: () => void;   // ▼ NEW
+  active?: boolean;       // ▼ NEW
 }
 
 export function Header({
   search = '',
   onSearch = noop,
   results = [],
-  onFocus = noop,
-  active = false,
 }: HeaderProps) {
-  const show = active && search.trim() && results.length > 0;
+  const show = search.trim() && results.length > 0;
 
   return (
     <header className="header">
@@ -34,10 +32,7 @@ export function Header({
         </Link>
         </div>
         {/* Search bar */}
-        <div
-          className="site-header-search, search-container"
-          onClick={e => e.stopPropagation()}
-        >
+        <div className="site-header-search, search-container">
           <svg 
             width="20px" 
             height="20px" 
@@ -55,12 +50,10 @@ export function Header({
             </clipPath>
             </defs>
           </svg>
-          <input
-            className="input"
+          <input className="input"
             type="text"
             placeholder="Rechercher un logiciel..."
             onChange={e => onSearch(e.target.value)}
-            onFocus={onFocus}
           />
 
           {/* ▾ dropdown */}
