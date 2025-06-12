@@ -54,7 +54,7 @@ export default function Home() {
       /> 
       <CategoriesSection />
 
-      <main className="container, banner-container">
+      <main className="container banner-container">
       
         
       {metrics ? (
