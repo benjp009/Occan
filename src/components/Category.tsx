@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
-import { NavLink } from 'react-router-dom';
-
+import { NavLink, useNavigate } from 'react-router-dom';
+import { slugify } from '../utils/slugify';
 
 
 export function CategoriesSection() {
 
   const [categories, setCategories] = useState<CategoryRow[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCategories().then((cats) => setCategories(cats));
@@ -28,8 +29,6 @@ export function CategoriesSection() {
         >
           Voir toutes les catégories
         </NavLink>
-
-
       </div>
 
       <div className="categories-grid">
@@ -38,9 +37,12 @@ export function CategoriesSection() {
             cat.description.length > 50
               ? cat.description.slice(0, 50).trimEnd() + '…'
               : cat.description;
-
           return (
-            <div key={cat.id} className="category-card">
+              <div
+                key={cat.id}
+                className="category-card"
+                onClick={() => navigate(`/category/${slugify(cat.name)}`)}
+              >
               <img
                 src={`/icons/${cat.icon}`}
                 alt={`${cat.name} icon`}
