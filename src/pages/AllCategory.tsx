@@ -18,7 +18,7 @@ export default function AllCategory() {
 
   return (
     <>
-      <Header onSearch={() => {}} />
+      <Header />
       <main className="container-all-categories">
         {/* Breadcrumbs */}
         <nav className="breadcrumb">
