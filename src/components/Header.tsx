@@ -1,24 +1,29 @@
-import logolong from '../logolong.svg';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import logolong from '../logolong.svg';
+import { fetchCompanies } from '../utils/api';
+import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
 
-const noop = () => {};
+export function Header() {
+  const [companies, setCompanies] = useState<CompanyRow[]>([]);
+  const [search, setSearch] = useState('');
+  const [active, setActive] = useState(false);
 
-interface HeaderProps {
-  search?: string;
-  onSearch?: (query: string) => void;
-  results?: CompanyRow[];
-  onFocus?: () => void;
-  active?: boolean;
-}
+  useEffect(() => {
+    fetchCompanies().then(data => setCompanies(data));
+  }, []);
 
-export function Header({
-  search = '',
-  onSearch = noop,
-  active = false,
-  results = [],
-  onFocus = noop,
-}: HeaderProps) {
+    useEffect(() => {
+    function handleClickAway() {
+      setActive(false);
+    }
+    document.addEventListener('click', handleClickAway);
+    return () => document.removeEventListener('click', handleClickAway);
+  }, []);
+
+
+  const results = filterCompanies(search, companies);
   const show = active && search.trim() && results.length > 0;
 
   return (
@@ -59,8 +64,9 @@ export function Header({
             className="input"
             type="text"
             placeholder="Rechercher un logiciel..."
-            onChange={e => onSearch(e.target.value)}
-            onFocus={onFocus}
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            onFocus={() => setActive(true)}
           />
 
           {/* ▾ dropdown */}
