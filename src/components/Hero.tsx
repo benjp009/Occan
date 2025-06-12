@@ -74,6 +74,7 @@ export function Hero({
             </ul>
           )}
             </div>
+            
             <button
             type="button"
             className="search-button"
@@ -82,8 +83,7 @@ export function Hero({
             }}
           >
             Rechercher
-          </button>
-          
+          </button>       
         </div>
         <div className="popular-tags-container">
           <p className="research-text">
