@@ -24,7 +24,7 @@ export function CategoriesSection() {
       <div className="categories-header">
         <h2>Catégories populaires</h2>
           <NavLink
-          to="/all-categories"
+          to="/toutes-categories"
           className="secondary-button"
         >
           Voir toutes les catégories
@@ -41,7 +41,7 @@ export function CategoriesSection() {
               <div
                 key={cat.id}
                 className="category-card"
-                onClick={() => navigate(`/category/${slugify(cat.name)}`)}
+                onClick={() => navigate(`/categorie/${slugify(cat.name)}`)}
               >
               <img
                 src={`/icons/${cat.icon}`}

@@ -82,4 +82,12 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ---
 
+## 🚀 Déploiement
+
+Avant de mettre l'application en production, générez un sitemap à jour. Le script `npm run build` s'en charge automatiquement et crée `public/sitemap.xml` à partir des catégories présentes dans la feuille Google Sheets.
+
+```bash
+npm run build
+```
+
 *Logiciel France 🇫🇷 - Annuaire des entreprises technologiques françaises*

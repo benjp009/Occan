@@ -17,8 +17,8 @@ export default function App() {
           path="/ajouter-un-nouveau-logiciel"
           element={<AddSoftware />}
         />
-        <Route path="/all-categories" element={<AllCategory />} />
-        <Route path="/category/:slug" element={<Category />} />
+        <Route path="/toutes-categories" element={<AllCategory />} />
+        <Route path="/categorie/:slug" element={<Category />} />
         {/* …other routes */}
       </Routes>
     </Router>
