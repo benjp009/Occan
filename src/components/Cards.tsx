@@ -25,10 +25,14 @@ export function Cards({ company }: { company: CompanyRow }) {
         <h2 className="subtitle">{company.name}</h2>
 
         <a
-          href={company.referral}
+          href={company.website}
           target="_blank"
           rel="noreferrer"
           className="visit-button"
+          onClick={e => {
+            e.stopPropagation();
+            window.open(company.website, '_blank', 'noopener,noreferrer');
+          }}
         >
           Visite
         </a>
