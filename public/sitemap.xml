@@ -20,4 +20,52 @@
     <loc>https://logicielfrance.com/admin</loc>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://logicielfrance.com/category/analytics</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/automatisation</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/comptabilit</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/crm</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/data</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/email</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/erp</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/exprience-utilisateur</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/marketing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/prospection</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/social-media</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/webinaire</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
