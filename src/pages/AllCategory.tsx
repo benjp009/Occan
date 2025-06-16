@@ -36,7 +36,7 @@ export default function AllCategory() {
             <div
               key={category.id}
               className="categories-card"
-              onClick={() => navigate(`/category/${slugify(category.name)}`)}
+              onClick={() => navigate(`/categorie/${slugify(category.name)}`)}
             >
             <div className="categories-card" key={category.id}>
               <span className="categories-name">{category.name}</span>
