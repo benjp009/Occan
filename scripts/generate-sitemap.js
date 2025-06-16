@@ -7,6 +7,8 @@ const BASE_URL = 'https://logicielfrance.com';
 function slugify(name) {
   return name
     .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .trim()
     .replace(/\s+/g, '-')
     .replace(/[^a-z0-9-]/g, '');
