@@ -50,7 +50,7 @@ export default function Category() {
       <main className="container-category">
         <nav className="breadcrumbs">
           <Link to="/">Accueil</Link> /{' '}
-          <Link to="/all-categories">toutes les catégories</Link> /{' '}
+          <Link to="/all-categories">Toutes les catégories</Link> /{' '}
           <span>{category?.name || slug}</span>
         </nav>
         {category && (
