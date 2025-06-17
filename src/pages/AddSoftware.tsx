@@ -52,24 +52,27 @@ const AddSoftware: React.FC = () => {
     setStatus("sending");
 
     const formBody = new URLSearchParams();
-      formBody.append("name", name);
-      formBody.append("email", email);
-      formBody.append("softwareName", softwareName);
-      formBody.append("website", website);
-      formBody.append("companyName", companyName);
-      formBody.append("siret", siret);
-      formBody.append("hqAddress", hqAddress);
-      formBody.append("phoneNumber", phoneNumber);
-      formBody.append("keywords", keywords);
-      formBody.append("category", category);
-      formBody.append("description", description);
-      formBody.append("targetCustomer", targetCustomer);
-      formBody.append("affiliation", affiliation);
+    formBody.append("name", name);
+    formBody.append("email", email);
+    formBody.append("softwareName", softwareName);
+    formBody.append("website", website);
+    formBody.append("companyName", companyName);
+    formBody.append("siret", siret);
+    formBody.append("hqAddress", hqAddress);
+    formBody.append("phoneNumber", phoneNumber);
+    formBody.append("keywords", keywords);
+    formBody.append("category", category);
+    formBody.append("description", description);
+    formBody.append("targetCustomer", targetCustomer);
+    formBody.append("affiliation", affiliation);
 
   try {
     const res = await fetch(WEB_APP_URL, {
-      method:  "POST",
-      body:    formBody,  // no JSON.stringify, no custom headers
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+      },
+      body: formBody.toString(),
     });
     const json = await res.json();
     if (json.status === "success") {
@@ -173,7 +176,7 @@ const AddSoftware: React.FC = () => {
                 <label htmlFor="targetCustomer">Clientèle cible</label>
                 <input id="targetCustomer" value={targetCustomer} onChange={e => setTargetCustomer(e.target.value)} />
               </div>
-              <div className="form-group">
+              <div className="form-group affiliation-group">
                 <label htmlFor="affiliation">Affiliation</label>
                 <select id="affiliation" value={affiliation} onChange={e => setAffiliation(e.target.value)} required>
                   <option value="">Sélectionner</option>
