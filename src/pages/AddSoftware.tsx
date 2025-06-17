@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer';
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
 
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzM-1PpBeDkU_omj61zZiIkEwzwTxFSFWBi_GDA-Sqts3SHiMw34VZfKbojhwobZjPUig/exec";
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzXXpeXRghTedOSlMmi-rIHy4xL11WFCEOnDKiCV0MAfh1tfL94GHN0vDYPXoDUsu1h/exec";
 
 const AddSoftware: React.FC = () => {
     const [step, setStep] = useState(1);
