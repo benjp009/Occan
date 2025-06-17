@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { fetchCategories } from '../utils/api';
+import { CategoryRow } from '../types';
 
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzM-1PpBeDkU_omj61zZiIkEwzwTxFSFWBi_GDA-Sqts3SHiMw34VZfKbojhwobZjPUig/exec";
 
 const AddSoftware: React.FC = () => {
     const [step, setStep] = useState(1);
+
+  const [categories, setCategories] = useState<CategoryRow[]>([]);
 
   // Step 1 fields
   const [name, setName] = useState("");
@@ -24,12 +28,24 @@ const AddSoftware: React.FC = () => {
   const [category, setCategory] = useState("");
   const [description, setDescription] = useState("");
   const [targetCustomer, setTargetCustomer] = useState("");
-  const [affiliation, setAffiliation] = useState(false);
+  const [affiliation, setAffiliation] = useState("");
+
+  useEffect(() => {
+    fetchCategories().then(setCategories);
+  }, []);
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const next = () => setStep(s => Math.min(s + 1, 4));
   const prev = () => setStep(s => Math.max(s - 1, 1));
+
+  const isStep1Valid =
+    name.trim() && email.trim() && softwareName.trim() && website.trim();
+  const isStep2Valid =
+    companyName.trim() && siret.trim() && hqAddress.trim() && phoneNumber.trim();
+  const isStep3Valid =
+    keywords.trim() && category.trim() && description.trim() &&
+    targetCustomer.trim() && affiliation.trim();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +64,7 @@ const AddSoftware: React.FC = () => {
       formBody.append("category", category);
       formBody.append("description", description);
       formBody.append("targetCustomer", targetCustomer);
-      formBody.append("affiliation", affiliation ? "yes" : "no");
+      formBody.append("affiliation", affiliation);
 
   try {
     const res = await fetch(WEB_APP_URL, {
@@ -70,7 +86,7 @@ const AddSoftware: React.FC = () => {
       setCategory("");
       setDescription("");
       setTargetCustomer("");
-      setAffiliation(false);
+      setAffiliation("");
       setStep(1);
     } else {
       throw new Error(json.message || "Erreur inconnue");
@@ -142,7 +158,12 @@ const AddSoftware: React.FC = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="category">Catégorie</label>
-                <input id="category" value={category} onChange={e => setCategory(e.target.value)} />
+                <select id="category" value={category} onChange={e => setCategory(e.target.value)} required>
+                  <option value="">Sélectionner</option>
+                  {categories.map(cat => (
+                    <option key={cat.id} value={cat.name}>{cat.name}</option>
+                  ))}
+                </select>
               </div>
               <div className="form-group">
                 <label htmlFor="description">Courte description</label>
@@ -153,10 +174,12 @@ const AddSoftware: React.FC = () => {
                 <input id="targetCustomer" value={targetCustomer} onChange={e => setTargetCustomer(e.target.value)} />
               </div>
               <div className="form-group">
-                <label>
-                  <input type="checkbox" checked={affiliation} onChange={e => setAffiliation(e.target.checked)} />
-                  {' '}Affiliation ?
-                </label>
+                <label htmlFor="affiliation">Affiliation</label>
+                <select id="affiliation" value={affiliation} onChange={e => setAffiliation(e.target.value)} required>
+                  <option value="">Sélectionner</option>
+                  <option value="oui">Oui</option>
+                  <option value="non">Non</option>
+                </select>
               </div>
             </>
           )}
@@ -177,14 +200,26 @@ const AddSoftware: React.FC = () => {
                 <li><strong>Catégorie:</strong> {category}</li>
                 <li><strong>Description:</strong> {description}</li>
                 <li><strong>Clientèle cible:</strong> {targetCustomer}</li>
-                <li><strong>Affiliation:</strong> {affiliation ? 'Oui' : 'Non'}</li>
+                <li><strong>Affiliation:</strong> {affiliation}</li>
               </ul>
             </div>
           )}
 
           <div className="step-buttons">
             {step > 1 && <button type="button" onClick={prev}>Précédent</button>}
-            {step < 4 && <button type="button" onClick={next}>Suivant</button>}
+            {step < 4 && (
+              <button
+                type="button"
+                onClick={next}
+                disabled={
+                  (step === 1 && !isStep1Valid) ||
+                  (step === 2 && !isStep2Valid) ||
+                  (step === 3 && !isStep3Valid)
+                }
+              >
+                Suivant
+              </button>
+            )}
             {step === 4 && (
               <button type="submit" className="button" disabled={status === 'sending'}>
                 {status === 'sending' ? 'Envoi…' : 'Envoyer'}
