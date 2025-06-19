@@ -33,6 +33,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/category/creation-dentreprise</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/category/crm</loc>
     <priority>0.7</priority>
   </url>
@@ -58,6 +62,10 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/category/prospection</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/category/reglementation</loc>
     <priority>0.7</priority>
   </url>
   <url>
