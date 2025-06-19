@@ -3,14 +3,19 @@ import Home from './pages/Home';
 import AddSoftware from './pages/AddSoftware';
 import AllCategory from './pages/AllCategory';
 import Category from './pages/Category';
+import LLMInjection from './components/LLMInjection';
+
 
 
 
 export default function App() {
 
-  return (
-    <Router>
+   const isLLMBot = true;
 
+  return (
+    
+    <Router>
+      <LLMInjection isLLMBot={isLLMBot} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
