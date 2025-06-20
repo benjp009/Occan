@@ -29,6 +29,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/category/autre</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/category/comptabilite</loc>
     <priority>0.7</priority>
   </url>
