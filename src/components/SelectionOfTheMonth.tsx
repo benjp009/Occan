@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CompanyRow } from '../types';
+import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
 import Company from './Company';
 
@@ -14,34 +15,15 @@ interface SelectionOfTheMonthProps {
 }
 
 export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ companies }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedCompany, setSelectedCompany] = useState<CompanyRow | null>(null);
+  const navigate = useNavigate();
+
   
   // For now, just take the first 9. Adjust logic as needed.
   const topNine = companies.slice(0, 9);
   
-  // Open & Close Modal 
-  const openModal = (company: CompanyRow) => {
-    setSelectedCompany(company);
-    setIsModalOpen(true);
-  };
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedCompany(null);
-  };
-
-  // Close on ESC
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isModalOpen) {
-        closeModal();
-      }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isModalOpen]);
+const openCompanyPage = (company: CompanyRow) => {
+  navigate(`/logiciel/${slugify(company.name)}`);
+};
 
   return (
     <section className="selection-month">
@@ -56,25 +38,13 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
         {topNine.map(company => (
           <div
             key={company.id}
-            className={`card-wrapper ${selectedCompany?.id === company.id && isModalOpen ? 'active' : ''}`}
-            onClick={() => openModal(company)}
+            className="card-wrapper"
+            onClick={() => openCompanyPage(company)}
           >
             <Cards company={company} />
           </div>
         ))}
       </div>
-
-      {isModalOpen && selectedCompany && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close-button" onClick={closeModal}>
-              ✕
-            </button>
-            <Company company={selectedCompany} />
-            
-          </div>
-        </div>
-      )}
     </section>
   );
 };

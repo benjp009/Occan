@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import logolong from '../logolong.svg';
 import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
+import { slugify } from '../utils/slugify';
 import { CompanyRow } from '../types';
 
 export function Header() {
@@ -75,7 +76,7 @@ export function Header() {
               <ul className="search-results">
                 {results.slice(0, 10).map(row => (
                   <li key={row.id} className="result-item">
-                    <Link to={`/logiciel/${row.id}`}>
+                    <Link to={`/logiciel/${slugify(row.name)}`}>
                       <strong className="result-item-text">{row.name}</strong>
                     </Link>
                   </li>
