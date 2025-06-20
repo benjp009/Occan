@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
-import Company from './Company';
 
 interface SelectionOfTheMonthProps {
   /** 
