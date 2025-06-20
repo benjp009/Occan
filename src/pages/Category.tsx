@@ -6,7 +6,6 @@ import { Footer } from '../components/Footer';
 import { fetchCategories, fetchCompanies } from '../utils/api';
 import { CategoryRow, CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
-import Company from '../components/Company';
 
 export default function Category() {
   const { slug } = useParams<{ slug: string }>();
