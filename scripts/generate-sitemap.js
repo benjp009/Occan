@@ -1,7 +1,12 @@
 const fs = require('fs');
 const Papa = require('papaparse');
+require('dotenv').config();
 
-const CATEGORIES_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=583866653&single=true&output=csv';
+const CATEGORIES_CSV =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=583866653&single=true&output=csv';
+const COMPANIES_CSV =
+  process.env.REACT_APP_SHEET_CSV_URL ||
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?output=csv';
 const BASE_URL = 'https://logicielfrance.com';
 
 function slugify(name) {
@@ -21,12 +26,26 @@ async function fetchCategories() {
   return data.filter(r => r.name);
 }
 
+async function fetchCompanies() {
+  const resp = await fetch(COMPANIES_CSV);
+  const text = await resp.text();
+  const { data } = Papa.parse(text, { header: true });
+  return data.filter(r => r.id && r.name);
+}
+
 async function generate() {
   let categories = [];
+  let companies = [];
   try {
     categories = await fetchCategories();
   } catch (err) {
     console.error('Failed to fetch categories:', err.message);
+  }
+
+   try {
+    companies = await fetchCompanies();
+  } catch (err) {
+    console.error('Failed to fetch companies:', err.message);
   }
 
   const staticUrls = [
@@ -41,7 +60,12 @@ async function generate() {
     .map(c => ({ loc: `${BASE_URL}/category/${slugify(c.name)}`, priority: '0.7' }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
-  const urls = staticUrls.concat(categoryUrls);
+  const softwareUrls = companies
+    .map(c => ({ loc: `${BASE_URL}/logiciel/${slugify(c.name)}`, priority: '0.6' }))
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const urls = staticUrls.concat(categoryUrls, softwareUrls);
+
 
   const lines = [
     '<?xml version="1.0" encoding="UTF-8"?>',
