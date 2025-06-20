@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Software from './pages/Software';
 import AddSoftware from './pages/AddSoftware';
 import AllCategory from './pages/AllCategory';
 import Category from './pages/Category';
@@ -24,6 +25,7 @@ export default function App() {
         />
         <Route path="/toutes-categories" element={<AllCategory />} />
         <Route path="/categorie/:slug" element={<Category />} />
+        <Route path="/logiciel/:slug" element={<Software />} />
         {/* …other routes */}
       </Routes>
     </Router>
