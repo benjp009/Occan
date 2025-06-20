@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -10,10 +10,10 @@ import Company from '../components/Company';
 
 export default function Category() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const [category, setCategory] = useState<CategoryRow | null>(null);
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedCompany, setSelectedCompany] = useState<CompanyRow | null>(null);
+
 
   useEffect(() => {
     fetchCategories().then(cats => {
@@ -35,13 +35,8 @@ export default function Category() {
       })
     : [];
 
-  const openModal = (company: CompanyRow) => {
-    setSelectedCompany(company);
-    setIsModalOpen(true);
-  };
-  const closeModal = () => {
-    setSelectedCompany(null);
-    setIsModalOpen(false);
+  const openCompanyPage = (company: CompanyRow) => {
+    navigate(`/logiciel/${slugify(company.name)}`);
   };
 
   return (
@@ -64,23 +59,13 @@ export default function Category() {
             <div
               key={company.id}
               className="card-wrapper"
-              onClick={() => openModal(company)}
+              onClick={() => openCompanyPage(company)}
             >
               <Cards company={company} />
             </div>
           ))}
         </div>
       </main>
-      {isModalOpen && selectedCompany && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close-button" onClick={closeModal}>
-              ✕
-            </button>
-            <Company company={selectedCompany} />
-          </div>
-        </div>
-      )}
       <Footer />
     </>
   );

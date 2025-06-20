@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
+import { slugify } from '../utils/slugify';
 import { Link } from 'react-router-dom';
 
 // Description: Footer component for the website
@@ -80,7 +81,7 @@ export function Hero() {
                           <ul className="search-results">
                             {results.slice(0, 10).map(row => (
                               <li key={row.id} className="result-item">
-                                <Link to={`/logiciel/${row.id}`}>
+                                <Link to={`/logiciel/${slugify(row.name)}`}>
                                   <strong className="result-item-text">{row.name}</strong>
                                 </Link>
                               </li>
