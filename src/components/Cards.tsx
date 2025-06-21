@@ -1,8 +1,24 @@
-// src/components/Cards.tsx
+import React from 'react';
 import { CompanyRow } from '../types';
 
-export function Cards({ company }: { company: CompanyRow }) {
-  // Truncate description to 100 characters + "…" if longer
+interface CardsProps {
+  company: CompanyRow;
+  highlight?: string;
+}
+
+function escapeRegExp(str: string) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function highlightText(text: string, query?: string) {
+  if (!query) return text;
+  const regex = new RegExp(`(${escapeRegExp(query)})`, 'gi');
+  return text.split(regex).map((part, i) =>
+    part.toLowerCase() === query.toLowerCase() ? <mark key={i}>{part}</mark> : part
+  );
+}
+
+export function Cards({ company, highlight }: CardsProps) {
   const truncatedDescription =
     company.description.length > 80
       ? company.description.slice(0, 80).trimEnd() + '…'
@@ -10,7 +26,6 @@ export function Cards({ company }: { company: CompanyRow }) {
 
   return (
     <div className="card">
-      {/* ─── Header: logo + title + “Visite” button ──────────────────────── */}
       <div className="card-header">
         {company.logo && (
           <div className="company-logo">
@@ -22,7 +37,7 @@ export function Cards({ company }: { company: CompanyRow }) {
           </div>
         )}
 
-        <h2 className="subtitle">{company.name}</h2>
+          <h2 className="subtitle">{highlightText(company.name, highlight)}</h2>
 
         <a
           href={company.website}
@@ -39,7 +54,7 @@ export function Cards({ company }: { company: CompanyRow }) {
       </div>
 
       {/* ─── Truncated description ──────────────────────────────────────── */}
-      <p className="text">{truncatedDescription}</p>
+      <p className="text">{highlightText(truncatedDescription, highlight)}</p>
     </div>
   );
 }
