@@ -1041,3 +1041,39 @@ selection-card {
 .result-item:hover { 
   background: #E8F3FF;
  }
+
+ /* Clock Loader */
+.clock-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.clock-loader .clock {
+  width: 50px;
+  height: 50px;
+}
+
+.clock-loader .clock-minute,
+.clock-loader .clock-hour {
+  transform-origin: 50% 50%;
+}
+
+.clock-loader .clock-minute {
+  animation: rotate-minute 1s linear infinite;
+}
+
+.clock-loader .clock-hour {
+  animation: rotate-hour 12s linear infinite;
+}
+
+@keyframes rotate-minute {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes rotate-hour {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
