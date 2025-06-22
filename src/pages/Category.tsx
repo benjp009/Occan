@@ -6,12 +6,14 @@ import { Footer } from '../components/Footer';
 import { fetchCategories, fetchCompanies } from '../utils/api';
 import { CategoryRow, CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
+import CardSkeleton from '../components/CardSkeleton';
+import Skeleton from 'react-loading-skeleton';
 
 export default function Category() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const [category, setCategory] = useState<CategoryRow | null>(null);
-  const [companies, setCompanies] = useState<CompanyRow[]>([]);
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
 
 
   useEffect(() => {
@@ -24,7 +26,7 @@ export default function Category() {
     fetchCompanies().then(setCompanies);
   }, [slug]);
 
-  const filteredCompanies = category
+  const filteredCompanies = category && companies
     ? companies.filter(co => {
         if (!co.categories) return false;
         return co.categories
@@ -47,21 +49,32 @@ export default function Category() {
           <Link to="/toutes-categories">Toutes les catégories</Link> /{' '}
           <span>{category?.name || slug}</span>
         </nav>
-        {category && (
+        {category ? (
           <>
             <h1>{category.name}</h1>
             <p className="category-description">{category.description}</p>
           </>
+        ) : (
+          <>
+            <h1><Skeleton width={200} /></h1>
+            <p className="category-description"><Skeleton count={2} /></p>
+          </>
         )}
         <div className="selection-grid">
-          {filteredCompanies.map(company => (
-            <div
-              key={company.id}
-              className="card-wrapper"
-              onClick={() => openCompanyPage(company)}
-            >
-              <Cards company={company} />
-            </div>
+          {(companies ? filteredCompanies : Array.from({ length: 6 })).map((company, idx) => (
+            companies ? (
+              <div
+                key={(company as CompanyRow).id}
+                className="card-wrapper"
+                onClick={() => openCompanyPage(company as CompanyRow)}
+              >
+                <Cards company={company as CompanyRow} />
+              </div>
+            ) : (
+              <div key={idx} className="card-wrapper">
+                <CardSkeleton />
+              </div>
+            )
           ))}
         </div>
       </main>

@@ -3,22 +3,23 @@ import { Link, useNavigate } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
+import CardSkeleton from './CardSkeleton';
 
 interface SelectionOfTheMonthProps {
-  /** 
-   * The full array of companies. 
-   * This component will pick out (e.g.) the first 9 for display. 
+  /**
+   * The full array of companies.
+   * This component will pick out (e.g.) the first 9 for display.
    * You can replace this logic with any “top 9” or curated list.
    */
-  companies: CompanyRow[];
+  companies: CompanyRow[] | null;
 }
 
 export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ companies }) => {
   const navigate = useNavigate();
 
-  
+
   // For now, just take the first 9. Adjust logic as needed.
-  const topNine = companies.slice(0, 9);
+  const topNine = companies ? companies.slice(0, 9) : Array.from({ length: 9 });
   
 const openCompanyPage = (company: CompanyRow) => {
   navigate(`/logiciel/${slugify(company.name)}`);
@@ -34,14 +35,20 @@ const openCompanyPage = (company: CompanyRow) => {
       </div>
 
       <div className="selection-grid">
-        {topNine.map(company => (
-          <div
-            key={company.id}
-            className="card-wrapper"
-            onClick={() => openCompanyPage(company)}
-          >
-            <Cards company={company} />
-          </div>
+        {topNine.map((company, idx) => (
+          companies ? (
+            <div
+              key={(company as CompanyRow).id}
+              className="card-wrapper"
+              onClick={() => openCompanyPage(company as CompanyRow)}
+            >
+              <Cards company={company as CompanyRow} />
+            </div>
+          ) : (
+            <div key={idx} className="card-wrapper">
+              <CardSkeleton />
+            </div>
+          )
         ))}
       </div>
     </section>

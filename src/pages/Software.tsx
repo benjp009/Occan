@@ -6,10 +6,11 @@ import { slugify } from '../utils/slugify';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import Company from '../components/Company';
+import Skeleton from 'react-loading-skeleton';
 
 export default function Software() {
   const { slug } = useParams<{ slug: string }>();
-  const [company, setCompany] = useState<CompanyRow | null>(null);
+  const [company, setCompany] = useState<CompanyRow | null | undefined>(undefined);
 
   useEffect(() => {
     fetchCompanies().then(data => {
@@ -20,7 +21,19 @@ export default function Software() {
     });
   }, [slug]);
 
-  if (!company) {
+  if (company === undefined) {
+    return (
+      <>
+        <Header />
+        <main className="container-category">
+          <Skeleton height={200} />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  if (company === null) {
     return (
       <>
         <Header />

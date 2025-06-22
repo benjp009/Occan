@@ -5,11 +5,12 @@ import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
 import { Link, useNavigate } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
+import Skeleton from 'react-loading-skeleton';
 
 
 
 export default function AllCategory() {
-  const [categories, setCategories] = useState<CategoryRow[]>([]);
+  const [categories, setCategories] = useState<CategoryRow[] | null>(null);
   const navigate = useNavigate();
 
 
@@ -32,17 +33,24 @@ export default function AllCategory() {
         </nav>
         <h1 className="page-title">Toutes les catégories de logiciels français</h1>
         <div className="all-categories-grid">
-          {categories.map(category => (
-            <div
-              key={category.id}
-              className="categories-card"
-              onClick={() => navigate(`/categorie/${slugify(category.name)}`)}
-            >
-            <div className="categories-card" key={category.id}>
-              <span className="categories-name">{category.name}</span>
-              <span className="categories-count">{category.count} logiciels</span>
-            </div>
-            </div>
+          {(categories || Array.from({ length: 10 })).map((category, idx) => (
+            categories ? (
+              <div
+                key={(category as CategoryRow).id}
+                className="categories-card"
+                onClick={() => navigate(`/categorie/${slugify((category as CategoryRow).name)}`)}
+              >
+                <div className="categories-card" key={(category as CategoryRow).id}>
+                  <span className="categories-name">{(category as CategoryRow).name}</span>
+                  <span className="categories-count">{(category as CategoryRow).count} logiciels</span>
+                </div>
+              </div>
+            ) : (
+              <div key={idx} className="categories-card">
+                <span className="categories-name"><Skeleton width={120} /></span>
+                <span className="categories-count"><Skeleton width={80} /></span>
+              </div>
+            )
           ))}
         </div>
       </main>
