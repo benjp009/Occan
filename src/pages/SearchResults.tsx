@@ -7,9 +7,10 @@ import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
+import CardSkeleton from '../components/CardSkeleton';
 
 export default function SearchResults() {
-  const [companies, setCompanies] = useState<CompanyRow[]>([]);
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const query = searchParams.get('q') || '';
@@ -18,7 +19,7 @@ export default function SearchResults() {
     fetchCompanies().then(setCompanies);
   }, []);
 
-  const results = filterCompanies(query, companies);
+  const results = companies ? filterCompanies(query, companies) : [];
 
   const openCompanyPage = (company: CompanyRow) => {
     navigate(`/logiciel/${slugify(company.name)}`);
@@ -32,7 +33,15 @@ export default function SearchResults() {
           <Link to="/">Accueil</Link> / <span>Recherche</span>
         </nav>
         <h1>Résultats pour «{query}»</h1>
-        {results.length === 0 ? (
+        {companies === null ? (
+          <div className="selection-grid">
+            {Array.from({ length: 6 }).map((_, idx) => (
+              <div key={idx} className="card-wrapper">
+                <CardSkeleton />
+              </div>
+            ))}
+          </div>
+        ) : results.length === 0 ? (
           <p>Aucun résultat trouvé.</p>
         ) : (
           <div className="selection-grid">
