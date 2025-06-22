@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import logolong from '../logolong.svg';
 import { fetchCompanies } from '../utils/api';
@@ -10,6 +10,7 @@ export function Header() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCompanies().then(data => setCompanies(data));
@@ -68,6 +69,11 @@ export function Header() {
             value={search}
             onChange={e => setSearch(e.target.value)}
             onFocus={() => setActive(true)}
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                navigate(`/recherche?q=${encodeURIComponent(search)}`);
+              }
+            }}
           />
 
           {/* ▾ dropdown */}

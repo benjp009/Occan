@@ -1,0 +1,54 @@
+import React, { useEffect, useState } from 'react';
+import { useNavigate, useSearchParams, Link } from 'react-router-dom';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { fetchCompanies } from '../utils/api';
+import { filterCompanies } from '../utils/search';
+import { CompanyRow } from '../types';
+import { Cards } from '../components/Cards';
+import { slugify } from '../utils/slugify';
+
+export default function SearchResults() {
+  const [companies, setCompanies] = useState<CompanyRow[]>([]);
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const query = searchParams.get('q') || '';
+
+  useEffect(() => {
+    fetchCompanies().then(setCompanies);
+  }, []);
+
+  const results = filterCompanies(query, companies);
+
+  const openCompanyPage = (company: CompanyRow) => {
+    navigate(`/logiciel/${slugify(company.name)}`);
+  };
+
+  return (
+    <>
+      <Header />
+      <main className="container-category">
+        <nav className="breadcrumbs">
+          <Link to="/">Accueil</Link> / <span>Recherche</span>
+        </nav>
+        <h1>Résultats pour «{query}»</h1>
+        {results.length === 0 ? (
+          <p>Aucun résultat trouvé.</p>
+        ) : (
+          <div className="selection-grid">
+            {results.map(company => (
+              <div
+                key={company.id}
+                className="card-wrapper"
+                onClick={() => openCompanyPage(company)}
+              >
+                <Cards company={company} highlight={query} />
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+      <Footer />
+    </>
+  );
+}
