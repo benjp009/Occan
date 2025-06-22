@@ -8,6 +8,7 @@ import { CategoriesSection } from '../components/Category';
 import MetricsBanner from '../components/MetricsBanner';
 import { useMetrics } from '../utils/useMetrics';
 import { SelectionOfTheMonth } from '../components/SelectionOfTheMonth';
+import ClockLoader from '../components/ClockLoader';
 import { Footer } from '../components/Footer';
 
 
@@ -38,7 +39,7 @@ export default function Home() {
           frenchPercentage={metrics.frenchPercentage}
         />
       ) : (
-        <p>Chargement des données</p>
+        <ClockLoader />
       )}
 
       <SelectionOfTheMonth companies={companies} />

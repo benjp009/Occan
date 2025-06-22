@@ -4,7 +4,7 @@ import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 // Description: Footer component for the website
 const popularTags = [
@@ -15,6 +15,7 @@ export function Hero() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
       fetchCompanies().then(data => setCompanies(data));
@@ -74,6 +75,11 @@ export function Hero() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               onFocus={() => setActive(true)}
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  navigate(`/recherche?q=${encodeURIComponent(search)}`);
+                }
+              }}
             />
             {/* ▾ dropdown */}
                       {show && (
@@ -98,7 +104,7 @@ export function Hero() {
             type="button"
             className="search-button"
             onClick={() => {
-              // you could also trigger search explicitly here if needed
+              navigate(`/recherche?q=${encodeURIComponent(search)}`);
             }}
           >
             Rechercher
