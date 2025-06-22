@@ -1,10 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const HOST = 'www.logicielfrance.com';
 const KEY = '82fe11e68c9c40bb9a4c55579a849434';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP_PATH = path.join(__dirname, '..', 'public', 'sitemap.xml');
+const HASH_PATH = path.join(__dirname, '..', '.sitemap.hash');
 
 function extractUrls(xml) {
   const regex = /<loc>([^<]+)<\/loc>/g;
@@ -50,12 +52,32 @@ function main() {
   }
 
   const xml = fs.readFileSync(SITEMAP_PATH, 'utf8');
+  const hash = crypto.createHash('sha256').update(xml).digest('hex');
+  let prevHash = null;
+  if (fs.existsSync(HASH_PATH)) {
+    try {
+      prevHash = fs.readFileSync(HASH_PATH, 'utf8').trim();
+    } catch {}
+  }
+
+  if (hash === prevHash) {
+    console.log('Sitemap unchanged; skipping IndexNow submission');
+    return;
+  }
+
   const urls = extractUrls(xml);
   if (urls.length === 0) {
     console.log('No URLs found for IndexNow submission');
     return;
   }
-  submit(urls);
+
+  submit(urls).finally(() => {
+    try {
+      fs.writeFileSync(HASH_PATH, hash, 'utf8');
+    } catch (err) {
+      console.error('Failed to write sitemap hash:', err.message);
+    }
+  });
 }
 
 main();
