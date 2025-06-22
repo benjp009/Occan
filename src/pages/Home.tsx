@@ -13,7 +13,7 @@ import { Footer } from '../components/Footer';
 
 
 export default function Home() {
-  const [companies, setCompanies] = useState<CompanyRow[]>([]);
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
   const metrics = useMetrics();
 
 
