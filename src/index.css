@@ -352,6 +352,36 @@ max-width: 80px;
   border: 0.5px solid #4E4E4E;
   border-radius: 5px;
 }
+.search-icon {
+  cursor: pointer;
+  padding: 0.4rem;
+  border: 1px solid #4E4E4E;
+  border-radius: 5px;
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.search-overlay .search-container {
+  width: 80%;
+  max-width: 500px;
+  padding: 0.4rem 1rem;
+}
+
+.add-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 20px;
+}
 
 .input {
   outline: none;
