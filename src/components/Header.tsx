@@ -10,7 +10,14 @@ export function Header() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const navigate = useNavigate();
+
+  const handleSearchIconClick = () => {
+    if (window.innerWidth <= 768) {
+      setMobileSearchOpen(true);
+    }
+  };
 
   useEffect(() => {
     fetchCompanies().then(data => setCompanies(data));
@@ -45,12 +52,14 @@ export function Header() {
           className="site-header-search, search-container"
           onClick={e => e.stopPropagation()}
         >
-          <svg 
-            width="20px" 
-            height="20px" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg">
+          <svg
+            width="20px"
+            height="20px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={handleSearchIconClick}
+          >
             <g clip-path="url(#clip0_15_152)">
             <rect width="24" height="24" fill="white"/>
             <circle cx="10.5" cy="10.5" r="6.5" stroke="#000000" stroke-linejoin="round"/>
@@ -97,12 +106,38 @@ export function Header() {
         
         {/* CTA */}
         <Link to="/ajouter-un-nouveau-logiciel">
-
-          <button className="button" >
-            Ajouter votre logiciel
+          <button className="button add-button" >
+            <span className="add-text">Ajouter votre logiciel</span>
+            <span className="add-icon">+</span>
           </button>
         </Link>
       </div>
+      {mobileSearchOpen && (
+        <div
+          className="mobile-search-overlay"
+          onClick={() => setMobileSearchOpen(false)}
+        >
+          <div
+            className="mobile-search-container"
+            onClick={e => e.stopPropagation()}
+          >
+            <input
+              autoFocus
+              className="input"
+              type="text"
+              placeholder="Rechercher un logiciel..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  navigate(`/recherche?q=${encodeURIComponent(search)}`);
+                  setMobileSearchOpen(false);
+                }
+              }}
+            />
+          </div>
+        </div>
+      )}
     </header>
   );
 }
