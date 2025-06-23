@@ -1078,6 +1078,11 @@ selection-card {
   to   { transform: rotate(360deg); }
 }
 
+/* Hide mobile-only icons by default */
+.add-button .add-icon {
+  display: none;
+}
+
 /* Mobile header adjustments */
 @media (max-width: 768px) {
   .search-container {
