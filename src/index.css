@@ -978,6 +978,9 @@ selection-card {
 
 .card-wrapper {
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .modal-overlay {

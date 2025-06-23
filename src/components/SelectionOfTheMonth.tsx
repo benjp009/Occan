@@ -36,20 +36,24 @@ const openCompanyPage = (company: CompanyRow) => {
 
       <div className="selection-grid">
         {topNine.map((company, idx) => (
-          companies ? (
-            <div
-              key={(company as CompanyRow).id}
-              className="card-wrapper"
-              onClick={() => openCompanyPage(company as CompanyRow)}
-            >
-              <Cards company={company as CompanyRow} />
-            </div>
-          ) : (
-            <div key={idx} className="card-wrapper">
-              <CardSkeleton />
-            </div>
-          )
-        ))}
+            companies ? (
+              <a
+                key={(company as CompanyRow).id}
+                className="card-wrapper"
+                href={`/logiciel/${slugify((company as CompanyRow).name)}`}
+                onClick={e => {
+                  e.preventDefault();
+                  openCompanyPage(company as CompanyRow);
+                }}
+              >
+                <Cards company={company as CompanyRow} />
+              </a>
+            ) : (
+              <div key={idx} className="card-wrapper">
+                <CardSkeleton />
+              </div>
+            )
+          ))}
       </div>
     </section>
   );
