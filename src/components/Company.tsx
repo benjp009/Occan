@@ -42,8 +42,10 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
           </div>
         </div>
 
-      <p className="company-description">{company.description}</p>
-
+        <p
+          className="company-description"
+          dangerouslySetInnerHTML={{ __html: company.description }}
+        />
       <div className="company-info">
         {company.siret && <p><strong>SIRET:</strong> {company.siret}</p>}
         {company.revenue2023 && <p><strong>Revenue (2023):</strong> {company.revenue2023}</p>}

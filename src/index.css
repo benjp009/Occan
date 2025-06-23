@@ -1077,3 +1077,53 @@ selection-card {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
+/* Hide mobile-only icons by default */
+.add-button .add-icon {
+  display: none;
+}
+
+/* Mobile header adjustments */
+@media (max-width: 768px) {
+  .search-container {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+  .search-container .input {
+    display: none;
+  }
+  .add-button .add-text {
+    display: none;
+  }
+  .add-button .add-icon {
+    display: block;
+    font-size: 24px;
+    line-height: 1;
+    color: #fff;
+  }
+}
+
+.mobile-search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.mobile-search-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 0.4rem 1rem;
+  border: 0.5px solid #4E4E4E;
+  border-radius: 5px;
+}
