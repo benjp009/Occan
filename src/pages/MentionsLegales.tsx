@@ -8,22 +8,22 @@ export default function MentionsLegales() {
       <Header />
       <main className="container mx-auto p-6">
         <h1>Mentions légales</h1>
-        <section>
+        <section className="legal-section">
           <h2>Éditeur du site</h2>
           <p>
-            Ce site est édité par <strong>[Nom de l&apos;éditeur]</strong>.
-            Pour toute question, vous pouvez nous contacter à l&apos;adresse
-            <a href="mailto:contact@example.com"> contact@example.com</a>.
+            Ce site est édité par <strong>Juste Ben SAS</strong>.
+            Pour toute question, vous pouvez nous contacter à l&apos;adresse&nbsp;
+            <a href="mailto:logiciel@logicielfrance.com">logiciel@logicielfrance.com</a>.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Hébergement</h2>
           <p>
-            Le site est hébergé par <strong>[Nom de l&apos;hébergeur]</strong>,
-            dont le siège social est situé à <strong>[Adresse]</strong>.
+            Le site est hébergé par <strong>Hostinger</strong>,
+            dont le siège social est situé à <strong>61 Lordou Vironos str., 6023 Larnaca, Cyprus.</strong>.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Propriété intellectuelle</h2>
           <p>
             L&apos;ensemble des contenus présents sur ce site (textes, images,
@@ -32,7 +32,7 @@ export default function MentionsLegales() {
             préalable.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Responsabilité</h2>
           <p>
             Les informations fournies sur ce site sont indicatives. Nous

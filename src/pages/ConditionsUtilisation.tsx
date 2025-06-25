@@ -8,7 +8,7 @@ export default function ConditionsUtilisation() {
       <Header />
       <main className="container mx-auto p-6">
         <h1>Conditions d'utilisation</h1>
-        <section>
+        <section className="legal-section">
           <h2>Objet</h2>
           <p>
             Les présentes conditions régissent l'utilisation du site et des
@@ -16,7 +16,7 @@ export default function ConditionsUtilisation() {
             ces conditions.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Accès au service</h2>
           <p>
             Le site est accessible gratuitement. Nous nous réservons toutefois
@@ -24,7 +24,7 @@ export default function ConditionsUtilisation() {
             majeure.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Propriété intellectuelle</h2>
           <p>
             Tout le contenu du site est protégé par le droit de la propriété
@@ -32,7 +32,7 @@ export default function ConditionsUtilisation() {
             partielle est interdite sans autorisation préalable.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Modification des conditions</h2>
           <p>
             Nous pouvons modifier les présentes conditions à tout moment. Les
@@ -40,7 +40,7 @@ export default function ConditionsUtilisation() {
             en ligne des nouvelles conditions.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Droit applicable</h2>
           <p>
             Les présentes conditions sont soumises au droit français. En cas de

@@ -8,7 +8,7 @@ export default function PolitiqueConfidentialite() {
       <Header />
       <main className="container mx-auto p-6">
         <h1>Politique de confidentialité</h1>
-        <section>
+        <section className="legal-section">
           <h2>Données collectées</h2>
           <p>
             Nous collectons uniquement les données nécessaires au bon
@@ -16,7 +16,7 @@ export default function PolitiqueConfidentialite() {
             des tiers sans votre consentement.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Utilisation des données</h2>
           <p>
             Les informations recueillies sont utilisées pour améliorer le
@@ -25,7 +25,7 @@ export default function PolitiqueConfidentialite() {
             données.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Cookies</h2>
           <p>
             Ce site peut utiliser des cookies afin d'analyser la fréquentation
@@ -34,12 +34,12 @@ export default function PolitiqueConfidentialite() {
             votre navigateur.
           </p>
         </section>
-        <section>
+        <section className="legal-section">
           <h2>Contact</h2>
           <p>
             Pour exercer vos droits ou pour toute question relative à la
-            protection de vos données, contactez-nous à
-            <a href="mailto:contact@example.com"> contact@example.com</a>.
+            protection de vos données, contactez-nous à&nbsp;	
+            <a href="mailto:logiciel@logicielfrance.com">logiciel@logicielfrance.com</a>.
           </p>
         </section>
       </main>
