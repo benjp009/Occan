@@ -52,7 +52,10 @@ export default function Category() {
         {category ? (
           <>
             <h1>{category.name}</h1>
-            <p className="category-description">{category.description}</p>
+            <p
+              className="category-description"
+              dangerouslySetInnerHTML={{ __html: category.description }}
+            />
           </>
           ) : (
           <>

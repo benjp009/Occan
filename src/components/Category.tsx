@@ -49,7 +49,10 @@ export function CategoriesSection() {
                 className="category-card__icon"
               />
               <h3 className="category-card__title">{cat.name}</h3>
-              <p className="category-card__desc">{truncatedDescription}</p>
+              <p
+                className="category-card__desc"
+                dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+              />
               <p className="category-card__count">
                 {cat.count} logiciels
               </p>

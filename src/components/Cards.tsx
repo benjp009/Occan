@@ -54,7 +54,10 @@ export function Cards({ company, highlight }: CardsProps) {
       </div>
 
       {/* ─── Truncated description ──────────────────────────────────────── */}
-      <p className="text">{highlightText(truncatedDescription, highlight)}</p>
+      <p
+        className="text"
+        dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+      />
     </div>
   );
 }
