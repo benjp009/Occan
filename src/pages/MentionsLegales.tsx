@@ -11,7 +11,7 @@ export default function MentionsLegales() {
         <section className="legal-section">
           <h2>Éditeur du site</h2>
           <p>
-            Ce site est édité par <strong>Juste Ben SAS</strong>.
+            Ce site est édité par <strong>Logiciel France SAS</strong>.
             Pour toute question, vous pouvez nous contacter à l&apos;adresse&nbsp;
             <a href="mailto:logiciel@logicielfrance.com">logiciel@logicielfrance.com</a>.
           </p>
