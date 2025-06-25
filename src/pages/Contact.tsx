@@ -10,7 +10,7 @@ export default function Contact() {
         <h1>Contact</h1>
         <section className="legal-section">
           <p>
-            Une question, une suggestion ou l\'envie de référencer votre logiciel&nbsp;?
+            Une question, une suggestion ou l'envie de référencer votre logiciel&nbsp;?
             Écrivez‑nous à&nbsp;
             <a href="mailto:logiciel@logicielfrance.com">logiciel@logicielfrance.com</a>
             &nbsp;et nous reviendrons vers vous rapidement.
