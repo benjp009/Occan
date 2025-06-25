@@ -8,6 +8,8 @@ import SearchResults from './pages/SearchResults';
 import MentionsLegales from './pages/MentionsLegales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
+import APropos from './pages/APropos';
+import Contact from './pages/Contact';
 import LLMInjection from './components/LLMInjection';
 
 
@@ -31,6 +33,8 @@ export default function App() {
         <Route path="/categorie/:slug" element={<Category />} />
         <Route path="/logiciel/:slug" element={<Software />} />
         <Route path="/recherche" element={<SearchResults />} />
+        <Route path="/a-propos" element={<APropos />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route
           path="/politique-de-confidentialite"

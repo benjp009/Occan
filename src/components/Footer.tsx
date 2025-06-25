@@ -1,11 +1,16 @@
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
+import { slugify } from '../utils/slugify';
 
 import React from 'react';
 
 export function Footer() {
-  const categories = ['Finance', 'Marketing', 'Vente', 'Contenu', 'Logistique'];
-  const resources  = ['À propos', 'Blog', 'Contact'];
+  const categories = ['Automatisation', 'Email', 'Marketing', 'Réseaux sociaux', 'SEO'];
+  const resources = [
+    { label: 'À propos', path: '/a-propos' },
+    { label: 'Blog', path: '/blog' },
+    { label: 'Contact', path: '/contact' }
+  ];
   const legal      = [
     { label: 'Mentions légales', path: '/mentions-legales' },
     { label: 'Politique de confidentialité', path: '/politique-de-confidentialite' },
@@ -33,7 +38,9 @@ export function Footer() {
           <h4>Catégories</h4>
           <ul>
             {categories.map(cat => (
-              <li key={cat} className="link">{cat}</li>
+              <li key={cat} className="link">
+                <Link to={`/categorie/${slugify(cat)}`}>{cat}</Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -42,8 +49,10 @@ export function Footer() {
         <div>
           <h4>Ressources</h4>
           <ul>
-            {resources.map(res => (
-              <li key={res} className="link">{res}</li>
+            {resources.map(item => (
+              <li key={item.path} className="link">
+                <Link to={item.path}>{item.label}</Link>
+              </li>
             ))}
           </ul>
         </div>
