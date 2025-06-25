@@ -77,6 +77,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/category/seo</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/category/webinaire</loc>
     <priority>0.7</priority>
   </url>
@@ -114,6 +118,10 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/logiciel/axonaut</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/bloomup</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -170,6 +178,10 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/logiciel/evoliz</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/fiche-paienet</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -273,7 +285,15 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/web-expire</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/webmecanik</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/yourtextguru</loc>
     <priority>0.6</priority>
   </url>
 </urlset>
