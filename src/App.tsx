@@ -5,6 +5,9 @@ import AddSoftware from './pages/AddSoftware';
 import AllCategory from './pages/AllCategory';
 import Category from './pages/Category';
 import SearchResults from './pages/SearchResults';
+import MentionsLegales from './pages/MentionsLegales';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
+import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import LLMInjection from './components/LLMInjection';
 
 
@@ -28,6 +31,15 @@ export default function App() {
         <Route path="/categorie/:slug" element={<Category />} />
         <Route path="/logiciel/:slug" element={<Software />} />
         <Route path="/recherche" element={<SearchResults />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route
+          path="/politique-de-confidentialite"
+          element={<PolitiqueConfidentialite />}
+        />
+        <Route
+          path="/conditions-utilisation"
+          element={<ConditionsUtilisation />}
+        />
         {/* …other routes */}
       </Routes>
     </Router>
