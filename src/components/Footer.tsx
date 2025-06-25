@@ -6,7 +6,11 @@ import React from 'react';
 export function Footer() {
   const categories = ['Finance', 'Marketing', 'Vente', 'Contenu', 'Logistique'];
   const resources  = ['À propos', 'Blog', 'Contact'];
-  const legal      = ['Mentions légales', 'Politique de confidentialité', 'Conditions d\'utilisation'];
+  const legal      = [
+    { label: 'Mentions légales', path: '/mentions-legales' },
+    { label: 'Politique de confidentialité', path: '/politique-de-confidentialite' },
+    { label: "Conditions d'utilisation", path: '/conditions-utilisation' }
+  ];
   const currentYear = new Date().getFullYear();
 
   return (
@@ -49,7 +53,9 @@ export function Footer() {
           <h4>Légal</h4>
           <ul>
             {legal.map(item => (
-              <li key={item} className="link">{item}</li>
+              <li key={item.path} className="link">
+                <Link to={item.path}>{item.label}</Link>
+              </li>
             ))}
           </ul>
         </div>
