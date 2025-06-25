@@ -1,5 +1,6 @@
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
+import { slugify } from '../utils/slugify';
 
 import React from 'react';
 
@@ -37,7 +38,9 @@ export function Footer() {
           <h4>Catégories</h4>
           <ul>
             {categories.map(cat => (
-              <li key={cat} className="link">{cat}</li>
+              <li key={cat} className="link">
+                <Link to={`/categorie/${slugify(cat)}`}>{cat}</Link>
+              </li>
             ))}
           </ul>
         </div>
