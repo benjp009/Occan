@@ -21,6 +21,10 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/category/achat</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/category/analytics</loc>
     <priority>0.7</priority>
   </url>
@@ -125,6 +129,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/bme</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/boondmanager</loc>
     <priority>0.6</priority>
   </url>
@@ -209,6 +217,10 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/lemmilink</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/livestorm</loc>
     <priority>0.6</priority>
   </url>
@@ -230,6 +242,10 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/logiciel/matomo</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/monitor-rank</loc>
     <priority>0.6</priority>
   </url>
   <url>
@@ -274,6 +290,14 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/logiciel/tiime</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/up-review</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/vuzzion</loc>
     <priority>0.6</priority>
   </url>
   <url>
