@@ -34,22 +34,6 @@ img {
 .mb-1 { margin-bottom: 1rem; }
 .p-1 { padding: 1rem; }
 
-/* breakpoints.css */
-@media (max-width: 768px) {
-  /* Styles pour cellphone */
-  .container {
-    grid-template-columns: repeat(1, auto);
-  }
-}
-
-/* breakpoints.css */
-@media (min-width: 768px) {
-  /* Styles pour tablettes */
-  .container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media (min-width: 1024px) {
   /* Styles pour ordinateurs de bureau */
   .container {
@@ -436,6 +420,7 @@ max-width: 80px;
   font-size: 14px;
   font-weight: normal;
   border-style: solid;
+  border-color: #000091;
   border-width: 0.5px;
 }
 
@@ -1021,6 +1006,11 @@ selection-card {
   align-items: flex-start;
 }
 
+.company-asset {
+  border-radius: 20px;
+  max-width: 50%;
+}
+
 /* header search dropdown */
 .search-container { position: relative; }
 
@@ -1145,4 +1135,24 @@ selection-card {
   padding: 0.4rem 1rem;
   border: 0.5px solid #4E4E4E;
   border-radius: 5px;
+}
+
+/* breakpoints.css */
+@media (max-width: 768px) {
+  /* Styles pour cellphone */
+  .container {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .company-asset {
+    max-width: 100%;
+  }
+}
+
+/* breakpoints.css */
+@media (min-width: 768px) {
+  /* Styles pour tablettes */
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
