@@ -18,6 +18,12 @@ export interface CompanyRow {
   hq_zip: string;
   hq_city: string;
   hq_country: string;
+  long_content: string;
+  description_1: string;
+  description_2: string;
+  asset_1: string;
+  asset_2: string;
+  asset_3: string;
 }
 
 export interface CategoryRow {
