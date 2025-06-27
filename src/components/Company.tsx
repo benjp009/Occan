@@ -18,7 +18,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
             className="company-logo modal-logo"
           />
           )}
-          <h2 className="company-name">{company.name}</h2>
+          <h1 className="company-name">{company.name}</h1>
         </div>
       
       
