@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
 import CardSkeleton from './CardSkeleton';
+import { fetchMonthlySelection } from '../utils/api';
 
 interface SelectionOfTheMonthProps {
   /** 
@@ -17,10 +18,29 @@ interface SelectionOfTheMonthProps {
 export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ companies }) => {
   const navigate = useNavigate();
 
-  
-  // For now, just take the first 9. Adjust logic as needed.
-  const topNine = companies ? companies.slice(0, 9) : Array.from({ length: 9 });
-  
+  const monthName = new Date().toLocaleString('fr-FR', { month: 'long' });
+  const [topNine, setTopNine] = useState<(CompanyRow | undefined)[]>(
+    Array.from({ length: 9 })
+  );
+
+  useEffect(() => {
+    if (!companies) return;
+
+    fetchMonthlySelection(monthName).then(names => {
+      const nameMap = new Map(
+        companies.map(c => [c.name.toLowerCase(), c])
+      );
+      const selected = names
+        .map(n => nameMap.get(n.toLowerCase()))
+        .filter(Boolean) as CompanyRow[];
+      if (selected.length > 0) {
+        setTopNine(selected.slice(0, 9));
+      } else {
+        setTopNine(companies.slice(0, 9));
+      }
+    });
+  }, [companies, monthName]);
+
 const openCompanyPage = (company: CompanyRow) => {
   navigate(`/logiciel/${slugify(company.name)}`);
 };
@@ -28,7 +48,10 @@ const openCompanyPage = (company: CompanyRow) => {
   return (
     <section className="selection-month">
       <div className="selection-header">
-        <h2 className="selection-title">Sélection du mois</h2>
+        <h2 className="selection-title">{`Sélection du ${monthName}`}</h2>
+        <p className="selection-description">
+          Découvrez les logiciels mis en avant ce mois-ci.
+        </p>
         <Link to="/all-softwares" className="secondary-button">
           Voir tous les logiciels
         </Link>
@@ -36,24 +59,24 @@ const openCompanyPage = (company: CompanyRow) => {
 
       <div className="selection-grid">
         {topNine.map((company, idx) => (
-            companies ? (
-              <a
-                key={(company as CompanyRow).id}
-                className="card-wrapper"
-                href={`/logiciel/${slugify((company as CompanyRow).name)}`}
-                onClick={e => {
-                  e.preventDefault();
-                  openCompanyPage(company as CompanyRow);
-                }}
-              >
-                <Cards company={company as CompanyRow} />
-              </a>
-            ) : (
-              <div key={idx} className="card-wrapper">
-                <CardSkeleton />
-              </div>
-            )
-          ))}
+          company ? (
+            <a
+              key={company.id}
+              className="card-wrapper"
+              href={`/logiciel/${slugify(company.name)}`}
+              onClick={e => {
+                e.preventDefault();
+                openCompanyPage(company);
+              }}
+            >
+              <Cards company={company} />
+            </a>
+          ) : (
+            <div key={idx} className="card-wrapper">
+              <CardSkeleton />
+            </div>
+          )
+        ))}
       </div>
     </section>
   );
