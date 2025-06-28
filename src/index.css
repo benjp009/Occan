@@ -609,6 +609,13 @@ max-width: 80px;
   margin-bottom: 1rem;
 }
 
+/* Small description under the title */
+.selection-description {
+  margin: 0 0 1rem;
+  font-size: 16px;
+  color: #444;
+}
+
 /* Grid container: 3 columns, wrap if needed, with gap */
 .selection-grid {
   display: grid;

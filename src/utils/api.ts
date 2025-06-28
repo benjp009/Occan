@@ -20,3 +20,36 @@ export async function fetchCategories(): Promise<CategoryRow[]> {
   // drop any rows without a name
   return (data as CategoryRow[]).filter((r) => r.name);
 }
+
+// CSV listing the software names selected for each month. The URL is stored in
+// an environment variable so the gid can be configured without code changes.
+const MONTH_CHOICE_CSV = process.env.REACT_APP_MONTH_CHOICE_CSV_URL!;
+
+/**
+ * Fetch the list of software names for a given month from the "month Choice"
+ * sheet. The first row contains the month names and each column lists the
+ * software names for that month.
+ */
+export async function fetchMonthlySelection(month: string): Promise<string[]> {
+  if (!MONTH_CHOICE_CSV) return [];
+
+  const resp = await fetch(MONTH_CHOICE_CSV);
+  const text = await resp.text();
+
+  const { data } = Papa.parse<string[]>(text, { header: false });
+  if (data.length === 0) return [];
+
+  const headers = data[0] as string[];
+  const monthIndex = headers.findIndex(
+    h => h.toLowerCase().trim() === month.toLowerCase(),
+  );
+  if (monthIndex === -1) return [];
+
+  const names: string[] = [];
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i] as string[];
+    const name = row[monthIndex]?.trim();
+    if (name) names.push(name);
+  }
+  return names;
+}
