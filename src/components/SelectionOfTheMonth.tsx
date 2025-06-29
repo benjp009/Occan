@@ -4,7 +4,6 @@ import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
 import CardSkeleton from './CardSkeleton';
-import { fetchMonthlySelection } from '../utils/api';
 
 interface SelectionOfTheMonthProps {
   /** 
@@ -19,27 +18,10 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
   const navigate = useNavigate();
 
   const monthName = new Date().toLocaleString('fr-FR', { month: 'long' });
-  const [topNine, setTopNine] = useState<(CompanyRow | undefined)[]>(
-    Array.from({ length: 9 })
-  );
 
-  useEffect(() => {
-    if (!companies) return;
-
-    fetchMonthlySelection(monthName).then(names => {
-      const nameMap = new Map(
-        companies.map(c => [slugify(c.name), c])
-      );
-      const selected = names
-        .map(n => nameMap.get(slugify(n)))
-        .filter(Boolean) as CompanyRow[];
-      if (selected.length > 0) {
-        setTopNine(selected.slice(0, 9));
-      } else {
-        setTopNine(companies.slice(0, 9));
-      }
-    });
-  }, [companies, monthName]);
+  const topNine = companies
+    ? companies.filter(c => c.month_choice?.toLowerCase() === 'yes').slice(0, 9)
+    : Array.from({ length: 9 });
 
 const openCompanyPage = (company: CompanyRow) => {
   navigate(`/logiciel/${slugify(company.name)}`);
@@ -59,7 +41,7 @@ const openCompanyPage = (company: CompanyRow) => {
 
       <div className="selection-grid">
         {topNine.map((company, idx) => (
-          company ? (
+           company ? (
             <a
               key={company.id}
               className="card-wrapper"
