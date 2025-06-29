@@ -28,10 +28,10 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
 
     fetchMonthlySelection(monthName).then(names => {
       const nameMap = new Map(
-        companies.map(c => [c.name.toLowerCase(), c])
+        companies.map(c => [slugify(c.name), c])
       );
       const selected = names
-        .map(n => nameMap.get(n.toLowerCase()))
+        .map(n => nameMap.get(slugify(n)))
         .filter(Boolean) as CompanyRow[];
       if (selected.length > 0) {
         setTopNine(selected.slice(0, 9));
@@ -48,7 +48,7 @@ const openCompanyPage = (company: CompanyRow) => {
   return (
     <section className="selection-month">
       <div className="selection-header">
-        <h2 className="selection-title">{`Sélection du ${monthName}`}</h2>
+        <h2 className="selection-title">{`Sélection du mois de ${monthName}`}</h2>
         <p className="selection-description">
           Découvrez les logiciels mis en avant ce mois-ci.
         </p>
