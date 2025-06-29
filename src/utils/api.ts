@@ -33,8 +33,14 @@ const MONTH_CHOICE_CSV = process.env.REACT_APP_MONTH_CHOICE_CSV_URL!;
 export async function fetchMonthlySelection(month: string): Promise<string[]> {
   if (!MONTH_CHOICE_CSV) return [];
 
-  const resp = await fetch(MONTH_CHOICE_CSV);
-  const text = await resp.text();
+  let text: string;
+  try {
+    const resp = await fetch(MONTH_CHOICE_CSV);
+    text = await resp.text();
+  } catch (err) {
+    console.error('Failed to fetch monthly selection:', err);
+    return [];
+  }
 
   const { data } = Papa.parse<string[]>(text, { header: false });
   if (data.length === 0) return [];
