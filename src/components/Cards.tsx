@@ -39,10 +39,8 @@ export function Cards({ company, highlight }: CardsProps) {
 
           <h2 className="subtitle">{highlightText(company.name, highlight)}</h2>
 
-        <a
-          href={company.website}
-          target="_blank"
-          rel="noreferrer"
+        <button
+          type="button"
           className="visit-button"
           onClick={e => {
             e.stopPropagation();
@@ -50,7 +48,7 @@ export function Cards({ company, highlight }: CardsProps) {
           }}
         >
           Visite
-        </a>
+        </button>
       </div>
 
       {/* ─── Truncated description ──────────────────────────────────────── */}
