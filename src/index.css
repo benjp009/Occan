@@ -195,6 +195,7 @@ max-width: 80px;
 .company-logo-img {
   width: 100%;
   height: 100%;
+  max-width: 50px;
   object-fit: contain;       /* keep aspect ratio inside 80×80 box */
   display: block;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
@@ -19,9 +19,10 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
 
   const monthName = new Date().toLocaleString('fr-FR', { month: 'long' });
 
-  const topNine = companies
+  const topNine: (CompanyRow | null)[] = companies
     ? companies.filter(c => c.month_choice?.toLowerCase() === 'yes').slice(0, 9)
-    : Array.from({ length: 9 });
+    : Array.from({ length: 9 }, () => null);
+
 
 const openCompanyPage = (company: CompanyRow) => {
   navigate(`/logiciel/${slugify(company.name)}`);
@@ -31,12 +32,14 @@ const openCompanyPage = (company: CompanyRow) => {
     <section className="selection-month">
       <div className="selection-header">
         <h2 className="selection-title">{`Sélection du mois de ${monthName}`}</h2>
-        <p className="selection-description">
-          Découvrez les logiciels mis en avant ce mois-ci.
-        </p>
         <Link to="/all-softwares" className="secondary-button">
           Voir tous les logiciels
         </Link>
+      </div>
+      <div>
+        <p className="selection-description">
+          Découvrez dans cette catégorie tous les logiciels que nous avons sélectionné pour vous ce mois ci. 
+        </p>
       </div>
 
       <div className="selection-grid">
