@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { StaticRouter } from 'react-router';
 import Home from './pages/Home';
 import Software from './pages/Software';
 import AddSoftware from './pages/AddSoftware';
@@ -16,13 +17,20 @@ import Canonical from './components/Canonical';
 
 
 
-export default function App() {
+interface AppProps {
+  location?: string;
+}
+
+export default function App({ location }: AppProps) {
 
    const isLLMBot = true;
 
+  const Router: any = location ? StaticRouter : BrowserRouter;
+  const routerProps = location ? { location } : {};
+
   return (
 
-    <Router>
+    <Router {...routerProps}>
       <Canonical />
       <LLMInjection isLLMBot={isLLMBot} />
       <Routes>
