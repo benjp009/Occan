@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { StaticRouter } from 'react-router-dom/server';
+import { StaticRouter } from 'react-router';
 import Home from './pages/Home';
 import Software from './pages/Software';
 import AddSoftware from './pages/AddSoftware';
