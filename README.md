@@ -62,9 +62,9 @@ Les données sont récupérées dynamiquement à chaque chargement de l'applicat
 4. Lancer l'application en mode développement :
 
    ```bash
-   npm run dev
+   npm start
    ```
-5. Accéder à l'application via `http://localhost:5173`.
+5. Accéder à l'application via `http://localhost:3000`.
 
 ## 🤝 Contribution
 
