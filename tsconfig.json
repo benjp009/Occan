@@ -15,12 +15,6 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "baseUrl": "./",
-    "paths": {
-      "react-router-dom/server": [
-        "src/react-router-dom-server.ts"
-      ]
-    },
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
