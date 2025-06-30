@@ -2,6 +2,17 @@ const fs = require('fs');
 const Papa = require('papaparse');
 require('dotenv').config();
 
+const TODAY = new Date().toISOString().split('T')[0];
+
+function formatDate(str) {
+  if (!str) return TODAY;
+  const d = new Date(str);
+  if (Number.isNaN(d.getTime())) {
+    return TODAY;
+  }
+  return d.toISOString().split('T')[0];
+}
+
 const CATEGORIES_CSV =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=583866653&single=true&output=csv';
 const COMPANIES_CSV =
@@ -49,19 +60,27 @@ async function generate() {
   }
 
   const staticUrls = [
-    { loc: `${BASE_URL}/`, priority: '1.0' },
-    { loc: `${BASE_URL}/ajouter-un-nouveau-logiciel`, priority: '0.8' },
-    { loc: `${BASE_URL}/all-categories`, priority: '0.8' },
-    { loc: `${BASE_URL}/login`, priority: '0.5' },
-    { loc: `${BASE_URL}/admin`, priority: '0.5' },
+    { loc: `${BASE_URL}/`, priority: '1.0', lastmod: TODAY },
+    { loc: `${BASE_URL}/ajouter-un-nouveau-logiciel`, priority: '0.8', lastmod: TODAY },
+    { loc: `${BASE_URL}/all-categories`, priority: '0.8', lastmod: TODAY },
+    { loc: `${BASE_URL}/login`, priority: '0.5', lastmod: TODAY },
+    { loc: `${BASE_URL}/admin`, priority: '0.5', lastmod: TODAY },
   ];
 
   const categoryUrls = categories
-    .map(c => ({ loc: `${BASE_URL}/category/${slugify(c.name)}`, priority: '0.7' }))
+    .map(c => ({
+      loc: `${BASE_URL}/category/${slugify(c.name)}`,
+      priority: '0.7',
+      lastmod: TODAY,
+    }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
   const softwareUrls = companies
-    .map(c => ({ loc: `${BASE_URL}/logiciel/${slugify(c.name)}`, priority: '0.6' }))
+    .map(c => ({
+      loc: `${BASE_URL}/logiciel/${slugify(c.name)}`,
+      priority: '0.6',
+      lastmod: formatDate(c.date_updated || c.date_added),
+    }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
   const urls = staticUrls.concat(categoryUrls, softwareUrls);
@@ -72,9 +91,12 @@ async function generate() {
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
   ];
 
-  for (const { loc, priority } of urls) {
+  for (const { loc, priority, lastmod } of urls) {
     lines.push('  <url>');
     lines.push(`    <loc>${loc}</loc>`);
+    if (lastmod) {
+      lines.push(`    <lastmod>${lastmod}</lastmod>`);
+    }
     lines.push(`    <priority>${priority}</priority>`);
     lines.push('  </url>');
   }

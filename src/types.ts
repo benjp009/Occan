@@ -1,5 +1,6 @@
 export interface CompanyRow {
   id: string;
+  month_choice?: string;
   date_added : string;
   date_updated : string;
   date_deleted : string;

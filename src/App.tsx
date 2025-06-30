@@ -11,6 +11,7 @@ import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import LLMInjection from './components/LLMInjection';
+import Canonical from './components/Canonical';
 
 
 
@@ -20,8 +21,9 @@ export default function App() {
    const isLLMBot = true;
 
   return (
-    
+
     <Router>
+      <Canonical />
       <LLMInjection isLLMBot={isLLMBot} />
       <Routes>
         <Route path="/" element={<Home />} />
