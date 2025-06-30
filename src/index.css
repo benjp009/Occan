@@ -195,6 +195,7 @@ max-width: 80px;
 .company-logo-img {
   width: 100%;
   height: 100%;
+  max-width: 50px;
   object-fit: contain;       /* keep aspect ratio inside 80×80 box */
   display: block;
 }
@@ -488,6 +489,25 @@ max-width: 80px;
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .research-text {
+    width: 100%;
+    font-size: 16px;
+  }
+  .popular-tags-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .popular-tags {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tag {
+    margin: 4px 0;
+  }
+}
+
+
 /* Categories */
 
 /* Section wrapper */
@@ -529,6 +549,21 @@ max-width: 80px;
   justify-content: center;
   gap: 1rem;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .categories-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+  .categories-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .category-card {
+    flex: 0 0 auto;
+  }
 }
 
 /* Individual card */
@@ -609,12 +644,49 @@ max-width: 80px;
   margin-bottom: 1rem;
 }
 
+/* Small description under the title */
+.selection-description {
+  margin: 0 0 1rem;
+  font-size: 16px;
+  color: #444;
+}
+
 /* Grid container: 3 columns, wrap if needed, with gap */
 .selection-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: .5rem;             /* Space between cards */
 
+}
+
+@media (max-width: 768px) {
+
+  .metrics-banner {
+    flex-direction: column;
+  }
+
+  .metric {
+    padding: 20px 0;
+  }
+
+  .selection-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: .5rem;
+    padding-bottom: 1rem;
+  }
+  .selection-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .selection-grid .card-wrapper {
+    flex: 0 0 auto;
+  }
+
+  .card {
+    max-width: 340px;
+  }
 }
 
 selection-card {
@@ -865,6 +937,15 @@ selection-card {
   max-width: 1200px;
   margin: 60px auto;
   padding: 1rem;
+}
+
+.category-page .selection-grid {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.category-page .card-wrapper {
+  width: 100%;
 }
 
 .all-categories-grid {

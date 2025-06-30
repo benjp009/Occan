@@ -62,9 +62,9 @@ Les données sont récupérées dynamiquement à chaque chargement de l'applicat
 4. Lancer l'application en mode développement :
 
    ```bash
-   npm run dev
+   npm start
    ```
-5. Accéder à l'application via `http://localhost:5173`.
+5. Accéder à l'application via `http://localhost:3000`.
 
 ## 🤝 Contribution
 
@@ -84,7 +84,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## 🚀 Déploiement
 
-Avant de mettre l'application en production, générez un sitemap à jour. Le script `npm run build` s'en charge automatiquement et crée `public/sitemap.xml` à partir des catégories et logiciels présents dans la feuille Google Sheets.
+Avant de mettre l'application en production, générez un sitemap à jour. Le script `npm run build` s'en charge automatiquement et crée `public/sitemap.xml` à partir des catégories et logiciels présents dans la feuille Google Sheets. Le fichier contient désormais un élément `<lastmod>` pour chaque URL afin de faciliter la prise en compte des mises à jour par les moteurs de recherche.
 
 ```bash
 npm run build
