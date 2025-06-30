@@ -43,7 +43,7 @@ export default function Category() {
   return (
     <>
       <Header />
-      <main className="container-category">
+      <main className="container-category category-page">
         <nav className="breadcrumbs">
           <Link to="/">Accueil</Link> /{' '}
           <Link to="/toutes-categories">Toutes les catégories</Link> /{' '}
