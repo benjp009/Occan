@@ -3,7 +3,14 @@ const path = require('path');
 const express = require('express');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
+const moduleAlias = require('module-alias');
+moduleAlias.addAlias('react-router-dom/server', path.join(__dirname, 'src', 'react-router-dom-server'));
+process.env.TS_NODE_COMPILER_OPTIONS = JSON.stringify({ module: 'CommonJS' });
+process.env.TS_NODE_TRANSPILE_ONLY = 'true';
 require('ts-node/register');
+require('tsconfig-paths/register');
+require.extensions['.css'] = () => '';
+require.extensions['.svg'] = () => '';
 const App = require('./src/App.tsx').default;
 
 const PORT = process.env.PORT || 3000;
