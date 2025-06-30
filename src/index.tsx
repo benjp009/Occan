@@ -6,22 +6,16 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
 
-const container = document.getElementById('root') as HTMLElement;
-
-const AppTree = (
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
   <React.StrictMode>
     <HelmetProvider>
       <App />
     </HelmetProvider>
   </React.StrictMode>
 );
-
-if (container.hasChildNodes()) {
-  ReactDOM.hydrateRoot(container, AppTree);
-} else {
-  const root = ReactDOM.createRoot(container);
-  root.render(AppTree);
-}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
