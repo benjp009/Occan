@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "indexnow": "node scripts/indexnow.js",
     "build": "npm run generate-sitemap && react-scripts build && npm run indexnow",
