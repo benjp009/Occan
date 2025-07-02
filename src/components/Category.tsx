@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
-import { NavLink, useNavigate } from 'react-router-dom';
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { slugify } from '../utils/slugify';
 
 
 export function CategoriesSection() {
 
   const [categories, setCategories] = useState<CategoryRow[]>([]);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     fetchCategories().then((cats) => setCategories(cats));
@@ -23,12 +24,12 @@ export function CategoriesSection() {
     <section className="categories-section">
       <div className="categories-header">
         <h2>Catégories populaires</h2>
-          <NavLink
-          to="/toutes-categories"
+          <Link
+          href="/toutes-categories"
           className="secondary-button"
         >
           Voir toutes les catégories
-        </NavLink>
+        </Link>
       </div>
 
       <div className="categories-grid">
@@ -41,7 +42,7 @@ export function CategoriesSection() {
               <div
                 key={cat.id}
                 className="category-card"
-                onClick={() => navigate(`/categorie/${slugify(cat.name)}`)}
+                onClick={() => router.push(`/categorie/${slugify(cat.name)}`)}
               >
               <img
                 src={`/icons/${cat.icon}`}

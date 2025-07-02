@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { fetchCategories } from '../utils/api';
-import { CategoryRow } from '../types';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Header } from '../src/components/Header';
+import { Footer } from '../src/components/Footer';
+import { fetchCategories } from '../src/utils/api';
+import { CategoryRow } from '../src/types';
 import Skeleton from 'react-loading-skeleton';
-import { Link, useNavigate } from 'react-router-dom';
-import { slugify } from '../utils/slugify';
-
-
+import { slugify } from '../src/utils/slugify';
 
 export default function AllCategory() {
   const [categories, setCategories] = useState<CategoryRow[] | null>(null);
-  const navigate = useNavigate();
-
+  const router = useRouter();
 
   useEffect(() => {
-    fetchCategories().then((data) => {
+    fetchCategories().then(data => {
       const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
       setCategories(sortedData);
     });
@@ -25,9 +23,8 @@ export default function AllCategory() {
     <>
       <Header />
       <main className="container-all-categories">
-        {/* Breadcrumbs */}
         <nav className="breadcrumb">
-          <Link to="/" className="breadcrumb-link">Accueil</Link>
+          <Link href="/" className="breadcrumb-link">Accueil</Link>
           <span className="breadcrumb-separator"> / </span>
           <span className="breadcrumb-current">Toutes les catégories</span>
         </nav>
@@ -38,7 +35,7 @@ export default function AllCategory() {
               <div
                 key={(category as CategoryRow).id}
                 className="categories-card"
-                onClick={() => navigate(`/categorie/${slugify((category as CategoryRow).name)}`)}
+                onClick={() => router.push(`/categorie/${slugify((category as CategoryRow).name)}`)}
               >
                 <div className="categories-card" key={(category as CategoryRow).id}>
                   <span className="categories-name">{(category as CategoryRow).name}</span>

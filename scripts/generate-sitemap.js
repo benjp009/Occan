@@ -16,7 +16,7 @@ function formatDate(str) {
 const CATEGORIES_CSV =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=583866653&single=true&output=csv';
 const COMPANIES_CSV =
-  process.env.REACT_APP_SHEET_CSV_URL ||
+  process.env.NEXT_PUBLIC_SHEET_CSV_URL ||
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?output=csv';
 const BASE_URL = 'https://logicielfrance.com';
 

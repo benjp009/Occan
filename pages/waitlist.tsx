@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import '../WaitlistPage.css';
-import logo from '../Logo-long.svg';
-
+const logo = "/logolong.svg";
 const SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbzLKrgrcQrbfz8cjs4lbzdvVzJlynM1tOgLgfACsJjak09lLMHcvGECETxuTZG1WkzjWA/exec';
 

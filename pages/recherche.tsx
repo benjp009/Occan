@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate, useSearchParams, Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { fetchCompanies } from '../utils/api';
-import { filterCompanies } from '../utils/search';
-import { CompanyRow } from '../types';
-import { Cards } from '../components/Cards';
-import { slugify } from '../utils/slugify';
-import CardSkeleton from '../components/CardSkeleton';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { Header } from '../src/components/Header';
+import { Footer } from '../src/components/Footer';
+import { fetchCompanies } from '../src/utils/api';
+import { filterCompanies } from '../src/utils/search';
+import { CompanyRow } from '../src/types';
+import { Cards } from '../src/components/Cards';
+import { slugify } from '../src/utils/slugify';
+import CardSkeleton from '../src/components/CardSkeleton';
 
 export default function SearchResults() {
   const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
-  const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const query = searchParams.get('q') || '';
+  const router = useRouter();
+  const query = typeof router.query.q === 'string' ? router.query.q : '';
 
   useEffect(() => {
     fetchCompanies().then(setCompanies);
@@ -22,7 +22,7 @@ export default function SearchResults() {
   const results = companies ? filterCompanies(query, companies) : [];
 
   const openCompanyPage = (company: CompanyRow) => {
-    navigate(`/logiciel/${slugify(company.name)}`);
+    router.push(`/logiciel/${slugify(company.name)}`);
   };
 
   return (
@@ -30,7 +30,7 @@ export default function SearchResults() {
       <Header />
       <main className="container-category">
         <nav className="breadcrumbs">
-          <Link to="/">Accueil</Link> / <span>Recherche</span>
+          <Link href="/">Accueil</Link> / <span>Recherche</span>
         </nav>
         <h1>Résultats pour «{query}»</h1>
         {companies === null ? (

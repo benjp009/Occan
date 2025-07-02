@@ -3,7 +3,7 @@ import { CompanyRow } from '../types';
 import { CategoryRow } from '../types';
 
 export async function fetchCompanies(): Promise<CompanyRow[]> {
-  const url = process.env.REACT_APP_SHEET_CSV_URL!;
+  const url = process.env.NEXT_PUBLIC_SHEET_CSV_URL!;
   const response = await fetch(url);
   const csv = await response.text();
   const { data } = Papa.parse<CompanyRow>(csv, { header: true });
@@ -23,7 +23,7 @@ export async function fetchCategories(): Promise<CategoryRow[]> {
 
 // CSV listing the software names selected for each month. The URL is stored in
 // an environment variable so the gid can be configured without code changes.
-const MONTH_CHOICE_CSV = process.env.REACT_APP_MONTH_CHOICE_CSV_URL!;
+const MONTH_CHOICE_CSV = process.env.NEXT_PUBLIC_MONTH_CHOICE_CSV_URL!;
 
 /**
  * Fetch the list of software names for a given month from the "month Choice"

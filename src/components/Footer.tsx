@@ -1,5 +1,5 @@
 import logo from '../logo.svg';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
 import { slugify } from '../utils/slugify';
 
 import React from 'react';
@@ -23,7 +23,7 @@ export function Footer() {
       <div className="column">
         {/* Column 1: Logo + Tagline */}
         <div className="logo-container">
-           <Link to="/">
+           <Link href="/">
           <img
             src={logo}
             alt="Occan logo"
@@ -39,7 +39,7 @@ export function Footer() {
           <ul>
             {categories.map(cat => (
               <li key={cat} className="link">
-                <Link to={`/categorie/${slugify(cat)}`}>{cat}</Link>
+                <Link href={`/categorie/${slugify(cat)}`}>{cat}</Link>
               </li>
             ))}
           </ul>
@@ -51,7 +51,7 @@ export function Footer() {
           <ul>
             {resources.map(item => (
               <li key={item.path} className="link">
-                <Link to={item.path}>{item.label}</Link>
+                <Link href={item.path}>{item.label}</Link>
               </li>
             ))}
           </ul>
@@ -63,7 +63,7 @@ export function Footer() {
           <ul>
             {legal.map(item => (
               <li key={item.path} className="link">
-                <Link to={item.path}>{item.label}</Link>
+                <Link href={item.path}>{item.label}</Link>
               </li>
             ))}
           </ul>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { fetchCategories } from '../utils/api';
-import { CategoryRow } from '../types';
+import { Header } from '../src/components/Header';
+import { Footer } from '../src/components/Footer';
+import { fetchCategories } from '../src/utils/api';
+import { CategoryRow } from '../src/types';
 
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzXXpeXRghTedOSlMmi-rIHy4xL11WFCEOnDKiCV0MAfh1tfL94GHN0vDYPXoDUsu1h/exec";
 
