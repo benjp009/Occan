@@ -4,7 +4,8 @@ import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
-import { Link, useNavigate } from 'react-router-dom';
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 // Description: Footer component for the website
 const popularTags = [
@@ -15,7 +16,7 @@ export function Hero() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
       fetchCompanies().then(data => setCompanies(data));
@@ -77,7 +78,7 @@ export function Hero() {
               onFocus={() => setActive(true)}
               onKeyDown={e => {
                 if (e.key === 'Enter') {
-                  navigate(`/recherche?q=${encodeURIComponent(search)}`);
+                  router.push(`/recherche?q=${encodeURIComponent(search)}`);
                 }
               }}
             />
@@ -87,7 +88,7 @@ export function Hero() {
                           <ul className="search-results">
                             {results.slice(0, 10).map(row => (
                               <li key={row.id} className="result-item">
-                                <Link to={`/logiciel/${slugify(row.name)}`}>
+                                <Link href={`/logiciel/${slugify(row.name)}`}>
                                   <strong className="result-item-text">{row.name}</strong>
                                 </Link>
                               </li>
@@ -104,7 +105,7 @@ export function Hero() {
             type="button"
             className="search-button"
             onClick={() => {
-              navigate(`/recherche?q=${encodeURIComponent(search)}`);
+              router.push(`/recherche?q=${encodeURIComponent(search)}`);
             }}
           >
             Rechercher

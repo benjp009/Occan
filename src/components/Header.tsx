@@ -1,4 +1,5 @@
-import { Link, useNavigate } from 'react-router-dom';
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useState } from 'react';
 import logolong from '../logolong.svg';
 import { fetchCompanies } from '../utils/api';
@@ -11,7 +12,7 @@ export function Header() {
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleSearchIconClick = () => {
     if (window.innerWidth <= 768) {
@@ -39,7 +40,7 @@ export function Header() {
     <header className="header">
       <div className="header-container">
         <div className="header-logo">
-          <Link to="/">
+          <Link href="/">
           <img
             src={logolong}
             alt="Occan logo"
@@ -80,7 +81,7 @@ export function Header() {
             onFocus={() => setActive(true)}
             onKeyDown={e => {
               if (e.key === 'Enter') {
-                navigate(`/recherche?q=${encodeURIComponent(search)}`);
+                router.push(`/recherche?q=${encodeURIComponent(search)}`);
               }
             }}
           />
@@ -91,7 +92,7 @@ export function Header() {
               <ul className="search-results">
                 {results.slice(0, 10).map(row => (
                   <li key={row.id} className="result-item">
-                    <Link to={`/logiciel/${slugify(row.name)}`}>
+                    <Link href={`/logiciel/${slugify(row.name)}`}>
                       <strong className="result-item-text">{row.name}</strong>
                     </Link>
                   </li>
@@ -105,7 +106,7 @@ export function Header() {
         </div>
         
         {/* CTA */}
-        <Link to="/ajouter-un-nouveau-logiciel">
+        <Link href="/ajouter-un-nouveau-logiciel">
           <button className="button add-button" >
             <span className="add-text">Ajouter votre logiciel</span>
             <span className="add-icon">+</span>
@@ -130,7 +131,7 @@ export function Header() {
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => {
                 if (e.key === 'Enter') {
-                  navigate(`/recherche?q=${encodeURIComponent(search)}`);
+                  router.push(`/recherche?q=${encodeURIComponent(search)}`);
                   setMobileSearchOpen(false);
                 }
               }}

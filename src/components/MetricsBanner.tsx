@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../index.css';
 
 // Hook to animate from 0 up to `end` over `duration` seconds
 function useCountUp(end: number, duration: number = 1) {

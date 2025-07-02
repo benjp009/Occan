@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { fetchCompanies } from '../utils/api';
-import { CompanyRow } from '../types';
-import { useNavigate } from 'react-router-dom';
+import { fetchCompanies } from '../src/utils/api';
+import { CompanyRow } from '../src/types';
+import { useRouter } from 'next/router';
 
 export default function Admin() {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function Admin() {
 
   const handleLogout = () => {
     localStorage.removeItem('isAdmin');
-    navigate('/');
+    router.push('/');
   };
 
   return (
@@ -24,7 +24,7 @@ export default function Admin() {
       </button>
       {/* For now, editing directly via Google Sheets; show sheet link */}
       <p>
-        To update companies, edit the <a href={process.env.REACT_APP_SHEET_CSV_URL} target="_blank" rel="noreferrer" className="text-blue-600">Google Sheet</a>.
+        To update companies, edit the <a href={process.env.NEXT_PUBLIC_SHEET_CSV_URL} target="_blank" rel="noreferrer" className="text-blue-600">Google Sheet</a>.
       </p>
       <div className="mt-6">
         <h2 className="text-2xl mb-2">Current Entries</h2>
