@@ -42,8 +42,8 @@ export function Header() {
         <div className="header-logo">
           <Link href="/">
           <img
-            src={logolong}
-            alt="Occan logo"
+            src={logolong.src}
+            alt="Logiciel France logo"
             className="logo"
           />
         </Link>

@@ -25,7 +25,7 @@ export function Footer() {
         <div className="logo-container">
            <Link href="/">
           <img
-            src={logo}
+            src={logo.src}
             alt="Occan logo"
             className="logo"
           />

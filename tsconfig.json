@@ -22,8 +22,10 @@
     "incremental": true
   },
   "include": [
+    "next-env.d.ts",
     "src",
-    "scripts"
+    "scripts",
+    "pages"
   ],
   "exclude": [
     "node_modules"

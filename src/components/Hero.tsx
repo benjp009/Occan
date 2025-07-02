@@ -37,7 +37,7 @@ export function Hero() {
     <section className="section-hero">
       <div className="hero-container container">
         <img
-          src={logo}
+          src={logo.src}
           alt="Occan logo"
           className="logo"
         />
