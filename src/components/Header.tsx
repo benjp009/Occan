@@ -42,7 +42,7 @@ export function Header() {
           <Link to="/">
           <img
             src={logolong}
-            alt="Occan logo"
+            alt="Logiciel France logo"
             className="logo"
           />
         </Link>

@@ -32,7 +32,7 @@ const openCompanyPage = (company: CompanyRow) => {
     <section className="selection-month">
       <div className="selection-header">
         <h2 className="selection-title">{`Sélection du mois de ${monthName}`}</h2>
-        <Link to="/all-softwares" className="secondary-button">
+        <Link to="/tous-les-logiciels" className="secondary-button">
           Voir tous les logiciels
         </Link>
       </div>
@@ -45,17 +45,15 @@ const openCompanyPage = (company: CompanyRow) => {
       <div className="selection-grid">
         {topNine.map((company, idx) => (
            company ? (
-            <a
+            <div
               key={company.id}
               className="card-wrapper"
-              href={`/logiciel/${slugify(company.name)}`}
-              onClick={e => {
-                e.preventDefault();
-                openCompanyPage(company);
-              }}
+              onClick={() => openCompanyPage(company)}
+              role="button"
+              tabIndex={0}
             >
               <Cards company={company} />
-            </a>
+            </div>
           ) : (
             <div key={idx} className="card-wrapper">
               <CardSkeleton />

@@ -66,17 +66,15 @@ export default function Category() {
         <div className="selection-grid">
           {(companies ? filteredCompanies : Array.from({ length: 6 })).map((company, idx) => (
             companies ? (
-              <a
+              <div
                 key={(company as CompanyRow).id}
                 className="card-wrapper"
-                href={`/logiciel/${slugify((company as CompanyRow).name)}`}
-                onClick={e => {
-                  e.preventDefault();
-                  openCompanyPage(company as CompanyRow);
-                }}
+                onClick={() => openCompanyPage(company as CompanyRow)}
+                role="button"
+                tabIndex={0}
               >
                 <Cards company={company as CompanyRow} />
-              </a>
+              </div>
             ) : (
               <div key={idx} className="card-wrapper">
                 <CardSkeleton />

@@ -207,7 +207,7 @@ max-width: 80px;
 }
 
 .text {
-  font-size: 0. nine rem;    /* ~14px; adjust to match your design */
+  font-size: 0.9 rem;    /* ~14px; adjust to match your design */
   color: #444444;
   margin: 8px 0 16px;
   line-height: 1.4;
