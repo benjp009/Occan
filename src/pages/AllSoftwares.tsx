@@ -13,7 +13,12 @@ export default function AllSoftwares() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchCompanies().then(data => setCompanies(data));
+    fetchCompanies().then(data => {
+      const sorted = data.sort((a, b) =>
+        a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' }),
+      );
+      setCompanies(sorted);
+    });
   }, []);
 
   const openCompanyPage = (company: CompanyRow) => {
@@ -28,6 +33,8 @@ export default function AllSoftwares() {
           <Link to="/">Accueil</Link> / <span>Tous les logiciels</span>
         </nav>
         <h1>Tous les logiciels</h1>
+        <p>Retrouvez la liste exhaustive de tout les logiciels français disponible.</p>
+        <p>La liste est mise à jour quotidiennement.</p>
         <div className="selection-grid">
           {(companies || Array.from({ length: 9 })).map((company, idx) => (
             companies ? (
