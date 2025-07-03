@@ -13,6 +13,7 @@ import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import LLMInjection from './components/LLMInjection';
 import Canonical from './components/Canonical';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -33,6 +34,7 @@ export default function App({ location }: AppProps) {
     <Router {...routerProps}>
       <Canonical />
       <LLMInjection isLLMBot={isLLMBot} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
