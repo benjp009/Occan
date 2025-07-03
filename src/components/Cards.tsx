@@ -39,16 +39,17 @@ export function Cards({ company, highlight }: CardsProps) {
 
           <h2 className="subtitle">{highlightText(company.name, highlight)}</h2>
 
-        <button
-          type="button"
+        <a
+          href={company.website}
+          target="_blank"
+          rel="noopener noreferrer"
           className="visit-button"
           onClick={e => {
             e.stopPropagation();
-            window.open(company.website, '_blank', 'noopener,noreferrer');
           }}
         >
           Visite
-        </button>
+        </a>
       </div>
 
       {/* ─── Truncated description ──────────────────────────────────────── */}
