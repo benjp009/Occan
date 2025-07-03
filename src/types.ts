@@ -25,6 +25,7 @@ export interface CompanyRow {
   asset_1: string;
   asset_2: string;
   asset_3: string;
+  meta_description?: string;
 }
 
 export interface CategoryRow {
