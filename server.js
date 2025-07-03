@@ -3,7 +3,14 @@ const path = require('path');
 const express = require('express');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
-require('ts-node/register');
+const tsNode = require('ts-node');
+tsNode.register({
+  transpileOnly: true,
+  compilerOptions: { module: 'commonjs' },
+});
+['.css', '.svg'].forEach(ext => {
+  require.extensions[ext] = () => '';
+});
 const App = require('./src/App.tsx').default;
 
 const PORT = process.env.PORT || 3000;

@@ -3,6 +3,7 @@ import { StaticRouter } from 'react-router';import Home from './pages/Home';
 import Software from './pages/Software';
 import AddSoftware from './pages/AddSoftware';
 import AllCategory from './pages/AllCategory';
+import AllSoftwares from './pages/AllSoftwares';
 import Category from './pages/Category';
 import SearchResults from './pages/SearchResults';
 import MentionsLegales from './pages/MentionsLegales';
@@ -12,6 +13,7 @@ import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import LLMInjection from './components/LLMInjection';
 import Canonical from './components/Canonical';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -32,6 +34,7 @@ export default function App({ location }: AppProps) {
     <Router {...routerProps}>
       <Canonical />
       <LLMInjection isLLMBot={isLLMBot} />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
@@ -41,6 +44,7 @@ export default function App({ location }: AppProps) {
         <Route path="/toutes-categories" element={<AllCategory />} />
         <Route path="/categorie/:slug" element={<Category />} />
         <Route path="/logiciel/:slug" element={<Software />} />
+        <Route path="/all-softwares" element={<AllSoftwares />} />
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
