@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { fetchCompanies } from '../utils/api';
 import { CompanyRow } from '../types';
@@ -51,6 +52,11 @@ export default function Software() {
 
   return (
     <>
+      <Helmet>
+        {company.meta_description && (
+          <meta name="description" content={company.meta_description} />
+        )}
+      </Helmet>
       <Header />
       <main className="container-category">
         <nav className="breadcrumbs">
