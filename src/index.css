@@ -941,11 +941,24 @@ selection-card {
 
 .category-page .selection-grid {
   display: flex;
-  flex-direction: column;
-  gap: .5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .category-page .card-wrapper {
-  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .category-page .card-wrapper {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .category-page .card-wrapper {
+    max-width: 30%;
+  }
 }
 
 .all-categories-grid {
