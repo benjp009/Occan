@@ -35,15 +35,8 @@ app.get('*', (req, res) => {
         React.createElement(App, { location: req.url })
       )
     );
-          const { helmet } = helmetContext;
-
-      // Remove the default meta description if one is provided by Helmet
-      let htmlWithoutDefaultMeta = htmlData;
-      if (helmet && helmet.meta && helmet.meta.toString().includes('name="description"')) {
-        htmlWithoutDefaultMeta = htmlData.replace(/<meta\s+name="description"[^>]*>/i, '');
-      }
-
-      const finalHtml = htmlWithoutDefaultMeta.replace(
+      const { helmet } = helmetContext;
+      const finalHtml = htmlData.replace(
         '<div id="root"></div>',
         `<div id="root">${appHtml}</div>`
       );
@@ -51,7 +44,7 @@ app.get('*', (req, res) => {
         ? `${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}`
         : '';
       const htmlWithHelmet = finalHtml.replace('</head>', `${helmetString}</head>`);
-      return res.send(htmlWithHelmet);
+        return res.send(htmlWithHelmet);
   });
 });
 
