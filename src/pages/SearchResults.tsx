@@ -46,17 +46,15 @@ export default function SearchResults() {
         ) : (
           <div className="selection-grid">
             {results.map(company => (
-              <a
+              <div
                 key={company.id}
                 className="card-wrapper"
-                href={`/logiciel/${slugify(company.name)}`}
-                onClick={e => {
-                  e.preventDefault();
-                  openCompanyPage(company);
-                }}
+                onClick={() => openCompanyPage(company)}
+                role="button"
+                tabIndex={0}
               >
                 <Cards company={company} highlight={query} />
-              </a>
+              </div>
             ))}
           </div>
         )}
