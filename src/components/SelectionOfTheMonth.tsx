@@ -32,7 +32,7 @@ const openCompanyPage = (company: CompanyRow) => {
     <section className="selection-month">
       <div className="selection-header">
         <h2 className="selection-title">{`Sélection du mois de ${monthName}`}</h2>
-        <Link to="/all-softwares" className="secondary-button">
+        <Link to="/tous-les-logiciels" className="secondary-button">
           Voir tous les logiciels
         </Link>
       </div>

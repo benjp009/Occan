@@ -44,7 +44,7 @@ export default function App({ location }: AppProps) {
         <Route path="/toutes-categories" element={<AllCategory />} />
         <Route path="/categorie/:slug" element={<Category />} />
         <Route path="/logiciel/:slug" element={<Software />} />
-        <Route path="/all-softwares" element={<AllSoftwares />} />
+        <Route path="/tous-les-logiciels" element={<AllSoftwares />} />
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
