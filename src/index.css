@@ -576,7 +576,7 @@ max-width: 80px;
   display: flex;
   flex-direction: column;
   padding: 1rem;
-
+  text-decoration: none;
 }
 
 .category-card:hover {
@@ -597,8 +597,9 @@ max-width: 80px;
 
 /* Title */
 .category-card__title {
-  font-size: 18px;
+  font-size: 22px;
   margin: 0 0 0.5rem;
+  color : #000000;;
 }
 
 /* Description */
@@ -616,6 +617,10 @@ max-width: 80px;
   font-size: 14px;
   margin: 0;
   text-decoration: none;
+}
+
+.category-card a {
+  text-decoration-line: none;
 }
 
 /* ───────────────────────────────────────────────────────
@@ -966,6 +971,7 @@ selection-card {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 60px 0;
+  text-decoration: none;
 }
 
 .categories-card {
