@@ -69,7 +69,7 @@ async function generate() {
 
   const categoryUrls = categories
     .map(c => ({
-      loc: `${BASE_URL}/category/${slugify(c.name)}`,
+      loc: `${BASE_URL}/categorie/${slugify(c.name)}`,
       priority: '0.7',
       lastmod: TODAY,
     }))
