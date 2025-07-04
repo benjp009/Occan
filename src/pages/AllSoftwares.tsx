@@ -5,12 +5,11 @@ import { fetchCompanies } from '../utils/api';
 import { CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CardSkeleton from '../components/CardSkeleton';
 
 export default function AllSoftwares() {
   const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCompanies().then(data => {
@@ -21,9 +20,6 @@ export default function AllSoftwares() {
     });
   }, []);
 
-  const openCompanyPage = (company: CompanyRow) => {
-    navigate(`/logiciel/${slugify(company.name)}`);
-  };
 
   return (
     <>
@@ -38,15 +34,13 @@ export default function AllSoftwares() {
         <div className="selection-grid">
           {(companies || Array.from({ length: 9 })).map((company, idx) => (
             companies ? (
-              <div
+              <Link
                 key={(company as CompanyRow).id}
                 className="card-wrapper"
-                onClick={() => openCompanyPage(company as CompanyRow)}
-                role="button"
-                tabIndex={0}
+                to={`/logiciel/${slugify((company as CompanyRow).name)}`}
               >
                 <Cards company={company as CompanyRow} />
-              </div>
+              </Link>
             ) : (
               <div key={idx} className="card-wrapper">
                 <CardSkeleton />
