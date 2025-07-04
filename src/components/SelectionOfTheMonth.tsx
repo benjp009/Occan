@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
@@ -15,7 +15,6 @@ interface SelectionOfTheMonthProps {
 }
 
 export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ companies }) => {
-  const navigate = useNavigate();
 
   const monthName = new Date().toLocaleString('fr-FR', { month: 'long' });
 
@@ -24,9 +23,6 @@ export const SelectionOfTheMonth: React.FC<SelectionOfTheMonthProps> = ({ compan
     : Array.from({ length: 9 }, () => null);
 
 
-const openCompanyPage = (company: CompanyRow) => {
-  navigate(`/logiciel/${slugify(company.name)}`);
-};
 
   return (
     <section className="selection-month">
@@ -45,15 +41,13 @@ const openCompanyPage = (company: CompanyRow) => {
       <div className="selection-grid">
         {topNine.map((company, idx) => (
            company ? (
-            <div
+            <Link
               key={company.id}
               className="card-wrapper"
-              onClick={() => openCompanyPage(company)}
-              role="button"
-              tabIndex={0}
+              to={`/logiciel/${slugify(company.name)}`}
             >
               <Cards company={company} />
-            </div>
+            </Link>
           ) : (
             <div key={idx} className="card-wrapper">
               <CardSkeleton />
