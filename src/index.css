@@ -1266,21 +1266,22 @@ selection-card {
 }
 
 .alphabet-nav {
-  display: flex;
+  display: center;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .alphabet-letter {
-  color: #000091;
+  color: #000;
   text-decoration: none;
   padding: 0.25rem 0.5rem;
   font-weight: 500;
 }
 
 .alphabet-letter:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #000091;
 }
 
 .alphabet-arrow {
