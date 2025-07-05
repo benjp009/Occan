@@ -166,6 +166,7 @@ max-width: 80px;
   border-radius: 16px;          /* 5px rounded corners */
   padding: 16px;               /* adjust as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
   max-width: 100%;             /* make sure it’s responsive */
   max-height: 100%;
   margin: 10px 5px;
@@ -692,6 +693,29 @@ max-width: 80px;
 
   .card {
     max-width: 340px;
+  }
+}
+
+/* Override mobile layout for the All Softwares page */
+@media (max-width: 768px) {
+  .software-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-x: unset;
+  }
+  .software-list-grid .card-wrapper {
+    flex: initial;
+  }
+  .software-list-grid .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Tablet layout for the All Softwares page */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .software-list-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
