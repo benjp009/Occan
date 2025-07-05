@@ -108,8 +108,9 @@ img {
 }
 
 .legal-section {
-  align-self: left;
-  width: 600px;
+  align-self: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 /* Lists inside columns */
@@ -165,6 +166,7 @@ max-width: 80px;
   border-radius: 16px;          /* 5px rounded corners */
   padding: 16px;               /* adjust as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
   max-width: 100%;             /* make sure it’s responsive */
   max-height: 100%;
   margin: 10px 5px;
@@ -694,6 +696,29 @@ max-width: 80px;
   }
 }
 
+/* Override mobile layout for the All Softwares page */
+@media (max-width: 768px) {
+  .software-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-x: unset;
+  }
+  .software-list-grid .card-wrapper {
+    flex: initial;
+  }
+  .software-list-grid .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Tablet layout for the All Softwares page */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .software-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 selection-card {
   background-color: #ffffff;
   border-radius: 5px;
@@ -957,6 +982,9 @@ selection-card {
 @media (min-width: 768px) {
   .category-page .card-wrapper {
     max-width: 40%;
+  }
+  .legal-section {
+    width: 600px;
   }
 }
 
@@ -1235,6 +1263,37 @@ selection-card {
   padding: 0.4rem 1rem;
   border: 0.5px solid #4E4E4E;
   border-radius: 5px;
+}
+
+.alphabet-nav {
+  display: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alphabet-letter {
+  color: #000;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+}
+
+.alphabet-letter:hover {
+  text-decoration: none;
+  color: #000091;
+}
+
+.alphabet-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.alphabet-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 /* breakpoints.css */
