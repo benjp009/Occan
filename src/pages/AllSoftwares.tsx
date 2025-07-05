@@ -7,6 +7,7 @@ import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
 import { Link } from 'react-router-dom';
 import CardSkeleton from '../components/CardSkeleton';
+import AlphabetNav from '../components/AlphabetNav';
 
 export default function AllSoftwares() {
   const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
@@ -31,6 +32,7 @@ export default function AllSoftwares() {
         <h1>Tous les logiciels</h1>
         <p>Retrouvez la liste exhaustive de tout les logiciels français disponible.</p>
         <p>La liste est mise à jour quotidiennement.</p>
+        {companies && <AlphabetNav companies={companies} />}
         <div className="selection-grid software-list-grid">
           {(companies || Array.from({ length: 9 })).map((company, idx) => (
             companies ? (
@@ -38,6 +40,17 @@ export default function AllSoftwares() {
                 key={(company as CompanyRow).id}
                 className="card-wrapper"
                 to={`/logiciel/${slugify((company as CompanyRow).name)}`}
+                id={(() => {
+                  const letter = (company as CompanyRow).name
+                    .charAt(0)
+                    .toUpperCase();
+                  const prev = idx > 0
+                    ? (companies as CompanyRow[])[idx - 1].name
+                        .charAt(0)
+                        .toUpperCase()
+                    : '';
+                  return letter !== prev ? `letter-${letter}` : undefined;
+                })()}
               >
                 <Cards company={company as CompanyRow} />
               </Link>
