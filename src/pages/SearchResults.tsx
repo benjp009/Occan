@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCompanies } from '../utils/api';
@@ -12,7 +12,6 @@ import CardSkeleton from '../components/CardSkeleton';
 export default function SearchResults() {
   const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
   const query = searchParams.get('q') || '';
 
   useEffect(() => {
@@ -21,9 +20,6 @@ export default function SearchResults() {
 
   const results = companies ? filterCompanies(query, companies) : [];
 
-  const openCompanyPage = (company: CompanyRow) => {
-    navigate(`/logiciel/${slugify(company.name)}`);
-  };
 
   return (
     <>
@@ -46,17 +42,13 @@ export default function SearchResults() {
         ) : (
           <div className="selection-grid">
             {results.map(company => (
-              <a
+              <Link
                 key={company.id}
                 className="card-wrapper"
-                href={`/logiciel/${slugify(company.name)}`}
-                onClick={e => {
-                  e.preventDefault();
-                  openCompanyPage(company);
-                }}
+                to={`/logiciel/${slugify(company.name)}`}
               >
                 <Cards company={company} highlight={query} />
-              </a>
+              </Link>
             ))}
           </div>
         )}

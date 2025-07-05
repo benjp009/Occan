@@ -63,6 +63,7 @@ Les données sont récupérées dynamiquement à chaque chargement de l'applicat
 
    ```bash
    npm start
+
    ```
 5. Accéder à l'application via `http://localhost:3000`.
 
@@ -88,6 +89,7 @@ Avant de mettre l'application en production, générez un sitemap à jour. Le sc
 
 ```bash
 npm run build
+node server.js
 ```
 
 *Logiciel France 🇫🇷 - Annuaire des entreprises technologiques françaises*
