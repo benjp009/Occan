@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -11,7 +11,6 @@ import Skeleton from 'react-loading-skeleton';
 
 export default function Category() {
   const { slug } = useParams<{ slug: string }>();
-  const navigate = useNavigate();
   const [category, setCategory] = useState<CategoryRow | null>(null);
   const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
 
@@ -36,9 +35,6 @@ export default function Category() {
       })
     : [];
 
-  const openCompanyPage = (company: CompanyRow) => {
-    navigate(`/logiciel/${slugify(company.name)}`);
-  };
 
   return (
     <>
@@ -66,17 +62,13 @@ export default function Category() {
         <div className="selection-grid">
           {(companies ? filteredCompanies : Array.from({ length: 6 })).map((company, idx) => (
             companies ? (
-              <a
+              <Link
                 key={(company as CompanyRow).id}
                 className="card-wrapper"
-                href={`/logiciel/${slugify((company as CompanyRow).name)}`}
-                onClick={e => {
-                  e.preventDefault();
-                  openCompanyPage(company as CompanyRow);
-                }}
+                to={`/logiciel/${slugify((company as CompanyRow).name)}`}
               >
                 <Cards company={company as CompanyRow} />
-              </a>
+              </Link>
             ) : (
               <div key={idx} className="card-wrapper">
                 <CardSkeleton />
