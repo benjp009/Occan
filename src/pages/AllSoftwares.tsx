@@ -31,7 +31,7 @@ export default function AllSoftwares() {
         <h1>Tous les logiciels</h1>
         <p>Retrouvez la liste exhaustive de tout les logiciels français disponible.</p>
         <p>La liste est mise à jour quotidiennement.</p>
-        <div className="selection-grid">
+        <div className="selection-grid software-list-grid">
           {(companies || Array.from({ length: 9 })).map((company, idx) => (
             companies ? (
               <Link
