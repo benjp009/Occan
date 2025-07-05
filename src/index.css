@@ -108,8 +108,9 @@ img {
 }
 
 .legal-section {
-  align-self: left;
-  width: 600px;
+  align-self: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 /* Lists inside columns */
@@ -957,6 +958,9 @@ selection-card {
 @media (min-width: 768px) {
   .category-page .card-wrapper {
     max-width: 40%;
+  }
+  .legal-section {
+    width: 600px;
   }
 }
 
