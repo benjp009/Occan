@@ -54,7 +54,8 @@ Les données sont récupérées dynamiquement à chaque chargement de l'applicat
    ```bash
    npm install
    ```
-3. Créer un fichier `.env` à la racine et ajouter votre clé d'API Google Sheets. Ce fichier doit rester local et **ne doit pas être committé** car il est listé dans `.gitignore` :
+3. Créer un fichier `.env` à la racine et ajouter votre clé d'API Google Sheets :
+
    ```env
    VITE_GOOGLE_SHEETS_API_KEY=Votre_Cle_API_Ici
    ```
@@ -85,9 +86,6 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ## 🚀 Déploiement
 
 Avant de mettre l'application en production, générez un sitemap à jour. Le script `npm run build` s'en charge automatiquement et crée `public/sitemap.xml` à partir des catégories et logiciels présents dans la feuille Google Sheets. Le fichier contient désormais un élément `<lastmod>` pour chaque URL afin de faciliter la prise en compte des mises à jour par les moteurs de recherche.
-
-Si vous exécutez la commande sur macOS, pensez à définir la variable `PUPPETEER_EXECUTABLE_PATH` avec le chemin vers Chrome, par exemple:
-`export PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`.
 
 ```bash
 npm run build
