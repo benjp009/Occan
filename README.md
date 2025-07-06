@@ -54,7 +54,8 @@ Les données sont récupérées dynamiquement à chaque chargement de l'applicat
    ```bash
    npm install
    ```
-3. Créer un fichier `.env` à la racine et ajouter votre clé d'API Google Sheets. Ce fichier doit rester local et **ne doit pas être committé** car il est listé dans `.gitignore` :
+3. Créer un fichier `.env` à la racine et ajouter votre clé d'API Google Sheets :
+
    ```env
    VITE_GOOGLE_SHEETS_API_KEY=Votre_Cle_API_Ici
    ```
