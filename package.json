@@ -53,8 +53,7 @@
   "reactSnap": {
     "include": ["/", "/products/indy", "/products/other…"],
     "source": "build",
-    "puppeteerArgs": ["--no-sandbox"],
-    "puppeteerExecutablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    "puppeteerArgs": ["--no-sandbox"]
   },
   "devDependencies": {
     "@types/papaparse": "^5.3.16",
