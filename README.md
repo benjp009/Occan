@@ -87,6 +87,9 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 Avant de mettre l'application en production, générez un sitemap à jour. Le script `npm run build` s'en charge automatiquement et crée `public/sitemap.xml` à partir des catégories et logiciels présents dans la feuille Google Sheets. Le fichier contient désormais un élément `<lastmod>` pour chaque URL afin de faciliter la prise en compte des mises à jour par les moteurs de recherche.
 
+Si vous exécutez la commande sur macOS, pensez à définir la variable `PUPPETEER_EXECUTABLE_PATH` avec le chemin vers Chrome, par exemple:
+`export PUPPETEER_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`.
+
 ```bash
 npm run build
 node server.js
