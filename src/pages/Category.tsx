@@ -9,21 +9,30 @@ import { Cards } from '../components/Cards';
 import CardSkeleton from '../components/CardSkeleton';
 import Skeleton from 'react-loading-skeleton';
 
-export default function Category() {
+interface CategoryProps {
+  initialCategory?: CategoryRow | null;
+  initialCompanies?: CompanyRow[] | null;
+}
+
+export default function Category({ initialCategory, initialCompanies }: CategoryProps) {
   const { slug } = useParams<{ slug: string }>();
-  const [category, setCategory] = useState<CategoryRow | null>(null);
-  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
+  const [category, setCategory] = useState<CategoryRow | null>(initialCategory ?? null);
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(initialCompanies ?? null);
 
 
   useEffect(() => {
-    fetchCategories().then(cats => {
-      const found = cats.find(
-        c => c.id === slug || slugify(c.name) === slug
-      );
-      setCategory(found || null);
-    });
-    fetchCompanies().then(setCompanies);
-  }, [slug]);
+    if (!initialCategory || (initialCategory && initialCategory.id !== slug && slugify(initialCategory.name) !== slug)) {
+      fetchCategories().then(cats => {
+        const found = cats.find(
+          c => c.id === slug || slugify(c.name) === slug
+        );
+        setCategory(found || null);
+      });
+    }
+    if (!initialCompanies) {
+      fetchCompanies().then(setCompanies);
+    }
+  }, [slug, initialCategory, initialCompanies]);
 
   const filteredCompanies = category && companies
     ? companies.filter(co => {
@@ -81,3 +90,4 @@ export default function Category() {
     </>
   );
 }
+
