@@ -71,6 +71,9 @@ export default function Software({ initialCompany }: SoftwareProps) {
           <meta name="description" content={company.meta_description} />
         )}
       </Helmet>
+      {company.meta_description && (
+        <noscript>{company.meta_description}</noscript>
+      )}
       <Header />
       <main className="container-category">
         <nav className="breadcrumbs">
