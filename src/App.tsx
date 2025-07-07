@@ -21,9 +21,10 @@ import ScrollToTop from './components/ScrollToTop';
 
 interface AppProps {
   location?: string;
+  initialData?: any;
 }
 
-export default function App({ location }: AppProps) {
+export default function App({ location, initialData }: AppProps) {
 
    const isLLMBot = true;
    const Router: any = location ? StaticRouter : BrowserRouter;
@@ -49,8 +50,19 @@ export default function App({ location }: AppProps) {
           element={<AddSoftware />}
         />
         <Route path="/toutes-categories" element={<AllCategory />} />
-        <Route path="/categorie/:slug" element={<Category />} />
-        <Route path="/logiciel/:slug" element={<Software />} />
+        <Route
+          path="/categorie/:slug"
+          element={
+            <Category
+              initialCategory={initialData?.category}
+              initialCompanies={initialData?.companies}
+            />
+          }
+        />
+        <Route
+          path="/logiciel/:slug"
+          element={<Software initialCompany={initialData?.company} />}
+        />
         <Route path="/tous-les-logiciels" element={<AllSoftwares />} />
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/a-propos" element={<APropos />} />

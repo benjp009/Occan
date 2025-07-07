@@ -9,18 +9,32 @@ import { Footer } from '../components/Footer';
 import Company from '../components/Company';
 import CompanySkeleton from '../components/CompanySkeleton';
 
-export default function Software() {
+interface SoftwareProps {
+  initialCompany?: CompanyRow | null;
+}
+
+export default function Software({ initialCompany }: SoftwareProps) {
   const { slug } = useParams<{ slug: string }>();
-  const [company, setCompany] = useState<CompanyRow | null | undefined>(undefined);
+  const [company, setCompany] = useState<CompanyRow | null | undefined>(
+    initialCompany === undefined ? undefined : initialCompany
+  );
 
   useEffect(() => {
-    fetchCompanies().then(data => {
-      const found = data.find(
-        c => slugify(c.name) === slug || c.id === slug
-      );
-      setCompany(found || null);
-    });
-  }, [slug]);
+    if (
+      !initialCompany ||
+      (initialCompany &&
+        slug &&
+        slugify(initialCompany.name) !== slug &&
+        initialCompany.id !== slug)
+    ) {
+      fetchCompanies().then(data => {
+        const found = data.find(
+          c => slugify(c.name) === slug || c.id === slug
+        );
+        setCompany(found || null);
+      });
+    }
+  }, [slug, initialCompany]);
 
   if (company === undefined) {
     return (
@@ -74,3 +88,4 @@ export default function Software() {
     </>
   );
 }
+
