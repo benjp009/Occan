@@ -44,7 +44,7 @@ export function Hero() {
           Le répertoire des logiciels français
         </h1>
         <p className="research-text">
-          Découvrez les meilleurs solutions logicielles françaises en 2025 pour votre entreprise, organisées par catégorie. 
+          Découvrez les meilleurs solutions logicielles françaises pour votre entreprise, organisées par catégorie et popularité.
         </p>
         <div className="hero-search">
             <div 
