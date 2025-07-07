@@ -15,6 +15,7 @@ const App = require('./src/App.tsx').default;
 const { HelmetProvider } = require('react-helmet-async');
 const Papa = require('papaparse');
 const { slugify } = require('./src/utils/slugify.ts');
+const { fetchCompanies, fetchCategories } = require('./src/utils/api.ts');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -29,21 +30,39 @@ app.get('*', async (req, res) => {
     const htmlData = await fs.promises.readFile(indexFile, 'utf8');
 
     let extraMeta = '';
-    const match = req.url.match(/^\/logiciel\/([^/?#]+)/);
-    if (match) {
+    let initialData = {};
+    const softwareMatch = req.url.match(/^\/logiciel\/([^/?#]+)/);
+    const categoryMatch = req.url.match(/^\/categorie\/([^/?#]+)/);
+    if (softwareMatch) {
       try {
-        const resp = await fetch(process.env.REACT_APP_SHEET_CSV_URL);
-        const csv = await resp.text();
-        const { data } = Papa.parse(csv, { header: true });
-        const company = data.find(
-          c => slugify(c.name) === match[1] || c.id === match[1]
+        const companies = await fetchCompanies();
+        const company = companies.find(
+          c => slugify(c.name) === softwareMatch[1] || c.id === softwareMatch[1]
         );
-        if (company && company.meta_description) {
-          const desc = String(company.meta_description).replace(/"/g, '&quot;');
-          extraMeta = `<meta name="description" content="${desc}" />`;
+        if (company) {
+          initialData = { company };
+          if (company.meta_description) {
+            const desc = String(company.meta_description).replace(/"/g, '&quot;');
+            extraMeta = `<meta name="description" content="${desc}" />`;
+          }
         }
       } catch (err) {
-        console.error('Failed to fetch meta description', err);
+        console.error('Failed to fetch company data', err);
+      }
+    } else if (categoryMatch) {
+      try {
+        const [categories, companies] = await Promise.all([
+          fetchCategories(),
+          fetchCompanies(),
+        ]);
+        const category = categories.find(
+          c => c.id === categoryMatch[1] || slugify(c.name) === categoryMatch[1]
+        );
+        if (category) {
+          initialData = { category, companies };
+        }
+      } catch (err) {
+        console.error('Failed to fetch category data', err);
       }
     }
 
@@ -52,14 +71,15 @@ app.get('*', async (req, res) => {
       React.createElement(
         HelmetProvider,
         { context: helmetContext },
-        React.createElement(App, { location: req.url })
+        React.createElement(App, { location: req.url, initialData })
       )
     );
 
     const { helmet } = helmetContext;
+    const dataScript = `<script>window.__INITIAL_DATA__=${JSON.stringify(initialData).replace(/</g, '\u003c')}</script>`;
     const finalHtml = htmlData.replace(
       '<div id="root"></div>',
-      `<div id="root">${appHtml}</div>`
+      `<div id="root">${appHtml}</div>${dataScript}`
     );
     const helmetString = helmet
       ? `${helmet.title.toString()}${helmet.meta.toString()}${helmet.link.toString()}`
