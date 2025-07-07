@@ -12,7 +12,6 @@ import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
-import LLMInjection from './components/LLMInjection';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -26,7 +25,6 @@ interface AppProps {
 
 export default function App({ location, initialData }: AppProps) {
 
-   const isLLMBot = true;
    const Router: any = location ? StaticRouter : BrowserRouter;
    const routerProps = location ? { location } : {};
 
@@ -41,7 +39,6 @@ export default function App({ location, initialData }: AppProps) {
           content="Le premier annuaire des logiciels & entreprises tech françaises : explorez l’offre Made in France, comparez les solutions SaaS et trouvez votre partenaire local."
         />
       </Helmet>
-      <LLMInjection isLLMBot={isLLMBot} />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
