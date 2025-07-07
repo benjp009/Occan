@@ -8,10 +8,12 @@ import { HelmetProvider } from 'react-helmet-async';
 
 const container = document.getElementById('root') as HTMLElement;
 
+const initialData = (window as any).__INITIAL_DATA__;
+
 const AppTree = (
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <App initialData={initialData} />
     </HelmetProvider>
   </React.StrictMode>
 );
