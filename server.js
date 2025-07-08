@@ -33,6 +33,8 @@ app.get('*', async (req, res) => {
     let initialData = {};
     const softwareMatch = req.url.match(/^\/logiciel\/([^/?#]+)/);
     const categoryMatch = req.url.match(/^\/categorie\/([^/?#]+)/);
+    const allSoftwaresMatch = req.url.startsWith('/tous-les-logiciels');
+    const homeMatch = req.url === '/' || req.url.startsWith('/?');
     if (softwareMatch) {
       try {
         const companies = await fetchCompanies();
@@ -63,6 +65,13 @@ app.get('*', async (req, res) => {
         }
       } catch (err) {
         console.error('Failed to fetch category data', err);
+      }
+    } else if (allSoftwaresMatch || homeMatch) {
+      try {
+        const companies = await fetchCompanies();
+        initialData = { companies };
+      } catch (err) {
+        console.error('Failed to fetch companies', err);
       }
     }
 
