@@ -41,7 +41,10 @@ export default function App({ location, initialData }: AppProps) {
       </Helmet>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home initialCompanies={initialData?.companies} />}
+        />
         <Route
           path="/ajouter-un-nouveau-logiciel"
           element={<AddSoftware />}
@@ -60,7 +63,10 @@ export default function App({ location, initialData }: AppProps) {
           path="/logiciel/:slug"
           element={<Software initialCompany={initialData?.company} />}
         />
-        <Route path="/tous-les-logiciels" element={<AllSoftwares />} />
+        <Route
+          path="/tous-les-logiciels"
+          element={<AllSoftwares initialCompanies={initialData?.companies} />}
+        />
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
