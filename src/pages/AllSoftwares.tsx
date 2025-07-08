@@ -9,17 +9,25 @@ import { Link } from 'react-router-dom';
 import CardSkeleton from '../components/CardSkeleton';
 import AlphabetNav from '../components/AlphabetNav';
 
-export default function AllSoftwares() {
-  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
+interface AllSoftwaresProps {
+  initialCompanies?: CompanyRow[] | null;
+}
+
+export default function AllSoftwares({ initialCompanies }: AllSoftwaresProps) {
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(
+    initialCompanies ?? null,
+  );
 
   useEffect(() => {
-    fetchCompanies().then(data => {
-      const sorted = data.sort((a, b) =>
-        a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' }),
-      );
-      setCompanies(sorted);
-    });
-  }, []);
+    if (!initialCompanies) {
+      fetchCompanies().then(data => {
+        const sorted = data.sort((a, b) =>
+          a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' }),
+        );
+        setCompanies(sorted);
+      });
+    }
+  }, [initialCompanies]);
 
 
   return (

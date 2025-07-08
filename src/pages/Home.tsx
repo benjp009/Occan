@@ -12,14 +12,22 @@ import ClockLoader from '../components/ClockLoader';
 import { Footer } from '../components/Footer';
 
 
-export default function Home() {
-  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
+interface HomeProps {
+  initialCompanies?: CompanyRow[] | null;
+}
+
+export default function Home({ initialCompanies }: HomeProps) {
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(
+    initialCompanies ?? null,
+  );
   const metrics = useMetrics();
 
 
   useEffect(() => {
-    fetchCompanies().then(data => setCompanies(data));
-  }, []);
+    if (!initialCompanies) {
+      fetchCompanies().then(data => setCompanies(data));
+    }
+  }, [initialCompanies]);
 
 
   return (
