@@ -44,7 +44,7 @@ export function Hero() {
           Le répertoire des logiciels français
         </h1>
         <p className="research-text">
-          Découvrez les meilleurs solutions logicielles françaises en 2025 pour votre entreprise, organisées par catégorie. 
+          Découvrez les meilleurs logiciels fait en France pour votre entreprise, organisées par catégorie, mots clefs et popularité. Parce que choisir une solution ou une alternative fait en France c'est offrir plus de possibilité à notre économie. 
         </p>
         <div className="hero-search">
             <div 
