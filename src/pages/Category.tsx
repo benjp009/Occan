@@ -57,11 +57,14 @@ export default function Category({ initialCategory, initialCompanies }: Category
         {category ? (
           <>
             <h1>{category.name}</h1>
-            <p
-              className="category-description"
-              dangerouslySetInnerHTML={{ __html: category.description }}
-            />
-          </>
+          <p
+            className="category-description"
+            dangerouslySetInnerHTML={{ __html: category.description }}
+          />
+          <p>
+            <Link to={`/comparatif/${slugify(category.name)}`}>Comparer ces logiciels</Link>
+          </p>
+        </>
           ) : (
           <>
             <h1><Skeleton width={200} /></h1>
