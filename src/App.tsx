@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { StaticRouter } from 'react-router';import Home from './pages/Home';
+import { StaticRouter } from 'react-router';
+import Home from './pages/Home';
 import { Helmet } from 'react-helmet-async';
 import Software from './pages/Software';
 import AddSoftware from './pages/AddSoftware';
@@ -12,6 +13,7 @@ import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
+import CompareCategory from './pages/CompareCategory';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -59,6 +61,7 @@ export default function App({ location, initialData }: AppProps) {
             />
           }
         />
+        <Route path="/comparatif/:slug" element={<CompareCategory />} />
         <Route
           path="/logiciel/:slug"
           element={<Software initialCompany={initialData?.company} />}
