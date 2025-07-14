@@ -75,14 +75,6 @@ async function generate() {
     }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
-  const compareUrls = categories
-    .map(c => ({
-      loc: `${BASE_URL}/comparatif/${slugify(c.name)}`,
-      priority: '0.6',
-      lastmod: TODAY,
-    }))
-    .sort((a, b) => a.loc.localeCompare(b.loc));
-
   const softwareUrls = companies
     .map(c => ({
       loc: `${BASE_URL}/logiciel/${slugify(c.name)}`,
@@ -91,7 +83,7 @@ async function generate() {
     }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
-  const urls = staticUrls.concat(categoryUrls, compareUrls, softwareUrls);
+  const urls = staticUrls.concat(categoryUrls, softwareUrls);
 
 
   const lines = [
