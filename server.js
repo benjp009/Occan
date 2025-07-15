@@ -30,7 +30,6 @@ app.get('*', async (req, res) => {
   try {
     const htmlData = await fs.promises.readFile(indexFile, 'utf8');
 
-    let extraMeta = '';
     let initialData = {};
     const softwareMatch = req.url.match(/^\/logiciel\/([^/?#]+)/);
     const categoryMatch = req.url.match(/^\/categorie\/([^/?#]+)/);
@@ -44,10 +43,6 @@ app.get('*', async (req, res) => {
         );
         if (company) {
           initialData = { company };
-          if (company.meta_description) {
-            const desc = String(company.meta_description).replace(/"/g, '&quot;');
-            extraMeta = `<meta name="description" content="${desc}" />`;
-          }
         }
       } catch (err) {
         console.error('Failed to fetch company data', err);
@@ -96,7 +91,7 @@ app.get('*', async (req, res) => {
       : '';
     const htmlWithHelmet = finalHtml.replace(
       '</head>',
-      `${helmetString}${extraMeta}</head>`
+      `${helmetString}</head>`
     );
     return res.send(htmlWithHelmet);
   } catch (err) {
