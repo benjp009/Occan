@@ -23,3 +23,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .sitemap.hash
+/cms/node_modules
+/cms/favicon.png
