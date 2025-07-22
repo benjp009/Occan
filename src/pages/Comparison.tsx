@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { fetchCompanies } from '../utils/api';
-import { CompanyRow } from '../types';
+import { fetchCompanies, fetchCategories } from '../utils/api';
+import { CompanyRow, CategoryRow } from '../types';
 
 export default function Comparison() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [selected, setSelected] = useState<CompanyRow[]>([]);
+  const [categories, setCategories] = useState<CategoryRow[]>([]);
+  const [category, setCategory] = useState('');
 
   useEffect(() => {
     fetchCompanies().then(setCompanies);
+    fetchCategories().then(setCategories);
   }, []);
 
   const toggle = (company: CompanyRow) => {
@@ -19,6 +22,16 @@ export default function Comparison() {
         : [...prev, company]
     );
   };
+
+  const filteredCompanies = category
+    ? companies.filter(co => {
+        if (!co.categories) return false;
+        return co.categories
+          .split(',')
+          .map(c => c.trim().toLowerCase())
+          .includes(category.toLowerCase());
+      })
+    : [];
 
   const features: { label: string; render: (c: CompanyRow) => React.ReactNode }[] = [
     { label: 'Site web', render: c => c.website },
@@ -32,21 +45,43 @@ export default function Comparison() {
     <>
       <Header />
       <main className="container-category">
-        <h1>Comparer des logiciels</h1>
-        <p>Sélectionnez les logiciels à comparer dans la liste ci‑dessous.</p>
-        <div className="comparison-list">
-          {companies.map(co => (
-            <label key={co.id} style={{ display: 'block', marginBottom: '0.25rem' }}>
-              <input
-                type="checkbox"
-                checked={selected.some(c => c.id === co.id)}
-                onChange={() => toggle(co)}
-              />{' '}
-              {co.name}
-            </label>
+        <h1>Comparez des logiciels</h1>
+        <p>Choisissez une catégorie puis sélectionnez les logiciels à comparer.</p>
+
+        <select
+          value={category}
+          onChange={e => {
+            setSelected([]);
+            setCategory(e.target.value);
+          }}
+        >
+          <option value="">-- Choisir une catégorie --</option>
+          {categories.map(cat => (
+            <option key={cat.id} value={cat.name}>
+              {cat.name}
+            </option>
           ))}
-        </div>
+        </select>
+
+        {category && (
+          <div className="comparison-list">
+            {filteredCompanies.map(co => (
+              <label
+                key={co.id}
+                style={{ display: 'block', marginBottom: '0.25rem', direction: 'rtl' }}
+              >
+                <input
+                  type="checkbox"
+                  checked={selected.some(c => c.id === co.id)}
+                  onChange={() => toggle(co)}
+                />{' '}
+                {co.name}
+              </label>
+            ))}
+          </div>
+        )}
         {selected.length > 0 && (
+          <div className="comparison-table-wrapper">
           <table className="comparison-table" style={{ marginTop: '1rem', width: '100%', borderCollapse: 'collapse' }}>
             <thead>
               <tr>
@@ -69,6 +104,7 @@ export default function Comparison() {
               ))}
             </tbody>
           </table>
+          </div>
         )}
       </main>
       <Footer />
