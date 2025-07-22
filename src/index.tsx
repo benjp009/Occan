@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Buffer } from 'buffer';
 import './index.css';
 import App from './App';
 import 'react-loading-skeleton/dist/skeleton.css';
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
+
+// Ensure Buffer is defined for dependencies that rely on Node's Buffer API
+if (!(window as any).Buffer) {
+  (window as any).Buffer = Buffer;
+}
 
 const container = document.getElementById('root') as HTMLElement;
 

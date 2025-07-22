@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { StaticRouter } from 'react-router';import Home from './pages/Home';
+import { StaticRouter } from 'react-router';
+import Home from './pages/Home';
 import { Helmet } from 'react-helmet-async';
 import Software from './pages/Software';
 import AddSoftware from './pages/AddSoftware';
@@ -12,6 +13,9 @@ import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
+import Comparison from './pages/Comparison';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -70,6 +74,9 @@ export default function App({ location, initialData }: AppProps) {
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/comparateur" element={<Comparison />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route
           path="/politique-de-confidentialite"
