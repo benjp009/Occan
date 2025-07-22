@@ -1315,3 +1315,31 @@ selection-card {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* Comparison page */
+.comparison-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.comparison-list label {
+  direction: rtl;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  position: sticky;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.comparison-table th,
+.comparison-table td {
+  white-space: nowrap;
+}
