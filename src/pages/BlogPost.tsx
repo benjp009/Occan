@@ -39,7 +39,6 @@ export default function BlogPost() {
       </Helmet>
       <Header />
       <main className="container blog-post">
-        <h1>{meta?.title}</h1>
         <ReactMarkdown>{content}</ReactMarkdown>
       </main>
       <Footer />

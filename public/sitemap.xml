@@ -11,9 +11,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://logicielfrance.com/toutes-categories</loc>
+    <loc>https://logicielfrance.com/all-categories</loc>
     <lastmod>2025-07-22</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/login</loc>
+    <lastmod>2025-07-22</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/admin</loc>
+    <lastmod>2025-07-22</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/achat</loc>
@@ -27,6 +37,11 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/automatisation</loc>
+    <lastmod>2025-07-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/categorie/autre</loc>
     <lastmod>2025-07-22</lastmod>
     <priority>0.7</priority>
   </url>

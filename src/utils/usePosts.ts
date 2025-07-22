@@ -21,7 +21,9 @@ export function usePosts() {
               .then(res => res.text())
               .then(text => {
                 const { data } = matter(text);
-                return { slug, ...(data as PostMeta) } as PostMeta;
+                return { slug, ...(data as Omit<PostMeta, 'slug'>) } as PostMeta;
+
+
               })
           )
         ).then(setPosts);
