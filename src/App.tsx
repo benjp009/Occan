@@ -12,6 +12,7 @@ import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -79,7 +80,8 @@ export default function App({ location, initialData }: AppProps) {
           path="/conditions-utilisation"
           element={<ConditionsUtilisation />}
         />
-        {/* …other routes */}
+        {/* Catch-all route for 404 - must be last */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
