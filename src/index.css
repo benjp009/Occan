@@ -1315,3 +1315,143 @@ selection-card {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* 404 Page Styles */
+.not-found-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.not-found-content {
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.not-found-number {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #000091;
+  margin-bottom: 1rem;
+}
+
+.not-found-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.not-found-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.not-found-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.not-found-btn-primary {
+  background-color: #000091;
+  color: white;
+  padding: 8.6px 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  border: 0.5px solid #000091;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.not-found-btn-primary:hover {
+  background-color: #E8F3FF;
+  color: #000091;
+  border-color: #000091;
+  border-style: solid;
+  border-width: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.not-found-btn-secondary {
+  background-color: transparent;
+  color: #000091;
+  padding: 8.6px 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 14px;
+  border: 0.5px solid #000091;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.not-found-btn-secondary:hover {
+  background-color: #E8F3FF;
+  color: #000091;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.not-found-suggestions {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.not-found-suggestions:hover {
+  background: #E8F3FF;
+  border-color: #000091;
+  border-style: solid;
+  border-width: 0.5px;
+}
+
+.not-found-suggestions-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.not-found-tags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.not-found-tag {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 0.5px solid #4E4E4E;
+  margin: 0 14px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.not-found-tag:hover {
+  background-color: #000091;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.not-found-tip {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 2rem;
+}
