@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCompanies } from '../utils/api';
@@ -32,6 +33,16 @@ export default function AllSoftwares({ initialCompanies }: AllSoftwaresProps) {
 
   return (
     <>
+      <Helmet>
+        <title>Tous les logiciels français | Logiciel France</title>
+        <meta name="description" content="Liste exhaustive de tous les logiciels français. Découvrez plus de 1000 solutions software made in France, mise à jour quotidiennement." />
+        <meta name="keywords" content="tous les logiciels français, liste logiciels france, annuaire complet, software français" />
+        <link rel="canonical" href="https://logicielfrance.com/logiciels" />
+        <meta property="og:title" content="Tous les logiciels français | Logiciel France" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://logicielfrance.com/logiciels" />
+        <meta property="og:description" content="Liste exhaustive de tous les logiciels français. Plus de 1000 solutions software made in France." />
+      </Helmet>
       <Header />
       <main className="container-category">
         <nav className="breadcrumbs">
