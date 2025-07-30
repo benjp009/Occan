@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { slugify } from '../utils/slugify';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -47,6 +48,35 @@ export default function Category({ initialCategory, initialCompanies }: Category
 
   return (
     <>
+      <Helmet>
+        <title>
+          {category 
+            ? `${category.name} - Logiciels français | Logiciel France`
+            : `${slug} - Logiciels français | Logiciel France`
+          }
+        </title>
+        {category?.description && (
+          <meta name="description" content={category.description.replace(/<[^>]*>/g, '').slice(0, 160)} />
+        )}
+        <meta name="keywords" content={`${category?.name || slug}, logiciel français, software, France`} />
+        
+        <link rel="canonical" href={`https://logicielfrance.com/categorie/${slug}`} />
+        
+        <meta property="og:title" content={`${category?.name || slug} - Logiciels français`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://logicielfrance.com/categorie/${slug}`} />
+        {category?.description && (
+          <meta property="og:description" content={category.description.replace(/<[^>]*>/g, '').slice(0, 160)} />
+        )}
+        <meta property="og:site_name" content="Logiciel France" />
+        <meta property="og:locale" content="fr_FR" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={`${category?.name || slug} - Logiciels français`} />
+        {category?.description && (
+          <meta name="twitter:description" content={category.description.replace(/<[^>]*>/g, '').slice(0, 160)} />
+        )}
+      </Helmet>
       <Header />
       <main className="container-category category-page">
         <nav className="breadcrumbs">
