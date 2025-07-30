@@ -11,6 +11,7 @@ import { useMetrics } from '../utils/useMetrics';
 import { SelectionOfTheMonth } from '../components/SelectionOfTheMonth';
 import ClockLoader from '../components/ClockLoader';
 import { Footer } from '../components/Footer';
+import { SEOExternalLinks } from '../components/SEOExternalLinks';
 
 
 interface HomeProps {
@@ -62,6 +63,9 @@ export default function Home({ initialCompanies }: HomeProps) {
       )}
 
       <SelectionOfTheMonth companies={companies} />
+      
+      {/* SEO External Links - Crawlable by search engines */}
+      <SEOExternalLinks companies={companies} />
       </main>
       <Footer />
     </>
