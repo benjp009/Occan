@@ -2,22 +2,27 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { fetchCategories } from '../utils/api';
-import { CategoryRow } from '../types';
+import { fetchCategories, fetchCompanies } from '../utils/api';
+import { CategoryRow, CompanyRow } from '../types';
 import Skeleton from 'react-loading-skeleton';
 import { Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
+import { SEOExternalLinks } from '../components/SEOExternalLinks';
 
 
 
 export default function AllCategory() {
   const [categories, setCategories] = useState<CategoryRow[] | null>(null);
-
+  const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
 
   useEffect(() => {
-    fetchCategories().then((data) => {
-      const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
-      setCategories(sortedData);
+    Promise.all([
+      fetchCategories(),
+      fetchCompanies()
+    ]).then(([categoriesData, companiesData]) => {
+      const sortedCategories = categoriesData.sort((a, b) => a.name.localeCompare(b.name));
+      setCategories(sortedCategories);
+      setCompanies(companiesData);
     });
   }, []);
 
@@ -61,6 +66,13 @@ export default function AllCategory() {
             )
           ))}
         </div>
+        
+        {/* SEO External Links - Crawlable by search engines */}
+        <SEOExternalLinks 
+          companies={companies} 
+          title="Logiciels français par catégorie" 
+          limit={6}
+        />
       </main>
       <Footer />
     </>
