@@ -8,7 +8,7 @@ interface CompanyProps {
 const Company: React.FC<CompanyProps> = ({ company }) => {
   const showLong = company.long_content?.toLowerCase() === 'yes';
   return (
-    <div className="company">
+    <article className="company" itemScope itemType="https://schema.org/SoftwareApplication">
       <div className="company-header">
         <div>
           {company.logo && (
@@ -16,9 +16,10 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
             src={company.logo}
             alt={`${company.name} logo`}
             className="company-logo modal-logo"
+            itemProp="image"
           />
           )}
-          <h1 className="company-name">{company.name}</h1>
+          <h1 className="company-name" itemProp="name">{company.name}</h1>
         </div>
       
       
@@ -26,7 +27,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
 
           <div className="company-buttons">
             {company.website && (
-              <a href={company.website} target="_blank" rel="noopener noreferrer">
+              <a href={company.website} target="_blank" rel="noopener noreferrer" itemProp="url">
                 <button type="button" className="button modal-button">Le site</button>
               </a>
             )}
@@ -62,8 +63,9 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
             )}
           </div>
         ) : (
-          <p
+          <div
             className="company-description"
+            itemProp="description"
             dangerouslySetInnerHTML={{ __html: company.description }}
           />
         )}
@@ -73,7 +75,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
         {company.categories && <p><strong>Categories:</strong> {company.categories}</p>}
         {company.keywords && <p><strong>Keywords:</strong> {company.keywords}</p>}
       </div>
-    </div>
+    </article>
   );
 };
 
