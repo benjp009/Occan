@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { fetchCompanies } from '../utils/api';
 import { CompanyRow } from '../types';
 import { Header } from '../components/Header';
@@ -32,6 +33,16 @@ export default function Home({ initialCompanies }: HomeProps) {
 
   return (
     <>
+      <Helmet>
+        <title>Logiciel France 🇫🇷 - Annuaire des logiciels français</title>
+        <meta name="description" content="Découvrez les meilleurs logiciels français. Annuaire complet des solutions software made in France pour tous vos besoins professionnels." />
+        <meta name="keywords" content="logiciel français, software france, annuaire logiciel, made in france" />
+        <link rel="canonical" href="https://logicielfrance.com/" />
+        <meta property="og:title" content="Logiciel France - Annuaire des logiciels français" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://logicielfrance.com/" />
+        <meta property="og:description" content="Découvrez les meilleurs logiciels français. Annuaire complet des solutions software made in France." />
+      </Helmet>
       <Header />
       <Hero /> 
       <CategoriesSection />
