@@ -26,6 +26,17 @@ app.use(express.static(path.resolve('./build')));
 app.use('/static', express.static(path.resolve('./build/static')));
 app.use('/asset', express.static(path.resolve('./build/asset')));
 
+// Serve robots.txt and sitemap.xml directly
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.sendFile(path.resolve('./build/robots.txt'));
+});
+
+app.get('/sitemap.xml', (req, res) => {
+  res.type('application/xml');
+  res.sendFile(path.resolve('./build/sitemap.xml'));
+});
+
 app.get('*', async (req, res) => {
   try {
     const htmlData = await fs.promises.readFile(indexFile, 'utf8');
