@@ -10,7 +10,6 @@ export default function APropos() {
         <title>À propos - Annuaire des logiciels français | Logiciel France</title>
         <meta name="description" content="Découvrez la mission de Logiciel France : promouvoir les logiciels made in France et faciliter la mise en relation entre éditeurs et utilisateurs." />
         <meta name="keywords" content="à propos logiciel france, mission, annuaire logiciels français, made in france" />
-        <link rel="canonical" href="https://logicielfrance.com/a-propos" />
         <meta property="og:title" content="À propos - Annuaire des logiciels français | Logiciel France" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://logicielfrance.com/a-propos" />

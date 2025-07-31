@@ -27,7 +27,6 @@ export default function AllCategory() {
         <title>Toutes les catégories - Logiciels français | Logiciel France</title>
         <meta name="description" content="Explorez toutes les catégories de logiciels français. Marketing, CRM, comptabilité, design... Trouvez la solution parfaite pour votre entreprise." />
         <meta name="keywords" content="catégories logiciels français, types de logiciels, software categories france, solutions entreprise" />
-        <link rel="canonical" href="https://logicielfrance.com/categories" />
         <meta property="og:title" content="Toutes les catégories - Logiciels français | Logiciel France" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://logicielfrance.com/categories" />
