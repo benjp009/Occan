@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { BlogPost } from '../types';
-import { getBlogPostsMain } from '../utils/blog';
+import { getBlogPosts } from '../utils/blog';
 
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -14,7 +14,7 @@ const Blog: React.FC = () => {
   useEffect(() => {
     const loadPosts = async () => {
       try {
-        const blogPosts = await getBlogPostsMain();
+        const blogPosts = await getBlogPosts();
         setPosts(blogPosts.filter(post => post.status === 'published'));
       } catch (error) {
         console.error('Erreur lors du chargement des articles:', error);
@@ -48,7 +48,7 @@ const Blog: React.FC = () => {
           name="description"
           content="Découvrez les dernières actualités, analyses et conseils sur l'écosystème tech français et les logiciels Made in France."
         />
-        <link rel="canonical" href={`https://logiciel-france.fr/blog`} />
+        <link rel="canonical" href={`${window.location.origin}/blog`} />
       </Helmet>
 
       <Header />
