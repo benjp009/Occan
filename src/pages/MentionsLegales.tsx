@@ -1,10 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export default function MentionsLegales() {
   return (
     <>
+      <Helmet>
+        <title>Mentions légales | Logiciel France</title>
+        <meta
+          name="description"
+          content="Consultez les mentions légales de Logiciel France, l'annuaire des logiciels et entreprises tech françaises."
+        />
+      </Helmet>
       <Header />
       <main className="container mx-auto p-6">
         <h1>Mentions légales</h1>
