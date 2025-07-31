@@ -10,6 +10,408 @@ html, body, #root {
   color: #333;
 }
 
+/* Blog Styles */
+.blog-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.tag-filter {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tag-filter:hover,
+.tag-filter.active {
+  background: #3182ce;
+  color: white;
+  border-color: #3182ce;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.blog-post-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 1.5rem;
+}
+
+.post-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.post-title a {
+  color: #1a202c;
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  color: #3182ce;
+}
+
+.post-excerpt {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-tag {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.read-more {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Blog Post Page */
+.blog-post-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.breadcrumb {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.blog-post {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.post-header {
+  padding: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.post-cover {
+  margin: -2rem -2rem 2rem -2rem;
+  height: 300px;
+  overflow: hidden;
+}
+
+.post-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-header h1 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin: 1rem 0;
+  color: #1a202c;
+}
+
+.post-content {
+  padding: 2rem;
+}
+
+.post-navigation {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-to-blog {
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-to-blog:hover {
+  text-decoration: underline;
+}
+
+/* Notion Content Styles */
+.notion-content {
+  line-height: 1.7;
+  color: #374151;
+}
+
+.notion-content h1,
+.notion-content h2,
+.notion-content h3 {
+  color: #1a202c;
+  margin: 2rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.notion-content h1 {
+  font-size: 1.8rem;
+}
+
+.notion-content h2 {
+  font-size: 1.5rem;
+}
+
+.notion-content h3 {
+  font-size: 1.3rem;
+}
+
+.notion-content p {
+  margin-bottom: 1rem;
+}
+
+.notion-content ul,
+.notion-content ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.notion-content li {
+  margin-bottom: 0.5rem;
+}
+
+.notion-content blockquote {
+  border-left: 4px solid #3182ce;
+  background: #f7fafc;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+}
+
+.notion-content code {
+  background: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.code-block {
+  background: #1a202c;
+  color: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.code-block code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.notion-image {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.notion-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notion-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.notion-divider {
+  border: none;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 2rem 0;
+}
+
+.notion-callout {
+  display: flex;
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.callout-icon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.callout-content {
+  flex: 1;
+}
+
+.notion-toggle {
+  margin: 1rem 0;
+}
+
+.notion-toggle summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: #3182ce;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.notion-toggle summary:hover {
+  background: #f7fafc;
+}
+
+.toggle-content {
+  padding: 1rem 0 0 1rem;
+}
+
+.notion-embed {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notion-unsupported {
+  background: #fed7d7;
+  border: 1px solid #feb2b2;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: #742a2a;
+}
+
+/* Loading states */
+.blog-loading,
+.no-posts,
+.error-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.error-message h1 {
+  color: #1a202c;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-posts {
+    grid-template-columns: 1fr;
+  }
+  
+  .post-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .post-header,
+  .post-content {
+    padding: 1.5rem;
+  }
+  
+  .post-cover {
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;

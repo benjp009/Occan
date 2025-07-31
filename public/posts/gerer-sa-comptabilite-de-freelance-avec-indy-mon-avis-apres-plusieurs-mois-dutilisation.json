@@ -1,0 +1,1222 @@
+{
+  "id": "2414721e-1219-801a-9fe2-f711cf2547f5",
+  "title": "Gérer sa comptabilité de freelance avec Indy : mon avis après plusieurs mois d’utilisation",
+  "slug": "gerer-sa-comptabilite-de-freelance-avec-indy-mon-avis-apres-plusieurs-mois-dutilisation",
+  "excerpt": "Indy est-il vraiment le meilleur outil pour gérer sa compta en freelance ? Après plusieurs mois d’utilisation en micro-entreprise, je partage mon avis complet : ce que j’aime, ce qui manque, et à qui je le recommande vraiment.",
+  "content": [
+    {
+      "id": "2414721e-1219-8059-adfb-e38a615b7161",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2414721e-1219-806a-b910-f7fbf03510b4",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pourquoi j’ai choisi Indy",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pourquoi j’ai choisi Indy",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8096-bee7-c9cc75081ee0",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Quand on se lance en freelance, on cherche des outils simples, efficaces, et surtout… pas trop chers.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Quand on se lance en freelance, on cherche des outils simples, efficaces, et surtout… pas trop chers.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80d3-b0a3-c48897c28457",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "C’est exactement ce qui m’a conduit à tester ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "C’est exactement ce qui m’a conduit à tester ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Indy",
+              "link": {
+                "url": "https://www.indy.fr/?ae=1176"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Indy",
+            "href": "https://www.indy.fr/?ae=1176"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8062-a6b8-f9b2e1e1372b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "En tant que micro-entrepreneur, la promesse était claire : un outil gratuit pour gérer ma comptabilité, sans prise de tête, et seulement 12 €/an si je voulais des fonctionnalités plus avancées.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "En tant que micro-entrepreneur, la promesse était claire : un outil gratuit pour gérer ma comptabilité, sans prise de tête, et seulement 12 €/an si je voulais des fonctionnalités plus avancées.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-801c-9950-f6f924b241a0",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Difficile de faire plus accessible.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Difficile de faire plus accessible.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8088-8bba-fc194b9f3567",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon utilisation concrète d’Indy au quotidien",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon utilisation concrète d’Indy au quotidien",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-804c-98c4-e07064f6d26b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "J’utilise principalement Indy pour le suivi de mon budget.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "J’utilise principalement Indy pour le suivi de mon budget.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8018-bf0b-c5a5ff11df6a",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La connexion à mon compte pro SumUp s’est faite en quelques minutes. Ensuite, toutes mes transactions bancaires sont automatiquement synchronisées, ce qui me permet de voir rapidement où j’en suis, ce qui rentre, ce qui sort, et surtout, quel est mon bénéfice réel.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La connexion à mon compte pro SumUp s’est faite en quelques minutes. Ensuite, toutes mes transactions bancaires sont automatiquement synchronisées, ce qui me permet de voir rapidement où j’en suis, ce qui rentre, ce qui sort, et surtout, quel est mon bénéfice réel.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80de-8fe4-da92922cbf9d",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Je passe environ 1 à 2 heures par semaine à vérifier les écritures, catégoriser mes dépenses ou corriger des libellés.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Je passe environ 1 à 2 heures par semaine à vérifier les écritures, catégoriser mes dépenses ou corriger des libellés.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80b1-832d-c52cddc70e2a",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L’interface est ultra claire et franchement agréable à utiliser, même pour quelqu’un qui n’a aucune formation comptable.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L’interface est ultra claire et franchement agréable à utiliser, même pour quelqu’un qui n’a aucune formation comptable.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8053-8346-ed24a4054a5c",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ce que j’apprécie le plus",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ce que j’apprécie le plus",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-800e-80c7-ed10f5512034",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "✅ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "✅ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Facilité d’utilisation",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Facilité d’utilisation",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : tout est fluide, intuitif, bien pensé.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : tout est fluide, intuitif, bien pensé.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80de-8415-da4ea5d1eea2",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "✅ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "✅ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Vue claire du bénéfice",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Vue claire du bénéfice",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : très pratique pour anticiper ses cotisations.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : très pratique pour anticiper ses cotisations.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80f0-a95d-c37d9949557e",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "✅ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "✅ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Connexion bancaire automatique",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Connexion bancaire automatique",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : gain de temps énorme.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : gain de temps énorme.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8065-8d59-dcd80d1bd1d0",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "✅ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "✅ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Économie",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Économie",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : pas besoin d’un expert-comptable pour une micro-entreprise.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : pas besoin d’un expert-comptable pour une micro-entreprise.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80e1-ae46-f3593d117fa3",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "✅ ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "✅ ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Prix imbattable",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Prix imbattable",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : gratuit pour les micro-entrepreneurs, 49 €/mois pour les sociétés (SASU, EURL, etc.) — bien moins cher qu’un cabinet comptable classique.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : gratuit pour les micro-entrepreneurs, 49 €/mois pour les sociétés (SASU, EURL, etc.) — bien moins cher qu’un cabinet comptable classique.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8097-af62-e413e39e4ea7",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les limites à connaître",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les limites à connaître",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-805a-9f05-c8753efdc1ad",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "🔴 ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "🔴 ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Pas de connexion directe avec PayPal, Stripe",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pas de connexion directe avec PayPal, Stripe",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " ou d’autres solutions de paiement en ligne.\nC’est un point bloquant si vous avez un business e-commerce ou si vous facturez à l’étranger via ces plateformes.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " ou d’autres solutions de paiement en ligne.\nC’est un point bloquant si vous avez un business e-commerce ou si vous facturez à l’étranger via ces plateformes.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8063-984a-f2dcef916259",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "🔴 ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "🔴 ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Pas encore testé la partie bilan / TVA / clôture",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pas encore testé la partie bilan / TVA / clôture",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", car je suis encore en auto-entreprise.\nCe sera à évaluer plus tard.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", car je suis encore en auto-entreprise.\nCe sera à évaluer plus tard.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8041-84ea-fc314572d9a1",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon verdict : pour qui est fait Indy ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon verdict : pour qui est fait Indy ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8029-b6b6-fd3e32127d02",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Je recommande sans hésitation Indy à toutes les ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Je recommande sans hésitation Indy à toutes les ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "micro-entreprises",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "micro-entreprises",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " qui veulent gérer leur compta simplement, gratuitement, sans prise de tête.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " qui veulent gérer leur compta simplement, gratuitement, sans prise de tête.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-806d-a9f3-c4f96b44a898",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "C’est vraiment un allié du quotidien pour tout freelance ou indépendant qui veut se concentrer sur son métier.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "C’est vraiment un allié du quotidien pour tout freelance ou indépendant qui veut se concentrer sur son métier.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-808c-9fa8-cea12395d60b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour les ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour les ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "petites sociétés",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "petites sociétés",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", le tarif de 49 €/mois est compétitif, surtout au regard des tarifs d’un expert-comptable traditionnel.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", le tarif de 49 €/mois est compétitif, surtout au regard des tarifs d’un expert-comptable traditionnel.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80fd-b857-d3cf6beaacb9",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Reste à voir si les fonctionnalités pour les structures plus complexes sont aussi efficaces.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Reste à voir si les fonctionnalités pour les structures plus complexes sont aussi efficaces.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80b2-b3f5-d26ffbe35a89",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Spoiler : je compte les tester très bientôt.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Spoiler : je compte les tester très bientôt.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80e2-ab8f-f74aeb0f58fb",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Conclusion",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Conclusion",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-800a-9410-dcb3427fceea",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Indy coche (presque) toutes les cases pour un indépendant.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Indy coche (presque) toutes les cases pour un indépendant.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8069-9033-ddc82f84a7e0",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Est-ce que c’est parfait ? Non, surtout si vous avez des revenus multicanaux (Stripe, PayPal…).",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Est-ce que c’est parfait ? Non, surtout si vous avez des revenus multicanaux (Stripe, PayPal…).",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-806f-be23-d2e0543641e8",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mais pour un freelance ou une petite entreprise qui facture simplement en euros sur un compte pro, c’est un outil extrêmement malin.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mais pour un freelance ou une petite entreprise qui facture simplement en euros sur un compte pro, c’est un outil extrêmement malin.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-80ad-be75-e2a54880962c",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "👉 À suivre : je testerai bientôt d’autres outils comme Freebe ou Tiime pour comparer.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "👉 À suivre : je testerai bientôt d’autres outils comme Freebe ou Tiime pour comparer.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2414721e-1219-8089-bb67-de4674c3d090",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "👉 ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "👉 ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Essayez Indy gratuitement ici",
+              "link": {
+                "url": "https://www.indy.fr/?ae=1176"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Essayez Indy gratuitement ici",
+            "href": "https://www.indy.fr/?ae=1176"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " si vous voulez vous faire votre propre avis.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " si vous voulez vous faire votre propre avis.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    }
+  ],
+  "publishedAt": "2025-07-31T20:07:40.240Z",
+  "updatedAt": "2025-07-31",
+  "author": "Équipe Logiciel France",
+  "tags": [],
+  "coverImage": "/posts/images/cover-2414721e-1219-801a-9fe2-f711cf2547f5.webp",
+  "status": "published",
+  "seo": {
+    "metaDescription": "Découvrez mon avis sur Indy après plusieurs mois d’utilisation en freelance. Points forts, limites et conseils pour bien gérer votre comptabilité.\n\n",
+    "keywords": [
+      "Indy",
+      "Avis Indy",
+      "Comptabilité freelance",
+      "Logiciel comptable micro-entreprise",
+      "Gestion comptabilité auto-entrepreneur",
+      "Outil comptabilité SASU",
+      "Meilleur logiciel compta indépendant",
+      "Indy micro-entreprise gratuit"
+    ]
+  }
+}
