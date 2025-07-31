@@ -1,10 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
 export default function PolitiqueConfidentialite() {
   return (
     <>
+      <Helmet>
+        <title>Politique de confidentialité | Logiciel France</title>
+        <meta
+          name="description"
+          content="Découvrez notre politique de confidentialité et la protection de vos données personnelles sur Logiciel France."
+        />
+      </Helmet>
       <Header />
       <main className="container mx-auto p-6">
         <h1>Politique de confidentialité</h1>

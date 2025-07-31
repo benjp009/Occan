@@ -50,9 +50,11 @@ export default function Category({ initialCategory, initialCompanies }: Category
     <>
       <Helmet>
         <title>
-          {category 
+          {category && category.name && typeof category.name === 'string'
             ? `${category.name} - Logiciels français | Logiciel France`
-            : `${slug} - Logiciels français | Logiciel France`
+            : slug && typeof slug === 'string'
+            ? `${slug} - Logiciels français | Logiciel France`
+            : 'Logiciels français | Logiciel France'
           }
         </title>
         {category?.description && (

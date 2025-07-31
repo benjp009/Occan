@@ -68,6 +68,7 @@ async function generate() {
   ];
 
   const categoryUrls = categories
+    .filter(c => c.name && typeof c.name === 'string')
     .map(c => ({
       loc: `${BASE_URL}/categorie/${slugify(c.name)}`,
       priority: '0.7',
@@ -76,6 +77,7 @@ async function generate() {
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
   const softwareUrls = companies
+    .filter(c => c.name && typeof c.name === 'string')
     .map(c => ({
       loc: `${BASE_URL}/logiciel/${slugify(c.name)}`,
       priority: '0.6',

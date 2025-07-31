@@ -67,7 +67,7 @@ export default function Software({ initialCompany }: SoftwareProps) {
   return (
     <>
       <Helmet>
-        <title>{company.name} - Logiciel français | Logiciel France</title>
+        <title>{company.name && typeof company.name === 'string' ? `${company.name} - Logiciel français | Logiciel France` : 'Logiciel français | Logiciel France'}</title>
         {company.meta_description ? (
           <meta name="description" content={company.meta_description.length > 160 ? `${company.meta_description.substring(0, 157)}...` : company.meta_description} />
         ) : (
