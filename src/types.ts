@@ -35,3 +35,28 @@ export interface CategoryRow {
   description: string; 
   count: string;        
 }
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: NotionBlock[];
+  publishedAt: string;
+  updatedAt?: string;
+  author: string;
+  tags: string[];
+  coverImage?: string;
+  status: 'draft' | 'need review' | 'published';
+  seo: {
+    metaDescription: string;
+    keywords: string[];
+  };
+}
+
+export interface NotionBlock {
+  id: string;
+  type: string;
+  content?: any;
+  children?: NotionBlock[];
+}
