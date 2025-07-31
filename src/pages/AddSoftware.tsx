@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCategories } from '../utils/api';
@@ -102,6 +103,13 @@ const AddSoftware: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Ajouter un nouveau logiciel | Logiciel France</title>
+        <meta
+          name="description"
+          content="Ajoutez votre logiciel français à notre annuaire. Formulaire simple et rapide pour référencer votre solution Made in France."
+        />
+      </Helmet>
       <Header />
       <div className="add-software-page">
         <nav className="breadcrumbs">
