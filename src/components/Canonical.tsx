@@ -9,6 +9,7 @@ export default function Canonical() {
   return (
     <Helmet>
       <link rel="canonical" href={url} />
+      <link rel="alternate" hrefLang="fr" href={url} />
     </Helmet>
   );
 }

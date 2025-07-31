@@ -37,7 +37,6 @@ export default function Home({ initialCompanies }: HomeProps) {
         <title>Logiciel France 🇫🇷 - Annuaire des logiciels français</title>
         <meta name="description" content="Découvrez les meilleurs logiciels français. Annuaire complet des solutions software made in France pour tous vos besoins professionnels." />
         <meta name="keywords" content="logiciel français, software france, annuaire logiciel, made in france" />
-        <link rel="canonical" href="https://logicielfrance.com/" />
         <meta property="og:title" content="Logiciel France - Annuaire des logiciels français" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://logicielfrance.com/" />
