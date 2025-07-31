@@ -62,7 +62,6 @@ export default function Category({ initialCategory, initialCompanies }: Category
         )}
         <meta name="keywords" content={`${category?.name || slug}, logiciel français, software, France`} />
         
-        <link rel="canonical" href={`https://logicielfrance.com/categorie/${slug}`} />
         
         <meta property="og:title" content={`${category?.name || slug} - Logiciels français`} />
         <meta property="og:type" content="website" />

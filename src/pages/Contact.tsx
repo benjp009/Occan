@@ -10,7 +10,6 @@ export default function Contact() {
         <title>Contact - Logiciel France</title>
         <meta name="description" content="Contactez-nous pour référencer votre logiciel français ou poser vos questions. Écrivez-nous à logiciel@logicielfrance.com" />
         <meta name="keywords" content="contact logiciel france, référencer logiciel, support, aide" />
-        <link rel="canonical" href="https://logicielfrance.com/contact" />
         <meta property="og:title" content="Contact - Logiciel France" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://logicielfrance.com/contact" />

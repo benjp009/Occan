@@ -12,7 +12,6 @@ export default function NotFound() {
         <meta name="description" content="La page que vous recherchez n'existe pas. Découvrez notre annuaire des logiciels français et trouvez votre solution." />
         <meta name="robots" content="noindex, follow" />
         
-        <link rel="canonical" href="https://logicielfrance.com/404" />
         
         <meta property="og:title" content="Page non trouvée - 404" />
         <meta property="og:description" content="La page que vous recherchez n'existe pas sur Logiciel France." />

@@ -37,7 +37,6 @@ export default function AllSoftwares({ initialCompanies }: AllSoftwaresProps) {
         <title>Tous les logiciels français | Logiciel France</title>
         <meta name="description" content="Liste exhaustive de tous les logiciels français. Découvrez plus de 1000 solutions software made in France, mise à jour quotidiennement." />
         <meta name="keywords" content="tous les logiciels français, liste logiciels france, annuaire complet, software français" />
-        <link rel="canonical" href="https://logicielfrance.com/logiciels" />
         <meta property="og:title" content="Tous les logiciels français | Logiciel France" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://logicielfrance.com/logiciels" />
