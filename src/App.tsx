@@ -7,6 +7,8 @@ import AllCategory from './pages/AllCategory';
 import AllSoftwares from './pages/AllSoftwares';
 import Category from './pages/Category';
 import SearchResults from './pages/SearchResults';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import MentionsLegales from './pages/MentionsLegales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
@@ -69,6 +71,8 @@ export default function App({ location, initialData }: AppProps) {
           element={<AllSoftwares initialCompanies={initialData?.companies} />}
         />
         <Route path="/recherche" element={<SearchResults />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
