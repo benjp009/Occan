@@ -90,10 +90,6 @@ export default function Software({ initialCompany }: SoftwareProps) {
         <meta property="og:site_name" content="Logiciel France" />
         <meta property="og:locale" content="fr_FR" />
         
-        {/* Canonical URL and hreflang */}
-        <link rel="canonical" href={`https://logicielfrance.com/logiciel/${slugify(company.name)}`} />
-        <link rel="alternate" hrefLang="fr" href={`https://logicielfrance.com/logiciel/${slugify(company.name)}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://logicielfrance.com/logiciel/${slugify(company.name)}`} />
         
         {/* Preload hints for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
