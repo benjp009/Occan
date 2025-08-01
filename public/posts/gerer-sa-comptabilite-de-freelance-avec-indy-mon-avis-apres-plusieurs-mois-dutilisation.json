@@ -5,11 +5,6 @@
   "excerpt": "Indy est-il vraiment le meilleur outil pour gérer sa compta en freelance ? Après plusieurs mois d’utilisation en micro-entreprise, je partage mon avis complet : ce que j’aime, ce qui manque, et à qui je le recommande vraiment.",
   "content": [
     {
-      "id": "2414721e-1219-8059-adfb-e38a615b7161",
-      "type": "divider",
-      "content": {}
-    },
-    {
       "id": "2414721e-1219-806a-b910-f7fbf03510b4",
       "type": "heading_2",
       "content": {
@@ -1200,7 +1195,7 @@
       }
     }
   ],
-  "publishedAt": "2025-07-31T20:07:40.240Z",
+  "publishedAt": "2025-08-01T09:25:53.862Z",
   "updatedAt": "2025-07-31",
   "author": "Équipe Logiciel France",
   "tags": [],
