@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Papa = require('papaparse');
+const path = require('path');
 require('dotenv').config();
 
 const TODAY = new Date().toISOString().split('T')[0];
@@ -44,9 +45,28 @@ async function fetchCompanies() {
   return data.filter(r => r.id && r.name);
 }
 
+async function fetchBlogPosts() {
+  try {
+    const blogPostsPath = path.join(__dirname, '../public/blog-posts.json');
+    if (!fs.existsSync(blogPostsPath)) {
+      console.log('Aucun fichier blog-posts.json trouvé');
+      return [];
+    }
+    
+    const data = fs.readFileSync(blogPostsPath, 'utf8');
+    const posts = JSON.parse(data);
+    return posts.filter(post => post.status === 'published' && post.slug);
+  } catch (error) {
+    console.error('Erreur lors de la récupération des articles de blog:', error.message);
+    return [];
+  }
+}
+
 async function generate() {
   let categories = [];
   let companies = [];
+  let blogPosts = [];
+  
   try {
     categories = await fetchCategories();
   } catch (err) {
@@ -59,12 +79,17 @@ async function generate() {
     console.error('Failed to fetch companies:', err.message);
   }
 
+  try {
+    blogPosts = await fetchBlogPosts();
+  } catch (err) {
+    console.error('Failed to fetch blog posts:', err.message);
+  }
+
   const staticUrls = [
     { loc: `${BASE_URL}/`, priority: '1.0', lastmod: TODAY },
     { loc: `${BASE_URL}/ajouter-un-nouveau-logiciel`, priority: '0.8', lastmod: TODAY },
-    { loc: `${BASE_URL}/all-categories`, priority: '0.8', lastmod: TODAY },
-    { loc: `${BASE_URL}/login`, priority: '0.5', lastmod: TODAY },
-    { loc: `${BASE_URL}/admin`, priority: '0.5', lastmod: TODAY },
+    { loc: `${BASE_URL}/toutes-categories`, priority: '0.8', lastmod: TODAY },
+    { loc: `${BASE_URL}/blog`, priority: '0.8', lastmod: TODAY },
   ];
 
   const categoryUrls = categories
@@ -85,7 +110,16 @@ async function generate() {
     }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
-  const urls = staticUrls.concat(categoryUrls, softwareUrls);
+  const blogUrls = blogPosts
+    .filter(post => post.slug && typeof post.slug === 'string')
+    .map(post => ({
+      loc: `${BASE_URL}/blog/${post.slug}`,
+      priority: '0.7',
+      lastmod: formatDate(post.updatedAt || post.publishedAt),
+    }))
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const urls = staticUrls.concat(categoryUrls, softwareUrls, blogUrls);
 
 
   const lines = [
