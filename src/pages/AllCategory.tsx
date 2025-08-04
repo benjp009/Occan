@@ -41,24 +41,47 @@ export default function AllCategory() {
           <span className="breadcrumb-current">Toutes les catégories</span>
         </nav>
         <h1 className="page-title">Toutes les catégories de logiciels français</h1>
-        <div className="all-categories-grid">
-          {(categories || Array.from({ length: 10 })).map((category, idx) => (
-            categories ? (
-              <Link
-                key={(category as CategoryRow).id}
-                className="categories-card"
-                to={`/categorie/${slugify((category as CategoryRow).name)}`}
-              >
-                <span className="categories-name">{(category as CategoryRow).name}</span>
-                <span className="categories-count">{(category as CategoryRow).count} logiciels</span>
-              </Link>
-            ) : (
-              <div key={idx} className="categories-card">
-                <span className="categories-name"><Skeleton width={120} /></span>
-                <span className="categories-count"><Skeleton width={80} /></span>
-              </div>
-            )
-          ))}
+        <div className="categories-section">
+          <div className="categories-grid">
+            {(categories || Array.from({ length: 10 })).map((category, idx) => {
+              if (categories) {
+                const truncatedDescription =
+                  (category as CategoryRow).description.length > 50
+                    ? (category as CategoryRow).description.slice(0, 50).trimEnd() + '…'
+                    : (category as CategoryRow).description;
+                return (
+                  <Link
+                    key={(category as CategoryRow).id}
+                    className="category-card"
+                    to={`/categorie/${slugify((category as CategoryRow).name)}`}
+                  >
+                    <img
+                      src={`/icons/${(category as CategoryRow).icon}`}
+                      alt={`${(category as CategoryRow).name} icon`}
+                      className="category-card__icon"
+                    />
+                    <h3 className="category-card__title">{(category as CategoryRow).name}</h3>
+                    <p
+                      className="category-card__desc"
+                      dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+                    />
+                    <p className="category-card__count">
+                      {(category as CategoryRow).count} logiciels
+                    </p>
+                  </Link>
+                );
+              } else {
+                return (
+                  <div key={idx} className="category-card">
+                    <div className="category-card__icon"><Skeleton width={40} height={40} /></div>
+                    <h3 className="category-card__title"><Skeleton width={120} /></h3>
+                    <p className="category-card__desc"><Skeleton width={150} height={40} /></p>
+                    <p className="category-card__count"><Skeleton width={80} /></p>
+                  </div>
+                );
+              }
+            })}
+          </div>
         </div>
       </main>
       <Footer />
