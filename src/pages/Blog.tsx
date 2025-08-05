@@ -63,7 +63,7 @@ const Blog: React.FC = () => {
           name="description"
           content="Découvrez les dernières actualités, analyses et conseils sur l'écosystème tech français et les logiciels Made in France."
         />
-        <link rel="canonical" href={`${window.location.origin}/blog`} />
+        <link rel="canonical" href={`${typeof window !== 'undefined' ? window.location.origin : 'https://logicielfrance.com'}/blog`} />
       </Helmet>
 
       <Header />
