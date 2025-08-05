@@ -266,39 +266,48 @@ const getBlogPostBySlugOriginal = getBlogPostBySlug;
 
 // Fonction avec fallback pour plus de robustesse
 export const getBlogPostsMain = async (): Promise<BlogPost[]> => {
-  if (process.env.NODE_ENV === 'production') {
-    try {
-      return await getBlogPostsStatic();
-    } catch (error) {
-      console.warn('Erreur lors du chargement des articles statiques, tentative avec l\'API Notion:', error);
-      // Fallback vers l'API Notion si disponible
+  // En développement, on utilise aussi les fichiers statiques à cause des CORS
+  // L'API Notion ne peut être appelée que depuis le serveur, pas depuis le navigateur
+  try {
+    return await getBlogPostsStatic();
+  } catch (error) {
+    console.warn('Erreur lors du chargement des articles statiques:', error);
+    
+    // En production, on peut essayer un fallback vers l'API Notion server-side
+    if (process.env.NODE_ENV === 'production') {
       try {
         return await getBlogPostsOriginal();
       } catch (notionError) {
         console.error('Erreur lors du chargement via Notion:', notionError);
         throw error; // Renvoyer l'erreur originale
       }
+    } else {
+      // En développement, pas de fallback possible à cause des CORS
+      console.error('Impossible de charger les articles en développement sans blog-posts.json');
+      throw error;
     }
-  } else {
-    return await getBlogPostsOriginal();
   }
 };
 
 export const getBlogPostBySlugMain = async (slug: string): Promise<BlogPost | null> => {
-  if (process.env.NODE_ENV === 'production') {
-    try {
-      return await getBlogPostBySlugStatic(slug);
-    } catch (error) {
-      console.warn('Erreur lors du chargement de l\'article statique, tentative avec l\'API Notion:', error);
-      // Fallback vers l'API Notion si disponible
+  // En développement, on utilise aussi les fichiers statiques à cause des CORS
+  try {
+    return await getBlogPostBySlugStatic(slug);
+  } catch (error) {
+    console.warn('Erreur lors du chargement de l\'article statique:', error);
+    
+    // En production, on peut essayer un fallback vers l'API Notion server-side
+    if (process.env.NODE_ENV === 'production') {
       try {
         return await getBlogPostBySlugOriginal(slug);
       } catch (notionError) {
         console.error('Erreur lors du chargement via Notion:', notionError);
-        throw error; // Renvoyer l'erreur originale
+        throw error;
       }
+    } else {
+      // En développement, pas de fallback possible à cause des CORS
+      console.error('Impossible de charger l\'article en développement sans fichier statique');
+      throw error;
     }
-  } else {
-    return await getBlogPostBySlugOriginal(slug);
   }
 };

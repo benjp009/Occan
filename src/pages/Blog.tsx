@@ -12,7 +12,7 @@ const Blog: React.FC = () => {
   const [error, setError] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 16;
+  const postsPerPage = 8;
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -72,19 +72,7 @@ const Blog: React.FC = () => {
         <div className="container">
           <div className="blog-header">
             <h1>Blog</h1>
-            <p>Actualités, analyses et conseils sur l'écosystème tech français</p>
-          </div>
-
-          <div className="blog-filters">
-            {allTags.map(tag => (
-              <button
-                key={tag}
-                className={`tag-filter ${selectedTag === tag ? 'active' : ''}`}
-                onClick={() => handleTagChange(tag)}
-              >
-                {tag}
-              </button>
-            ))}
+            <p>Retrouvez ici tous les articles des outils 100% produits en France. Analyse, études, comparateurs pour vous aider à trouver le meilleur logiciel pour votre entreprise.</p>
           </div>
 
           {loading ? (
@@ -105,31 +93,14 @@ const Blog: React.FC = () => {
                   <p className="no-posts">Aucun article trouvé.</p>
                 ) : (
                   currentPosts.map(post => (
-                    <article key={post.id} className="blog-post-card">
-                      {post.coverImage && (
-                        <div className="post-image">
-                          <img src={post.coverImage} alt={post.title} />
+                    <Link key={post.id} to={`/blog/${post.slug}`} className="blog-post-card">
+                      <div className="post-image">
+                        <img src={post.coverImage || '/asset/default-blog-image.jpg'} alt={post.title} />
+                        <div className="post-title-overlay">
+                          <h2>{post.title}</h2>
                         </div>
-                      )}
-                      <div className="post-content">
-                        <div className="post-meta">
-                          <span className="post-date">{formatDate(post.publishedAt)}</span>
-                          <span className="post-author">Par {post.author}</span>
-                        </div>
-                        <h2 className="post-title">
-                          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                        </h2>
-                        <p className="post-excerpt">{post.excerpt}</p>
-                        <div className="post-tags">
-                          {post.tags.map(tag => (
-                            <span key={tag} className="post-tag">{tag}</span>
-                          ))}
-                        </div>
-                        <Link to={`/blog/${post.slug}`} className="read-more">
-                          Lire la suite →
-                        </Link>
                       </div>
-                    </article>
+                    </Link>
                   ))
                 )}
               </div>
