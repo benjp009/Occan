@@ -220,22 +220,43 @@ function generateSlug(title: string): string {
 export async function getBlogPostsStatic(): Promise<BlogPost[]> {
   try {
     const response = await fetch('/blog-posts.json');
-    if (!response.ok) return [];
-    return await response.json();
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+    const data = await response.json();
+    
+    // Vérifier que les données sont valides
+    if (!Array.isArray(data)) {
+      throw new Error('Format de données invalide');
+    }
+    
+    return data;
   } catch (error) {
     console.error('Erreur lors du chargement des articles statiques:', error);
-    return [];
+    throw error; // Re-lancer l'erreur pour que le composant puisse l'afficher
   }
 }
 
 export async function getBlogPostBySlugStatic(slug: string): Promise<BlogPost | null> {
   try {
     const response = await fetch(`/posts/${slug}.json`);
-    if (!response.ok) return null;
-    return await response.json();
+    if (!response.ok) {
+      if (response.status === 404) {
+        return null; // Article non trouvé
+      }
+      throw new Error(`Erreur HTTP: ${response.status}`);
+    }
+    const data = await response.json();
+    
+    // Vérifier que les données sont valides
+    if (!data || typeof data !== 'object') {
+      throw new Error('Format de données invalide');
+    }
+    
+    return data;
   } catch (error) {
     console.error('Erreur lors du chargement de l\'article statique:', error);
-    return null;
+    throw error;
   }
 }
 
@@ -243,10 +264,41 @@ export async function getBlogPostBySlugStatic(slug: string): Promise<BlogPost | 
 const getBlogPostsOriginal = getBlogPosts;
 const getBlogPostBySlugOriginal = getBlogPostBySlug;
 
-export const getBlogPostsMain = process.env.NODE_ENV === 'production' 
-  ? getBlogPostsStatic 
-  : getBlogPostsOriginal;
+// Fonction avec fallback pour plus de robustesse
+export const getBlogPostsMain = async (): Promise<BlogPost[]> => {
+  if (process.env.NODE_ENV === 'production') {
+    try {
+      return await getBlogPostsStatic();
+    } catch (error) {
+      console.warn('Erreur lors du chargement des articles statiques, tentative avec l\'API Notion:', error);
+      // Fallback vers l'API Notion si disponible
+      try {
+        return await getBlogPostsOriginal();
+      } catch (notionError) {
+        console.error('Erreur lors du chargement via Notion:', notionError);
+        throw error; // Renvoyer l'erreur originale
+      }
+    }
+  } else {
+    return await getBlogPostsOriginal();
+  }
+};
 
-export const getBlogPostBySlugMain = process.env.NODE_ENV === 'production'
-  ? getBlogPostBySlugStatic
-  : getBlogPostBySlugOriginal;
+export const getBlogPostBySlugMain = async (slug: string): Promise<BlogPost | null> => {
+  if (process.env.NODE_ENV === 'production') {
+    try {
+      return await getBlogPostBySlugStatic(slug);
+    } catch (error) {
+      console.warn('Erreur lors du chargement de l\'article statique, tentative avec l\'API Notion:', error);
+      // Fallback vers l'API Notion si disponible
+      try {
+        return await getBlogPostBySlugOriginal(slug);
+      } catch (notionError) {
+        console.error('Erreur lors du chargement via Notion:', notionError);
+        throw error; // Renvoyer l'erreur originale
+      }
+    }
+  } else {
+    return await getBlogPostBySlugOriginal(slug);
+  }
+};
