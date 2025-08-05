@@ -60,10 +60,11 @@ html, body, #root {
   border-color: #3182ce;
 }
 
-.blog-posts {
+.blog-posts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .blog-post-card {
@@ -384,6 +385,74 @@ html, body, #root {
   color: #666;
 }
 
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.pagination-btn {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #2d3748;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-number {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #2d3748;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination-number:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.pagination-number.active {
+  background: #3182ce;
+  border-color: #3182ce;
+  color: white;
+}
+
+/* Mobile single column layout */
+@media (max-width: 480px) {
+  .blog-posts-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .blog-error p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
@@ -416,8 +485,29 @@ html, body, #root {
     font-size: 2rem;
   }
   
-  .blog-posts {
-    grid-template-columns: 1fr;
+  .blog-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .pagination-numbers {
+    order: -1;
+  }
+
+  .pagination-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .pagination-number {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    min-width: 35px;
   }
   
   .post-header h1 {
