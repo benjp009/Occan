@@ -99,71 +99,73 @@ const Blog: React.FC = () => {
               </button>
             </div>
           ) : (
-            <div className="blog-posts-grid">
-              {currentPosts.length === 0 ? (
-                <p className="no-posts">Aucun article trouvé.</p>
-              ) : (
-                currentPosts.map(post => (
-                  <article key={post.id} className="blog-post-card">
-                    {post.coverImage && (
-                      <div className="post-image">
-                        <img src={post.coverImage} alt={post.title} />
+            <>
+              <div className="blog-posts-grid">
+                {currentPosts.length === 0 ? (
+                  <p className="no-posts">Aucun article trouvé.</p>
+                ) : (
+                  currentPosts.map(post => (
+                    <article key={post.id} className="blog-post-card">
+                      {post.coverImage && (
+                        <div className="post-image">
+                          <img src={post.coverImage} alt={post.title} />
+                        </div>
+                      )}
+                      <div className="post-content">
+                        <div className="post-meta">
+                          <span className="post-date">{formatDate(post.publishedAt)}</span>
+                          <span className="post-author">Par {post.author}</span>
+                        </div>
+                        <h2 className="post-title">
+                          <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                        </h2>
+                        <p className="post-excerpt">{post.excerpt}</p>
+                        <div className="post-tags">
+                          {post.tags.map(tag => (
+                            <span key={tag} className="post-tag">{tag}</span>
+                          ))}
+                        </div>
+                        <Link to={`/blog/${post.slug}`} className="read-more">
+                          Lire la suite →
+                        </Link>
                       </div>
-                    )}
-                    <div className="post-content">
-                      <div className="post-meta">
-                        <span className="post-date">{formatDate(post.publishedAt)}</span>
-                        <span className="post-author">Par {post.author}</span>
-                      </div>
-                      <h2 className="post-title">
-                        <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-                      </h2>
-                      <p className="post-excerpt">{post.excerpt}</p>
-                      <div className="post-tags">
-                        {post.tags.map(tag => (
-                          <span key={tag} className="post-tag">{tag}</span>
-                        ))}
-                      </div>
-                      <Link to={`/blog/${post.slug}`} className="read-more">
-                        Lire la suite →
-                      </Link>
-                    </div>
-                  </article>
-                ))
-              )}
-            </div>
-
-            {totalPages > 1 && (
-              <div className="pagination">
-                <button
-                  className="pagination-btn"
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                  disabled={currentPage === 1}
-                >
-                  ← Précédent
-                </button>
-                
-                <div className="pagination-numbers">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                    <button
-                      key={page}
-                      className={`pagination-number ${currentPage === page ? 'active' : ''}`}
-                      onClick={() => setCurrentPage(page)}
-                    >
-                      {page}
-                    </button>
-                  ))}
-                </div>
-
-                <button
-                  className="pagination-btn"
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                  disabled={currentPage === totalPages}
-                >
-                  Suivant →
-                </button>
+                    </article>
+                  ))
+                )}
               </div>
-            )}
+
+              {totalPages > 1 && (
+                <div className="pagination">
+                  <button
+                    className="pagination-btn"
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                  >
+                    ← Précédent
+                  </button>
+                  
+                  <div className="pagination-numbers">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                      <button
+                        key={page}
+                        className={`pagination-number ${currentPage === page ? 'active' : ''}`}
+                        onClick={() => setCurrentPage(page)}
+                      >
+                        {page}
+                      </button>
+                    ))}
+                  </div>
+
+                  <button
+                    className="pagination-btn"
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                  >
+                    Suivant →
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </main>
