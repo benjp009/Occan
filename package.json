@@ -27,7 +27,7 @@
     "dev": "react-scripts start",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "indexnow": "node scripts/indexnow.js",
-    "build": "npm run generate-sitemap && node scripts/build-blog.js && react-scripts build && npm run indexnow",
+    "build": "node scripts/build-blog.js && npm run generate-sitemap && react-scripts build && npm run indexnow",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
