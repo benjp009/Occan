@@ -9,15 +9,18 @@ import { getBlogPostsMain } from '../utils/blog';
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
 
   useEffect(() => {
     const loadPosts = async () => {
       try {
+        setError('');
         const blogPosts = await getBlogPostsMain();
         setPosts(blogPosts.filter(post => post.status === 'published'));
       } catch (error) {
         console.error('Erreur lors du chargement des articles:', error);
+        setError('Erreur lors du chargement des articles. Veuillez réessayer plus tard.');
       } finally {
         setLoading(false);
       }
@@ -81,6 +84,13 @@ const Blog: React.FC = () => {
           {loading ? (
             <div className="blog-loading">
               <p>Chargement des articles...</p>
+            </div>
+          ) : error ? (
+            <div className="blog-error">
+              <p>{error}</p>
+              <button onClick={() => window.location.reload()} className="retry-button">
+                Réessayer
+              </button>
             </div>
           ) : (
             <div className="blog-posts">
