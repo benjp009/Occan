@@ -27,7 +27,8 @@
     "dev": "react-scripts start",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "indexnow": "node scripts/indexnow.js",
-    "build": "node scripts/build-blog.js && npm run generate-sitemap && react-scripts build && npm run indexnow",
+    "convert-webp": "node scripts/convert-to-webp.js",
+    "build": "node scripts/build-blog.js && npm run convert-webp && npm run generate-sitemap && react-scripts build && npm run indexnow",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -50,6 +51,7 @@
     ]
   },
   "devDependencies": {
-    "@types/papaparse": "^5.3.16"
+    "@types/papaparse": "^5.3.16",
+    "sharp": "^0.34.3"
   }
 }
