@@ -5,6 +5,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { BlogPost } from '../types';
 import { getBlogPostsMain } from '../utils/blog';
+import BlogPostPreview from '../components/BlogPostPreview';
 
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -93,14 +94,11 @@ const Blog: React.FC = () => {
                   <p className="no-posts">Aucun article trouvé.</p>
                 ) : (
                   currentPosts.map(post => (
-                    <Link key={post.id} to={`/blog/${post.slug}`} className="blog-post-card">
-                      <div className="post-image">
-                        <img src={post.coverImage || '/asset/default-blog-image.jpg'} alt={post.title} />
-                        <div className="post-title-overlay">
-                          <h2>{post.title}</h2>
-                        </div>
-                      </div>
-                    </Link>
+                    <BlogPostPreview
+                      key={post.id}
+                      post={post}
+                      variant="card"
+                    />
                   ))
                 )}
               </div>

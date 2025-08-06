@@ -4,12 +4,14 @@ import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { BlogPost } from '../types';
-import { getBlogPostBySlugMain } from '../utils/blog';
+import { getBlogPostBySlugMain, getBlogPostsMain } from '../utils/blog';
 import NotionRenderer from '../components/NotionRenderer';
+import BlogPostPreview from '../components/BlogPostPreview';
 
 const BlogPostPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<BlogPost | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
 
@@ -18,11 +20,32 @@ const BlogPostPage: React.FC = () => {
       if (!slug) return;
       
       try {
-        const blogPost = await getBlogPostBySlugMain(slug);
+        const [blogPost, allPosts] = await Promise.all([
+          getBlogPostBySlugMain(slug),
+          getBlogPostsMain()
+        ]);
+        
         if (!blogPost || blogPost.status !== 'published') {
           setError('Article non trouvé');
         } else {
           setPost(blogPost);
+          
+          // Find related posts based on shared tags
+          const publishedPosts = allPosts.filter(p => p.status === 'published' && p.slug !== slug);
+          const related = publishedPosts
+            .filter(p => p.tags.some(tag => blogPost.tags.includes(tag)))
+            .slice(0, 3);
+          
+          // If not enough related posts, add recent posts
+          if (related.length < 3) {
+            const recentPosts = publishedPosts
+              .filter(p => !related.some(rp => rp.slug === p.slug))
+              .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+              .slice(0, 3 - related.length);
+            related.push(...recentPosts);
+          }
+          
+          setRelatedPosts(related);
         }
       } catch (error) {
         console.error('Erreur lors du chargement de l\'article:', error);
@@ -163,6 +186,24 @@ const BlogPostPage: React.FC = () => {
               <NotionRenderer blocks={post.content} />
             </div>
           </article>
+
+          {/* Related Articles Section */}
+          {relatedPosts.length > 0 && (
+            <aside className="related-articles">
+              <h2>Articles similaires</h2>
+              <div className="related-posts-grid">
+                {relatedPosts.map(relatedPost => (
+                  <BlogPostPreview
+                    key={relatedPost.id}
+                    post={relatedPost}
+                    variant="related"
+                    showDate={true}
+                    showExcerpt={true}
+                  />
+                ))}
+              </div>
+            </aside>
+          )}
 
           <nav className="post-navigation">
             <Link to="/blog" className="back-to-blog">
