@@ -21,6 +21,24 @@ const { fetchCompanies, fetchCategories } = require('./src/utils/api.ts');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+// HTTPS redirect middleware
+app.use((req, res, next) => {
+  // Check if we're in production and the request is HTTP
+  if (req.header('x-forwarded-proto') !== 'https' && process.env.NODE_ENV === 'production') {
+    return res.redirect(301, `https://${req.get('Host')}${req.url}`);
+  }
+  next();
+});
+
+// Security headers
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+    // Force HTTPS for future requests
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  }
+  next();
+});
+
 const indexFile = path.resolve('./build/index.html');
 app.use(express.static(path.resolve('./build')));
 app.use('/static', express.static(path.resolve('./build/static')));
