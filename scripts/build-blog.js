@@ -15,7 +15,14 @@ async function fetchNotionDatabase(databaseId, apiKey) {
         'Notion-Version': NOTION_VERSION,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({})
+      body: JSON.stringify({
+        filter: {
+          property: 'status',
+          status: {
+            equals: 'Published'
+          }
+        }
+      })
     });
 
     if (!response.ok) {
@@ -228,16 +235,19 @@ async function buildBlog() {
     return;
   }
 
-  console.log('🚀 Génération du blog depuis Notion...');
+  console.log('🚀 Génération du blog depuis Notion (articles publiés uniquement)...');
 
   try {
-    // Récupération des pages depuis Notion
+    // Récupération des pages publiées depuis Notion
     const database = await fetchNotionDatabase(databaseId, apiKey);
     const posts = [];
 
+    console.log(`📄 ${database.results.length} articles publiés trouvés dans Notion`);
+
     for (const page of database.results) {
-      console.log('Properties disponibles:', Object.keys(page.properties));
-      console.log(`Traitement de l'article: ${page.properties.title?.title?.[0]?.plain_text}`);
+      const title = page.properties.title?.title?.[0]?.plain_text;
+      const status = page.properties.status?.status?.name;
+      console.log(`Traitement de l'article: ${title} (${status})`);
       const post = await convertNotionPageToBlogPost(page, apiKey);
       if (post) {
         posts.push(post);
