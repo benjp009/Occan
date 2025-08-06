@@ -1145,10 +1145,10 @@ max-width: 80px;
    ─────────────────────────────────────────────────────── */
 
 .discover-beta {
-  max-width: 1024px;
   margin: 3rem 0 0 0;      
   padding: 3rem 10rem;              
   background-color: #fff;
+  align-self: center;
 }
 
 /* Header row: title + "Voir tous les logiciels" side by side */
@@ -1157,7 +1157,7 @@ max-width: 80px;
   flex-direction: row; 
   width:100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
@@ -1175,6 +1175,7 @@ max-width: 80px;
 .discover-beta-content.with-image {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 3rem;
 }
 
