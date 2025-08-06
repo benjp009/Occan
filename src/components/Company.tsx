@@ -1,5 +1,6 @@
 import React from 'react';
 import { CompanyRow } from '../types';
+import { OptimizedImage } from '../utils/imageUtils';
 
 interface CompanyProps {
   company: CompanyRow;
@@ -12,7 +13,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
       <div className="company-header">
         <div>
           {company.logo && (
-          <img
+          <OptimizedImage
             src={company.logo}
             alt={`${company.name} logo`}
             className="company-logo modal-logo"
@@ -47,19 +48,19 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
         {showLong ? (
           <div className="company-long-content">
             {company.asset_1 && (
-              <img src={company.asset_1} alt="asset 1" className="company-asset" />
+              <OptimizedImage src={company.asset_1} alt="asset 1" className="company-asset" />
             )}
             {company.description_1 && (
               <p dangerouslySetInnerHTML={{ __html: company.description_1 }} />
             )}
             {company.asset_2 && (
-              <img src={company.asset_2} alt="asset 2" className="company-asset" />
+              <OptimizedImage src={company.asset_2} alt="asset 2" className="company-asset" />
             )}
             {company.description_2 && (
               <p dangerouslySetInnerHTML={{ __html: company.description_2 }} />
             )}
             {company.asset_3 && (
-              <img src={company.asset_3} alt="asset 3" className="company-asset" />
+              <OptimizedImage src={company.asset_3} alt="asset 3" className="company-asset" />
             )}
           </div>
         ) : (
