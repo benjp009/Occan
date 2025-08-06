@@ -987,39 +987,6 @@ max-width: 80px;
   cursor: pointer;
 }
 
-.search-button {
-  background-color: #000091;
-  color: white;
-  padding: 8.6px 2rem;
-  border-radius: 0 5px 5px 0;
-  font-size: 14px;
-  font-weight: normal;
-  border-style: solid;
-  border-width: 0.5px;
-  
-}
-
-.search-button:hover {
-  background-color: #E8F3FF;
-  color: #000091;
-  border-color: #000091;
-  border-style: solid;
-  border-width: 0.5px;
-  cursor: pointer;
-}
-
-.popular-tags-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.popular-tags {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
 .research-text {
   width: 60%;
@@ -1027,20 +994,7 @@ max-width: 80px;
   text-align: center;
 }
 
-.tag {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 10px 20px;
-  border: 0.5px solid #4E4E4E;
-  margin: 0 14px;
-  font-size: 14px;
-}
 
-.tag:hover {
-  background-color: #000091;
-  color: #fff;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   .research-text {
@@ -1177,13 +1131,86 @@ max-width: 80px;
 }
 
 /* ───────────────────────────────────────────────────────
-   Styles for the “Sélection du mois” section in Home.tsx
+   Styles for the "Sélection du mois" section in Home.tsx
    ─────────────────────────────────────────────────────── */
 
 .selection-month {
   max-width: 1400px;
-  margin: 0 auto;      /* center horizontally */
-  padding: 0 16px;     /* optional horizontal padding for very small screens */
+  margin: 0 auto;    
+  padding: 0 16px;     
+}
+
+/* ───────────────────────────────────────────────────────
+   Styles for the "Discover Beta Software" section in Home.tsx
+   ─────────────────────────────────────────────────────── */
+
+.discover-beta {
+  max-width: 1024px;
+  margin: 3rem 0 0 0;      
+  padding: 3rem 10rem;              
+  background-color: #fff;
+}
+
+/* Header row: title + "Voir tous les logiciels" side by side */
+.discover-beta-header {
+  display: flex;
+  flex-direction: row; 
+  width:100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* Title styling */
+.discover-beta-title {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+/* Content container for text and image */
+.discover-beta-content {
+  margin-bottom: 2rem;
+}
+
+.discover-beta-content.with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.discover-beta-text {
+  flex: 1;
+  max-width: 30rem;
+}
+
+/* Small description under the title */
+.discover-beta-description {
+  margin: 0 0 1rem;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Image container */
+.discover-beta-image {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.discover-beta-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.discover-beta-button {
+  margin: 40px 0;
+}
+
+/* Grid container: 3 columns for beta (fewer items), wrap if needed, with gap */
+.discover-beta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;             /* Space between cards */
 }
 
 /* Header row: title + “Voir tous les logiciels” side by side */
@@ -1240,6 +1267,33 @@ max-width: 80px;
   }
   .selection-grid .card-wrapper {
     flex: 0 0 auto;
+  }
+
+  .discover-beta-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: .5rem;
+    padding-bottom: 1rem;
+  }
+  .discover-beta-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .discover-beta-grid .card-wrapper {
+    flex: 0 0 auto;
+  }
+
+  /* Mobile layout for discover beta content */
+  .discover-beta-content.with-image {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .discover-beta-image {
+    flex: none;
+    max-width: 250px;
+    align-self: center;
   }
 
   .card {
