@@ -1,4 +1,3 @@
-import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
 
@@ -25,7 +24,7 @@ export function Footer() {
         <div className="logo-container">
            <Link to="/">
           <img
-            src={logo}
+            src="/logo.svg"
             alt="Occan logo"
             className="logo"
           />
