@@ -1,5 +1,6 @@
 import React from 'react';
 import { CompanyRow } from '../types';
+import { OptimizedImage } from '../utils/imageUtils';
 
 interface CardsProps {
   company: CompanyRow;
@@ -29,7 +30,7 @@ export function Cards({ company, highlight }: CardsProps) {
       <div className="card-header">
         {company.logo && (
           <div className="company-logo">
-            <img
+            <OptimizedImage
               src={company.logo}
               alt={`${company.name} logo`}
               className="company-logo-img"
