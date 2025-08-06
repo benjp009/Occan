@@ -1,6 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import logolong from '../logolong.svg';
 import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { slugify } from '../utils/slugify';
@@ -41,7 +40,7 @@ export function Header() {
         <div className="header-logo">
           <Link to="/">
           <img
-            src={logolong}
+            src="/logolong.svg"
             alt="Logiciel France logo"
             className="logo"
           />
