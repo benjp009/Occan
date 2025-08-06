@@ -71,7 +71,7 @@ export function Hero() {
             <input
               className="input"
               type="text"
-              placeholder="Rechercher par nom. catégorie, fonction, etc ..."
+              placeholder="Rechercher facilement un logiciel français."
               value={search}
               onChange={e => setSearch(e.target.value)}
               onFocus={() => setActive(true)}
@@ -99,39 +99,7 @@ export function Hero() {
                         </div>
                       )}  
             </div>
-            
-            <button
-            type="button"
-            className="search-button"
-            onClick={() => {
-              navigate(`/recherche?q=${encodeURIComponent(search)}`);
-            }}
-          >
-            Rechercher
-          </button>
-          
-          
         </div>
-        <div className="popular-tags-container">
-          <p className="research-text">
-            Recherche populaires: 
-          </p>
-          <div className="popular-tags">
-          {popularTags.map(tag => (
-            <button
-              className="tag"
-              key={tag}
-              onClick={() => {
-                setSearch(tag);
-                setActive(true);
-              }}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
-        </div>
-        
       </div>
     </section>
   );
