@@ -9,6 +9,7 @@ import { CategoriesSection } from '../components/Category';
 import MetricsBanner from '../components/MetricsBanner';
 import { useMetrics } from '../utils/useMetrics';
 import { SelectionOfTheMonth } from '../components/SelectionOfTheMonth';
+import { DiscoverBetaSoftware } from '../components/DiscoverBetaSoftware';
 import ClockLoader from '../components/ClockLoader';
 import { Footer } from '../components/Footer';
 
@@ -61,6 +62,7 @@ export default function Home({ initialCompanies }: HomeProps) {
       )}
 
       <SelectionOfTheMonth companies={companies} />
+      <DiscoverBetaSoftware companies={companies} />
       </main>
       <Footer />
     </>
