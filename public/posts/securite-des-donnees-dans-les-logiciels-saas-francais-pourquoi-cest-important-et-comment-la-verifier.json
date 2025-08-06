@@ -1,0 +1,348 @@
+{
+  "id": "2464721e-1219-807b-a03e-da2359926b4b",
+  "title": "Sécurité des données dans les logiciels SaaS français : pourquoi c’est important et comment la vérifier",
+  "slug": "securite-des-donnees-dans-les-logiciels-saas-francais-pourquoi-cest-important-et-comment-la-verifier",
+  "excerpt": "",
+  "content": [
+    {
+      "id": "2464721e-1219-800b-880d-e04e9d134964",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2464721e-1219-81f6-9fa7-e6ab0ab57b5e",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Je me suis longtemps posé la question : est-ce que mes données sont réellement en sécurité lorsque j’utilise un logiciel en ligne, surtout un SaaS (Software as a Service) ? Avec la montée en puissance du cloud, tout semble plus simple, plus fluide… mais à quel prix ? J’ai commencé à m’intéresser de près à la manière dont mes données personnelles ou professionnelles étaient stockées, utilisées, parfois même transférées à l’étranger sans que je le sache. Et là, je me suis confronté à une réalité que beaucoup préfèrent ignorer : tous les logiciels ne se valent pas en matière de sécurité des données.\n\nJe veux partager avec toi ce que j’ai découvert, parce qu’au fond, cette question nous concerne tous. Qu’il s’agisse de facturation, de gestion de clients, de RH ou de marketing, nous utilisons tous des logiciels SaaS. Mais combien sont transparents sur la localisation de leurs serveurs ? Sur le chiffrement de nos données ? Sur leur conformité avec le RGPD, ce règlement européen censé nous protéger ? Malheureusement, très peu.\n\nC’est justement pour ça que je me tourne désormais vers des solutions françaises. Pas par pur chauvinisme, mais parce que j’ai réalisé que les entreprises françaises comprennent bien mieux nos exigences juridiques, notre culture de la confidentialité et nos attentes en matière de sécurité. Derrière ces solutions, il y a souvent des équipes engagées, soumises aux lois françaises et européennes, et bien plus accessibles en cas de besoin. C’est un vrai gage de confiance que je ne retrouve pas toujours chez les géants américains.\n\nAlors, si toi aussi tu te poses des questions sur la sécurité de tes données dans les logiciels SaaS, reste avec moi. Je vais te montrer concrètement comment la vérifier, quoi surveiller, et pourquoi choisir une solution française peut vraiment faire la différence… surtout en 2024.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Je me suis longtemps posé la question : est-ce que mes données sont réellement en sécurité lorsque j’utilise un logiciel en ligne, surtout un SaaS (Software as a Service) ? Avec la montée en puissance du cloud, tout semble plus simple, plus fluide… mais à quel prix ? J’ai commencé à m’intéresser de près à la manière dont mes données personnelles ou professionnelles étaient stockées, utilisées, parfois même transférées à l’étranger sans que je le sache. Et là, je me suis confronté à une réalité que beaucoup préfèrent ignorer : tous les logiciels ne se valent pas en matière de sécurité des données.\n\nJe veux partager avec toi ce que j’ai découvert, parce qu’au fond, cette question nous concerne tous. Qu’il s’agisse de facturation, de gestion de clients, de RH ou de marketing, nous utilisons tous des logiciels SaaS. Mais combien sont transparents sur la localisation de leurs serveurs ? Sur le chiffrement de nos données ? Sur leur conformité avec le RGPD, ce règlement européen censé nous protéger ? Malheureusement, très peu.\n\nC’est justement pour ça que je me tourne désormais vers des solutions françaises. Pas par pur chauvinisme, mais parce que j’ai réalisé que les entreprises françaises comprennent bien mieux nos exigences juridiques, notre culture de la confidentialité et nos attentes en matière de sécurité. Derrière ces solutions, il y a souvent des équipes engagées, soumises aux lois françaises et européennes, et bien plus accessibles en cas de besoin. C’est un vrai gage de confiance que je ne retrouve pas toujours chez les géants américains.\n\nAlors, si toi aussi tu te poses des questions sur la sécurité de tes données dans les logiciels SaaS, reste avec moi. Je vais te montrer concrètement comment la vérifier, quoi surveiller, et pourquoi choisir une solution française peut vraiment faire la différence… surtout en 2024.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2464721e-1219-801c-bce1-c36082fd9685",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2464721e-1219-8092-84df-e620c9565e14",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "## La transparence avant tout : savoir où vont mes données\n\nJe me souviens encore de ce moment où j'ai découvert que l’un des logiciels que j’utilisais au quotidien envoyait mes données personnelles… en Californie. Sans aucune notification claire, sans mon consentement explicite. Juste une petite ligne perdue dans les conditions générales. Et ça, c’est quand on prend le temps de les lire.\n\nC’est là que j’ai compris : la transparence, ce n’est pas un luxe – c’est une nécessité.\n\n### Comment j’ai appris à lire entre les lignes\n\nEn commençant à comparer différentes solutions SaaS, je me suis vite rendu compte d'une chose : peu d’entre elles mentionnent clairement la localisation de leurs serveurs, ou leurs politiques de gestion des données. C’est flou, volontairement flou. Et ça, c’est un problème. J’ai réalisé que je devais me poser les bonnes questions : où sont stockées mes données ? Sont-elles chiffrées ? Qui y a accès ? Est-ce qu’elles sont revendues à des tiers ou utilisées à des fins commerciales ? \n\n### Pourquoi une solution française fait toute la différence\n\nQuand j’ai commencé à tester des alternatives françaises, j’ai senti un vrai changement. Ces entreprises ne se contentent pas de “dire” qu’elles respectent le RGPD : elles le vivent au quotidien. Serveurs en France ou en Europe, transparence sur les mesures de sécurité, accès direct à des interlocuteurs humains, pas à un bot en anglais… Franchement, c’est un confort que je ne soupçonnais même pas.\n\nEt puis, c’est aussi une question de valeurs : avec un éditeur français, je sens que mes données sont traitées comme ce qu’elles sont réellement — précieuses. Pas comme une simple monnaie d'échange pour de la publicité ciblée. En choisissant français, je choisis la proximité, la fiabilité, et surtout, la responsabilité.\n\nEt toi, tu sais vraiment qui détient tes données aujourd’hui ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "## La transparence avant tout : savoir où vont mes données\n\nJe me souviens encore de ce moment où j'ai découvert que l’un des logiciels que j’utilisais au quotidien envoyait mes données personnelles… en Californie. Sans aucune notification claire, sans mon consentement explicite. Juste une petite ligne perdue dans les conditions générales. Et ça, c’est quand on prend le temps de les lire.\n\nC’est là que j’ai compris : la transparence, ce n’est pas un luxe – c’est une nécessité.\n\n### Comment j’ai appris à lire entre les lignes\n\nEn commençant à comparer différentes solutions SaaS, je me suis vite rendu compte d'une chose : peu d’entre elles mentionnent clairement la localisation de leurs serveurs, ou leurs politiques de gestion des données. C’est flou, volontairement flou. Et ça, c’est un problème. J’ai réalisé que je devais me poser les bonnes questions : où sont stockées mes données ? Sont-elles chiffrées ? Qui y a accès ? Est-ce qu’elles sont revendues à des tiers ou utilisées à des fins commerciales ? \n\n### Pourquoi une solution française fait toute la différence\n\nQuand j’ai commencé à tester des alternatives françaises, j’ai senti un vrai changement. Ces entreprises ne se contentent pas de “dire” qu’elles respectent le RGPD : elles le vivent au quotidien. Serveurs en France ou en Europe, transparence sur les mesures de sécurité, accès direct à des interlocuteurs humains, pas à un bot en anglais… Franchement, c’est un confort que je ne soupçonnais même pas.\n\nEt puis, c’est aussi une question de valeurs : avec un éditeur français, je sens que mes données sont traitées comme ce qu’elles sont réellement — précieuses. Pas comme une simple monnaie d'échange pour de la publicité ciblée. En choisissant français, je choisis la proximité, la fiabilité, et surtout, la responsabilité.\n\nEt toi, tu sais vraiment qui détient tes données aujourd’hui ?",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2464721e-1219-81fb-8818-fd562c4ac7cd",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pendant longtemps, j’étais sceptique à l’idée de confier mes données à des logiciels SaaS, surtout en ligne. Et puis j’ai compris que tout dépendait du niveau de sécurité offert… et surtout de la transparence. Aujourd’hui, je privilégie les solutions françaises, car elles respectent des normes strictes et protègent vraiment mes données. Mais comment être sûr que la sécurité est au rendez-vous ? Je vous explique tout.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pendant longtemps, j’étais sceptique à l’idée de confier mes données à des logiciels SaaS, surtout en ligne. Et puis j’ai compris que tout dépendait du niveau de sécurité offert… et surtout de la transparence. Aujourd’hui, je privilégie les solutions françaises, car elles respectent des normes strictes et protègent vraiment mes données. Mais comment être sûr que la sécurité est au rendez-vous ? Je vous explique tout.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2464721e-1219-814c-93da-dd6eabf95735",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Pourquoi j’ai changé d’avis sur les logiciels SaaS français\n\nJ’ai longtemps douté. Confier mes fichiers, mes informations sensibles, voire mes projets professionnels à un outil en ligne ? C’était impensable. Les grandes plateformes américaines me faisaient peur : trop floues sur l’usage des données, trop opaques sur leur hébergement. Ce qui a tout changé, c’est quand j’ai découvert qu’il existait des alternatives 100 % françaises, comme celles proposées par des entreprises comme Cozy Cloud ou Jamespot.  \n\n### La sécurité au cœur de la conception\n\nLeurs infrastructures respectent la RGPD à la lettre, les serveurs sont localisés en France et chaque mise à jour est documentée avec précision. Contrairement à ce que je craignais, je n’ai rien perdu en performance ou en fonctionnalités. Au contraire, j’ai même retrouvé un sentiment de confiance que j’avais perdu. En fait, utiliser une solution française m’offre le meilleur des deux mondes : la technologie moderne et la souveraineté numérique.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Pourquoi j’ai changé d’avis sur les logiciels SaaS français\n\nJ’ai longtemps douté. Confier mes fichiers, mes informations sensibles, voire mes projets professionnels à un outil en ligne ? C’était impensable. Les grandes plateformes américaines me faisaient peur : trop floues sur l’usage des données, trop opaques sur leur hébergement. Ce qui a tout changé, c’est quand j’ai découvert qu’il existait des alternatives 100 % françaises, comme celles proposées par des entreprises comme Cozy Cloud ou Jamespot.  \n\n### La sécurité au cœur de la conception\n\nLeurs infrastructures respectent la RGPD à la lettre, les serveurs sont localisés en France et chaque mise à jour est documentée avec précision. Contrairement à ce que je craignais, je n’ai rien perdu en performance ou en fonctionnalités. Au contraire, j’ai même retrouvé un sentiment de confiance que j’avais perdu. En fait, utiliser une solution française m’offre le meilleur des deux mondes : la technologie moderne et la souveraineté numérique.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-8157-84aa-e9497a2558c4",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Comment j’ai vérifié la fiabilité de ces solutions\n\nAu début, j’étais sceptique. Comment être sûr que mes données sont réellement en sécurité ? J’ai donc pris le temps d’auditer les services que j’utilisais. Premier réflexe : lire leur politique de confidentialité. Ce que j’y ai trouvé m’a rassuré — des engagements clairs, transparents, sans jargon inutile. Ensuite, je me suis intéressé à la certification HDS pour les données de santé, à la norme ISO 27001 et aux audits de sécurité réalisés par des tiers. Ces labels, souvent absents chez les géants internationaux, sont au cœur de l’ADN des logiciels français.\n\n### Transparence et support local\n\nEt ce n’est pas tout. J’ai eu affaire à une équipe support réactive, basée en France, capable de répondre en français à mes questions techniques. Ce genre de proximité, on ne le retrouve quasiment jamais chez les géants du cloud. Résultat ? J’ai gagné en sérénité et j’ai pu me concentrer sur mon travail, en sachant exactement où et comment mes données étaient protégées.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Comment j’ai vérifié la fiabilité de ces solutions\n\nAu début, j’étais sceptique. Comment être sûr que mes données sont réellement en sécurité ? J’ai donc pris le temps d’auditer les services que j’utilisais. Premier réflexe : lire leur politique de confidentialité. Ce que j’y ai trouvé m’a rassuré — des engagements clairs, transparents, sans jargon inutile. Ensuite, je me suis intéressé à la certification HDS pour les données de santé, à la norme ISO 27001 et aux audits de sécurité réalisés par des tiers. Ces labels, souvent absents chez les géants internationaux, sont au cœur de l’ADN des logiciels français.\n\n### Transparence et support local\n\nEt ce n’est pas tout. J’ai eu affaire à une équipe support réactive, basée en France, capable de répondre en français à mes questions techniques. Ce genre de proximité, on ne le retrouve quasiment jamais chez les géants du cloud. Résultat ? J’ai gagné en sérénité et j’ai pu me concentrer sur mon travail, en sachant exactement où et comment mes données étaient protégées.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-816b-825b-f524f936e65e",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Des solutions concrètes et adaptées à mon besoin\n\nCe qui m’a définitivement convaincu, c’est la capacité des logiciels SaaS français à respecter la législation européenne, en particulier le RGPD. Contrairement à certaines solutions américaines soumises au Cloud Act, ici, mes données restent sur le sol français. Aucun transfert opaque ni ambiguïté juridique. Quand j’ai comparé plusieurs offres, j’ai vu la différence : une interface claire sur la gestion de la sécurité, des engagements sur la non-utilisation commerciale de mes informations, et surtout, une vraie volonté de construire une relation de confiance.  \n\n### Une culture de la sécurité \"by design\"\n\nJ’ai compris que chez ces éditeurs français, la sécurité n’est pas un simple argument marketing. Elle est intégrée dès la conception. Cela change tout. Je me dis que derrière chaque ligne de code, il y a une vraie responsabilité — et ça, ça n’a pas de prix.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Des solutions concrètes et adaptées à mon besoin\n\nCe qui m’a définitivement convaincu, c’est la capacité des logiciels SaaS français à respecter la législation européenne, en particulier le RGPD. Contrairement à certaines solutions américaines soumises au Cloud Act, ici, mes données restent sur le sol français. Aucun transfert opaque ni ambiguïté juridique. Quand j’ai comparé plusieurs offres, j’ai vu la différence : une interface claire sur la gestion de la sécurité, des engagements sur la non-utilisation commerciale de mes informations, et surtout, une vraie volonté de construire une relation de confiance.  \n\n### Une culture de la sécurité \"by design\"\n\nJ’ai compris que chez ces éditeurs français, la sécurité n’est pas un simple argument marketing. Elle est intégrée dès la conception. Cela change tout. Je me dis que derrière chaque ligne de code, il y a une vraie responsabilité — et ça, ça n’a pas de prix.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-8188-ad33-f8d079eca55c",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "En choisissant un logiciel SaaS français, je choisis la transparence, la conformité et une vraie éthique. Je ne sacrifie ni la performance ni la sécurité. Aujourd’hui, je sais où vont mes données, qui les protège et pourquoi. Pour moi, c’est un choix évident et rassurant.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "En choisissant un logiciel SaaS français, je choisis la transparence, la conformité et une vraie éthique. Je ne sacrifie ni la performance ni la sécurité. Aujourd’hui, je sais où vont mes données, qui les protège et pourquoi. Pour moi, c’est un choix évident et rassurant.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2464721e-1219-8115-8b5d-d88d085ee96f",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Quand j'ai commencé à utiliser des logiciels SaaS, une question me revenait sans cesse : mes données sont-elles vraiment en sécurité ? Avec la montée des cyberattaques et des hébergeurs étrangers, j'ai vite compris l'importance de choisir une solution fiable, surtout quand elle est française. Mais comment distinguer le vrai du marketing ? J’ai mené l’enquête, et ce que j’ai découvert m’a complètement ouvert les yeux.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Quand j'ai commencé à utiliser des logiciels SaaS, une question me revenait sans cesse : mes données sont-elles vraiment en sécurité ? Avec la montée des cyberattaques et des hébergeurs étrangers, j'ai vite compris l'importance de choisir une solution fiable, surtout quand elle est française. Mais comment distinguer le vrai du marketing ? J’ai mené l’enquête, et ce que j’ai découvert m’a complètement ouvert les yeux.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2464721e-1219-81ec-bf83-e0aa1a2ccdc8",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Une question de confiance avant tout\n\nJ’ai d’abord testé plusieurs solutions américaines réputées. Oui, les interfaces étaient séduisantes, les fonctionnalités nombreuses... mais quelque chose clochait. Je lisais entre les lignes des conditions d’utilisation : stockage aux États-Unis, traitement des données hors UE, et une politique de confidentialité qui laissait place à de nombreuses zones floues. En tant qu’utilisateur français, cela m’a mis un vrai coup de frein.\n\n### La découverte d’une alternative française\n\nC’est alors que je suis tombé sur un logiciel SaaS conçu et hébergé en France. Pas juste un produit traduit en français, mais une vraie solution pensée par une entreprise française, soumise aux lois locales et au RGPD. J’ai immédiatement senti la différence : transparence sur le stockage des données, support client réactif (et francophone !), et une philosophie centrée sur la confiance. Cette découverte a complètement changé ma manière de choisir mes outils numériques.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Une question de confiance avant tout\n\nJ’ai d’abord testé plusieurs solutions américaines réputées. Oui, les interfaces étaient séduisantes, les fonctionnalités nombreuses... mais quelque chose clochait. Je lisais entre les lignes des conditions d’utilisation : stockage aux États-Unis, traitement des données hors UE, et une politique de confidentialité qui laissait place à de nombreuses zones floues. En tant qu’utilisateur français, cela m’a mis un vrai coup de frein.\n\n### La découverte d’une alternative française\n\nC’est alors que je suis tombé sur un logiciel SaaS conçu et hébergé en France. Pas juste un produit traduit en français, mais une vraie solution pensée par une entreprise française, soumise aux lois locales et au RGPD. J’ai immédiatement senti la différence : transparence sur le stockage des données, support client réactif (et francophone !), et une philosophie centrée sur la confiance. Cette découverte a complètement changé ma manière de choisir mes outils numériques.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-81bc-adac-ff5128189a98",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Ce qui m’a convaincu : une transparence totale\n\nAu-delà de la simple nationalité de l’éditeur, ce que j’ai découvert, c’est une vraie culture de la sécurité chez ce fournisseur. Chaque étape de la gestion des données est claire : serveurs localisés en France, accès strictement contrôlés, journalisation des actions… Et surtout, la conformité RGPD n’est pas un gadget marketing, mais intégrée dès la conception (« privacy by design »).  \n\n### Une tranquillité d’esprit inégalée\n\nAvant, j’hésitais sans cesse à confier mes informations sensibles à un service. Aujourd’hui, je peux enfin me concentrer sur mon métier, sans avoir à me demander si mes données seront analysées, revendues ou compromises. Ce n’est pas juste une question technique, c’est un choix responsable. Et le fait que ce soit pensé et hébergé en France ? Pour moi, c’est devenu un critère non négociable.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Ce qui m’a convaincu : une transparence totale\n\nAu-delà de la simple nationalité de l’éditeur, ce que j’ai découvert, c’est une vraie culture de la sécurité chez ce fournisseur. Chaque étape de la gestion des données est claire : serveurs localisés en France, accès strictement contrôlés, journalisation des actions… Et surtout, la conformité RGPD n’est pas un gadget marketing, mais intégrée dès la conception (« privacy by design »).  \n\n### Une tranquillité d’esprit inégalée\n\nAvant, j’hésitais sans cesse à confier mes informations sensibles à un service. Aujourd’hui, je peux enfin me concentrer sur mon métier, sans avoir à me demander si mes données seront analysées, revendues ou compromises. Ce n’est pas juste une question technique, c’est un choix responsable. Et le fait que ce soit pensé et hébergé en France ? Pour moi, c’est devenu un critère non négociable.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-81d8-b451-e3bac8dfe09b",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Comment j’ai validé leur niveau de sécurité\n\n### Un audit de sécurité accessible et compréhensible\n\nJe ne suis pas expert en cybersécurité, mais j’ai toujours voulu savoir concrètement comment un logiciel protège mes données. Ce qui m’a réellement rassuré, c’est de pouvoir consulter un audit de sécurité détaillé, rédigé en français, clair et à jour. Pas de jargon inutile. Ils expliquent leurs systèmes de chiffrement, les tests d’intrusion réalisés par des tiers, et surtout, ce qu’ils ont amélioré suite à ces tests.  \n\n### Une communication continue\n\nJe reçois aussi régulièrement des informations sur les évolutions de la sécurité, les mises à jour critiques, et les bonnes pratiques à adopter. Cela montre que ce n’est pas une protection figée, mais un engagement permanent. Et ça, je ne l’avais jamais vu chez les éditeurs étrangers. Toutes ces preuves m’ont convaincu : ici, la sécurité n’est pas cachée derrière un logo, elle est démontrée.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Comment j’ai validé leur niveau de sécurité\n\n### Un audit de sécurité accessible et compréhensible\n\nJe ne suis pas expert en cybersécurité, mais j’ai toujours voulu savoir concrètement comment un logiciel protège mes données. Ce qui m’a réellement rassuré, c’est de pouvoir consulter un audit de sécurité détaillé, rédigé en français, clair et à jour. Pas de jargon inutile. Ils expliquent leurs systèmes de chiffrement, les tests d’intrusion réalisés par des tiers, et surtout, ce qu’ils ont amélioré suite à ces tests.  \n\n### Une communication continue\n\nJe reçois aussi régulièrement des informations sur les évolutions de la sécurité, les mises à jour critiques, et les bonnes pratiques à adopter. Cela montre que ce n’est pas une protection figée, mais un engagement permanent. Et ça, je ne l’avais jamais vu chez les éditeurs étrangers. Toutes ces preuves m’ont convaincu : ici, la sécurité n’est pas cachée derrière un logo, elle est démontrée.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-8125-9e3c-c7a5f26bdb92",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "En fin de compte, j’ai compris une chose essentielle : choisir un logiciel SaaS français, c’est choisir la transparence et l’engagement. La sécurité n’est pas qu’un argument marketing, elle se prouve jour après jour. Et quand je sais que mes données sont protégées par une entreprise locale, soumise aux lois françaises et européennes, je dors tout simplement mieux.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "En fin de compte, j’ai compris une chose essentielle : choisir un logiciel SaaS français, c’est choisir la transparence et l’engagement. La sécurité n’est pas qu’un argument marketing, elle se prouve jour après jour. Et quand je sais que mes données sont protégées par une entreprise locale, soumise aux lois françaises et européennes, je dors tout simplement mieux.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    }
+  ],
+  "publishedAt": "2025-08-06T06:32:24.658Z",
+  "author": "Équipe Logiciel France",
+  "tags": [],
+  "status": "draft",
+  "seo": {
+    "metaDescription": "",
+    "keywords": []
+  }
+}
