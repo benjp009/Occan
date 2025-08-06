@@ -1,0 +1,148 @@
+{
+  "id": "2464721e-1219-8040-93e8-d982f6696ec4",
+  "title": "Comparatif des plateformes emailing françaises : Sarbacane vs Mailjet vs Brevo",
+  "slug": "comparatif-des-plateformes-emailing-francaises-sarbacane-vs-mailjet-vs-brevo",
+  "excerpt": "",
+  "content": [
+    {
+      "id": "2464721e-1219-81ca-9b55-e480cd4bfcdd",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "En cherchant une solution d’emailing pour mon entreprise, je me suis retrouvé face à un choix difficile : Sarbacane, Mailjet ou Brevo. Chacune promet monts et merveilles, mais laquelle tient vraiment ses promesses, surtout pour un utilisateur comme moi, en quête d’un outil simple, efficace, et... français ? J’ai testé ces trois plateformes pour vous livrer mon retour d’expérience en toute transparence.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "En cherchant une solution d’emailing pour mon entreprise, je me suis retrouvé face à un choix difficile : Sarbacane, Mailjet ou Brevo. Chacune promet monts et merveilles, mais laquelle tient vraiment ses promesses, surtout pour un utilisateur comme moi, en quête d’un outil simple, efficace, et... français ? J’ai testé ces trois plateformes pour vous livrer mon retour d’expérience en toute transparence.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2464721e-1219-8168-bbad-e9bced11dccd",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Mon parcours de test : premiers pas sur chaque plateforme\n\n### Une interface intuitive ou un casse-tête visuel ?\n\nDès la prise en main, j’ai vite compris que toutes les plateformes ne se valent pas. Brevo, anciennement Sendinblue, m’a séduit par son ergonomie : tout y est clair, fluide, et en français. Aucun besoin d’être un expert pour lancer ma première campagne. Mailjet, de son côté, m’a semblé un peu plus technique, avec des options bien pensées mais une navigation moins instinctive. Quant à Sarbacane, j’ai été agréablement surpris : l’interface est moderne, simple, et surtout conçue pour les utilisateurs francophones — un vrai plus pour moi qui préfère éviter les approximations de traduction.\n\nMais au-delà de l’interface, je voulais surtout voir lequel allait me faire gagner du temps et m’offrir du concret. Et c’est là que les vraies différences ont commencé à apparaître…",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Mon parcours de test : premiers pas sur chaque plateforme\n\n### Une interface intuitive ou un casse-tête visuel ?\n\nDès la prise en main, j’ai vite compris que toutes les plateformes ne se valent pas. Brevo, anciennement Sendinblue, m’a séduit par son ergonomie : tout y est clair, fluide, et en français. Aucun besoin d’être un expert pour lancer ma première campagne. Mailjet, de son côté, m’a semblé un peu plus technique, avec des options bien pensées mais une navigation moins instinctive. Quant à Sarbacane, j’ai été agréablement surpris : l’interface est moderne, simple, et surtout conçue pour les utilisateurs francophones — un vrai plus pour moi qui préfère éviter les approximations de traduction.\n\nMais au-delà de l’interface, je voulais surtout voir lequel allait me faire gagner du temps et m’offrir du concret. Et c’est là que les vraies différences ont commencé à apparaître…",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-81d2-b8f2-ec5756a76911",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Automatisations, templates et productivité : qui a vraiment pensé à l’utilisateur ?\n\nEn testant les fonctionnalités d’automatisation, j’ai vite vu que Brevo avait une longueur d’avance. Je peux créer des scénarios très précis sans perdre une heure à comprendre comment tout connecter. Les templates sont élégants, professionnels et surtout adaptés au marché français. Mailjet m’a demandé un peu plus de configuration pour un résultat similaire, et surtout, j’ai dû jongler entre l’anglais et le français — pas idéal. Sarbacane, quant à lui, m’a bluffé par sa logique « tout-en-un » et ses automatisations prêtes à l’emploi. Conçu en France, pour les professionnels français, chaque fonction semble répondre à mes besoins sans complexité inutile. Ce niveau de personnalisation m’a rassuré : je sens que je perds moins de temps, et que mes campagnes ont plus d’impact.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Automatisations, templates et productivité : qui a vraiment pensé à l’utilisateur ?\n\nEn testant les fonctionnalités d’automatisation, j’ai vite vu que Brevo avait une longueur d’avance. Je peux créer des scénarios très précis sans perdre une heure à comprendre comment tout connecter. Les templates sont élégants, professionnels et surtout adaptés au marché français. Mailjet m’a demandé un peu plus de configuration pour un résultat similaire, et surtout, j’ai dû jongler entre l’anglais et le français — pas idéal. Sarbacane, quant à lui, m’a bluffé par sa logique « tout-en-un » et ses automatisations prêtes à l’emploi. Conçu en France, pour les professionnels français, chaque fonction semble répondre à mes besoins sans complexité inutile. Ce niveau de personnalisation m’a rassuré : je sens que je perds moins de temps, et que mes campagnes ont plus d’impact.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-812c-b95e-ff8473c27604",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "## Gestion des contacts et segmentation : la vraie clé de l'efficacité\n\nQuand il s’agit d’envoyer les bons messages aux bonnes personnes, la gestion des listes devient rapidement un casse-tête... sauf avec Sarbacane. Dès mes premiers tests, j’ai été surpris par la clarté de l’interface et la facilité avec laquelle je pouvais segmenter ma base selon mes propres critères. Et surtout, tout est en français, pensé pour répondre aux usages locaux. Brevo offre des options intéressantes, mais j’ai dû fouiller dans des menus imprécis, parfois traduits à moitié. Quant à Mailjet, malgré ses performances correctes, je me suis senti plus comme un utilisateur parmi tant d’autres que comme un vrai partenaire.\n\n### Mon choix instinctif\n\nAvec Sarbacane, je sens que chaque détail a été pensé pour moi, professionnel français. Les options sont conçues pour être rapides, accessibles, et surtout pertinentes. Je gagne du temps, je gagne en impact, et je me sens enfin compris.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "## Gestion des contacts et segmentation : la vraie clé de l'efficacité\n\nQuand il s’agit d’envoyer les bons messages aux bonnes personnes, la gestion des listes devient rapidement un casse-tête... sauf avec Sarbacane. Dès mes premiers tests, j’ai été surpris par la clarté de l’interface et la facilité avec laquelle je pouvais segmenter ma base selon mes propres critères. Et surtout, tout est en français, pensé pour répondre aux usages locaux. Brevo offre des options intéressantes, mais j’ai dû fouiller dans des menus imprécis, parfois traduits à moitié. Quant à Mailjet, malgré ses performances correctes, je me suis senti plus comme un utilisateur parmi tant d’autres que comme un vrai partenaire.\n\n### Mon choix instinctif\n\nAvec Sarbacane, je sens que chaque détail a été pensé pour moi, professionnel français. Les options sont conçues pour être rapides, accessibles, et surtout pertinentes. Je gagne du temps, je gagne en impact, et je me sens enfin compris.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2464721e-1219-81ea-8434-f1448f53192f",
+          "type": "paragraph",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Au final, j’ai fait mon choix en toute confiance : Sarbacane. C’est la seule plateforme qui parle vraiment ma langue, dans tous les sens du terme. Je me sens guidé, soutenu, et efficace. Si vous cherchez plus qu’un simple outil d’emailing, mais un vrai partenaire français, pensé pour vous, c’est clairement la solution à adopter.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Au final, j’ai fait mon choix en toute confiance : Sarbacane. C’est la seule plateforme qui parle vraiment ma langue, dans tous les sens du terme. Je me sens guidé, soutenu, et efficace. Si vous cherchez plus qu’un simple outil d’emailing, mais un vrai partenaire français, pensé pour vous, c’est clairement la solution à adopter.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    }
+  ],
+  "publishedAt": "2025-08-06T06:32:35.629Z",
+  "author": "Équipe Logiciel France",
+  "tags": [],
+  "status": "draft",
+  "seo": {
+    "metaDescription": "",
+    "keywords": []
+  }
+}
