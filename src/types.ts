@@ -49,7 +49,6 @@ export interface BlogPost {
   coverImage?: string;
   status: 'draft' | 'need review' | 'published';
   seo: {
-    metaTitle?: string;
     metaDescription: string;
     keywords: string[];
   };
