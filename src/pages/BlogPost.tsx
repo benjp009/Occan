@@ -8,9 +8,13 @@ import { getBlogPostBySlugMain, getBlogPostsMain } from '../utils/blog';
 import NotionRenderer from '../components/NotionRenderer';
 import BlogPostPreview from '../components/BlogPostPreview';
 
-const BlogPostPage: React.FC = () => {
+interface BlogPostPageProps {
+  initialBlogPost?: BlogPost | null;
+}
+
+const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<BlogPost | null>(null);
+  const [post, setPost] = useState<BlogPost | null>(initialBlogPost ?? null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
@@ -18,6 +22,32 @@ const BlogPostPage: React.FC = () => {
   useEffect(() => {
     const loadPost = async () => {
       if (!slug) return;
+      
+      // Skip loading if we already have initial data
+      if (initialBlogPost && initialBlogPost.slug === slug) {
+        try {
+          const allPosts = await getBlogPostsMain();
+          const publishedPosts = allPosts.filter(p => p.status === 'published' && p.slug !== slug);
+          const related = publishedPosts
+            .filter(p => p.tags.some(tag => initialBlogPost.tags.includes(tag)))
+            .slice(0, 3);
+          
+          if (related.length < 3) {
+            const recentPosts = publishedPosts
+              .filter(p => !related.some(rp => rp.slug === p.slug))
+              .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+              .slice(0, 3 - related.length);
+            related.push(...recentPosts);
+          }
+          
+          setRelatedPosts(related);
+          setLoading(false);
+        } catch (error) {
+          console.error('Erreur lors du chargement des articles connexes:', error);
+          setLoading(false);
+        }
+        return;
+      }
       
       try {
         const [blogPost, allPosts] = await Promise.all([
@@ -56,7 +86,7 @@ const BlogPostPage: React.FC = () => {
     };
 
     loadPost();
-  }, [slug]);
+  }, [slug, initialBlogPost]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('fr-FR', {
@@ -109,13 +139,13 @@ const BlogPostPage: React.FC = () => {
         <title>{post.seo.metaTitle || `${post.title} - Blog Logiciel France`}</title>
         <meta name="description" content={post.seo.metaDescription || post.excerpt} />
         <meta name="keywords" content={post.seo.keywords.join(', ')} />
-        <link rel="canonical" href={`https://logiciel-france.fr/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://logicielfrance.com/blog/${post.slug}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={post.seo.metaTitle || post.title} />
         <meta property="og:description" content={post.seo.metaDescription || post.excerpt} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://logiciel-france.fr/blog/${post.slug}`} />
+        <meta property="og:url" content={`https://logicielfrance.com/blog/${post.slug}`} />
         {post.coverImage && <meta property="og:image" content={post.coverImage} />}
         
         {/* Twitter Card */}
