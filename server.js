@@ -132,6 +132,8 @@ app.get('*', async (req, res) => {
     );
     return res.send(htmlWithHelmet);
   } catch (err) {
+    console.error('SSR Error:', err.message);
+    console.error('Stack:', err.stack);
     return res.status(500).send('Error loading HTML file');
   }
 });
