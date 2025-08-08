@@ -28,121 +28,824 @@
           }
         ],
         "color": "default"
-      },
-      "children": [
-        {
-          "id": "2464721e-1219-81f1-b388-db2295967178",
-          "type": "paragraph",
-          "content": {
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "## Mon parcours dans la jungle des logiciels d’automatisation\n\n### Trop de choix, pas assez de résultats\n\nQuand j’ai commencé à chercher un logiciel d’automatisation marketing, je me suis vite retrouvé noyé sous les promesses. Des noms à consonance anglophone, des offres séduisantes… mais au final, beaucoup de complexité, peu de transparence, et un vrai flou sur le traitement des données. Et pour moi, en tant que professionnel basé en France, confier mes données clients à une plateforme hors-Europe, c’était inenvisageable.\n\n### La révélation : une solution pensée en France\n\nPuis j’ai découvert une solution développée par une entreprise française, avec une interface claire, un accompagnement francophone et surtout, une conformité totale avec le RGPD. Un outil qui ne me fait pas perdre mon temps, qui s’intègre parfaitement à mes outils existants et me permet enfin d’automatiser sans stress. C’est cette différence – le soin local, l’expertise française – qui a tout changé pour moi.",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "## Mon parcours dans la jungle des logiciels d’automatisation\n\n### Trop de choix, pas assez de résultats\n\nQuand j’ai commencé à chercher un logiciel d’automatisation marketing, je me suis vite retrouvé noyé sous les promesses. Des noms à consonance anglophone, des offres séduisantes… mais au final, beaucoup de complexité, peu de transparence, et un vrai flou sur le traitement des données. Et pour moi, en tant que professionnel basé en France, confier mes données clients à une plateforme hors-Europe, c’était inenvisageable.\n\n### La révélation : une solution pensée en France\n\nPuis j’ai découvert une solution développée par une entreprise française, avec une interface claire, un accompagnement francophone et surtout, une conformité totale avec le RGPD. Un outil qui ne me fait pas perdre mon temps, qui s’intègre parfaitement à mes outils existants et me permet enfin d’automatiser sans stress. C’est cette différence – le soin local, l’expertise française – qui a tout changé pour moi.",
-                "href": null
-              }
-            ],
-            "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-8008-ad7e-fca8a30e07c3",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon parcours dans la jungle des logiciels d’automatisation",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon parcours dans la jungle des logiciels d’automatisation",
+            "href": null
           }
-        },
-        {
-          "id": "2464721e-1219-8153-959b-f852260f4dec",
-          "type": "paragraph",
-          "content": {
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "## Pourquoi j’ai laissé tomber les géants américains\n\n### Le piège des solutions trop globales\n\nAu début, j’étais tenté par les solutions américaines comme HubSpot ou ActiveCampaign. Leurs promesses de croissance rapide et d’automatisation intelligente étaient attrayantes… jusqu’à ce que je réalise leur complexité, leurs coûts cachés et leur manque d’adaptabilité à nos réalités françaises. Chaque fonctionnalité semblait pensée pour un marché anglo-saxon, et je passais plus de temps à traduire les interfaces qu’à lancer des campagnes efficaces.\n\n### L’expérience locale fait la différence  \n\nAvec une solution française, j’ai enfin eu droit à une vraie écoute. Le support est réactif, les formations sont claires, et je sens que mes enjeux sont compris. Je ne suis plus un simple utilisateur parmi des millions, je suis accompagné. Et toute cette proximité – humaine, linguistique, légale – m’a donné confiance pour aller plus loin avec l’automatisation marketing.",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "## Pourquoi j’ai laissé tomber les géants américains\n\n### Le piège des solutions trop globales\n\nAu début, j’étais tenté par les solutions américaines comme HubSpot ou ActiveCampaign. Leurs promesses de croissance rapide et d’automatisation intelligente étaient attrayantes… jusqu’à ce que je réalise leur complexité, leurs coûts cachés et leur manque d’adaptabilité à nos réalités françaises. Chaque fonctionnalité semblait pensée pour un marché anglo-saxon, et je passais plus de temps à traduire les interfaces qu’à lancer des campagnes efficaces.\n\n### L’expérience locale fait la différence  \n\nAvec une solution française, j’ai enfin eu droit à une vraie écoute. Le support est réactif, les formations sont claires, et je sens que mes enjeux sont compris. Je ne suis plus un simple utilisateur parmi des millions, je suis accompagné. Et toute cette proximité – humaine, linguistique, légale – m’a donné confiance pour aller plus loin avec l’automatisation marketing.",
-                "href": null
-              }
-            ],
-            "color": "default"
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80bd-9a94-edd64462f395",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Trop de choix, pas assez de résultats",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Trop de choix, pas assez de résultats",
+            "href": null
           }
-        },
-        {
-          "id": "2464721e-1219-81e0-8ef1-c9fe256a5a1c",
-          "type": "paragraph",
-          "content": {
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "## Mon choix en 2025 : les leaders français du marketing automation\n\n### Une approche sur-mesure et transparente\n\nAprès plusieurs tests, j’ai découvert des solutions françaises comme Sendinblue (devenu Brevo), Plezi ou Webmecanik. Ce qui m’a frappé, c’est leur simplicité d’usage et leur capacité à s’adapter à mes besoins réels. Contrairement aux usines à gaz américaines, ici tout est clair : pas de modules inutiles, pas de surcoût imprévu. Je configure, je lance, je mesure les résultats. Et surtout, les données restent hébergées en France, ce qui me rassure énormément vis-à-vis du RGPD.  \n\nAvec Brevo, j’ai optimisé mes campagnes emailing en quelques jours. Plezi m’a permis de personnaliser mes tunnels automatisés sans coder. Webmecanik, lui, s’intègre parfaitement avec mon CRM. Je ne ressens plus ce sentiment d’être \"petit\" face à un outil démesuré : je suis en contrôle.",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "## Mon choix en 2025 : les leaders français du marketing automation\n\n### Une approche sur-mesure et transparente\n\nAprès plusieurs tests, j’ai découvert des solutions françaises comme Sendinblue (devenu Brevo), Plezi ou Webmecanik. Ce qui m’a frappé, c’est leur simplicité d’usage et leur capacité à s’adapter à mes besoins réels. Contrairement aux usines à gaz américaines, ici tout est clair : pas de modules inutiles, pas de surcoût imprévu. Je configure, je lance, je mesure les résultats. Et surtout, les données restent hébergées en France, ce qui me rassure énormément vis-à-vis du RGPD.  \n\nAvec Brevo, j’ai optimisé mes campagnes emailing en quelques jours. Plezi m’a permis de personnaliser mes tunnels automatisés sans coder. Webmecanik, lui, s’intègre parfaitement avec mon CRM. Je ne ressens plus ce sentiment d’être \"petit\" face à un outil démesuré : je suis en contrôle.",
-                "href": null
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-8033-8464-ec357c45098b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Quand j’ai commencé à chercher un logiciel ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Quand j’ai commencé à chercher un logiciel ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "d’automatisation marketing,",
+              "link": {
+                "url": "https://logicielfrance.com/categorie/marketing"
               }
-            ],
-            "color": "default"
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "d’automatisation marketing,",
+            "href": "https://logicielfrance.com/categorie/marketing"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " je me suis vite retrouvé noyé sous les promesses. Des noms à consonance anglophone, des offres séduisantes… mais au final, beaucoup de complexité, peu de transparence, et un vrai flou sur le traitement des données. Et pour moi, en tant que professionnel basé en France, confier mes données clients à une plateforme hors-Europe, c’était inenvisageable.\n",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " je me suis vite retrouvé noyé sous les promesses. Des noms à consonance anglophone, des offres séduisantes… mais au final, beaucoup de complexité, peu de transparence, et un vrai flou sur le traitement des données. Et pour moi, en tant que professionnel basé en France, confier mes données clients à une plateforme hors-Europe, c’était inenvisageable.\n",
+            "href": null
           }
-        },
-        {
-          "id": "2464721e-1219-8181-baa6-d28151cee498",
-          "type": "paragraph",
-          "content": {
-            "rich_text": [
-              {
-                "type": "text",
-                "text": {
-                  "content": "Aujourd’hui, je n’hésite plus : choisir une solution française, c’est opter pour la clarté, la proximité et la performance. J’ai gagné en efficacité, tout en gardant la main sur mes données. Brevo, Plezi, Webmecanik ne sont pas juste des outils, ce sont des partenaires au service de ma croissance. Je ne reviendrai plus en arrière.",
-                  "link": null
-                },
-                "annotations": {
-                  "bold": false,
-                  "italic": false,
-                  "strikethrough": false,
-                  "underline": false,
-                  "code": false,
-                  "color": "default"
-                },
-                "plain_text": "Aujourd’hui, je n’hésite plus : choisir une solution française, c’est opter pour la clarté, la proximité et la performance. J’ai gagné en efficacité, tout en gardant la main sur mes données. Brevo, Plezi, Webmecanik ne sont pas juste des outils, ce sont des partenaires au service de ma croissance. Je ne reviendrai plus en arrière.",
-                "href": null
-              }
-            ],
-            "color": "default"
-          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-8059-831b-f6af8e772f79",
+      "type": "image",
+      "content": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "/posts/images/2484721e-1219-8059-831b-f6af8e772f79.png"
         }
-      ]
+      }
+    },
+    {
+      "id": "2484721e-1219-8018-8a03-d790eb7eec22",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La révélation : une solution pensée en France",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La révélation : une solution pensée en France",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-8086-8f0e-d87ffde9cefd",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Puis j’ai découvert une solution développée par une entreprise française, avec une interface claire, un accompagnement francophone et surtout, une conformité totale avec le RGPD. Un outil qui ne me fait pas perdre mon temps, qui s’intègre parfaitement à mes outils existants et me permet enfin d’automatiser sans stress. C’est cette différence – le soin local, l’expertise française – qui a tout changé pour moi.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Puis j’ai découvert une solution développée par une entreprise française, avec une interface claire, un accompagnement francophone et surtout, une conformité totale avec le RGPD. Un outil qui ne me fait pas perdre mon temps, qui s’intègre parfaitement à mes outils existants et me permet enfin d’automatiser sans stress. C’est cette différence – le soin local, l’expertise française – qui a tout changé pour moi.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80bc-a118-ee4c03a81122",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80d6-9d28-fd4dbfdc54b3",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pourquoi j’ai laissé tomber les géants américains",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pourquoi j’ai laissé tomber les géants américains",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80af-ac04-e0a4bf92f55d",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le piège des solutions trop globales",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le piège des solutions trop globales",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80e8-af7d-f9ed848ed5de",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Au début, j’étais tenté par les solutions américaines comme HubSpot ou ActiveCampaign. Leurs promesses de croissance rapide et d’automatisation intelligente étaient attrayantes… jusqu’à ce que je réalise leur complexité, leurs coûts cachés et leur manque d’adaptabilité à nos réalités françaises. Chaque fonctionnalité semblait pensée pour un marché anglo-saxon, et je passais plus de temps à traduire les interfaces qu’à lancer des campagnes efficaces.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Au début, j’étais tenté par les solutions américaines comme HubSpot ou ActiveCampaign. Leurs promesses de croissance rapide et d’automatisation intelligente étaient attrayantes… jusqu’à ce que je réalise leur complexité, leurs coûts cachés et leur manque d’adaptabilité à nos réalités françaises. Chaque fonctionnalité semblait pensée pour un marché anglo-saxon, et je passais plus de temps à traduire les interfaces qu’à lancer des campagnes efficaces.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-8076-beac-cfaaedf63a84",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L’expérience locale fait la différence  ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L’expérience locale fait la différence  ",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-806e-a1d3-e16fb9361307",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Avec une solution française, j’ai enfin eu droit à une vraie écoute. Le support est réactif, les formations sont claires, et je sens que mes enjeux sont compris. Je ne suis plus un simple utilisateur parmi des millions, je suis accompagné. Et toute cette proximité – humaine, linguistique, légale – m’a donné confiance pour aller plus loin avec l’automatisation marketing.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Avec une solution française, j’ai enfin eu droit à une vraie écoute. Le support est réactif, les formations sont claires, et je sens que mes enjeux sont compris. Je ne suis plus un simple utilisateur parmi des millions, je suis accompagné. Et toute cette proximité – humaine, linguistique, légale – m’a donné confiance pour aller plus loin avec l’automatisation marketing.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-8051-b341-d717a76bb162",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80c0-b94b-c251145f5008",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon choix en 2025 : les leaders français du marketing automation",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon choix en 2025 : les leaders français du marketing automation",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-800f-b4d0-dba08049e5c9",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Une approche sur-mesure et transparente",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Une approche sur-mesure et transparente",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80a3-9159-fbe1e37d9b22",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Après plusieurs tests, j’ai découvert des solutions françaises comme ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Après plusieurs tests, j’ai découvert des solutions françaises comme ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Sendinblue (devenu Brevo)",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/brevo"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sendinblue (devenu Brevo)",
+            "href": "https://logicielfrance.com/logiciel/brevo"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Plezi",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/plezi"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Plezi",
+            "href": "https://logicielfrance.com/logiciel/plezi"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " ou ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " ou ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Sarbacane",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/sarbacane"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sarbacane",
+            "href": "https://logicielfrance.com/logiciel/sarbacane"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ". Ce qui m’a frappé, c’est leur simplicité d’usage et leur capacité à s’adapter à mes besoins réels. Contrairement aux usines à gaz américaines, ici tout est clair : pas de modules inutiles, pas de surcoût imprévu. Je configure, je lance, je mesure les résultats. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ". Ce qui m’a frappé, c’est leur simplicité d’usage et leur capacité à s’adapter à mes besoins réels. Contrairement aux usines à gaz américaines, ici tout est clair : pas de modules inutiles, pas de surcoût imprévu. Je configure, je lance, je mesure les résultats. ",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-80a3-8cb0-d0448ca3a302",
+      "type": "image",
+      "content": {
+        "caption": [],
+        "type": "file",
+        "file": {
+          "url": "/posts/images/2484721e-1219-80a3-8cb0-d0448ca3a302.png"
+        }
+      }
+    },
+    {
+      "id": "2484721e-1219-80dc-90b7-d4a52c68258d",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Et surtout, les données restent hébergées en France, ce qui me rassure énormément vis-à-vis du ",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Et surtout, les données restent hébergées en France, ce qui me rassure énormément vis-à-vis du ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "RGPD",
+              "link": {
+                "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "RGPD",
+            "href": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".  ",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".  ",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2484721e-1219-804d-b1d8-c32905fc869a",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Avec ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Avec ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Brevo",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/brevo"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Brevo",
+            "href": "https://logicielfrance.com/logiciel/brevo"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", j’ai optimisé mes campagnes ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", j’ai optimisé mes campagnes ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "emailing",
+              "link": {
+                "url": "https://logicielfrance.com/categorie/email"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "emailing",
+            "href": "https://logicielfrance.com/categorie/email"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " en quelques jours. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " en quelques jours. ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Plezi",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/plezi"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Plezi",
+            "href": "https://logicielfrance.com/logiciel/plezi"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " m’a permis de personnaliser mes tunnels automatisés sans coder. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " m’a permis de personnaliser mes tunnels automatisés sans coder. ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Webmecanik",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/webmecanik"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Webmecanik",
+            "href": "https://logicielfrance.com/logiciel/webmecanik"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", lui, s’intègre parfaitement avec mon CRM. Je ne ressens plus ce sentiment d’être \"petit\" face à un outil démesuré : je suis en contrôle.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", lui, s’intègre parfaitement avec mon CRM. Je ne ressens plus ce sentiment d’être \"petit\" face à un outil démesuré : je suis en contrôle.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2464721e-1219-8181-baa6-d28151cee498",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Aujourd’hui, je n’hésite plus : choisir une solution française, c’est opter pour la clarté, la proximité et la performance. J’ai gagné en efficacité, tout en gardant la main sur mes données. Brevo, Plezi, Webmecanik ne sont pas juste des outils, ce sont des partenaires au service de ma croissance. Je ne reviendrai plus en arrière.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Aujourd’hui, je n’hésite plus : choisir une solution française, c’est opter pour la clarté, la proximité et la performance. J’ai gagné en efficacité, tout en gardant la main sur mes données. Brevo, Plezi, Webmecanik ne sont pas juste des outils, ce sont des partenaires au service de ma croissance. Je ne reviendrai plus en arrière.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
     }
   ],
-  "publishedAt": "2025-08-06T06:32:31.212Z",
+  "publishedAt": "2025-08-07",
   "author": "Équipe Logiciel France",
   "tags": [],
-  "status": "draft",
+  "coverImage": "/posts/images/cover-2464721e-1219-804b-a1e4-f56b26a1436c.jpg",
+  "status": "published",
   "seo": {
-    "metaDescription": "",
-    "keywords": []
+    "metaTitle": "Comparatif 2025 : Les meilleures solutions françaises de marketing automation",
+    "metaDescription": "Découvrez notre comparatif des solutions françaises de marketing automation en 2025 : analyse complète des fonctionnalités, tarifs et avantages pour booster vos campagnes digitales.",
+    "keywords": [
+      "marketing automation France",
+      "solutions marketing automation 2025",
+      "comparatif marketing automation",
+      "logiciel marketing automation français",
+      "plateforme marketing automation",
+      "automatisation marketing France",
+      "guide marketing automation",
+      "marketing automation pour PME",
+      "outil d'automatisation marketing",
+      "digital marketing automation",
+      "stratégie marketing automation",
+      "technologie marketing automation",
+      "comparatif solutions marketing automation",
+      "marketing automation SaaS",
+      "automatisation commerciale",
+      "solution marketing digital",
+      "marketing automation B2B",
+      "marketing numérique France",
+      "innovations marketing automation",
+      "marketing automation avancé"
+    ]
   }
 }
