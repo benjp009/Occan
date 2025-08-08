@@ -15,7 +15,8 @@ export function CategoriesSection() {
 
   // Ensure count is treated as a number: sort descending and take top 8
   const topCategories = [...categories]
-    .sort((a, b) => Number(b.count) - Number(a.count))
+    .filter(cat => cat.id && cat.name) // Filter out invalid categories
+    .sort((a, b) => Number(b.count || 0) - Number(a.count || 0))
     .slice(0, 8);
 
   return (
@@ -32,10 +33,16 @@ export function CategoriesSection() {
 
       <div className="categories-grid">
         {topCategories.map((cat) => {
+          // Safety check for undefined description
+          if (!cat.id || !cat.name) {
+            return null;
+          }
+          
+          const description = cat.description || '';
           const truncatedDescription =
-            cat.description.length > 50
-              ? cat.description.slice(0, 50).trimEnd() + '…'
-              : cat.description;
+            description.length > 50
+              ? description.slice(0, 50).trimEnd() + '…'
+              : description;
           return (
               <Link
                 key={cat.id}
@@ -43,7 +50,7 @@ export function CategoriesSection() {
                 to={`/categorie/${slugify(cat.name)}`}
               >
               <img
-                src={`/icons/${cat.icon}`}
+                src={`/icons/${cat.icon || 'default.webp'}`}
                 alt={`${cat.name} icon`}
                 className="category-card__icon"
               />
@@ -53,7 +60,7 @@ export function CategoriesSection() {
                 dangerouslySetInnerHTML={{ __html: truncatedDescription }}
               />
               <p className="category-card__count">
-                {cat.count} logiciels
+                {cat.count || '0'} logiciels
               </p>
             </Link>
           );
