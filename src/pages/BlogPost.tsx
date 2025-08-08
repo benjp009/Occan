@@ -136,13 +136,13 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
   return (
     <>
       <Helmet>
-        <title>{post.seo.metaTitle || `${post.title} - Blog Logiciel France`}</title>
+        <title>{post.title} - Blog Logiciel France</title>
         <meta name="description" content={post.seo.metaDescription || post.excerpt} />
         <meta name="keywords" content={post.seo.keywords.join(', ')} />
         <link rel="canonical" href={`https://logicielfrance.com/blog/${post.slug}`} />
         
         {/* Open Graph */}
-        <meta property="og:title" content={post.seo.metaTitle || post.title} />
+        <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.seo.metaDescription || post.excerpt} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`https://logicielfrance.com/blog/${post.slug}`} />
@@ -150,7 +150,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.seo.metaTitle || post.title} />
+        <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.seo.metaDescription || post.excerpt} />
         {post.coverImage && <meta name="twitter:image" content={post.coverImage} />}
         

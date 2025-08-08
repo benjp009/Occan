@@ -84,7 +84,7 @@
             "text": {
               "content": "Indy",
               "link": {
-                "url": "https://logicielfrance.com/logiciel/indy"
+                "url": "https://www.indy.fr/?ae=1176"
               }
             },
             "annotations": {
@@ -96,7 +96,7 @@
               "color": "default"
             },
             "plain_text": "Indy",
-            "href": "https://logicielfrance.com/logiciel/indy"
+            "href": "https://www.indy.fr/?ae=1176"
           },
           {
             "type": "text",
@@ -172,17 +172,6 @@
       }
     },
     {
-      "id": "2484721e-1219-8070-ad0a-e776e8bb2fbd",
-      "type": "image",
-      "content": {
-        "caption": [],
-        "type": "file",
-        "file": {
-          "url": "/posts/images/2484721e-1219-8070-ad0a-e776e8bb2fbd.png"
-        }
-      }
-    },
-    {
       "id": "2414721e-1219-8088-8bba-fc194b9f3567",
       "type": "heading_2",
       "content": {
@@ -217,7 +206,7 @@
           {
             "type": "text",
             "text": {
-              "content": "J’utilise principalement ",
+              "content": "J’utilise principalement Indy pour le suivi de mon budget.",
               "link": null
             },
             "annotations": {
@@ -228,43 +217,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "J’utilise principalement ",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": "Indy",
-              "link": {
-                "url": "https://logicielfrance.com/logiciel/indy"
-              }
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "Indy",
-            "href": "https://logicielfrance.com/logiciel/indy"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": " pour le suivi de mon budget.",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": " pour le suivi de mon budget.",
+            "plain_text": "J’utilise principalement Indy pour le suivi de mon budget.",
             "href": null
           }
         ],
@@ -279,7 +232,7 @@
           {
             "type": "text",
             "text": {
-              "content": "La connexion à mon compte pro ",
+              "content": "La connexion à mon compte pro SumUp s’est faite en quelques minutes. Ensuite, toutes mes transactions bancaires sont automatiquement synchronisées, ce qui me permet de voir rapidement où j’en suis, ce qui rentre, ce qui sort, et surtout, quel est mon bénéfice réel.",
               "link": null
             },
             "annotations": {
@@ -290,43 +243,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "La connexion à mon compte pro ",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": "SumUp",
-              "link": {
-                "url": "/2084721e12198072a8ced53a960f3f7b"
-              }
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "SumUp",
-            "href": "/2084721e12198072a8ced53a960f3f7b"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": " s’est faite en quelques minutes. Ensuite, toutes mes transactions bancaires sont automatiquement synchronisées, ce qui me permet de voir rapidement où j’en suis, ce qui rentre, ce qui sort, et surtout, quel est mon bénéfice réel.",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": " s’est faite en quelques minutes. Ensuite, toutes mes transactions bancaires sont automatiquement synchronisées, ce qui me permet de voir rapidement où j’en suis, ce qui rentre, ce qui sort, et surtout, quel est mon bénéfice réel.",
+            "plain_text": "La connexion à mon compte pro SumUp s’est faite en quelques minutes. Ensuite, toutes mes transactions bancaires sont automatiquement synchronisées, ce qui me permet de voir rapidement où j’en suis, ce qui rentre, ce qui sort, et surtout, quel est mon bénéfice réel.",
             "href": null
           }
         ],
@@ -764,7 +681,7 @@
           {
             "type": "text",
             "text": {
-              "content": "Pas de connexion directe avec ",
+              "content": "Pas de connexion directe avec PayPal, Stripe",
               "link": null
             },
             "annotations": {
@@ -775,43 +692,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "Pas de connexion directe avec ",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": "PayPal",
-              "link": {
-                "url": "/2414721e1219801a9fe2f711cf2547f5"
-              }
-            },
-            "annotations": {
-              "bold": true,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "PayPal",
-            "href": "/2414721e1219801a9fe2f711cf2547f5"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": ", Stripe",
-              "link": null
-            },
-            "annotations": {
-              "bold": true,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": ", Stripe",
+            "plain_text": "Pas de connexion directe avec PayPal, Stripe",
             "href": null
           },
           {
@@ -896,17 +777,6 @@
       }
     },
     {
-      "id": "2484721e-1219-8093-9053-f8f40a70fc13",
-      "type": "image",
-      "content": {
-        "caption": [],
-        "type": "file",
-        "file": {
-          "url": "/posts/images/2484721e-1219-8093-9053-f8f40a70fc13.png"
-        }
-      }
-    },
-    {
       "id": "2414721e-1219-8041-84ea-fc314572d9a1",
       "type": "heading_2",
       "content": {
@@ -941,7 +811,7 @@
           {
             "type": "text",
             "text": {
-              "content": "Je recommande sans hésitation ",
+              "content": "Je recommande sans hésitation Indy à toutes les ",
               "link": null
             },
             "annotations": {
@@ -952,43 +822,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "Je recommande sans hésitation ",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": "Indy",
-              "link": {
-                "url": "https://logicielfrance.com/logiciel/indy"
-              }
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "Indy",
-            "href": "https://logicielfrance.com/logiciel/indy"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": " à toutes les ",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": " à toutes les ",
+            "plain_text": "Je recommande sans hésitation Indy à toutes les ",
             "href": null
           },
           {
@@ -1168,17 +1002,6 @@
       }
     },
     {
-      "id": "2484721e-1219-80d0-8d52-f0945f7c2820",
-      "type": "image",
-      "content": {
-        "caption": [],
-        "type": "file",
-        "file": {
-          "url": "/posts/images/2484721e-1219-80d0-8d52-f0945f7c2820.png"
-        }
-      }
-    },
-    {
       "id": "2414721e-1219-80e2-ab8f-f74aeb0f58fb",
       "type": "heading_2",
       "content": {
@@ -1291,7 +1114,7 @@
           {
             "type": "text",
             "text": {
-              "content": "👉 À suivre : je testerai bientôt d’autres outils comme ",
+              "content": "👉 À suivre : je testerai bientôt d’autres outils comme Freebe ou Tiime pour comparer.",
               "link": null
             },
             "annotations": {
@@ -1302,115 +1125,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "👉 À suivre : je testerai bientôt d’autres outils comme ",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": "Abby",
-              "link": {
-                "url": "https://logicielfrance.com/logiciel/abby"
-              }
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "Abby",
-            "href": "https://logicielfrance.com/logiciel/abby"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": " ou ",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": " ou ",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": "Tiime",
-              "link": {
-                "url": "https://logicielfrance.com/logiciel/tiime"
-              }
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": "Tiime",
-            "href": "https://logicielfrance.com/logiciel/tiime"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": " pour comparer, vous pouvez aussi trouver tous les",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": " pour comparer, vous pouvez aussi trouver tous les",
-            "href": null
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": " logiciels français de comptabilité sur notre page dédiée",
-              "link": {
-                "url": "https://logicielfrance.com/categorie/comptabilite"
-              }
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": " logiciels français de comptabilité sur notre page dédiée",
-            "href": "https://logicielfrance.com/categorie/comptabilite"
-          },
-          {
-            "type": "text",
-            "text": {
-              "content": ". ",
-              "link": null
-            },
-            "annotations": {
-              "bold": false,
-              "italic": false,
-              "strikethrough": false,
-              "underline": false,
-              "code": false,
-              "color": "default"
-            },
-            "plain_text": ". ",
+            "plain_text": "👉 À suivre : je testerai bientôt d’autres outils comme Freebe ou Tiime pour comparer.",
             "href": null
           }
         ],
@@ -1487,7 +1202,6 @@
   "coverImage": "/posts/images/cover-2414721e-1219-801a-9fe2-f711cf2547f5.webp",
   "status": "published",
   "seo": {
-    "metaTitle": "Indy avis 2025 : mon retour d’expérience sur la comptabilité freelance ",
     "metaDescription": "Découvrez mon avis sur Indy après plusieurs mois d’utilisation en freelance. Points forts, limites et conseils pour bien gérer votre comptabilité.\n\n",
     "keywords": [
       "Indy",

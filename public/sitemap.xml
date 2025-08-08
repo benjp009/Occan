@@ -161,11 +161,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://logicielfrance.com/logiciel/captain-verify</loc>
-    <lastmod>2025-07-07</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://logicielfrance.com/logiciel/cegid</loc>
     <lastmod>2025-08-08</lastmod>
     <priority>0.6</priority>
@@ -246,6 +241,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/jd2m-comptable-lmnp</loc>
+    <lastmod>2025-07-07</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/karanext</loc>
     <lastmod>2025-08-08</lastmod>
     <priority>0.6</priority>
@@ -253,11 +253,6 @@
   <url>
     <loc>https://logicielfrance.com/logiciel/kpulse</loc>
     <lastmod>2025-08-08</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://logicielfrance.com/logiciel/legal-start</loc>
-    <lastmod>2025-07-07</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -389,11 +384,6 @@
     <loc>https://logicielfrance.com/logiciel/yourtextguru</loc>
     <lastmod>2025-08-08</lastmod>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://logicielfrance.com/blog/comparatif-des-solutions-francaises-de-marketing-automation-en-2025</loc>
-    <lastmod>2025-08-07</lastmod>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/blog/gerer-sa-comptabilite-de-freelance-avec-indy-mon-avis-apres-plusieurs-mois-dutilisation</loc>
