@@ -52,7 +52,7 @@ export default function NotFound() {
             <div className="not-found-suggestions">
               <h2 className="not-found-suggestions-title">🔍 Suggestions populaires</h2>
               <div className="not-found-tags">
-                <Link to="/toutes-categories" className="not-found-tag">
+                <Link to="/categorie" className="not-found-tag">
                   Toutes les catégories
                 </Link>
                 <Link to="/ajouter-un-nouveau-logiciel" className="not-found-tag">
