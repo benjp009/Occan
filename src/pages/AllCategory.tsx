@@ -45,36 +45,28 @@ export default function AllCategory() {
           <div className="categories-grid">
             {(categories || Array.from({ length: 10 })).map((category, idx) => {
               if (categories) {
-                const categoryTyped = category as CategoryRow;
-                
-                // Safety checks for undefined fields
-                if (!categoryTyped.id || !categoryTyped.name) {
-                  return null;
-                }
-                
-                const description = categoryTyped.description || '';
                 const truncatedDescription =
-                  description.length > 50
-                    ? description.slice(0, 50).trimEnd() + '…'
-                    : description;
+                  (category as CategoryRow).description.length > 50
+                    ? (category as CategoryRow).description.slice(0, 50).trimEnd() + '…'
+                    : (category as CategoryRow).description;
                 return (
                   <Link
-                    key={categoryTyped.id}
+                    key={(category as CategoryRow).id}
                     className="category-card"
-                    to={`/categorie/${slugify(categoryTyped.name)}`}
+                    to={`/categorie/${slugify((category as CategoryRow).name)}`}
                   >
                     <img
-                      src={`/icons/${categoryTyped.icon || 'default.webp'}`}
-                      alt={`${categoryTyped.name} icon`}
+                      src={`/icons/${(category as CategoryRow).icon}`}
+                      alt={`${(category as CategoryRow).name} icon`}
                       className="category-card__icon"
                     />
-                    <h3 className="category-card__title">{categoryTyped.name}</h3>
+                    <h3 className="category-card__title">{(category as CategoryRow).name}</h3>
                     <p
                       className="category-card__desc"
                       dangerouslySetInnerHTML={{ __html: truncatedDescription }}
                     />
                     <p className="category-card__count">
-                      {categoryTyped.count || '0'} logiciels
+                      {(category as CategoryRow).count} logiciels
                     </p>
                   </Link>
                 );

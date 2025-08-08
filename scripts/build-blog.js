@@ -183,7 +183,6 @@ async function convertNotionPageToBlogPost(page, apiKey) {
     }
     
     // SEO
-    const metaTitle = properties.seo_metaTitle?.rich_text?.[0]?.plain_text || null;
     const metaDescription = properties.seo_metaDescription?.rich_text?.[0]?.plain_text || excerpt;
     const keywords = properties.seo_keywords?.rich_text?.[0]?.plain_text?.split(',').map(k => k.trim()) || [];
 
@@ -217,7 +216,6 @@ async function convertNotionPageToBlogPost(page, apiKey) {
       coverImage,
       status,
       seo: {
-        metaTitle,
         metaDescription,
         keywords
       }
