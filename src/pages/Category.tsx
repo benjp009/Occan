@@ -57,8 +57,8 @@ export default function Category({ initialCategory, initialCompanies }: Category
             : 'Logiciels français | Logiciel France'
           }
         </title>
-        {category?.description && (
-          <meta name="description" content={category.description.replace(/<[^>]*>/g, '').slice(0, 160)} />
+        {category?.meta_description && (
+          <meta name="description" content={category.meta_description.replace(/<[^>]*>/g, '').slice(0, 160)} />
         )}
         <meta name="keywords" content={`${category?.name || slug}, logiciel français, software, France`} />
         
@@ -66,16 +66,16 @@ export default function Category({ initialCategory, initialCompanies }: Category
         <meta property="og:title" content={`${category?.name || slug} - Logiciels français`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://logicielfrance.com/categorie/${slug}`} />
-        {category?.description && (
-          <meta property="og:description" content={category.description.replace(/<[^>]*>/g, '').slice(0, 160)} />
+        {category?.meta_description && (
+          <meta property="og:description" content={category.meta_description.replace(/<[^>]*>/g, '').slice(0, 160)} />
         )}
         <meta property="og:site_name" content="Logiciel France" />
         <meta property="og:locale" content="fr_FR" />
         
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={`${category?.name || slug} - Logiciels français`} />
-        {category?.description && (
-          <meta name="twitter:description" content={category.description.replace(/<[^>]*>/g, '').slice(0, 160)} />
+        {category?.meta_description && (
+          <meta name="twitter:description" content={category.meta_description.replace(/<[^>]*>/g, '').slice(0, 160)} />
         )}
       </Helmet>
       <Header />
@@ -90,7 +90,7 @@ export default function Category({ initialCategory, initialCompanies }: Category
             <h1>{category.name}</h1>
             <p
               className="category-description"
-              dangerouslySetInnerHTML={{ __html: category.description }}
+              dangerouslySetInnerHTML={{ __html: category.long_description || category.description }}
             />
           </>
           ) : (
