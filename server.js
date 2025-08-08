@@ -70,6 +70,7 @@ app.get('*', async (req, res) => {
     let initialData = {};
     const softwareMatch = req.url.match(/^\/logiciel\/([^/?#]+)/);
     const categoryMatch = req.url.match(/^\/categorie\/([^/?#]+)/);
+    const blogPostMatch = req.url.match(/^\/blog\/([^/?#]+)/);
     const allSoftwaresMatch = req.url.startsWith('/tous-les-logiciels');
     const homeMatch = req.url === '/' || req.url.startsWith('/?');
     if (softwareMatch) {
@@ -98,6 +99,17 @@ app.get('*', async (req, res) => {
         }
       } catch (err) {
         console.error('Failed to fetch category data', err);
+      }
+    } else if (blogPostMatch) {
+      try {
+        const blogSlug = blogPostMatch[1];
+        const blogPostPath = path.resolve(`./build/posts/${blogSlug}.json`);
+        if (fs.existsSync(blogPostPath)) {
+          const blogPostData = JSON.parse(fs.readFileSync(blogPostPath, 'utf8'));
+          initialData = { blogPost: blogPostData };
+        }
+      } catch (err) {
+        console.error('Failed to fetch blog post data', err);
       }
     } else if (allSoftwaresMatch || homeMatch) {
       try {

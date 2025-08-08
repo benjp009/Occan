@@ -72,7 +72,7 @@ export default function App({ location, initialData }: AppProps) {
         />
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/blog/:slug" element={<BlogPost initialBlogPost={initialData?.blogPost} />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
