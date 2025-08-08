@@ -30,8 +30,11 @@ async function convertImagesInDirectory(dir) {
           const baseName = path.basename(item, ext);
           const webpPath = path.join(dir, `${baseName}.webp`);
           
-          // Éviter de reconvertir si le fichier WebP existe déjà
-          if (!fs.existsSync(webpPath)) {
+          // Vérifier si conversion nécessaire
+          const needsConversion = !fs.existsSync(webpPath) || 
+            fs.statSync(fullPath).mtime > fs.statSync(webpPath).mtime;
+          
+          if (needsConversion) {
             try {
               await sharp(fullPath)
                 .webp({ quality: QUALITY })
@@ -42,7 +45,7 @@ async function convertImagesInDirectory(dir) {
               console.error(`❌ Erreur lors de la conversion de ${fullPath}:`, error.message);
             }
           } else {
-            console.log(`⏭️  Déjà converti: ${path.relative(process.cwd(), webpPath)}`);
+            console.log(`⏭️  Déjà à jour: ${path.relative(process.cwd(), webpPath)}`);
           }
         }
       }
