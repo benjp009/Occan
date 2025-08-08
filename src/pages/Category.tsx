@@ -82,7 +82,7 @@ export default function Category({ initialCategory, initialCompanies }: Category
       <main className="container-category category-page">
         <nav className="breadcrumbs">
           <Link to="/">Accueil</Link> /{' '}
-          <Link to="/toutes-categories">Toutes les catégories</Link> /{' '}
+          <Link to="/categorie">Toutes les catégories</Link> /{' '}
           <span>{category?.name || slug}</span>
         </nav>
         {category ? (
