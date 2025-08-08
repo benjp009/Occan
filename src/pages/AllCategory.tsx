@@ -29,7 +29,7 @@ export default function AllCategory() {
         <meta name="keywords" content="catégories logiciels français, types de logiciels, software categories france, solutions entreprise" />
         <meta property="og:title" content="Toutes les catégories - Logiciels français | Logiciel France" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://logicielfrance.com/categories" />
+        <meta property="og:url" content="https://logicielfrance.com/categorie" />
         <meta property="og:description" content="Explorez toutes les catégories de logiciels français. Trouvez la solution parfaite pour votre entreprise." />
       </Helmet>
       <Header />
