@@ -88,7 +88,7 @@ async function generate() {
   const staticUrls = [
     { loc: `${BASE_URL}/`, priority: '1.0', lastmod: TODAY },
     { loc: `${BASE_URL}/ajouter-un-nouveau-logiciel`, priority: '0.8', lastmod: TODAY },
-    { loc: `${BASE_URL}/toutes-categories`, priority: '0.8', lastmod: TODAY },
+    { loc: `${BASE_URL}/categorie`, priority: '0.8', lastmod: TODAY },
     { loc: `${BASE_URL}/blog`, priority: '0.8', lastmod: TODAY },
   ];
 
