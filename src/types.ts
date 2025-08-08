@@ -33,6 +33,8 @@ export interface CategoryRow {
   icon: string;         
   name: string;    
   description: string; 
+  long_description?: string;
+  meta_description?: string;
   count: string;        
 }
 
