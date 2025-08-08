@@ -52,7 +52,7 @@ export default function App({ location, initialData }: AppProps) {
           path="/ajouter-un-nouveau-logiciel"
           element={<AddSoftware />}
         />
-        <Route path="/toutes-categories" element={<AllCategory />} />
+        <Route path="/categorie" element={<AllCategory />} />
         <Route
           path="/categorie/:slug"
           element={
