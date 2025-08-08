@@ -23,7 +23,7 @@ export function CategoriesSection() {
       <div className="categories-header">
         <h2>Catégories populaires</h2>
           <NavLink
-          to="/toutes-categories"
+          to="/categorie"
           className="secondary-button"
         >
           Voir toutes les catégories
