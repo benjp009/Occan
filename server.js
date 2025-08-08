@@ -21,8 +21,16 @@ const { fetchCompanies, fetchCategories } = require('./src/utils/api.ts');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-// HTTPS redirect middleware
+// WWW redirect and HTTPS redirect middleware
 app.use((req, res, next) => {
+  const host = req.get('Host');
+  
+  // Redirect www to non-www
+  if (host && host.startsWith('www.')) {
+    const newHost = host.substring(4); // Remove 'www.'
+    return res.redirect(301, `https://${newHost}${req.url}`);
+  }
+  
   // Check if we're in production and the request is HTTP
   if (req.header('x-forwarded-proto') !== 'https' && process.env.NODE_ENV === 'production') {
     return res.redirect(301, `https://${req.get('Host')}${req.url}`);
