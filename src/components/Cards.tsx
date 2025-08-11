@@ -29,36 +29,21 @@ export function Cards({ company, highlight, internalTo }: CardsProps) {
 
   return (
     <div className="card">
+      {internalTo && (
+        <Link to={internalTo} className="stretched-link" aria-label={`Voir ${company.name}`} />
+      )}
       <div className="card-header">
         {company.logo && (
-          internalTo ? (
-            <Link to={internalTo} className="company-logo" aria-label={company.name}>
-              <OptimizedImage
-                src={company.logo}
-                alt={`${company.name} logo`}
-                className="company-logo-img"
-              />
-            </Link>
-          ) : (
-            <div className="company-logo">
-              <OptimizedImage
-                src={company.logo}
-                alt={`${company.name} logo`}
-                className="company-logo-img"
-              />
-            </div>
-          )
+          <div className="company-logo">
+            <OptimizedImage
+              src={company.logo}
+              alt={`${company.name} logo`}
+              className="company-logo-img"
+            />
+          </div>
         )}
 
-        {internalTo ? (
-          <h2 className="subtitle">
-            <Link to={internalTo} className="internal-title-link">
-              {highlightText(company.name, highlight)}
-            </Link>
-          </h2>
-        ) : (
-          <h2 className="subtitle">{highlightText(company.name, highlight)}</h2>
-        )}
+        <h2 className="subtitle">{highlightText(company.name, highlight)}</h2>
 
         <a
           href={company.website}
