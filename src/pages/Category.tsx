@@ -102,13 +102,12 @@ export default function Category({ initialCategory, initialCompanies }: Category
         <div className="selection-grid">
           {(companies ? filteredCompanies : Array.from({ length: 6 })).map((company, idx) => (
             companies ? (
-              <Link
-                key={(company as CompanyRow).id}
-                className="card-wrapper"
-                to={`/logiciel/${slugify((company as CompanyRow).name)}`}
-              >
-                <Cards company={company as CompanyRow} />
-              </Link>
+              <div key={(company as CompanyRow).id} className="card-wrapper">
+                <Cards
+                  company={company as CompanyRow}
+                  internalTo={`/logiciel/${slugify((company as CompanyRow).name)}`}
+                />
+              </div>
             ) : (
               <div key={idx} className="card-wrapper">
                 <CardSkeleton />
@@ -121,4 +120,3 @@ export default function Category({ initialCategory, initialCompanies }: Category
     </>
   );
 }
-

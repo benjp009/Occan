@@ -55,10 +55,9 @@ export default function AllSoftwares({ initialCompanies }: AllSoftwaresProps) {
           <div className="selection-grid software-list-grid">
             {(companies || Array.from({ length: 9 })).map((company, idx) => (
               companies ? (
-                <Link
+                <div
                   key={(company as CompanyRow).id}
                   className="card-wrapper"
-                  to={`/logiciel/${slugify((company as CompanyRow).name)}`}
                   id={(() => {
                     const letter = (company as CompanyRow).name
                       .charAt(0)
@@ -71,8 +70,11 @@ export default function AllSoftwares({ initialCompanies }: AllSoftwaresProps) {
                     return letter !== prev ? `letter-${letter}` : undefined;
                   })()}
                 >
-                  <Cards company={company as CompanyRow} />
-                </Link>
+                  <Cards
+                    company={company as CompanyRow}
+                    internalTo={`/logiciel/${slugify((company as CompanyRow).name)}`}
+                  />
+                </div>
               ) : (
                 <div key={idx} className="card-wrapper">
                   <CardSkeleton />

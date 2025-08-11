@@ -74,6 +74,7 @@ app.get('*', async (req, res) => {
     const blogListMatch = req.url === '/blog' || req.url.startsWith('/blog?');
     const allSoftwaresMatch = req.url.startsWith('/tous-les-logiciels');
     const homeMatch = req.url === '/' || req.url.startsWith('/?');
+    const allCategoriesMatch = req.url === '/categorie' || req.url.startsWith('/categorie?');
     if (softwareMatch) {
       try {
         const companies = await fetchCompanies();
@@ -127,10 +128,20 @@ app.get('*', async (req, res) => {
       }
     } else if (allSoftwaresMatch || homeMatch) {
       try {
-        const companies = await fetchCompanies();
-        initialData = { companies };
+        const [companies, categories] = await Promise.all([
+          fetchCompanies(),
+          fetchCategories(),
+        ]);
+        initialData = { companies, categories };
       } catch (err) {
         console.error('Failed to fetch companies', err);
+      }
+    } else if (allCategoriesMatch) {
+      try {
+        const categories = await fetchCategories();
+        initialData = { categories };
+      } catch (err) {
+        console.error('Failed to fetch categories', err);
       }
     }
 
