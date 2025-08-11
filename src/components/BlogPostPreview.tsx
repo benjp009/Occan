@@ -33,7 +33,12 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
   };
 
   return (
-    <Link to={`/blog/${post.slug}`} className={getCardClassName()}>
+    <Link
+      to={`/blog/${post.slug}`}
+      className={getCardClassName()}
+      aria-label={post.title}
+      title={post.title}
+    >
       <div className="blog-post-preview__image">
         {post.coverImage ? (
           <img 
@@ -49,6 +54,8 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
           </div>
         )}
       </div>
+      {/* Ensure anchor has readable text for crawlers/screen readers */}
+      <span className="sr-only">{post.title}</span>
 
       {variant !== 'card' && (
         <div className="blog-post-preview__content">
