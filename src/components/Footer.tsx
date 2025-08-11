@@ -25,7 +25,7 @@ export function Footer() {
            <Link to="/">
           <img
             src="/logo.svg"
-            alt="Occan logo"
+            alt="Logiciel France logo"
             className="logo"
           />
           </Link>
