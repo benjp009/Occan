@@ -46,13 +46,13 @@ export default function App({ location, initialData }: AppProps) {
       <Routes>
         <Route
           path="/"
-          element={<Home initialCompanies={initialData?.companies} />}
+          element={<Home initialCompanies={initialData?.companies} initialCategories={initialData?.categories} />}
         />
         <Route
           path="/ajouter-un-nouveau-logiciel"
           element={<AddSoftware />}
         />
-        <Route path="/categorie" element={<AllCategory />} />
+        <Route path="/categorie" element={<AllCategory initialCategories={initialData?.categories} />} />
         <Route
           path="/categorie/:slug"
           element={

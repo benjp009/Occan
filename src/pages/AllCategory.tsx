@@ -10,16 +10,24 @@ import { slugify } from '../utils/slugify';
 
 
 
-export default function AllCategory() {
-  const [categories, setCategories] = useState<CategoryRow[] | null>(null);
+interface AllCategoryProps {
+  initialCategories?: CategoryRow[] | null;
+}
+
+export default function AllCategory({ initialCategories }: AllCategoryProps) {
+  const [categories, setCategories] = useState<CategoryRow[] | null>(
+    initialCategories ?? null,
+  );
 
 
   useEffect(() => {
-    fetchCategories().then((data) => {
-      const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
-      setCategories(sortedData);
-    });
-  }, []);
+    if (!initialCategories) {
+      fetchCategories().then((data) => {
+        const sortedData = data.sort((a, b) => a.name.localeCompare(b.name));
+        setCategories(sortedData);
+      });
+    }
+  }, [initialCategories]);
 
   return (
     <>

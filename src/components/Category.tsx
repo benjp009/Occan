@@ -5,13 +5,19 @@ import { NavLink, Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
 
 
-export function CategoriesSection() {
+interface CategoriesSectionProps {
+  initialCategories?: CategoryRow[] | null;
+}
 
-  const [categories, setCategories] = useState<CategoryRow[]>([]);
+export function CategoriesSection({ initialCategories }: CategoriesSectionProps) {
+
+  const [categories, setCategories] = useState<CategoryRow[]>(initialCategories || []);
 
   useEffect(() => {
-    fetchCategories().then((cats) => setCategories(cats));
-  }, []);
+    if (!initialCategories) {
+      fetchCategories().then((cats) => setCategories(cats));
+    }
+  }, [initialCategories]);
 
   // Ensure count is treated as a number: sort descending and take top 8
   const topCategories = [...categories]
