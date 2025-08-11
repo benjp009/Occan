@@ -59,6 +59,7 @@ export default function App({ location, initialData }: AppProps) {
             <Category
               initialCategory={initialData?.category}
               initialCompanies={initialData?.companies}
+              initialRelatedPosts={initialData?.relatedPosts}
             />
           }
         />

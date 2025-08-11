@@ -97,7 +97,27 @@ app.get('*', async (req, res) => {
           c => c.id === categoryMatch[1] || slugify(c.name) === categoryMatch[1]
         );
         if (category) {
-          initialData = { category, companies };
+          // Try to include related blog posts for this category from build assets
+          let relatedPosts = [];
+          try {
+            const blogListPath = path.resolve('./build/blog-posts.json');
+            if (fs.existsSync(blogListPath)) {
+              const posts = JSON.parse(fs.readFileSync(blogListPath, 'utf8'));
+              const cat = category.name.toLowerCase();
+              relatedPosts = (Array.isArray(posts) ? posts : [])
+                .filter(p => (p.status || '').toLowerCase() === 'published')
+                .filter(p => {
+                  const tags = (p.tags || []).map(t => (t || '').toLowerCase());
+                  return tags.includes(cat) ||
+                    (p.title || '').toLowerCase().includes(cat) ||
+                    (p.excerpt || '').toLowerCase().includes(cat);
+                })
+                .slice(0, 6);
+            }
+          } catch (err) {
+            console.error('Failed to compute related blog posts', err);
+          }
+          initialData = { category, companies, relatedPosts };
         }
       } catch (err) {
         console.error('Failed to fetch category data', err);

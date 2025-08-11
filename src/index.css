@@ -67,6 +67,23 @@ html, body, #root {
   margin-bottom: 3rem;
 }
 
+/* Three-column variant used in Related Articles */
+.blog-posts-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .blog-posts-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-posts-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
 .blog-post-card {
   display: block;
   position: relative;
