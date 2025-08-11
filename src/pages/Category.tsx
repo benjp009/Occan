@@ -5,17 +5,19 @@ import { slugify } from '../utils/slugify';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCategories, fetchCompanies } from '../utils/api';
-import { CategoryRow, CompanyRow } from '../types';
+import { CategoryRow, CompanyRow, BlogPost } from '../types';
 import { Cards } from '../components/Cards';
 import CardSkeleton from '../components/CardSkeleton';
 import Skeleton from 'react-loading-skeleton';
+import RelatedArticles from '../components/RelatedArticles';
 
 interface CategoryProps {
   initialCategory?: CategoryRow | null;
   initialCompanies?: CompanyRow[] | null;
+  initialRelatedPosts?: BlogPost[] | null;
 }
 
-export default function Category({ initialCategory, initialCompanies }: CategoryProps) {
+export default function Category({ initialCategory, initialCompanies, initialRelatedPosts }: CategoryProps) {
   const { slug } = useParams<{ slug: string }>();
   const [category, setCategory] = useState<CategoryRow | null>(initialCategory ?? null);
   const [companies, setCompanies] = useState<CompanyRow[] | null>(initialCompanies ?? null);
@@ -115,6 +117,15 @@ export default function Category({ initialCategory, initialCompanies }: Category
             )
           ))}
         </div>
+
+        {/* Related articles section */}
+        {category && (
+          <RelatedArticles
+            categoryName={category.name}
+            initialPosts={initialRelatedPosts || undefined}
+            limit={6}
+          />
+        )}
       </main>
       <Footer />
     </>
