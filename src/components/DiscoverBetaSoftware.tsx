@@ -14,18 +14,10 @@ interface DiscoverBetaSoftwareProps {
 }
 
 export const DiscoverBetaSoftware: React.FC<DiscoverBetaSoftwareProps> = ({ companies }) => {
-
-  // Filter for recent companies (added within last 6 months) as "beta" software
-  const sixMonthsAgo = new Date();
-  sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
-
+  // Filter companies explicitly tagged as beta via month_choice === 'beta'
   const betaSoftware: (CompanyRow | null)[] = companies
     ? companies
-        .filter(c => {
-          if (!c.date_added) return false;
-          const addedDate = new Date(c.date_added);
-          return addedDate >= sixMonthsAgo;
-        })
+        .filter(c => (c.month_choice || '').toLowerCase().trim() === 'beta')
         .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
         .slice(0, 6)
     : Array.from({ length: 6 }, () => null);
