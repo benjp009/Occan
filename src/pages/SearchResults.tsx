@@ -42,13 +42,13 @@ export default function SearchResults() {
         ) : (
           <div className="selection-grid">
             {results.map(company => (
-              <Link
-                key={company.id}
-                className="card-wrapper"
-                to={`/logiciel/${slugify(company.name)}`}
-              >
-                <Cards company={company} highlight={query} />
-              </Link>
+              <div key={company.id} className="card-wrapper">
+                <Cards
+                  company={company}
+                  highlight={query}
+                  internalTo={`/logiciel/${slugify(company.name)}`}
+                />
+              </div>
             ))}
           </div>
         )}

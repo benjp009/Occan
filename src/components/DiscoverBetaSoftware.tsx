@@ -62,14 +62,13 @@ export const DiscoverBetaSoftware: React.FC<DiscoverBetaSoftwareProps> = ({ comp
 
       <div className="discover-beta-grid">
         {betaSoftware.map((company, idx) => (
-           company ? (
-            <Link
-              key={company.id}
-              className="card-wrapper"
-              to={`/logiciel/${slugify(company.name)}`}
-            >
-              <Cards company={company} />
-            </Link>
+          company ? (
+            <div key={company.id} className="card-wrapper">
+              <Cards
+                company={company}
+                internalTo={`/logiciel/${slugify(company.name)}`}
+              />
+            </div>
           ) : (
             <div key={idx} className="card-wrapper">
               <CardSkeleton />

@@ -766,6 +766,11 @@ max-width: 80px;
   line-height: 1.4;
 }
 
+.internal-title-link {
+  text-decoration: none;
+  color: #000091;
+}
+
 
 .visit-button {
   margin-left: auto;         /* push this link all the way to the right */
