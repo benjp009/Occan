@@ -84,6 +84,38 @@ html, body, #root {
   }
 }
 
+/* Related Articles Grid */
+.related-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .related-articles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .related-articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Related Articles Section */
+.related-articles {
+  margin: 3rem 0;
+}
+
+.related-articles h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
 .blog-post-card {
   display: block;
   position: relative;
