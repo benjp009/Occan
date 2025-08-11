@@ -7,15 +7,22 @@ import { BlogPost } from '../types';
 import { getBlogPostsMain } from '../utils/blog';
 import BlogPostPreview from '../components/BlogPostPreview';
 
-const Blog: React.FC = () => {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+interface BlogProps {
+  initialPosts?: BlogPost[];
+}
+
+const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
+  const [posts, setPosts] = useState<BlogPost[]>(initialPosts || []);
+  const [loading, setLoading] = useState(!initialPosts);
   const [error, setError] = useState<string>('');
   const [selectedTag, setSelectedTag] = useState<string>('');
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 8;
 
   useEffect(() => {
+    // If SSR provided posts, skip client fetch
+    if (initialPosts && initialPosts.length > 0) return;
+
     const loadPosts = async () => {
       try {
         setError('');
@@ -30,7 +37,7 @@ const Blog: React.FC = () => {
     };
 
     loadPosts();
-  }, []);
+  }, [initialPosts]);
 
   const filteredPosts = selectedTag 
     ? posts.filter(post => post.tags.includes(selectedTag))
