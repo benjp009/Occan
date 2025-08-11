@@ -34,20 +34,22 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
 
   return (
     <Link to={`/blog/${post.slug}`} className={getCardClassName()}>
-      {post.coverImage && (
-        <div className="blog-post-preview__image">
+      <div className="blog-post-preview__image">
+        {post.coverImage ? (
           <img 
-            src={post.coverImage || '/asset/default-blog-image.jpg'} 
-            alt={post.title} 
+            src={post.coverImage}
+            alt={post.title}
           />
-          {variant === 'card' && (
-            <div className="blog-post-preview__overlay">
-              <h2 className="blog-post-preview__title">{post.title}</h2>
-            </div>
-          )}
-        </div>
-      )}
-      
+        ) : (
+          <div className="blog-post-preview__placeholder" aria-hidden="true" />
+        )}
+        {variant === 'card' && (
+          <div className="blog-post-preview__overlay">
+            <h2 className="blog-post-preview__title">{post.title}</h2>
+          </div>
+        )}
+      </div>
+
       {variant !== 'card' && (
         <div className="blog-post-preview__content">
           <h3 className="blog-post-preview__title">{post.title}</h3>
