@@ -50,15 +50,15 @@ export const RelatedArticles: React.FC<RelatedArticlesProps> = ({ categoryName, 
   return (
     <aside className="related-articles">
       <h2>Articles associés</h2>
-      <div className="blog-posts-grid blog-posts-grid--3">
+      <div className="selection-grid related-articles-grid">
         {related.map(post => (
-          <BlogPostPreview
-            key={post.id}
-            post={post}
-            variant="card"
-            showDate={false}
-            showExcerpt={false}
-          />
+          <div key={post.id} className="card-wrapper">
+            <BlogPostPreview
+              key={post.id}
+              post={post}
+              variant="card"
+            />
+          </div>
         ))}
       </div>
     </aside>
