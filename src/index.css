@@ -721,6 +721,7 @@ max-width: 80px;
   max-width: 100%;             /* make sure it’s responsive */
   max-height: 100%;
   margin: 10px 5px;
+  position: relative;          /* enable stretched-link positioning */
 }
 
 .card:hover {
@@ -731,6 +732,16 @@ max-width: 80px;
   border-color: #000091;
   border-style: solid;
   border-width: 0.5px;
+}
+
+/* Make entire card clickable without nesting anchors */
+.stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  text-indent: -999em; /* hide link text if any */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card-header {
@@ -768,7 +779,7 @@ max-width: 80px;
 
 .internal-title-link {
   text-decoration: none;
-  color: #000091;
+  color: #444444;
 }
 
 
@@ -782,6 +793,8 @@ max-width: 80px;
   font-size: 0.9rem;         /* ~14px */
   font-weight: 500;
   transition: background-color 0.2s ease;
+  position: relative;        /* keep above stretched link */
+  z-index: 2;
 }
 
 .visit-button:hover {
@@ -1042,6 +1055,7 @@ max-width: 80px;
 }
 
 .secondary-button {
+  text-decoration: none;
   font-size: 18px;
   background: none;
   border: none;
