@@ -16,9 +16,10 @@ import { Footer } from '../components/Footer';
 
 interface HomeProps {
   initialCompanies?: CompanyRow[] | null;
+  initialCategories?: import('../types').CategoryRow[] | null;
 }
 
-export default function Home({ initialCompanies }: HomeProps) {
+export default function Home({ initialCompanies, initialCategories }: HomeProps) {
   const [companies, setCompanies] = useState<CompanyRow[] | null>(
     initialCompanies ?? null,
   );
@@ -45,7 +46,7 @@ export default function Home({ initialCompanies }: HomeProps) {
       </Helmet>
       <Header />
       <Hero /> 
-      <CategoriesSection />
+      <CategoriesSection initialCategories={initialCategories} />
 
       <main className="banner-container">
 
