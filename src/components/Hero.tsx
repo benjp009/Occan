@@ -6,11 +6,6 @@ import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Link, useNavigate } from 'react-router-dom';
 
-// Description: Footer component for the website
-const popularTags = [
-  'CRM', 'Comptabilité', 'Marketing', 'PME',
-];
-
 export function Hero() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
