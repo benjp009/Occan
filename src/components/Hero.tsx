@@ -39,7 +39,7 @@ export function Hero() {
           Le répertoire des logiciels français
         </h1>
         <p className="research-text">
-          Découvrez les meilleurs logiciels fait en France pour votre entreprise, organisées par catégorie, mots clefs et popularité.
+          Découvrez les meilleurs logiciels faits en France pour votre entreprise, organisées par catégorie, mots clefs et popularité.
         </p>
         <div className="hero-search">
             <div 
