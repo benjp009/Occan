@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+const fetch = require('node-fetch');
 
 const HOST = 'www.logicielfrance.com';
 const KEY = '82fe11e68c9c40bb9a4c55579a849434';
