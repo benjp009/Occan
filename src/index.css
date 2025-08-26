@@ -12,7 +12,7 @@ html, body, #root {
 
 /* Blog Styles */
 .blog-page {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -85,10 +85,10 @@ html, body, #root {
 }
 
 /* Related Articles Grid */
-.related-articles-grid {
+.related-posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -241,7 +241,6 @@ html, body, #root {
 
 /* Blog Post Page */
 .blog-post-page {
-  max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
@@ -263,14 +262,12 @@ html, body, #root {
 
 .blog-post {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .post-header {
   padding: 2rem;
-  border-bottom: 1px solid #e2e8f0;
 }
 
 .post-cover {
@@ -302,7 +299,7 @@ html, body, #root {
 }
 
 .back-to-blog {
-  color: #3182ce;
+  color: #1a202c;
   text-decoration: none;
   font-weight: 500;
 }
@@ -567,6 +564,10 @@ html, body, #root {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .blog-page {
+    width: 100%;
+  }
+  
   .blog-header h1 {
     font-size: 2rem;
   }
@@ -607,6 +608,20 @@ html, body, #root {
   
   .post-cover {
     margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .blog-page {
+    width: 90%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .blog-page {
+    width: 80%;
   }
 }
 
