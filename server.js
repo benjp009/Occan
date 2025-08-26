@@ -4,6 +4,14 @@ const path = require('path');
 const express = require('express');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
+// Polyfill fetch in Node environments where it's not available
+if (typeof fetch === 'undefined') {
+  const fetchImpl = require('node-fetch');
+  global.fetch = fetchImpl;
+  global.Headers = fetchImpl.Headers;
+  global.Request = fetchImpl.Request;
+  global.Response = fetchImpl.Response;
+}
 const tsNode = require('ts-node');
 tsNode.register({
   transpileOnly: true,
