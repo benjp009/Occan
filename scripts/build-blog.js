@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
+const fetch = require('node-fetch');
 
 // Configuration Notion
 const NOTION_API_URL = 'https://api.notion.com/v1';
