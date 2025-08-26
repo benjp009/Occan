@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -15,7 +14,7 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
   const [posts, setPosts] = useState<BlogPost[]>(initialPosts || []);
   const [loading, setLoading] = useState(!initialPosts);
   const [error, setError] = useState<string>('');
-  const [selectedTag, setSelectedTag] = useState<string>('');
+  const [selectedTag] = useState<string>('');
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 8;
 
@@ -48,20 +47,6 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
   const endIndex = startIndex + postsPerPage;
   const currentPosts = filteredPosts.slice(startIndex, endIndex);
 
-  const handleTagChange = (tag: string) => {
-    setSelectedTag(tag);
-    setCurrentPage(1);
-  };
-
-  const allTags = Array.from(new Set(posts.flatMap(post => post.tags)));
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('fr-FR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
 
   return (
     <>
