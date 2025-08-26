@@ -2,6 +2,7 @@ const fs = require('fs');
 const Papa = require('papaparse');
 const path = require('path');
 require('dotenv').config();
+const fetch = require('node-fetch');
 
 const TODAY = new Date().toISOString().split('T')[0];
 

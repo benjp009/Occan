@@ -6,11 +6,6 @@ import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Link, useNavigate } from 'react-router-dom';
 
-// Description: Footer component for the website
-const popularTags = [
-  'CRM', 'Comptabilité', 'Marketing', 'PME',
-];
-
 export function Hero() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
@@ -44,7 +39,7 @@ export function Hero() {
           Le répertoire des logiciels français
         </h1>
         <p className="research-text">
-          Découvrez les meilleurs logiciels fait en France pour votre entreprise, organisées par catégorie, mots clefs et popularité.
+          Découvrez les meilleurs logiciels faits en France pour votre entreprise, organisées par catégorie, mots clefs et popularité.
         </p>
         <div className="hero-search">
             <div 
