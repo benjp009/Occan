@@ -1,5 +1,1567 @@
 [
   {
+    "id": "2644721e-1219-80b2-b4fc-ecddeede57e8",
+    "title": "Ce que j’ignorais en réduisant mon emploi à 50 % qui a failli me coûter ma retraite ",
+    "slug": "ce-que-jignorais-en-reduisant-mon-emploi-a-50-qui-a-failli-me-couter-ma-retraite",
+    "excerpt": "Fin de carrière, mi-temps & micro-entreprise : j’ai réalisé comment transformer mon statut en SASU pour conserver ma retraite.",
+    "content": [
+      {
+        "id": "2644721e-1219-808d-8073-e27dfc70b23a",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Une vie à deux vitesses — et un jour, tout bascule",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Une vie à deux vitesses — et un jour, tout bascule",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8003-b51d-f158302a055d",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8074-9c9f-c854fedf38b0",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Je m’appelle Nathalie (le prénom a été changé pour préserver l’anonymat). Je suis professeure en lycée, passionnée par mon métier. En parallèle de mes cours, j’ai créé une micro‑entreprise : j’y réalise des missions administratives pour compléter mes revenus. Ce double rythme était silencieux, discret, presque invisible dans le quotidien de mes collègues… jusqu’à aujourd’hui.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Je m’appelle Nathalie (le prénom a été changé pour préserver l’anonymat). Je suis professeure en lycée, passionnée par mon métier. En parallèle de mes cours, j’ai créé une micro‑entreprise : j’y réalise des missions administratives pour compléter mes revenus. Ce double rythme était silencieux, discret, presque invisible dans le quotidien de mes collègues… jusqu’à aujourd’hui.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80a9-a41b-e9bd1d508207",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Tout a changé quand j’ai réduit mon service à ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Tout a changé quand j’ai réduit mon service à ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "50 %",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "50 %",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", afin de conserver mes cotisations retraite et anticiper la prochaine étape de ma vie professionnelle.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", afin de conserver mes cotisations retraite et anticiper la prochaine étape de ma vie professionnelle.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80cc-806f-cdfe492ec3ec",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Mi-temps + micro-entreprise = un cocktail explosif",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Mi-temps + micro-entreprise = un cocktail explosif",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8005-9b99-d2a24b147e53",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "La réalité m’a rattrapée brutalement. Maintenir ma micro‑entreprise, tout en étant à mi‑temps dans la fonction publique, m’exposait à un risque majeur : compromettre ma retraite.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "La réalité m’a rattrapée brutalement. Maintenir ma micro‑entreprise, tout en étant à mi‑temps dans la fonction publique, m’exposait à un risque majeur : compromettre ma retraite.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8042-a80b-fe143bc99b92",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Pour les fonctionnaires",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Pour les fonctionnaires",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", le cumul d’une activité privée est possible, mais ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", le cumul d’une activité privée est possible, mais ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "sous conditions restrictives",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "sous conditions restrictives",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", notamment en temps plein. À mi‑temps, ce cumul peut être envisageable, mais seulement ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", notamment en temps plein. À mi‑temps, ce cumul peut être envisageable, mais seulement ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "sous autorisation hiérarchique",
+                "link": {
+                  "url": "https://bpifrance-creation.fr/system/files/2018-12/Webinaires/Tout%20savoir%20sur%20le%20cumul%20d%27activit%C3%A9s%20en%20micro%20V2.pdf?utm_source=chatgpt.com"
+                }
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "sous autorisation hiérarchique",
+              "href": "https://bpifrance-creation.fr/system/files/2018-12/Webinaires/Tout%20savoir%20sur%20le%20cumul%20d%27activit%C3%A9s%20en%20micro%20V2.pdf?utm_source=chatgpt.com"
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " .",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " .",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8018-9066-df1e1ec8a0ca",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "En matière de ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "En matière de ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "retraite",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "retraite",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", si je ne remplis pas les conditions du cumul intégral (avoir liquidé toutes mes pensions de base et complémentaires et détenu un taux plein), mon cumul devient ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", si je ne remplis pas les conditions du cumul intégral (avoir liquidé toutes mes pensions de base et complémentaires et détenu un taux plein), mon cumul devient ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "plafonné",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "plafonné",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " : l’ensemble de mes revenus (retraite + activité) doit rester en-dessous d’un certain seuil, sous peine de ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " : l’ensemble de mes revenus (retraite + activité) doit rester en-dessous d’un certain seuil, sous peine de ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "suspension de la pension",
+                "link": {
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F12402?utm_source=chatgpt.com"
+                }
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "suspension de la pension",
+              "href": "https://www.service-public.fr/particuliers/vosdroits/F12402?utm_source=chatgpt.com"
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " .",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " .",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80b6-b8c4-d7befb1a2ff4",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Cette pression juridique s’est insinuée dans mes nuits. La pensée lancinante me hantait : ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Cette pression juridique s’est insinuée dans mes nuits. La pensée lancinante me hantait : ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "« Si je continue en micro‑entreprise, je risque de perdre ma retraite… »",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": true,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "« Si je continue en micro‑entreprise, je risque de perdre ma retraite… »",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-804d-baf6-e3f8837218e9",
+        "type": "image",
+        "content": {
+          "caption": [],
+          "type": "file",
+          "file": {
+            "url": "/posts/images/2644721e-1219-804d-baf6-e3f8837218e9.jpg"
+          }
+        }
+      },
+      {
+        "id": "2644721e-1219-802e-8f59-c5c590fa3479",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Et si la solution était ailleurs ?",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Et si la solution était ailleurs ?",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80e9-a9a9-e49f248fc8d6",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Dans ce moment d’incertitude, j’ai reçu une proposition inattendue (et salvatrice) : ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Dans ce moment d’incertitude, j’ai reçu une proposition inattendue (et salvatrice) : ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "et si je transformais ma micro‑entreprise en SASU ?",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": true,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "et si je transformais ma micro‑entreprise en SASU ?",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8048-a7f6-db2fd9fba382",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ma porte de sortie : SASU + Indy (via Logiciel France)",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ma porte de sortie : SASU + Indy (via Logiciel France)",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80f9-8a34-f56a82ec504e",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "J’ai découvert cette alternative plus rassurante :",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "J’ai découvert cette alternative plus rassurante :",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8039-b01e-ddeb0fbcfc04",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "La ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "La ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "SASU",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "SASU",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " (Société par Actions Simplifiée Unipersonnelle) me permet de poursuivre mon activité en tant que dirigeante assimilée salariée, affiliée au régime général. C’est une structure juridique claire, adaptée et plus souple en matière de  .",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " (Société par Actions Simplifiée Unipersonnelle) me permet de poursuivre mon activité en tant que dirigeante assimilée salariée, affiliée au régime général. C’est une structure juridique claire, adaptée et plus souple en matière de  .",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80c4-9655-f7fb8ba085d3",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Grâce à ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Grâce à ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "Indy",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Indy",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", visible sur ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", visible sur ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "Logiciel France",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Logiciel France",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", j’ai pu ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", j’ai pu ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "créer cette SASU gratuitement",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "créer cette SASU gratuitement",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", étape par étape, en toute sérénité.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", étape par étape, en toute sérénité.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80ac-8368-d56957e872f9",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sans compter que ce statut est plus compatible avec les droits à la retraite que l’auto‑entrepreneur individuel, car il cadre fiscalement et socialement l’activité de manière plus robuste.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sans compter que ce statut est plus compatible avec les droits à la retraite que l’auto‑entrepreneur individuel, car il cadre fiscalement et socialement l’activité de manière plus robuste.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8040-97be-dd4e751e8dc7",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Avec cette solution, je peux continuer à facturer mes clients, en toute légalité, et ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Avec cette solution, je peux continuer à facturer mes clients, en toute légalité, et ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "continuer à percevoir ma retraite sans compromis",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "continuer à percevoir ma retraite sans compromis",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ".",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ".",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-806b-8a99-d42d39695b03",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Pourquoi cette histoire me semblait importante à partager",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Pourquoi cette histoire me semblait importante à partager",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80f7-af84-e65f0f61b784",
+        "type": "table",
+        "content": {
+          "table_width": 2,
+          "has_column_header": true,
+          "has_row_header": false
+        },
+        "children": [
+          {
+            "id": "2644721e-1219-8064-aff2-f06e532e7d18",
+            "type": "table_row",
+            "content": {
+              "cells": [
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Atout",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Atout",
+                    "href": null
+                  }
+                ],
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Ce que ça apporte",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Ce que ça apporte",
+                    "href": null
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "id": "2644721e-1219-8065-94cd-fad7beed1ae1",
+            "type": "table_row",
+            "content": {
+              "cells": [
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Suspense narratif",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": true,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Suspense narratif",
+                    "href": null
+                  }
+                ],
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "L’histoire capte l’attention jusqu’à la révélation de la solution.",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "L’histoire capte l’attention jusqu’à la révélation de la solution.",
+                    "href": null
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "id": "2644721e-1219-8090-ab64-fe5cd959eaba",
+            "type": "table_row",
+            "content": {
+              "cells": [
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Sources juridiques fiables",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": true,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Sources juridiques fiables",
+                    "href": null
+                  }
+                ],
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Service‑public.fr, Légalplace, etc., renforcent ma crédibilité et rassurent.",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Service‑public.fr, Légalplace, etc., renforcent ma crédibilité et rassurent.",
+                    "href": null
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "id": "2644721e-1219-8070-a77f-d3ba695fcdab",
+            "type": "table_row",
+            "content": {
+              "cells": [
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Solution concrète et accessible",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": true,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Solution concrète et accessible",
+                    "href": null
+                  }
+                ],
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "SASU + Indy = alternative pragmatique que je peux recommander en confiance.",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "SASU + Indy = alternative pragmatique que je peux recommander en confiance.",
+                    "href": null
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "id": "2644721e-1219-8026-b447-e7a646199cf1",
+            "type": "table_row",
+            "content": {
+              "cells": [
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Tonalité humaine et encourageante",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": true,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Tonalité humaine et encourageante",
+                    "href": null
+                  }
+                ],
+                [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Je m’adresse à d’autres dans ma situation, avec empathie et clarté.",
+                      "link": null
+                    },
+                    "annotations": {
+                      "bold": false,
+                      "italic": false,
+                      "strikethrough": false,
+                      "underline": false,
+                      "code": false,
+                      "color": "default"
+                    },
+                    "plain_text": "Je m’adresse à d’autres dans ma situation, avec empathie et clarté.",
+                    "href": null
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "2644721e-1219-80a0-9430-c9941037d213",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ce que j’appelle mes propres mots primordiaux",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ce que j’appelle mes propres mots primordiaux",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8040-b385-d7ea0bb573a8",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Si, comme moi, vous approchez de la fin de votre carrière — avec un emploi à mi‑temps dans la fonction publique et une micro‑entreprise en back‑up —, ne vous enfermez pas dans l’incertitude.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Si, comme moi, vous approchez de la fin de votre carrière — avec un emploi à mi‑temps dans la fonction publique et une micro‑entreprise en back‑up —, ne vous enfermez pas dans l’incertitude.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-80b6-a38b-d0d776cc8f62",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Pensez à passer à ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Pensez à passer à ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "la SASU",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "la SASU",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ", avec un accompagnement simple et rassurant comme ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ", avec un accompagnement simple et rassurant comme ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "Indy",
+                "link": {
+                  "url": "https://logicielfrance.com/logiciel/indy"
+                }
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Indy",
+              "href": "https://logicielfrance.com/logiciel/indy"
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ". Vous pourrez continuer à exercer, tout en préservant vos droits à la retraite.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ". Vous pourrez continuer à exercer, tout en préservant vos droits à la retraite.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-800b-b332-eef38e75d27d",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Partagez cette histoire autour de vous. Peut-être sauvera-t-elle une carrière... ou une tranquillité bien méritée.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Partagez cette histoire autour de vous. Peut-être sauvera-t-elle une carrière... ou une tranquillité bien méritée.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-809c-b337-e4ff6bb6de5d",
+        "type": "heading_2",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sources utiles",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sources utiles",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8081-b42e-d02bfb6d36dc",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Cumul emploi‑retraite",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Cumul emploi‑retraite",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " : cumul intégral ou plafonné selon ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " : cumul intégral ou plafonné selon ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "conditions",
+                "link": {
+                  "url": "https://www.service-public.fr/particuliers/vosdroits/F12402"
+                }
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "conditions",
+              "href": "https://www.service-public.fr/particuliers/vosdroits/F12402"
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " (retraite à taux plein liquidée ou non).",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " (retraite à taux plein liquidée ou non).",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8033-8332-fce184357e73",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Fonctionnaire + micro‑entreprise",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Fonctionnaire + micro‑entreprise",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " : cumul possible à mi‑temps avec autorisation de la hiérarchie.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " : cumul possible à mi‑temps avec autorisation de la hiérarchie.",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "2644721e-1219-8053-a086-e3f14feada6c",
+        "type": "bulleted_list_item",
+        "content": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "SASU et cumul",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "SASU et cumul",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": " : le statut de dirigeant assimilé salarié permet ce statut juridique, compatible avec micro‑entrepreneur sous ",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": " : le statut de dirigeant assimilé salarié permet ce statut juridique, compatible avec micro‑entrepreneur sous ",
+              "href": null
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": "conditions",
+                "link": {
+                  "url": "https://www.legalplace.fr/guides/cumul-sasu-auto-entrepreneur/"
+                }
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "conditions",
+              "href": "https://www.legalplace.fr/guides/cumul-sasu-auto-entrepreneur/"
+            },
+            {
+              "type": "text",
+              "text": {
+                "content": ".",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": ".",
+              "href": null
+            }
+          ],
+          "color": "default"
+        }
+      }
+    ],
+    "publishedAt": "2025-09-04",
+    "author": "Équipe Logiciel France",
+    "tags": [],
+    "coverImage": "/posts/images/cover-2644721e-1219-80b2-b4fc-ecddeede57e8.jpg",
+    "status": "published",
+    "seo": {
+      "metaDescription": "Fin de carrière, mi-temps & micro-entreprise : j’ai réalisé comment transformer mon statut en SASU pour conserver ma retraite.",
+      "keywords": [
+        "cumul emploi-retraite",
+        "auto-entrepreneur fonctionnaire",
+        "SASU retraite",
+        "complément retraite",
+        "création SASU"
+      ]
+    }
+  },
+  {
     "id": "2464721e-1219-804b-a1e4-f56b26a1436c",
     "title": "Comparatif des solutions françaises de marketing automation en 2025",
     "slug": "comparatif-des-solutions-francaises-de-marketing-automation-en-2025",
@@ -8418,425 +9980,6 @@
         }
       },
       {
-        "id": "24c4721e-1219-800a-b84c-c0702431538a",
-        "type": "paragraph",
-        "content": {
-          "rich_text": [],
-          "color": "default"
-        }
-      },
-      {
-        "id": "24c4721e-1219-8015-8e82-cb8df92a3162",
-        "type": "table",
-        "content": {
-          "table_width": 3,
-          "has_column_header": true,
-          "has_row_header": false
-        },
-        "children": [
-          {
-            "id": "24c4721e-1219-806a-adb4-cc82c2dfb847",
-            "type": "table_row",
-            "content": {
-              "cells": [
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "Logiciel",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "Logiciel",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "Prix (HT/mois)",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "Prix (HT/mois)",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "Fonctionnalités principales incluses",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "Fonctionnalités principales incluses",
-                    "href": null
-                  }
-                ]
-              ]
-            }
-          },
-          {
-            "id": "24c4721e-1219-8006-9aaf-e6059168e47e",
-            "type": "table_row",
-            "content": {
-              "cells": [
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "Abby Pro",
-                      "link": {
-                        "url": "https://logicielfrance.com/logiciel/abby"
-                      }
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "Abby Pro",
-                    "href": "https://logicielfrance.com/logiciel/abby"
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "15 €",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "15 €",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "👉 Facturation illimitée personnalisée<br>👉 Synchronisation bancaire en temps réel<br>👉 Gestion et déclaration TVA auto-entrepreneur<br>👉 Relance automatique des impayés<br>👉 Signature électronique",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "👉 Facturation illimitée personnalisée<br>👉 Synchronisation bancaire en temps réel<br>👉 Gestion et déclaration TVA auto-entrepreneur<br>👉 Relance automatique des impayés<br>👉 Signature électronique",
-                    "href": null
-                  }
-                ]
-              ]
-            }
-          },
-          {
-            "id": "24c4721e-1219-8056-b219-c5e2da0efef2",
-            "type": "table_row",
-            "content": {
-              "cells": [
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "Indy Premium",
-                      "link": {
-                        "url": "https://logicielfrance.com/logiciel/indy"
-                      }
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "Indy Premium",
-                    "href": "https://logicielfrance.com/logiciel/indy"
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "12 € (annuel) / 16 € (mensuel)",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "12 € (annuel) / 16 € (mensuel)",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "👉 Synchronisation bancaire illimitée<br>👉 Comptabilité automatisée et déclarations fiscales (TVA, liasse fiscale)<br>👉 Module de facturation intégré<br>👉 Tableau de bord et suivi en temps réel<br>👉 Support client prioritaire basé en France",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "👉 Synchronisation bancaire illimitée<br>👉 Comptabilité automatisée et déclarations fiscales (TVA, liasse fiscale)<br>👉 Module de facturation intégré<br>👉 Tableau de bord et suivi en temps réel<br>👉 Support client prioritaire basé en France",
-                    "href": null
-                  }
-                ]
-              ]
-            }
-          },
-          {
-            "id": "24c4721e-1219-80e6-9c4c-fa30ce9638fc",
-            "type": "table_row",
-            "content": {
-              "cells": [
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "Pennylane TPE",
-                      "link": {
-                        "url": "https://logicielfrance.com/logiciel/pennylane"
-                      }
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "Pennylane TPE",
-                    "href": "https://logicielfrance.com/logiciel/pennylane"
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "24 €",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "24 €",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "👉 Facturation complète et personnalisée<br>👉 Gestion des achats et notes de frais<br>👉 Synchronisation bancaire + relances automatiques<br>👉 Suivi de trésorerie prévisionnelle<br>👉 Collaboration avec expert-comptable",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "👉 Facturation complète et personnalisée<br>👉 Gestion des achats et notes de frais<br>👉 Synchronisation bancaire + relances automatiques<br>👉 Suivi de trésorerie prévisionnelle<br>👉 Collaboration avec expert-comptable",
-                    "href": null
-                  }
-                ]
-              ]
-            }
-          },
-          {
-            "id": "24c4721e-1219-800c-b3d9-ccf098b49c30",
-            "type": "table_row",
-            "content": {
-              "cells": [
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "MaCompta.fr Comptabilité + Facturation",
-                      "link": {
-                        "url": "https://logicielfrance.com/logiciel/macomptafr"
-                      }
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "MaCompta.fr Comptabilité + Facturation",
-                    "href": "https://logicielfrance.com/logiciel/macomptafr"
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "21,90 €",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "21,90 €",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "👉 Comptabilité trésorerie ou engagement<br>👉 Gestion TVA et analytique<br>👉 Facturation illimitée (liée à la compta)<br>👉 Import bancaire et rapprochement<br>👉 Multi-utilisateurs sans surcoût",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "👉 Comptabilité trésorerie ou engagement<br>👉 Gestion TVA et analytique<br>👉 Facturation illimitée (liée à la compta)<br>👉 Import bancaire et rapprochement<br>👉 Multi-utilisateurs sans surcoût",
-                    "href": null
-                  }
-                ]
-              ]
-            }
-          },
-          {
-            "id": "24c4721e-1219-8057-a118-e05197a9c550",
-            "type": "table_row",
-            "content": {
-              "cells": [
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "EBP Comptabilité Activ",
-                      "link": {
-                        "url": "https://logicielfrance.com/logiciel/ebp-comptabilite"
-                      }
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "EBP Comptabilité Activ",
-                    "href": "https://logicielfrance.com/logiciel/ebp-comptabilite"
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "30 € / utilisateur",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "30 € / utilisateur",
-                    "href": null
-                  }
-                ],
-                [
-                  {
-                    "type": "text",
-                    "text": {
-                      "content": "👉 Comptabilité complète avec analytique<br>👉 Déclarations TVA et liasse fiscale (selon options)<br>👉 Automatisation (import bancaire, lettrage)<br>👉 Tableaux de bord financiers<br>👉 Multi-dossiers, multi-utilisateurs",
-                      "link": null
-                    },
-                    "annotations": {
-                      "bold": false,
-                      "italic": false,
-                      "strikethrough": false,
-                      "underline": false,
-                      "code": false,
-                      "color": "default"
-                    },
-                    "plain_text": "👉 Comptabilité complète avec analytique<br>👉 Déclarations TVA et liasse fiscale (selon options)<br>👉 Automatisation (import bancaire, lettrage)<br>👉 Tableaux de bord financiers<br>👉 Multi-dossiers, multi-utilisateurs",
-                    "href": null
-                  }
-                ]
-              ]
-            }
-          }
-        ]
-      },
-      {
         "id": "24c4721e-1219-8068-9969-c52c58ef9fbe",
         "type": "heading_2",
         "content": {
@@ -9832,6 +10975,14 @@
               "href": null
             }
           ],
+          "color": "default"
+        }
+      },
+      {
+        "id": "24c4721e-1219-807d-94f1-f29d4d5a9992",
+        "type": "paragraph",
+        "content": {
+          "rich_text": [],
           "color": "default"
         }
       }
