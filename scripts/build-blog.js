@@ -227,6 +227,46 @@ async function convertNotionPageToBlogPost(page, apiKey) {
   }
 }
 
+function loadExistingPosts() {
+  const publicDir = path.join(__dirname, '../public');
+  const existingPostsFile = path.join(publicDir, 'blog-posts.json');
+  
+  if (fs.existsSync(existingPostsFile)) {
+    try {
+      const existingData = fs.readFileSync(existingPostsFile, 'utf8');
+      return JSON.parse(existingData);
+    } catch (error) {
+      console.warn('Erreur lors du chargement des articles existants:', error);
+      return [];
+    }
+  }
+  return [];
+}
+
+function shouldUpdatePost(notionPost, existingPost) {
+  if (!existingPost) {
+    return true; // Nouvel article
+  }
+  
+  // Si on n'a pas de date updatedAt dans Notion, on skip si l'article existe déjà
+  if (!notionPost.updatedAt && !notionPost.publishedAt) {
+    return false;
+  }
+  
+  // Comparer les dates updatedAt (ou publishedAt si updatedAt n'existe pas)
+  const notionDate = notionPost.updatedAt || notionPost.publishedAt;
+  const existingDate = existingPost.updatedAt || existingPost.publishedAt;
+  
+  if (!notionDate || !existingDate) {
+    return false; // Si on ne peut pas comparer, on considère que c'est inchangé
+  }
+  
+  const notionUpdatedAt = new Date(notionDate);
+  const existingUpdatedAt = new Date(existingDate);
+  
+  return notionUpdatedAt > existingUpdatedAt;
+}
+
 async function buildBlog() {
   const databaseId = process.env.NOTION_BLOG_DATABASE_ID;
   const apiKey = process.env.NOTION_API_KEY;
@@ -239,19 +279,49 @@ async function buildBlog() {
   console.log('🚀 Génération du blog depuis Notion (articles publiés uniquement)...');
 
   try {
+    // Charger les articles existants
+    const existingPosts = loadExistingPosts();
+    const existingPostsMap = new Map();
+    existingPosts.forEach(post => {
+      existingPostsMap.set(post.id, post);
+    });
+
     // Récupération des pages publiées depuis Notion
     const database = await fetchNotionDatabase(databaseId, apiKey);
     const posts = [];
+    let updatedCount = 0;
+    let skippedCount = 0;
 
     console.log(`📄 ${database.results.length} articles publiés trouvés dans Notion`);
 
     for (const page of database.results) {
       const title = page.properties.title?.title?.[0]?.plain_text;
       const status = page.properties.status?.status?.name;
-      console.log(`Traitement de l'article: ${title} (${status})`);
+      const existingPost = existingPostsMap.get(page.id);
+      
+      // Vérification rapide de la date updatedAt depuis Notion
+      const notionUpdatedAt = page.properties.updatedAt?.date?.start;
+      const notionPublishedAt = page.properties.publishedAt?.date?.start;
+      
+      if (existingPost) {
+        const shouldUpdate = shouldUpdatePost({ 
+          updatedAt: notionUpdatedAt, 
+          publishedAt: notionPublishedAt 
+        }, existingPost);
+        
+        if (!shouldUpdate) {
+          console.log(`⏭️  Article inchangé: ${title} - utilisation de la version existante`);
+          posts.push(existingPost);
+          skippedCount++;
+          continue;
+        }
+      }
+      
+      console.log(`🔄 Traitement de l'article: ${title} (${status})`);
       const post = await convertNotionPageToBlogPost(page, apiKey);
       if (post) {
         posts.push(post);
+        updatedCount++;
       }
     }
 
@@ -262,20 +332,28 @@ async function buildBlog() {
       JSON.stringify(posts, null, 2)
     );
 
-    // Sauvegarde de chaque article individuellement
+    // Sauvegarde de chaque article individuellement (seulement les nouveaux/modifiés)
     const postsDir = path.join(publicDir, 'posts');
     if (!fs.existsSync(postsDir)) {
       fs.mkdirSync(postsDir, { recursive: true });
     }
 
-    for (const post of posts) {
+    // Sauvegarder seulement les articles mis à jour
+    const updatedPosts = posts.filter(post => {
+      const existingPost = existingPostsMap.get(post.id);
+      return !existingPost || shouldUpdatePost(post, existingPost);
+    });
+
+    for (const post of updatedPosts) {
       fs.writeFileSync(
         path.join(postsDir, `${post.slug}.json`),
         JSON.stringify(post, null, 2)
       );
     }
 
-    console.log(`✅ ${posts.length} articles générés avec succès`);
+    console.log(`✅ ${posts.length} articles traités au total`);
+    console.log(`🔄 ${updatedCount} articles mis à jour`);
+    console.log(`⏭️  ${skippedCount} articles inchangés`);
   } catch (error) {
     console.error('❌ Erreur lors de la génération du blog:', error);
     process.exit(1);
