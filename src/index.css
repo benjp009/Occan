@@ -458,6 +458,37 @@ html, body, #root {
   color: #742a2a;
 }
 
+.notion-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.notion-table th,
+.notion-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.notion-table th {
+  background-color: #f7fafc;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.notion-table .table-header-row th {
+  background-color: #f7fafc;
+}
+
+.notion-table tr:last-child td,
+.notion-table tr:last-child th {
+  border-bottom: none;
+}
+
 /* Loading states */
 .blog-loading,
 .blog-error,
