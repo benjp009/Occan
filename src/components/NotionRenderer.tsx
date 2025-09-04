@@ -125,6 +125,31 @@ const NotionRenderer: React.FC<NotionRendererProps> = ({ blocks }) => {
           </div>
         );
 
+      case 'table':
+        return (
+          <table key={block.id} className="notion-table">
+            <tbody>
+              {children?.map(row => renderBlock(row))}
+            </tbody>
+          </table>
+        );
+
+      case 'table_row':
+        const cells = content?.cells || [];
+        const isHeader = cells[0]?.some((cell: any) => cell.annotations?.bold);
+        return (
+          <tr key={block.id} className={isHeader ? 'table-header-row' : 'table-row'}>
+            {cells.map((cell: any[], cellIndex: number) => {
+              const CellTag = isHeader ? 'th' : 'td';
+              return (
+                <CellTag key={cellIndex}>
+                  {renderRichText(cell)}
+                </CellTag>
+              );
+            })}
+          </tr>
+        );
+
       default:
         return (
           <div key={block.id} className="notion-unsupported">
