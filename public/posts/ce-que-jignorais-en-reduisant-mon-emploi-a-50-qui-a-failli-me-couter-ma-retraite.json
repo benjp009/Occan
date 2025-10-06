@@ -553,7 +553,7 @@
           {
             "type": "text",
             "text": {
-              "content": "Ma porte de sortie : SASU + Indy (via Logiciel France)",
+              "content": "Ma porte de sortie découverte sur Logiciel France",
               "link": null
             },
             "annotations": {
@@ -564,7 +564,7 @@
               "code": false,
               "color": "default"
             },
-            "plain_text": "Ma porte de sortie : SASU + Indy (via Logiciel France)",
+            "plain_text": "Ma porte de sortie découverte sur Logiciel France",
             "href": null
           }
         ],
@@ -684,7 +684,9 @@
             "type": "text",
             "text": {
               "content": "Indy",
-              "link": null
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/indy"
+              }
             },
             "annotations": {
               "bold": true,
@@ -695,7 +697,7 @@
               "color": "default"
             },
             "plain_text": "Indy",
-            "href": null
+            "href": "https://logicielfrance.com/logiciel/indy"
           },
           {
             "type": "text",
@@ -1545,6 +1547,7 @@
     }
   ],
   "publishedAt": "2025-09-04",
+  "updatedAt": "2025-09-05",
   "author": "Équipe Logiciel France",
   "tags": [],
   "coverImage": "/posts/images/cover-2644721e-1219-80b2-b4fc-ecddeede57e8.jpg",
