@@ -29,6 +29,8 @@
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "indexnow": "node scripts/indexnow.js",
     "convert-webp": "node scripts/convert-to-webp.js",
+    "sync-notion": "node scripts/sync-notion.js",
+    "test-notion": "node scripts/test-notion.js",
     "build": "node scripts/build-blog.js && npm run convert-webp && npm run generate-sitemap && react-scripts build && npm run indexnow",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -52,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@notionhq/client": "^2.2.15",
     "@types/papaparse": "^5.3.16",
     "sharp": "^0.34.3"
   }

@@ -1,0 +1,48 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main, development ]
+  workflow_dispatch:
+  repository_dispatch:
+    types: [notion-update]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Sync Notion content
+      if: github.event_name == 'repository_dispatch'
+      run: node scripts/sync-notion.js
+      env:
+        NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        
+    - name: Build project
+      run: npm run build
+      
+    - name: Deploy to production
+      if: github.ref == 'refs/heads/main'
+      run: |
+        # Add your deployment script here
+        # Example: rsync, FTP, or hosting provider CLI
+        echo "Deploying to production..."
+        
+    - name: Deploy to staging
+      if: github.ref == 'refs/heads/development'
+      run: |
+        # Add your staging deployment script here
+        echo "Deploying to staging..."

@@ -1,0 +1,68 @@
+name: Sync Notion Content
+
+on:
+  # Déclenchement manuel
+  workflow_dispatch:
+  
+  # Webhook depuis Notion (via repository_dispatch)
+  repository_dispatch:
+    types: [notion-publish]
+    
+  # Cron job quotidien à 8h du matin
+  schedule:
+    - cron: '0 8 * * *'
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Install Notion SDK
+      run: npm install @notionhq/client
+      
+    - name: Sync Notion content
+      run: node scripts/sync-notion.js
+      env:
+        NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        
+    - name: Check for changes
+      id: changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add public/posts/
+        if git diff --staged --quiet; then
+          echo "changes=false" >> $GITHUB_OUTPUT
+          echo "Aucun changement détecté"
+        else
+          echo "changes=true" >> $GITHUB_OUTPUT
+          echo "Nouveaux articles détectés"
+        fi
+        
+    - name: Commit and push changes
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        git commit -m "🤖 Mise à jour automatique depuis Notion"
+        git push
+        
+    - name: Build and deploy
+      if: steps.changes.outputs.changes == 'true'
+      run: |
+        npm run build
+        echo "🚀 Déploiement en cours..."
+        # Ajouter ici votre script de déploiement
