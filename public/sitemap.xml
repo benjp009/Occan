@@ -2,92 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://logicielfrance.com/</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/ajouter-un-nouveau-logiciel</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/blog</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/achat</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/automatisation</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/comptabilite</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/categorie/conception-web</loc>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/creation-dentreprise</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/data</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/email</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/erp</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/experience-utilisateur</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/categorie/formation</loc>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/marketing</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/prospection</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/reglementation</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/reseaux-sociaux</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/categorie/ressources-humaines</loc>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/seo</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/categorie/webinaire</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-10-09</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -128,6 +143,11 @@
   <url>
     <loc>https://logicielfrance.com/logiciel/axelor</loc>
     <lastmod>2025-05-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/axeptio</loc>
+    <lastmod>2025-08-06</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -181,6 +201,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/ctfreak</loc>
+    <lastmod>2025-08-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/dastra</loc>
     <lastmod>2025-06-16</lastmod>
     <priority>0.6</priority>
@@ -216,6 +241,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/eurecia</loc>
+    <lastmod>2025-08-27</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/evoliz</loc>
     <lastmod>2025-05-18</lastmod>
     <priority>0.6</priority>
@@ -226,8 +256,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/finary</loc>
+    <lastmod>2025-08-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/fitnet-manager</loc>
     <lastmod>2025-05-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/fresh-scan</loc>
+    <lastmod>2025-10-08</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -256,6 +296,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/legal-place</loc>
+    <lastmod>2025-08-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/legal-start</loc>
     <lastmod>2025-08-06</lastmod>
     <priority>0.6</priority>
@@ -268,6 +313,11 @@
   <url>
     <loc>https://logicielfrance.com/logiciel/lemmilink</loc>
     <lastmod>2025-06-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/linkavista</loc>
+    <lastmod>2025-10-08</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -311,6 +361,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/octime</loc>
+    <lastmod>2025-08-06</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/paper-club</loc>
+    <lastmod>2025-10-08</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/pennylane</loc>
     <lastmod>2025-05-26</lastmod>
     <priority>0.6</priority>
@@ -323,6 +383,11 @@
   <url>
     <loc>https://logicielfrance.com/logiciel/plezi</loc>
     <lastmod>2025-05-26</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/pro-photo</loc>
+    <lastmod>2025-10-08</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -341,8 +406,28 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/logiciel/seo-press</loc>
+    <lastmod>2025-10-08</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/simcollab</loc>
+    <lastmod>2025-09-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/skoatch</loc>
+    <lastmod>2025-08-08</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/logiciel/spendesk</loc>
     <lastmod>2025-06-25</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/logiciel/sweego</loc>
+    <lastmod>2025-09-04</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
@@ -392,7 +477,12 @@
   </url>
   <url>
     <loc>https://logicielfrance.com/blog/ce-que-jignorais-en-reduisant-mon-emploi-a-50-qui-a-failli-me-couter-ma-retraite</loc>
-    <lastmod>2025-09-04</lastmod>
+    <lastmod>2025-09-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://logicielfrance.com/blog/comment-continuer-a-toucher-ses-are-legalement-tout-en-travaillant-en-freelance-en-2025</loc>
+    <lastmod>2025-10-06</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
