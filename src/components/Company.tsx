@@ -62,6 +62,9 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
             {company.asset_3 && (
               <OptimizedImage src={company.asset_3} alt="asset 3" className="company-asset" />
             )}
+            {company.description_3 && (
+              <p dangerouslySetInnerHTML={{ __html: company.description_3 }} />
+            )}
           </div>
         ) : (
           <div
