@@ -1,0 +1,1909 @@
+{
+  "id": "2924721e-1219-803e-92cf-d77a0e32fed3",
+  "title": "🚀 De la Galère des Tests A/B au ROI Exponentiel : Comment AdCreative.ai a sauvé mes campagnes publicitaires",
+  "slug": "de-la-galere-des-tests-ab-au-roi-exponentiel-comment-adcreativeai-a-sauve-mes-campagnes-publicitaires",
+  "excerpt": "Fini les nuits blanches à bricoler des bannières ! Mon histoire avec ",
+  "content": [
+    {
+      "id": "2924721e-1219-801a-a91c-e6e9b6fda2a2",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Introduction : La spirale infernale de la création publicitaire",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Introduction : La spirale infernale de la création publicitaire",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-802f-9ca5-ce008a4a488f",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon nom est Julien, et pendant longtemps, j'ai détesté la publicité. Pas le concept, mais le processus. En tant que responsable marketing pour plusieurs e-commerces, j'étais pris dans ce que j'appelle la \"spirale de la créativité forcée\". Le cycle infernal était toujours le même : une idée de campagne, un briefing interminable au designer, des allers-retours qui duraient des jours, pour finalement lancer 5 versions différentes sur Facebook et Google... qui ne convertissaient pas.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon nom est Julien, et pendant longtemps, j'ai détesté la publicité. Pas le concept, mais le processus. En tant que responsable marketing pour plusieurs e-commerces, j'étais pris dans ce que j'appelle la \"spirale de la créativité forcée\". Le cycle infernal était toujours le même : une idée de campagne, un briefing interminable au designer, des allers-retours qui duraient des jours, pour finalement lancer 5 versions différentes sur Facebook et Google... qui ne convertissaient pas.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8046-a135-c876465fcb0b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le problème ? Le temps. Entre la conception, l'adaptation aux 10 formats (Story, Feed, Carré, Bannière Display...), la création des variations pour les tests A/B, et l'analyse post-lancement, la majorité de mon temps s'envolait dans la production purement exécutive. Je passais plus de temps à générer des images qu'à analyser la stratégie de fond. Et le pire, c'est que je n'avais jamais la garantie d'avoir créé la meilleure publicité possible. J'étais usé, et mes budgets publicitaires l'étaient encore plus.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le problème ? Le temps. Entre la conception, l'adaptation aux 10 formats (Story, Feed, Carré, Bannière Display...), la création des variations pour les tests A/B, et l'analyse post-lancement, la majorité de mon temps s'envolait dans la production purement exécutive. Je passais plus de temps à générer des images qu'à analyser la stratégie de fond. Et le pire, c'est que je n'avais jamais la garantie d'avoir créé la meilleure publicité possible. J'étais usé, et mes budgets publicitaires l'étaient encore plus.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80ff-9074-ce8f90ad5e96",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le Moment \"Eurêka\" : La Découverte de l'Intelligence Artificielle au service de la performance",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le Moment \"Eurêka\" : La Découverte de l'Intelligence Artificielle au service de la performance",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-801b-a44e-c1e5ee56f195",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "J'étais à deux doigts de renoncer à une campagne particulièrement stratégique. Le produit était excellent, le marché était là, mais mes visuels étaient... plats. J'avais besoin de quelque chose de radicalement différent, de percutant, mais je n'avais plus d'énergie créative. C'est en faisant des recherches désespérées sur \"comment automatiser la création publicitaire\" que je suis tombé sur un nom qui allait changer ma vie professionnelle : ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "J'étais à deux doigts de renoncer à une campagne particulièrement stratégique. Le produit était excellent, le marché était là, mais mes visuels étaient... plats. J'avais besoin de quelque chose de radicalement différent, de percutant, mais je n'avais plus d'énergie créative. C'est en faisant des recherches désespérées sur \"comment automatiser la création publicitaire\" que je suis tombé sur un nom qui allait changer ma vie professionnelle : ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "AdCreative.ai",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/ad-creative"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "AdCreative.ai",
+            "href": "https://logicielfrance.com/logiciel/ad-creative"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-804e-bcce-c4024264d169",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'idée de départ m'a paru trop belle pour être vraie : un outil basé sur l'Intelligence Artificielle, entraînée sur des millions de publicités performantes, capable de générer des créations optimisées pour la conversion en quelques secondes. Finis le design au feeling, place à la performance basée sur la donnée.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'idée de départ m'a paru trop belle pour être vraie : un outil basé sur l'Intelligence Artificielle, entraînée sur des millions de publicités performantes, capable de générer des créations optimisées pour la conversion en quelques secondes. Finis le design au feeling, place à la performance basée sur la donnée.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8096-9cb9-c672fe18f388",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Je me suis dit : \"Allez, un essai gratuit ne coûte rien.\" Ce fut le point de non-retour.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Je me suis dit : \"Allez, un essai gratuit ne coûte rien.\" Ce fut le point de non-retour.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80be-93c2-cead50185905",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Immersion dans l'outil : Mes Premiers Pas avec AdCreative.ai",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Immersion dans l'outil : Mes Premiers Pas avec AdCreative.ai",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80e4-9cb3-f000e73660a7",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'interface de l'outil est d'une simplicité déconcertante, un vrai contraste avec la complexité des plateformes publicitaires elles-mêmes. Pour lancer mon premier test, voici le processus que j'ai suivi, et qui m'a bluffé :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'interface de l'outil est d'une simplicité déconcertante, un vrai contraste avec la complexité des plateformes publicitaires elles-mêmes. Pour lancer mon premier test, voici le processus que j'ai suivi, et qui m'a bluffé :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8095-a108-c87c2f2b3ec6",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Profil de Marque (Le socle de la cohérence) :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Profil de Marque (Le socle de la cohérence) :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " J'ai d'abord créé mon profil. J'ai uploadé mon logo, défini les couleurs de ma marque et les polices principales. L'IA a immédiatement ingéré mon identité visuelle. Pour un marketeur, la cohérence de marque est sacrée, et j'ai apprécié de voir l'outil respecter ce point essentiel. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " J'ai d'abord créé mon profil. J'ai uploadé mon logo, défini les couleurs de ma marque et les polices principales. L'IA a immédiatement ingéré mon identité visuelle. Pour un marketeur, la cohérence de marque est sacrée, et j'ai apprécié de voir l'outil respecter ce point essentiel. ",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8016-a578-d38ce51ce639",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'Input Clé :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'Input Clé :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " J'ai ensuite renseigné les éléments cruciaux pour ma publicité :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " J'ai ensuite renseigné les éléments cruciaux pour ma publicité :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2924721e-1219-80a5-86c1-d1bcf9fbbace",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Le texte (Copy) :",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Le texte (Copy) :",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " Un titre simple et percutant, une courte description du produit.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " Un titre simple et percutant, une courte description du produit.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2924721e-1219-8000-87fe-f36308fcf9e8",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "L'image ou l'illustration :",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "L'image ou l'illustration :",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " J'ai uploadé une photo de haute qualité de mon produit.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " J'ai uploadé une photo de haute qualité de mon produit.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2924721e-1219-80bc-a0cd-f179c3bc4775",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Le \"Call to Action\" (CTA) :",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Le \"Call to Action\" (CTA) :",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " \"Acheter Maintenant\" ou \"En savoir plus\".",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " \"Acheter Maintenant\" ou \"En savoir plus\".",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2924721e-1219-8020-87b9-f9e4aaf01d94",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "La Plateforme :",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "La Plateforme :",
+                "href": null
+              },
+              {
+                "type": "text",
+                "text": {
+                  "content": " Facebook/Instagram, Google Display, LinkedIn, etc.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": " Facebook/Instagram, Google Display, LinkedIn, etc.",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2924721e-1219-8013-be66-fde14fd50330",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La Magie de la Génération :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La Magie de la Génération :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " J'ai cliqué sur \"Générer\". Le résultat a été instantané : en moins de 30 secondes, l'outil m'a proposé plus de ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " J'ai cliqué sur \"Générer\". Le résultat a été instantané : en moins de 30 secondes, l'outil m'a proposé plus de ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "50 variations de publicités",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "50 variations de publicités",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", toutes parfaitement dimensionnées, avec des arrière-plans, des jeux de couleurs et des positionnements de texte différents.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", toutes parfaitement dimensionnées, avec des arrière-plans, des jeux de couleurs et des positionnements de texte différents.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8033-a649-fa6f791e4a6f",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le Score Prédictif : La Fin du Hasard dans les Tests A/B",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le Score Prédictif : La Fin du Hasard dans les Tests A/B",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80a9-ab45-f9e456bf43f4",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ce qui distingue véritablement ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ce qui distingue véritablement ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "AdCreative.ai",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/ad-creative"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "AdCreative.ai",
+            "href": "https://logicielfrance.com/logiciel/ad-creative"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " des simples outils de design, c'est son ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " des simples outils de design, c'est son ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "score de conversion prédictif",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "score de conversion prédictif",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ". À côté de chaque création, l'IA affiche un score (ex. : 92/100) qui représente la probabilité que cette publicité performe mieux que la moyenne.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ". À côté de chaque création, l'IA affiche un score (ex. : 92/100) qui représente la probabilité que cette publicité performe mieux que la moyenne.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80ec-b5e6-d87cd9daa6d9",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Problème :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Problème :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Avant, je devais lancer 10 publicités et attendre 48h et dépenser du budget pour savoir lesquelles étaient les plus efficaces.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Avant, je devais lancer 10 publicités et attendre 48h et dépenser du budget pour savoir lesquelles étaient les plus efficaces.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-807c-a90e-e573f395ae64",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Résolution grâce à AdCreative.ai :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Résolution grâce à AdCreative.ai :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Je peux maintenant sélectionner uniquement les créations ayant un score supérieur à 85/100, réduisant drastiquement mes coûts de test A/B et le temps d'optimisation. L'IA fait le tri pour moi, m'assurant de n'injecter du budget que sur des visuels à fort potentiel.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Je peux maintenant sélectionner uniquement les créations ayant un score supérieur à 85/100, réduisant drastiquement mes coûts de test A/B et le temps d'optimisation. L'IA fait le tri pour moi, m'assurant de n'injecter du budget que sur des visuels à fort potentiel.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80cb-a4c6-f5428294c4a2",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "J'ai testé cette approche sur une campagne Google Display qui peinait à décoller. En remplaçant mes anciennes bannières par les 10 créations les mieux notées par l'IA d'AdCreative.ai, mon ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "J'ai testé cette approche sur une campagne Google Display qui peinait à décoller. En remplaçant mes anciennes bannières par les 10 créations les mieux notées par l'IA d'AdCreative.ai, mon ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "taux de clic (CTR) a bondi de 40%",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "taux de clic (CTR) a bondi de 40%",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " en une semaine. Le coût par acquisition a suivi la même tendance : il s'est effondré. J'avais enfin le levier que je cherchais : des créations qui parlent à l'algorithme ET aux utilisateurs.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " en une semaine. Le coût par acquisition a suivi la même tendance : il s'est effondré. J'avais enfin le levier que je cherchais : des créations qui parlent à l'algorithme ET aux utilisateurs.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80d6-93c3-cec00e2bd902",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les Fonctionnalités Secrètes qui font la différence",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les Fonctionnalités Secrètes qui font la différence",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80b3-ae95-f3e2167c96e2",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Au-delà de la simple génération, ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Au-delà de la simple génération, ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "AdCreative.ai",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/ad-creative"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "AdCreative.ai",
+            "href": "https://logicielfrance.com/logiciel/ad-creative"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est un véritable hub d'optimisation. Voici les fonctionnalités qui, selon mon expérience, en font un outil indispensable :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est un véritable hub d'optimisation. Voici les fonctionnalités qui, selon mon expérience, en font un outil indispensable :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8073-91dd-fbebce2d06ce",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "1. Le Redimensionnement Instantané (La fin des maux de tête du format)",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "1. Le Redimensionnement Instantané (La fin des maux de tête du format)",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80a3-ad03-deb08926e1f2",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour aller plus loin dans la gestion du temps, découvrez notre sélection d'",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour aller plus loin dans la gestion du temps, découvrez notre sélection d'",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Outils de Productivité",
+              "link": {
+                "url": "https://www.google.com/search?q=https%3A%2F%2Flogicielfrance.com%2Fcategorie%2Flogiciel-productivite"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Outils de Productivité",
+            "href": "https://www.google.com/search?q=https%3A%2F%2Flogicielfrance.com%2Fcategorie%2Flogiciel-productivite"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ")",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ")",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80d6-9dea-ffd634658175",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "2. L'Intégration Directe aux Plateformes",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "2. L'Intégration Directe aux Plateformes",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80b4-9014-d074fd613b14",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'outil ne se contente pas de générer. Il s'intègre directement avec le ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'outil ne se contente pas de générer. Il s'intègre directement avec le ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Google Ads Manager",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Google Ads Manager",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " et le ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " et le ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Meta Ads Manager",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Meta Ads Manager",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ". Plus besoin de télécharger les créations, de les renommer, puis de les uploader manuellement. On peut pousser les publicités directement depuis l'interface d'AdCreative.ai, ce qui minimise les errers et accélère considérablement le lancement des campagnes.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ". Plus besoin de télécharger les créations, de les renommer, puis de les uploader manuellement. On peut pousser les publicités directement depuis l'interface d'AdCreative.ai, ce qui minimise les errers et accélère considérablement le lancement des campagnes.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-800d-88ff-fc1045382268",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "3. Le Générateur de Texte (Copy)",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "3. Le Générateur de Texte (Copy)",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8082-b867-c107bfce9004",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Bien que le cœur de l'outil soit le visuel, il inclut un générateur de texte publicitaire par IA. Même si j'ai conservé la main sur le ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Bien que le cœur de l'outil soit le visuel, il inclut un générateur de texte publicitaire par IA. Même si j'ai conservé la main sur le ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "storytelling",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "storytelling",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " de marque, cet outil est parfait pour :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " de marque, cet outil est parfait pour :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8024-98da-c7ffce05ef72",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Générer des dizaines de titres accrocheurs pour des tests rapides.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Générer des dizaines de titres accrocheurs pour des tests rapides.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-802f-8ee1-d979d444f4cb",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Proposer des variations de ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Proposer des variations de ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Call to Action",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Call to Action",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " plus percutants.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " plus percutants.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80ab-9264-e84f9f889c68",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Traduire et adapter rapidement le texte à différentes langues.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Traduire et adapter rapidement le texte à différentes langues.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8033-84d4-dcfc152fb59e",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "4. La Cohérence de Marque Imposée",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "4. La Cohérence de Marque Imposée",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8065-bf60-ef051864431f",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Même en générant 50 créations, l'IA ne déroge jamais aux codes couleurs et aux polices que j'ai définis. C'est crucial pour le ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Même en générant 50 créations, l'IA ne déroge jamais aux codes couleurs et aux polices que j'ai définis. C'est crucial pour le ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "branding",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "branding",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ". Je n'ai plus à vérifier chaque visuel pour m'assurer qu'il respecte la charte graphique ; l'IA s'en charge.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ". Je n'ai plus à vérifier chaque visuel pour m'assurer qu'il respecte la charte graphique ; l'IA s'en charge.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8034-a3d4-cd02016e2269",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Conclusion : Reprendre le Contrôle de sa Stratégie",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Conclusion : Reprendre le Contrôle de sa Stratégie",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8052-bec2-c70df9864559",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon histoire avec ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon histoire avec ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "AdCreative.ai",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/ad-creative"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "AdCreative.ai",
+            "href": "https://logicielfrance.com/logiciel/ad-creative"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est celle d'un marketeur épuisé qui a retrouvé le plaisir de son métier. Je ne passe plus mes journées à faire du design ou à attendre les résultats de tests trop longs et trop coûteux.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est celle d'un marketeur épuisé qui a retrouvé le plaisir de son métier. Je ne passe plus mes journées à faire du design ou à attendre les résultats de tests trop longs et trop coûteux.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-809d-85f8-d41d0711359f",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Aujourd'hui, j'utilise l'outil pour :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Aujourd'hui, j'utilise l'outil pour :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-807f-9509-fae58af745f7",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Générer mes créations initiales",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Générer mes créations initiales",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " en 5 minutes chrono, en ne sélectionnant que celles qui ont un score prédictif élevé.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " en 5 minutes chrono, en ne sélectionnant que celles qui ont un score prédictif élevé.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8085-83f1-fb7f967e619b",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tester rapidement de nouvelles hypothèses",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tester rapidement de nouvelles hypothèses",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " visuelles sans faire appel au designer.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " visuelles sans faire appel au designer.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8019-bc5c-cac91e4c642f",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Garder une cohérence parfaite",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Garder une cohérence parfaite",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " sur toutes les plateformes, en adaptant le format en un clic.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " sur toutes les plateformes, en adaptant le format en un clic.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-801d-9be8-f901b8c4845d",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Si vous êtes un e-commerçant, un responsable marketing, ou même une agence débordée par la demande de créatifs, cet outil n'est pas un luxe, c'est une nécessité. Il permet de transformer le temps passé en exécution en temps consacré à la ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Si vous êtes un e-commerçant, un responsable marketing, ou même une agence débordée par la demande de créatifs, cet outil n'est pas un luxe, c'est une nécessité. Il permet de transformer le temps passé en exécution en temps consacré à la ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "stratégie",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "stratégie",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " et à l'analyse de la ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " et à l'analyse de la ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "performance",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "performance",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8007-a249-e86cffa6c47b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'ère où la meilleure publicité était celle qui avait la plus grosse équipe de designers est révolue. L'avenir est aux marketeurs qui exploitent l'Intelligence Artificielle pour surpasser leurs concurrents.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'ère où la meilleure publicité était celle qui avait la plus grosse équipe de designers est révolue. L'avenir est aux marketeurs qui exploitent l'Intelligence Artificielle pour surpasser leurs concurrents.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80b6-8e8c-f230e9b5cbb9",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Arrêtez de gaspiller votre budget en créations au hasard. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Arrêtez de gaspiller votre budget en créations au hasard. ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "AdCreative.ai",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/ad-creative"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "AdCreative.ai",
+            "href": "https://logicielfrance.com/logiciel/ad-creative"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est la solution pour des publicités qui convertissent, scientifiquement prouvées.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est la solution pour des publicités qui convertissent, scientifiquement prouvées.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    }
+  ],
+  "publishedAt": "2025-10-09",
+  "author": "Équipe Logiciel France",
+  "tags": [],
+  "coverImage": "/posts/images/cover-2924721e-1219-803e-92cf-d77a0e32fed3.jpg",
+  "status": "published",
+  "seo": {
+    "metaDescription": "Découvrez comment ",
+    "keywords": [
+      "AdCreative.ai"
+    ]
+  }
+}
