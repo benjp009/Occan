@@ -243,6 +243,8 @@ html, body, #root {
 .blog-post-page {
   margin: 0 auto;
   padding: 2rem 1rem;
+  background: #FFFFFF;
+  min-height: 100vh;
 }
 
 .breadcrumb {
