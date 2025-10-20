@@ -22,6 +22,7 @@ export interface CompanyRow {
   long_content: string;
   description_1: string;
   description_2: string;
+  description_3: string;
   asset_1: string;
   asset_2: string;
   asset_3: string;
