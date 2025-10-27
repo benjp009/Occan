@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
@@ -12,6 +12,7 @@ export function Header() {
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSearchIconClick = () => {
     setMobileSearchOpen(true);
@@ -80,13 +81,22 @@ export function Header() {
 
           {/* Center section: Navigation */}
           <nav className="header-nav">
-            <Link to="/categorie" className="nav-link nav-link-active">
+            <Link
+              to="/categorie"
+              className={`nav-link ${location.pathname.startsWith('/categorie') ? 'nav-link-active' : ''}`}
+            >
               Catégories
             </Link>
-            <Link to="/tous-les-logiciels" className="nav-link">
+            <Link
+              to="/tous-les-logiciels"
+              className={`nav-link ${location.pathname === '/tous-les-logiciels' || location.pathname.startsWith('/logiciel') ? 'nav-link-active' : ''}`}
+            >
               Logiciels
             </Link>
-            <Link to="/blog" className="nav-link">
+            <Link
+              to="/blog"
+              className={`nav-link ${location.pathname.startsWith('/blog') ? 'nav-link-active' : ''}`}
+            >
               Blog
             </Link>
           </nav>
@@ -112,16 +122,28 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/tous-les-logiciels" className="mobile-nav-link">
+          <Link
+            to="/tous-les-logiciels"
+            className={`mobile-nav-link ${location.pathname === '/tous-les-logiciels' || location.pathname.startsWith('/logiciel') ? 'mobile-nav-link-active' : ''}`}
+          >
             Logiciels
           </Link>
-          <Link to="/categorie" className="mobile-nav-link">
+          <Link
+            to="/categorie"
+            className={`mobile-nav-link ${location.pathname.startsWith('/categorie') ? 'mobile-nav-link-active' : ''}`}
+          >
             Catégories
           </Link>
-          <Link to="/blog" className="mobile-nav-link">
+          <Link
+            to="/blog"
+            className={`mobile-nav-link ${location.pathname.startsWith('/blog') ? 'mobile-nav-link-active' : ''}`}
+          >
             Blog
           </Link>
-          <Link to="/ajouter-un-nouveau-logiciel" className="mobile-nav-link">
+          <Link
+            to="/ajouter-un-nouveau-logiciel"
+            className={`mobile-nav-link ${location.pathname === '/ajouter-un-nouveau-logiciel' ? 'mobile-nav-link-active' : ''}`}
+          >
             Ajouter
           </Link>
         </nav>
