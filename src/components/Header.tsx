@@ -10,20 +10,24 @@ export function Header() {
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleSearchIconClick = () => {
-    if (window.innerWidth <= 768) {
-      setMobileSearchOpen(true);
-    }
+    setMobileSearchOpen(true);
   };
 
   useEffect(() => {
     fetchCompanies().then(data => setCompanies(data));
   }, []);
 
-    useEffect(() => {
-    function handleClickAway() {
+  useEffect(() => {
+    function handleClickAway(e: MouseEvent) {
+      // Don't close if clicking inside the search modal
+      const target = e.target as HTMLElement;
+      if (target.closest('.search-modal-content')) {
+        return;
+      }
       setActive(false);
     }
     document.addEventListener('click', handleClickAway);
@@ -32,108 +36,160 @@ export function Header() {
 
 
   const results = filterCompanies(search, companies);
-  const show = active && search.trim() && results.length > 0;
+  const show = search.trim() && results.length > 0;
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="header-logo">
-          <Link to="/">
-          <img
-            src="/logolong.svg"
-            alt="Logiciel France logo"
-            className="logo"
-          />
-        </Link>
-        </div>
-        {/* Search bar */}
-        <div
-          className="site-header-search, search-container"
-          onClick={e => e.stopPropagation()}
-        >
-          <svg
-            width="20px"
-            height="20px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            onClick={handleSearchIconClick}
-          >
-            <g clipPath="url(#clip0_15_152)">
-            <rect width="24" height="24" fill="white"/>
-            <circle cx="10.5" cy="10.5" r="6.5" stroke="#000000" strokeLinejoin="round"/>
-            <path d="M19.6464 20.3536C19.8417 20.5488 20.1583 20.5488 20.3536 20.3536C20.5488 20.1583 20.5488 19.8417 20.3536 19.6464L19.6464 20.3536ZM20.3536 19.6464L15.3536 14.6464L14.6464 15.3536L19.6464 20.3536L20.3536 19.6464Z" fill="#000000"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_15_152">
-            <rect width="24" height="24" fill="none"/>
-            </clipPath>
-            </defs>
-          </svg>
-          <input
-            className="input"
-            type="text"
-            placeholder="Rechercher un logiciel..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            onFocus={() => setActive(true)}
-            onKeyDown={e => {
-              if (e.key === 'Enter') {
-                navigate(`/recherche?q=${encodeURIComponent(search)}`);
-              }
-            }}
-          />
+    <header className="header-new" data-state={mobileMenuOpen ? 'open' : 'close'}>
+      <div className="header-wrapper">
+        <div className="header-inner">
+          {/* Left section: Hamburger + Logo */}
+          <div className="header-left">
+            <button
+              type="button"
+              className="hamburger-button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              <svg
+                viewBox="0 0 100 100"
+                aria-label="Menu"
+                role="img"
+                className={`hamburger-icon ${mobileMenuOpen ? 'open' : ''}`}
+              >
+                <path
+                  className="hamburger-line hamburger-line-top"
+                  d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20"
+                />
+                <path
+                  className="hamburger-line hamburger-line-middle"
+                  d="m 55,50 h -25"
+                />
+                <path
+                  className="hamburger-line hamburger-line-bottom"
+                  d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20"
+                />
+              </svg>
+            </button>
+            <Link to="/" className="header-logo-link">
+              <img
+                src="/logolong.svg"
+                alt="Logiciel France"
+                className="header-logo-img"
+              />
+            </Link>
+          </div>
 
-          {/* ▾ dropdown */}
-          {show && (
-            <div className="search-wrapper">
-              <ul className="search-results">
-                {results.slice(0, 10).map(row => (
-                  <li key={row.id} className="result-item">
-                    <Link to={`/logiciel/${slugify(row.name)}`}>
-                      <strong className="result-item-text">{row.name}</strong>
-                    </Link>
-                  </li>
-                ))}
-                {results.length > 10 && (
-                  <li className="result-more">…{results.length - 10} autres résultats</li>
-                )}
-              </ul>
+          {/* Center section: Navigation */}
+          <nav className="header-nav">
+            <Link to="/categories" className="nav-link nav-link-active">
+              Catégories
+            </Link>
+            <Link to="/tous-les-logiciels" className="nav-link">
+              Logiciels
+            </Link>
+            <Link to="/blog" className="nav-link">
+              Blog
+            </Link>
+          </nav>
+
+          {/* Right section: Search + Submit button */}
+          <div className="header-right">
+            <div className="header-actions">
+              <button
+                className="action-button"
+                onClick={handleSearchIconClick}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m21 21-4.34-4.34"></path>
+                  <circle cx="11" cy="11" r="8"></circle>
+                </svg>
+              </button>
             </div>
-          )}
+            <Link to="/ajouter-un-nouveau-logiciel" className="submit-button">
+              <span className="submit-text">Ajouter</span>
+            </Link>
+          </div>
         </div>
-        
-        {/* CTA */}
-        <Link to="/ajouter-un-nouveau-logiciel">
-          <button className="button add-button" >
-            <span className="add-text">Ajouter votre logiciel</span>
-            <span className="add-icon">+</span>
-          </button>
-        </Link>
+
+        {/* Mobile Navigation */}
+        <nav className={`mobile-nav ${mobileMenuOpen ? 'open' : ''}`}>
+          <Link to="/tous-les-logiciels" className="mobile-nav-link">
+            Logiciels
+          </Link>
+          <Link to="/categories" className="mobile-nav-link">
+            Catégories
+          </Link>
+          <Link to="/blog" className="mobile-nav-link">
+            Blog
+          </Link>
+          <Link to="/ajouter-un-nouveau-logiciel" className="mobile-nav-link">
+            Ajouter
+          </Link>
+        </nav>
       </div>
+
+      {/* Search Modal */}
       {mobileSearchOpen && (
         <div
-          className="mobile-search-overlay"
-          onClick={() => setMobileSearchOpen(false)}
+          className="search-modal-overlay"
+          onClick={() => {
+            setMobileSearchOpen(false);
+            setSearch('');
+          }}
         >
-          <div
-            className="mobile-search-container"
-            onClick={e => e.stopPropagation()}
-          >
-            <input
-              autoFocus
-              className="input"
-              type="text"
-              placeholder="Rechercher un logiciel..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              onKeyDown={e => {
-                if (e.key === 'Enter') {
-                  navigate(`/recherche?q=${encodeURIComponent(search)}`);
-                  setMobileSearchOpen(false);
-                }
-              }}
-            />
+          <div className="search-modal-content">
+            <div
+              className="search-modal-input-wrapper"
+              onClick={e => e.stopPropagation()}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m21 21-4.34-4.34"></path>
+                <circle cx="11" cy="11" r="8"></circle>
+              </svg>
+              <input
+                autoFocus
+                className="search-modal-input"
+                type="text"
+                placeholder="Rechercher un logiciel..."
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' && search.trim()) {
+                    navigate(`/recherche?q=${encodeURIComponent(search)}`);
+                    setMobileSearchOpen(false);
+                    setSearch('');
+                  }
+                }}
+              />
+            </div>
+
+            {/* Search Results Dropdown */}
+            {show && (
+              <div
+                className="search-modal-results"
+                onClick={e => e.stopPropagation()}
+              >
+                <ul className="search-results-list">
+                  {results.slice(0, 10).map(row => (
+                    <li key={row.id} className="search-result-item">
+                      <Link
+                        to={`/logiciel/${slugify(row.name)}`}
+                        onClick={() => {
+                          setMobileSearchOpen(false);
+                          setSearch('');
+                        }}
+                      >
+                        <strong>{row.name}</strong>
+                      </Link>
+                    </li>
+                  ))}
+                  {results.length > 10 && (
+                    <li className="search-result-more">
+                      …{results.length - 10} autres résultats
+                    </li>
+                  )}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       )}
