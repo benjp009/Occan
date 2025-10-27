@@ -10,6 +10,7 @@ export interface CompanyRow {
   email: string;
   phone: string;
   siret: string;
+  pappers?: string;
   revenue2023: string;
   categories: string; // comma-separated
   keywords: string;   // comma-separated

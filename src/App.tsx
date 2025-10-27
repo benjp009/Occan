@@ -15,6 +15,7 @@ import ConditionsUtilisation from './pages/ConditionsUtilisation';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import Refer from './pages/Refer';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -72,6 +73,7 @@ export default function App({ location, initialData }: AppProps) {
           element={<AllSoftwares initialCompanies={initialData?.companies} />}
         />
         <Route path="/recherche" element={<SearchResults />} />
+        <Route path="/refer/:slug" element={<Refer />} />
         <Route path="/blog" element={<Blog initialPosts={initialData?.blogPosts} />} />
         <Route path="/blog/:slug" element={<BlogPost initialBlogPost={initialData?.blogPost} />} />
         <Route path="/a-propos" element={<APropos />} />
