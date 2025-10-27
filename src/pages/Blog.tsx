@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -15,7 +15,9 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
   const [loading, setLoading] = useState(!initialPosts);
   const [error, setError] = useState<string>('');
   const [selectedTag] = useState<string>('');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [displayedCount, setDisplayedCount] = useState(8);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const loaderRef = useRef<HTMLDivElement>(null);
   const postsPerPage = 8;
 
   useEffect(() => {
@@ -38,14 +40,43 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
     loadPosts();
   }, [initialPosts]);
 
-  const filteredPosts = selectedTag 
+  const filteredPosts = selectedTag
     ? posts.filter(post => post.tags.includes(selectedTag))
     : posts;
 
-  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
-  const startIndex = (currentPage - 1) * postsPerPage;
-  const endIndex = startIndex + postsPerPage;
-  const currentPosts = filteredPosts.slice(startIndex, endIndex);
+  const currentPosts = filteredPosts.slice(0, displayedCount);
+  const hasMore = displayedCount < filteredPosts.length;
+
+  // Intersection Observer for infinite scroll
+  const handleObserver = useCallback((entries: IntersectionObserverEntry[]) => {
+    const target = entries[0];
+    if (target.isIntersecting && hasMore && !isLoadingMore) {
+      setIsLoadingMore(true);
+      setTimeout(() => {
+        setDisplayedCount(prev => prev + postsPerPage);
+        setIsLoadingMore(false);
+      }, 500); // Small delay to simulate loading
+    }
+  }, [hasMore, isLoadingMore, postsPerPage]);
+
+  useEffect(() => {
+    const option = {
+      root: null,
+      rootMargin: '20px',
+      threshold: 0
+    };
+    const observer = new IntersectionObserver(handleObserver, option);
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+
+    return () => {
+      if (loaderRef.current) {
+        observer.unobserve(loaderRef.current);
+      }
+    };
+  }, [handleObserver]);
 
 
   return (
@@ -95,35 +126,20 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
                 )}
               </div>
 
-              {totalPages > 1 && (
-                <div className="pagination">
-                  <button
-                    className="pagination-btn"
-                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                    disabled={currentPage === 1}
-                  >
-                    ← Précédent
-                  </button>
-                  
-                  <div className="pagination-numbers">
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                      <button
-                        key={page}
-                        className={`pagination-number ${currentPage === page ? 'active' : ''}`}
-                        onClick={() => setCurrentPage(page)}
-                      >
-                        {page}
-                      </button>
-                    ))}
-                  </div>
+              {/* Infinite scroll loader */}
+              {hasMore && (
+                <div ref={loaderRef} className="infinite-scroll-loader">
+                  {isLoadingMore && (
+                    <div className="loader-spinner">
+                      <p>Chargement d'autres articles...</p>
+                    </div>
+                  )}
+                </div>
+              )}
 
-                  <button
-                    className="pagination-btn"
-                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                    disabled={currentPage === totalPages}
-                  >
-                    Suivant →
-                  </button>
+              {!hasMore && currentPosts.length > 0 && (
+                <div className="all-posts-loaded">
+                  <p>Vous avez vu tous les articles ✨</p>
                 </div>
               )}
             </>

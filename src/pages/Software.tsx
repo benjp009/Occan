@@ -8,6 +8,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import Company from '../components/Company';
 import CompanySkeleton from '../components/CompanySkeleton';
+import { Cards } from '../components/Cards';
 
 interface SoftwareProps {
   initialCompany?: CompanyRow | null;
@@ -18,6 +19,7 @@ export default function Software({ initialCompany }: SoftwareProps) {
   const [company, setCompany] = useState<CompanyRow | null | undefined>(
     initialCompany === undefined ? undefined : initialCompany
   );
+  const [similarCompanies, setSimilarCompanies] = useState<CompanyRow[]>([]);
 
   useEffect(() => {
     if (
@@ -32,6 +34,32 @@ export default function Software({ initialCompany }: SoftwareProps) {
           c => slugify(c.name) === slug || c.id === slug
         );
         setCompany(found || null);
+
+        // Find similar companies from the same category
+        if (found && found.categories) {
+          const firstCategory = found.categories.split(',')[0].trim();
+          const similar = data
+            .filter(c =>
+              c.id !== found.id &&
+              c.categories &&
+              c.categories.split(',').some(cat => cat.trim() === firstCategory)
+            );
+          setSimilarCompanies(similar);
+        }
+      });
+    } else if (initialCompany) {
+      // Handle similar companies for initialCompany
+      fetchCompanies().then(data => {
+        if (initialCompany.categories) {
+          const firstCategory = initialCompany.categories.split(',')[0].trim();
+          const similar = data
+            .filter(c =>
+              c.id !== initialCompany.id &&
+              c.categories &&
+              c.categories.split(',').some(cat => cat.trim() === firstCategory)
+            );
+          setSimilarCompanies(similar);
+        }
       });
     }
   }, [slug, initialCompany]);
@@ -209,6 +237,32 @@ export default function Software({ initialCompany }: SoftwareProps) {
           <span>{company.name}</span>
         </nav>
         <Company company={company} />
+
+        {/* Similar Software Section */}
+        {similarCompanies.length > 0 && (
+          <section className="similar-software-section">
+            <div className="similar-software-header">
+              <h2 className="similar-software-title">Logiciels similaires</h2>
+              {firstCategory && (
+                <Link
+                  to={`/categorie/${slugify(firstCategory)}`}
+                  className="secondary-button"
+                >
+                  Voir tous les logiciels
+                </Link>
+              )}
+            </div>
+            <div className="similar-software-grid">
+              {similarCompanies.map(similar => (
+                <Cards
+                  key={similar.id}
+                  company={similar}
+                  internalTo={`/logiciel/${slugify(similar.name)}`}
+                />
+              ))}
+            </div>
+          </section>
+        )}
       </main>
       <Footer />
     </>
