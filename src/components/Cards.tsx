@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { OptimizedImage } from '../utils/imageUtils';
+import { slugify } from '../utils/slugify';
 
 interface CardsProps {
   company: CompanyRow;
@@ -46,9 +47,9 @@ export function Cards({ company, highlight, internalTo }: CardsProps) {
         <h2 className="subtitle">{highlightText(company.name, highlight)}</h2>
 
         <a
-          href={company.website}
+          href={`/refer/${slugify(company.name)}`}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow sponsored noopener noreferrer"
           className="visit-button"
         >
           Visite

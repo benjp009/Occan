@@ -80,7 +80,7 @@ export function Header() {
 
           {/* Center section: Navigation */}
           <nav className="header-nav">
-            <Link to="/categories" className="nav-link nav-link-active">
+            <Link to="/categorie" className="nav-link nav-link-active">
               Catégories
             </Link>
             <Link to="/tous-les-logiciels" className="nav-link">
@@ -115,7 +115,7 @@ export function Header() {
           <Link to="/tous-les-logiciels" className="mobile-nav-link">
             Logiciels
           </Link>
-          <Link to="/categories" className="mobile-nav-link">
+          <Link to="/categorie" className="mobile-nav-link">
             Catégories
           </Link>
           <Link to="/blog" className="mobile-nav-link">
