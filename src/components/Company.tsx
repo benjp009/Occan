@@ -1,6 +1,7 @@
 import React from 'react';
 import { CompanyRow } from '../types';
 import { OptimizedImage } from '../utils/imageUtils';
+import { slugify } from '../utils/slugify';
 
 interface CompanyProps {
   company: CompanyRow;
@@ -22,14 +23,19 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
           )}
           <h1 className="company-name" itemProp="name">{company.name}</h1>
         </div>
-      
-      
-      
+
+
+
 
           <div className="company-buttons">
             {company.website && (
-              <a href={company.website} target="_blank" rel="noopener noreferrer" itemProp="url">
-                <button type="button" className="button modal-button">Le site</button>
+              <a
+                href={`/refer/${slugify(company.name)}`}
+                target="_blank"
+                rel="nofollow sponsored noopener noreferrer"
+                itemProp="url"
+              >
+                <button type="button" className="button modal-button">Visite {company.name}</button>
               </a>
             )}
             {company.email && (
@@ -74,7 +80,23 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
           />
         )}
       <div className="company-info">
-        {company.siret && <p><strong>SIRET:</strong> {company.siret}</p>}
+        {company.siret && (
+          <p>
+            <strong>SIRET:</strong>{' '}
+            {company.pappers ? (
+              <a
+                href={company.pappers}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#000091', textDecoration: 'underline' }}
+              >
+                {company.siret}
+              </a>
+            ) : (
+              company.siret
+            )}
+          </p>
+        )}
         {company.revenue2023 && <p><strong>Revenue (2023):</strong> {company.revenue2023}</p>}
         {company.categories && <p><strong>Categories:</strong> {company.categories}</p>}
         {company.keywords && <p><strong>Keywords:</strong> {company.keywords}</p>}
