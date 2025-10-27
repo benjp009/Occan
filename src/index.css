@@ -5,8 +5,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
-  background-image: linear-gradient(to bottom right, #E8F3FF, #FFFFFF);
-  background-repeat: no-repeat;
+  background-color: #FFFFFF;
   color: #333;
 }
 
@@ -813,9 +812,9 @@ max-width: 80px;
   background-color: #ffffff;   /* white background */
   border-radius: 16px;          /* 5px rounded corners */
   padding: 16px;               /* adjust as needed */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;   /* light grey border */
   box-sizing: border-box;
-  max-width: 100%;             /* make sure it’s responsive */
+  max-width: 100%;             /* make sure it's responsive */
   max-height: 100%;
   margin: 10px 5px;
   position: relative;          /* enable stretched-link positioning */
@@ -823,7 +822,6 @@ max-width: 80px;
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background: #E8F3FF;
   cursor: pointer;
   border-color: #000091;
@@ -1534,6 +1532,7 @@ body {
 .category-card {
   background: #fff;
   border-radius: 16px;
+  border: 1px solid #e2e8f0;   /* light grey border */
   box-sizing: border-box;
   min-width: 200px;
   max-width: 240px;
