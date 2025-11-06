@@ -966,6 +966,8 @@ max-width: 80px;
   right: 0;
   z-index: 50;
   background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-wrapper {
@@ -974,6 +976,7 @@ max-width: 80px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  box-sizing: border-box;
 }
 
 .header-inner {
@@ -982,6 +985,8 @@ max-width: 80px;
   padding: 0.875rem 0;
   gap: 1rem;
   height: 60px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Left Section */
@@ -990,6 +995,7 @@ max-width: 80px;
   align-items: center;
   gap: 0.5rem;
   min-width: 0;
+  flex-shrink: 1;
 }
 
 .hamburger-button {
@@ -1040,7 +1046,8 @@ max-width: 80px;
 .header-logo-img {
   height: 2rem;
   width: auto;
-  flex-shrink: 0;
+  max-width: 150px;
+  flex-shrink: 1;
 }
 
 /* Center Navigation */
@@ -1077,6 +1084,8 @@ max-width: 80px;
   gap: 0.5rem;
   justify-content: flex-end;
   margin-left: auto;
+  min-width: 0;
+  flex-shrink: 0;
 }
 
 .header-actions {
@@ -1096,6 +1105,11 @@ max-width: 80px;
   cursor: pointer;
   transition: all 0.15s ease;
   font-size: 1rem;
+}
+
+.header-right .submit-button {
+  margin: 0;
+  padding: 0.45rem 0.9rem;
 }
 
 .action-button:hover {
@@ -1242,6 +1256,79 @@ max-width: 80px;
   padding: 0.75rem 1.5rem;
   color: #718096;
   font-size: 0.875rem;
+}
+
+
+@media (max-width: 900px) {
+  .header-wrapper {
+    padding: 0 1.25rem;
+  }
+
+  .header-right {
+    gap: 0.375rem;
+  }
+
+  .header-right .submit-button {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-wrapper {
+    padding: 0 0.75rem;
+  }
+
+  .header-inner {
+    height: 56px;
+    gap: 0.5rem;
+  }
+
+  .header-left {
+    gap: 0.25rem;
+  }
+
+  .header-logo-img {
+    height: 1.5rem;
+    max-width: 120px;
+  }
+
+  .header-right {
+    gap: 0.25rem;
+  }
+
+  .action-button {
+    padding: 0.25rem;
+  }
+
+  .header-right .submit-button {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-wrapper {
+    padding: 0 0.5rem;
+  }
+
+  .header-inner {
+    gap: 0.35rem;
+  }
+
+  .header-left {
+    gap: 0.15rem;
+  }
+
+  .header-logo-img {
+    height: 1.25rem;
+    max-width: 100px;
+  }
+
+  .hamburger-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 /* Desktop Styles */
