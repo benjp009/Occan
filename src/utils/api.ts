@@ -13,6 +13,21 @@ export async function fetchCompanies(): Promise<CompanyRow[]> {
 const CATEGORIES_CSV =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=583866653&single=true&output=csv';
 
+const BETA_CSV =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=51672677&single=true&output=csv';
+
+export async function fetchBetaCompanies(): Promise<CompanyRow[]> {
+  try {
+    const response = await fetch(BETA_CSV);
+    const csv = await response.text();
+    const { data } = Papa.parse<CompanyRow>(csv, { header: true });
+    return (data as CompanyRow[]).filter(row => row.id && row.name);
+  } catch (error) {
+    console.error('Failed to fetch beta companies:', error);
+    return [];
+  }
+}
+
 export async function fetchCategories(): Promise<CategoryRow[]> {
   const resp = await fetch(CATEGORIES_CSV);
   const text = await resp.text();
