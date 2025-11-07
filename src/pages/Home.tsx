@@ -63,7 +63,7 @@ export default function Home({ initialCompanies, initialCategories }: HomeProps)
       )}
 
       <SelectionOfTheMonth companies={companies} />
-      <DiscoverBetaSoftware companies={companies} />
+      <DiscoverBetaSoftware />
       </main>
       <Footer />
     </>
