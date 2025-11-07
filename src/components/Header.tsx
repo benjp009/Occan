@@ -8,7 +8,6 @@ import { CompanyRow } from '../types';
 export function Header() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
-  const [active, setActive] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -20,19 +19,6 @@ export function Header() {
 
   useEffect(() => {
     fetchCompanies().then(data => setCompanies(data));
-  }, []);
-
-  useEffect(() => {
-    function handleClickAway(e: MouseEvent) {
-      // Don't close if clicking inside the search modal
-      const target = e.target as HTMLElement;
-      if (target.closest('.search-modal-content')) {
-        return;
-      }
-      setActive(false);
-    }
-    document.addEventListener('click', handleClickAway);
-    return () => document.removeEventListener('click', handleClickAway);
   }, []);
 
 
