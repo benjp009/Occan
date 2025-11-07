@@ -1655,6 +1655,10 @@ body {
 }
 
 .discover-beta-text {
+  width: 100%;
+}
+
+.discover-beta-content.with-image .discover-beta-text {
   flex: 1;
   max-width: 30rem;
 }

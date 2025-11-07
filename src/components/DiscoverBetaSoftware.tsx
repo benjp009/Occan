@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
 import CardSkeleton from './CardSkeleton';
+import { fetchBetaCompanies } from '../utils/api';
 
 interface DiscoverBetaSoftwareProps {
-  /** 
-   * The full array of companies. 
-   * This component will pick out recent companies or those marked as beta.
+  /**
+   * This component fetches and displays beta companies from the "Beta DB" tab.
    */
-  companies: CompanyRow[] | null;
 }
 
-export const DiscoverBetaSoftware: React.FC<DiscoverBetaSoftwareProps> = ({ companies }) => {
-  // Filter companies explicitly tagged as beta via month_choice === 'beta'
-  const betaSoftware: (CompanyRow | null)[] = companies
-    ? companies
-        .filter(c => (c.month_choice || '').toLowerCase().trim() === 'beta')
+export const DiscoverBetaSoftware: React.FC<DiscoverBetaSoftwareProps> = () => {
+  const [betaCompanies, setBetaCompanies] = useState<CompanyRow[] | null>(null);
+
+  useEffect(() => {
+    fetchBetaCompanies().then(data => {
+      setBetaCompanies(data);
+    });
+  }, []);
+
+  // Display beta companies, sorted by date_added (newest first), limited to 6
+  const betaSoftware: (CompanyRow | null)[] = betaCompanies
+    ? betaCompanies
         .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
         .slice(0, 6)
     : Array.from({ length: 6 }, () => null);
@@ -63,12 +69,17 @@ export const DiscoverBetaSoftware: React.FC<DiscoverBetaSoftwareProps> = ({ comp
       <div className="discover-beta-grid">
         {betaSoftware.map((company, idx) => (
           company ? (
-            <div key={company.id} className="card-wrapper">
+            <a
+              key={company.id}
+              className="card-wrapper"
+              href={`/refer/${slugify(company.name)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Cards
                 company={company}
-                internalTo={`/logiciel/${slugify(company.name)}`}
               />
-            </div>
+            </a>
           ) : (
             <div key={idx} className="card-wrapper">
               <CardSkeleton />
