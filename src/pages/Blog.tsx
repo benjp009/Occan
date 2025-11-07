@@ -66,14 +66,15 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
       threshold: 0
     };
     const observer = new IntersectionObserver(handleObserver, option);
+    const currentLoader = loaderRef.current;
 
-    if (loaderRef.current) {
-      observer.observe(loaderRef.current);
+    if (currentLoader) {
+      observer.observe(currentLoader);
     }
 
     return () => {
-      if (loaderRef.current) {
-        observer.unobserve(loaderRef.current);
+      if (currentLoader) {
+        observer.unobserve(currentLoader);
       }
     };
   }, [handleObserver]);
