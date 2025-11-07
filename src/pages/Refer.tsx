@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import { fetchCompanies } from '../utils/api';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
+import { Helmet } from 'react-helmet-async';
 
 export default function Refer() {
   const { slug } = useParams<{ slug: string }>();
@@ -45,15 +46,20 @@ export default function Refer() {
   // Loading state
   if (company === undefined) {
     return (
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-        fontFamily: 'Inter, sans-serif'
-      }}>
-        Redirection en cours...
-      </div>
+      <>
+        <Helmet>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '100vh',
+          fontFamily: 'Inter, sans-serif'
+        }}>
+          Redirection en cours...
+        </div>
+      </>
     );
   }
 
