@@ -6,32 +6,25 @@ const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const cors = require('cors');
+const React = require('react');
+const ReactDOMServer = require('react-dom/server');
+const { HelmetProvider } = require('react-helmet-async');
+
+// Handle non-JS imports (SVG, CSS) that are referenced in React components
+// These are static assets that don't need to be loaded server-side
+['.css', '.svg'].forEach(ext => {
+  require.extensions[ext] = (module, filename) => {
+    module.exports = '';
+  };
+});
+
+// Import pre-compiled modules from dist-server
+const App = require('./dist-server/App.js').default;
+const { slugify } = require('./dist-server/utils/slugify.js');
+const { fetchCompanies, fetchCategories } = require('./dist-server/utils/api.js');
 
 // In-memory session store (for production, use Redis or similar)
 const sessions = new Map();
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
-// Polyfill fetch in Node environments where it's not available
-if (typeof fetch === 'undefined') {
-  const fetchImpl = require('node-fetch');
-  global.fetch = fetchImpl;
-  global.Headers = fetchImpl.Headers;
-  global.Request = fetchImpl.Request;
-  global.Response = fetchImpl.Response;
-}
-const tsNode = require('ts-node');
-tsNode.register({
-  transpileOnly: true,
-  compilerOptions: { module: 'commonjs' },
-});
-['.css', '.svg'].forEach(ext => {
-  require.extensions[ext] = () => '';
-});
-const App = require('./src/App.tsx').default;
-const { HelmetProvider } = require('react-helmet-async');
-const Papa = require('papaparse');
-const { slugify } = require('./src/utils/slugify.ts');
-const { fetchCompanies, fetchCategories } = require('./src/utils/api.ts');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -43,13 +36,13 @@ app.use(cookieParser());
 // WWW redirect and HTTPS redirect middleware
 app.use((req, res, next) => {
   const host = req.get('Host');
-  
+
   // Redirect www to non-www
   if (host && host.startsWith('www.')) {
     const newHost = host.substring(4); // Remove 'www.'
     return res.redirect(301, `https://${newHost}${req.url}`);
   }
-  
+
   // Check if we're in production and the request is HTTP
   if (req.header('x-forwarded-proto') !== 'https' && process.env.NODE_ENV === 'production') {
     return res.redirect(301, `https://${req.get('Host')}${req.url}`);
@@ -99,7 +92,9 @@ app.use((req, res, next) => {
 });
 
 const indexFile = path.resolve('./build/index.html');
-app.use(express.static(path.resolve('./build')));
+// Use index: false to prevent express.static from serving index.html
+// This ensures our SSR handler processes HTML requests
+app.use(express.static(path.resolve('./build'), { index: false }));
 app.use('/static', express.static(path.resolve('./build/static')));
 app.use('/asset', express.static(path.resolve('./build/asset')));
 
@@ -332,7 +327,8 @@ app.get('*', async (req, res) => {
     );
     return res.send(htmlWithHelmet);
   } catch (err) {
-    return res.status(500).send('Error loading HTML file');
+    console.error('SSR Error:', err);
+    return res.status(500).send('Error loading HTML file: ' + err.message);
   }
 });
 

@@ -33,10 +33,11 @@
   "scripts": {
     "start": "node server.js",
     "dev": "react-scripts start",
-    "generate-sitemap": "node scripts/generate-sitemap.js",
-    "indexnow": "node scripts/indexnow.js",
-    "convert-webp": "node scripts/convert-to-webp.js",
-    "build": "node scripts/build-blog.js && npm run convert-webp && npm run generate-sitemap && react-scripts build && npm run indexnow",
+    "generate-sitemap": "node scripts/generate-sitemap.cjs",
+    "indexnow": "node scripts/indexnow.cjs",
+    "convert-webp": "node scripts/convert-to-webp.cjs",
+    "build:server": "tsc --project tsconfig.server.json && node -e \"const fs=require('fs'),path=require('path');const stubs=[['dist-server/logo.svg',''],['dist-server/logolong.svg',''],['dist-server/index.css',''],['dist-server/App.css',''],['dist-server/WaitlistPage.css',''],['dist-server/components/BlogPostPreview.css','']];stubs.forEach(([f,c])=>{const d=path.dirname(f);if(!fs.existsSync(d))fs.mkdirSync(d,{recursive:true});fs.writeFileSync(f,'module.exports=\\\"\\\"');});\"",
+    "build": "node scripts/build-blog.cjs && npm run convert-webp && npm run generate-sitemap && npm run build:server && react-scripts build && npm run indexnow",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
