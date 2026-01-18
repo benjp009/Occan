@@ -3,15 +3,32 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === process.env.REACT_APP_ADMIN_PASSWORD) {
-      localStorage.setItem('isAdmin', 'true');
-      navigate('/admin');
-    } else {
-      alert('Invalid password');
+    setError('');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+        credentials: 'include'
+      });
+
+      if (response.ok) {
+        navigate('/admin');
+      } else {
+        setError('Mot de passe invalide');
+      }
+    } catch (err) {
+      setError('Erreur de connexion. Veuillez réessayer.');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -25,9 +42,15 @@ export default function Login() {
           value={password}
           onChange={e => setPassword(e.target.value)}
           className="w-full border p-2 mb-4"
+          disabled={isLoading}
         />
-        <button type="submit" className="w-full bg-blue-600 text-white p-2">
-          Login
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white p-2"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Connexion...' : 'Login'}
         </button>
       </form>
     </div>
