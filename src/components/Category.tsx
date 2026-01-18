@@ -3,6 +3,7 @@ import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
 import { NavLink, Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
+import { sanitizeHTML } from '../utils/sanitize';
 
 
 interface CategoriesSectionProps {
@@ -56,7 +57,7 @@ export function CategoriesSection({ initialCategories }: CategoriesSectionProps)
               <h3 className="category-card__title">{cat.name}</h3>
               <p
                 className="category-card__desc"
-                dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHTML(truncatedDescription) }}
               />
               <p className="category-card__count">
                 {cat.count} logiciels

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { OptimizedImage } from '../utils/imageUtils';
 import { slugify } from '../utils/slugify';
+import { sanitizeHTML } from '../utils/sanitize';
 
 interface CardsProps {
   company: CompanyRow;
@@ -59,7 +60,7 @@ export function Cards({ company, highlight, internalTo }: CardsProps) {
       {/* ─── Truncated description ──────────────────────────────────────── */}
       <p
         className="text"
-        dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+        dangerouslySetInnerHTML={{ __html: sanitizeHTML(truncatedDescription) }}
       />
     </div>
   );

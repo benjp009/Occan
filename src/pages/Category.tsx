@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { slugify } from '../utils/slugify';
+import { sanitizeHTML } from '../utils/sanitize';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCategories, fetchCompanies } from '../utils/api';
@@ -92,7 +93,7 @@ export default function Category({ initialCategory, initialCompanies, initialRel
             <h1>{category.name}</h1>
             <p
               className="category-description"
-              dangerouslySetInnerHTML={{ __html: category.long_description || category.description }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHTML(category.long_description || category.description) }}
             />
           </>
           ) : (

@@ -7,6 +7,7 @@ import { CategoryRow } from '../types';
 import Skeleton from 'react-loading-skeleton';
 import { Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
+import { sanitizeHTML } from '../utils/sanitize';
 
 
 
@@ -71,7 +72,7 @@ export default function AllCategory({ initialCategories }: AllCategoryProps) {
                     <h3 className="category-card__title">{(category as CategoryRow).name}</h3>
                     <p
                       className="category-card__desc"
-                      dangerouslySetInnerHTML={{ __html: truncatedDescription }}
+                      dangerouslySetInnerHTML={{ __html: sanitizeHTML(truncatedDescription) }}
                     />
                     <p className="category-card__count">
                       {(category as CategoryRow).count} logiciels
