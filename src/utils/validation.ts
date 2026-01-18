@@ -122,7 +122,7 @@ export function validateFormData(data: Record<string, string>): string[] {
   const errors: string[] = [];
 
   // Validate each field based on its key
-  for (const [key, value] of Object.entries(data)) {
+  for (const [, value] of Object.entries(data)) {
     if (!validators.noScript(value)) {
       errors.push(`Le champ contient des caractères non autorisés`);
       break; // Stop on first dangerous content
