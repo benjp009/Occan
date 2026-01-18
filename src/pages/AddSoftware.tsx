@@ -171,10 +171,6 @@ const AddSoftware: React.FC = () => {
     return errors;
   };
 
-  const isStep1Valid = validateStep1().length === 0;
-  const isStep2Valid = validateStep2().length === 0;
-  const isStep3Valid = validateStep3().length === 0;
-
   const handleStepValidation = (stepNumber: number): boolean => {
     let errors: string[] = [];
     switch (stepNumber) {
