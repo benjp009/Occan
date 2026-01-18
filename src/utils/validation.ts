@@ -20,6 +20,14 @@ export const validators = {
   },
 
   /**
+   * Validate French SIREN number (9 digits)
+   */
+  siren: (value: string): boolean => {
+    const cleaned = value.replace(/\s/g, '');
+    return /^\d{9}$/.test(cleaned);
+  },
+
+  /**
    * Validate phone number (French format or international)
    */
   phone: (value: string): boolean => {
@@ -130,6 +138,7 @@ export function validateFormData(data: Record<string, string>): string[] {
 export const errorMessages = {
   email: 'Veuillez entrer une adresse email valide',
   siret: 'Le numéro SIRET doit contenir 14 chiffres',
+  siren: 'Le numéro SIREN doit contenir 9 chiffres',
   phone: 'Veuillez entrer un numéro de téléphone valide',
   url: 'Veuillez entrer une URL valide (commençant par http:// ou https://)',
   required: 'Ce champ est requis',

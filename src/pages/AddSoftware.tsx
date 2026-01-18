@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -22,9 +22,15 @@ const AddSoftware: React.FC = () => {
 
   // Step 2 fields
   const [companyName, setCompanyName] = useState("");
-  const [siret, setSiret] = useState("");
+  const [siren, setSiren] = useState("");
   const [hqAddress, setHqAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+
+  // SIREN lookup states
+  const [sirenLoading, setSirenLoading] = useState(false);
+  const [sirenError, setSirenError] = useState<string | null>(null);
+  const [sirenLocked, setSirenLocked] = useState(false);
+  const sirenTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Step 3 fields
   const [keywords, setKeywords] = useState("");
@@ -36,6 +42,77 @@ const AddSoftware: React.FC = () => {
   useEffect(() => {
     fetchCategories().then(setCategories);
   }, []);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (sirenTimeoutRef.current) {
+        clearTimeout(sirenTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Fetch company info from SIREN
+  const fetchCompanyFromSiren = async (sirenNumber: string) => {
+    try {
+      const response = await fetch(
+        `https://recherche-entreprises.api.gouv.fr/search?q=${sirenNumber}`
+      );
+
+      if (!response.ok) {
+        throw new Error('Erreur réseau');
+      }
+
+      const data = await response.json();
+
+      if (data.results && data.results.length > 0) {
+        const company = data.results[0];
+        if (company.nom_complet) {
+          setCompanyName(company.nom_complet);
+          if (company.siege?.adresse) {
+            setHqAddress(company.siege.adresse);
+          }
+          setSirenLocked(true);
+          setSirenError(null);
+        } else {
+          setSirenError("Nom de l'entreprise non trouvé");
+          setSirenLocked(false);
+        }
+      } else {
+        setSirenError("Aucune entreprise trouvée avec ce SIREN");
+        setSirenLocked(false);
+      }
+    } catch (error) {
+      console.error('SIREN lookup error:', error);
+      setSirenError("Erreur lors de la recherche. Veuillez saisir le nom manuellement.");
+      setSirenLocked(false);
+    } finally {
+      setSirenLoading(false);
+    }
+  };
+
+  // Handle SIREN input change with debouncing
+  const handleSirenChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/\D/g, ''); // Keep only digits
+    setSiren(value);
+    setSirenError(null);
+    setSirenLocked(false);
+    setCompanyName("");
+    setHqAddress("");
+
+    // Clear any pending timeout
+    if (sirenTimeoutRef.current) {
+      clearTimeout(sirenTimeoutRef.current);
+    }
+
+    // Only fetch when exactly 9 digits
+    if (value.length === 9) {
+      setSirenLoading(true);
+      sirenTimeoutRef.current = setTimeout(() => {
+        fetchCompanyFromSiren(value);
+      }, 300);
+    }
+  };
 
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -49,7 +126,11 @@ const AddSoftware: React.FC = () => {
     if (!validators.required(email)) errors.push('L\'email est requis');
     else if (!validators.email(email)) errors.push(errorMessages.email);
     if (!validators.required(softwareName)) errors.push('Le nom du logiciel est requis');
-    if (website && !validators.url(website)) errors.push(errorMessages.url);
+    // Validate website with https:// prefix
+    if (website) {
+      const fullUrl = `https://${website.trim()}`;
+      if (!validators.url(fullUrl)) errors.push(errorMessages.url);
+    }
     // Check for dangerous content
     if (!validators.noScript(name) || !validators.noScript(softwareName)) {
       errors.push(errorMessages.invalidContent);
@@ -60,8 +141,8 @@ const AddSoftware: React.FC = () => {
   const validateStep2 = (): string[] => {
     const errors: string[] = [];
     if (!validators.required(companyName)) errors.push('Le nom de l\'entreprise est requis');
-    if (!validators.required(siret)) errors.push('Le SIRET est requis');
-    else if (!validators.siret(siret)) errors.push(errorMessages.siret);
+    if (!validators.required(siren)) errors.push('Le SIREN est requis');
+    else if (!validators.siren(siren)) errors.push(errorMessages.siren);
     if (!validators.required(hqAddress)) errors.push('L\'adresse est requise');
     if (!validators.required(phoneNumber)) errors.push('Le téléphone est requis');
     else if (!validators.phone(phoneNumber)) errors.push(errorMessages.phone);
@@ -120,13 +201,14 @@ const AddSoftware: React.FC = () => {
     setValidationErrors([]);
 
     // Sanitize all inputs before submission
+    const fullWebsite = website.trim() ? `https://${website.trim()}` : '';
     const formBody = new URLSearchParams();
     formBody.append("name", sanitizeInput(name));
     formBody.append("email", sanitizeInput(email));
     formBody.append("softwareName", sanitizeInput(softwareName));
-    formBody.append("website", sanitizeInput(website));
+    formBody.append("website", sanitizeInput(fullWebsite));
     formBody.append("companyName", sanitizeInput(companyName));
-    formBody.append("siret", sanitizeInput(siret));
+    formBody.append("siret", sanitizeInput(siren)); // Send as "siret" for backend compatibility
     formBody.append("hqAddress", sanitizeInput(hqAddress));
     formBody.append("phoneNumber", sanitizeInput(phoneNumber));
     formBody.append("keywords", sanitizeInput(keywords));
@@ -151,7 +233,7 @@ const AddSoftware: React.FC = () => {
       setSoftwareName("");
       setWebsite("");
       setCompanyName("");
-      setSiret("");
+      setSiren("");
       setHqAddress("");
       setPhoneNumber("");
       setKeywords("");
@@ -159,6 +241,9 @@ const AddSoftware: React.FC = () => {
       setDescription("");
       setTargetCustomer("");
       setAffiliation("");
+      setSirenLoading(false);
+      setSirenError(null);
+      setSirenLocked(false);
       setStep(1);
     } else {
       throw new Error(json.message || "Erreur inconnue");
@@ -203,7 +288,16 @@ const AddSoftware: React.FC = () => {
               </div>
               <div className="form-group">
                 <label htmlFor="website">Site web</label>
-                <input id="website" value={website} onChange={e => setWebsite(e.target.value)} />
+                <div className="input-with-prefix">
+                  <span className="input-prefix">https://</span>
+                  <input
+                    id="website"
+                    type="text"
+                    value={website}
+                    onChange={e => setWebsite(e.target.value)}
+                    placeholder="exemple.com"
+                  />
+                </div>
               </div>
             </>
           )}
@@ -211,16 +305,35 @@ const AddSoftware: React.FC = () => {
           {step === 2 && (
             <>
               <div className="form-group">
-                <label htmlFor="companyName">Nom de l'entreprise</label>
-                <input id="companyName" value={companyName} onChange={e => setCompanyName(e.target.value)} />
+                <label htmlFor="siren">SIREN</label>
+                <input
+                  id="siren"
+                  value={siren}
+                  onChange={handleSirenChange}
+                  maxLength={9}
+                  placeholder="123456789"
+                />
+                {sirenLoading && <span className="siren-loading">Recherche en cours...</span>}
+                {sirenError && <span className="siren-error">{sirenError}</span>}
+                {sirenLocked && <span className="siren-success">Entreprise trouvée</span>}
               </div>
               <div className="form-group">
-                <label htmlFor="siret">SIRET</label>
-                <input id="siret" value={siret} onChange={e => setSiret(e.target.value)} />
+                <label htmlFor="companyName">Nom de l'entreprise</label>
+                <input
+                  id="companyName"
+                  value={companyName}
+                  onChange={e => setCompanyName(e.target.value)}
+                  readOnly={sirenLocked}
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="hqAddress">Adresse du siège</label>
-                <input id="hqAddress" value={hqAddress} onChange={e => setHqAddress(e.target.value)} />
+                <input
+                  id="hqAddress"
+                  value={hqAddress}
+                  onChange={e => setHqAddress(e.target.value)}
+                  readOnly={sirenLocked}
+                />
               </div>
               <div className="form-group">
                 <label htmlFor="phoneNumber">Téléphone</label>
@@ -270,9 +383,9 @@ const AddSoftware: React.FC = () => {
                 <li><strong>Nom:</strong> {name}</li>
                 <li><strong>Email:</strong> {email}</li>
                 <li><strong>Nom du logiciel:</strong> {softwareName}</li>
-                <li><strong>Site web:</strong> {website}</li>
+                <li><strong>Site web:</strong> {website ? `https://${website}` : '-'}</li>
                 <li><strong>Entreprise:</strong> {companyName}</li>
-                <li><strong>SIRET:</strong> {siret}</li>
+                <li><strong>SIREN:</strong> {siren}</li>
                 <li><strong>Adresse:</strong> {hqAddress}</li>
                 <li><strong>Téléphone:</strong> {phoneNumber}</li>
                 <li><strong>Mots-clés:</strong> {keywords}</li>
