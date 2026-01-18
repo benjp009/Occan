@@ -32,7 +32,7 @@ RUN addgroup -g 1001 -S nodejs && \
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/server.js ./
 COPY --from=builder /app/package*.json ./
-COPY --from=builder /app/src ./src
+COPY --from=builder /app/dist-server ./dist-server
 
 # Install only production dependencies
 RUN npm ci --omit=dev && \
