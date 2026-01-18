@@ -409,10 +409,15 @@ const AddSoftware: React.FC = () => {
           )}
 
           <div className="step-buttons">
-            {step > 1 && <button type="button" onClick={() => { setValidationErrors([]); prev(); }}>Précédent</button>}
+            {step > 1 && (
+              <button type="button" className="button" onClick={() => { setValidationErrors([]); prev(); }}>
+                Précédent
+              </button>
+            )}
             {step < 4 && (
               <button
                 type="button"
+                className="button"
                 onClick={() => {
                   if (handleStepValidation(step)) {
                     next();
