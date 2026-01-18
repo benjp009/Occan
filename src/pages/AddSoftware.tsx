@@ -4,11 +4,13 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
+import { validators, sanitizeInput, errorMessages } from '../utils/validation';
 
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzXXpeXRghTedOSlMmi-rIHy4xL11WFCEOnDKiCV0MAfh1tfL94GHN0vDYPXoDUsu1h/exec";
 
 const AddSoftware: React.FC = () => {
     const [step, setStep] = useState(1);
+  const [validationErrors, setValidationErrors] = useState<string[]>([]);
 
   const [categories, setCategories] = useState<CategoryRow[]>([]);
 
@@ -40,32 +42,98 @@ const AddSoftware: React.FC = () => {
   const next = () => setStep(s => Math.min(s + 1, 4));
   const prev = () => setStep(s => Math.max(s - 1, 1));
 
-  const isStep1Valid =
-    name.trim() && email.trim() && softwareName.trim() && website.trim();
-  const isStep2Valid =
-    companyName.trim() && siret.trim() && hqAddress.trim() && phoneNumber.trim();
-  const isStep3Valid =
-    keywords.trim() && category.trim() && description.trim() &&
-    targetCustomer.trim() && affiliation.trim();
+  // Validation functions for each step
+  const validateStep1 = (): string[] => {
+    const errors: string[] = [];
+    if (!validators.required(name)) errors.push('Le nom est requis');
+    if (!validators.required(email)) errors.push('L\'email est requis');
+    else if (!validators.email(email)) errors.push(errorMessages.email);
+    if (!validators.required(softwareName)) errors.push('Le nom du logiciel est requis');
+    if (website && !validators.url(website)) errors.push(errorMessages.url);
+    // Check for dangerous content
+    if (!validators.noScript(name) || !validators.noScript(softwareName)) {
+      errors.push(errorMessages.invalidContent);
+    }
+    return errors;
+  };
+
+  const validateStep2 = (): string[] => {
+    const errors: string[] = [];
+    if (!validators.required(companyName)) errors.push('Le nom de l\'entreprise est requis');
+    if (!validators.required(siret)) errors.push('Le SIRET est requis');
+    else if (!validators.siret(siret)) errors.push(errorMessages.siret);
+    if (!validators.required(hqAddress)) errors.push('L\'adresse est requise');
+    if (!validators.required(phoneNumber)) errors.push('Le téléphone est requis');
+    else if (!validators.phone(phoneNumber)) errors.push(errorMessages.phone);
+    // Check for dangerous content
+    if (!validators.noScript(companyName) || !validators.noScript(hqAddress)) {
+      errors.push(errorMessages.invalidContent);
+    }
+    return errors;
+  };
+
+  const validateStep3 = (): string[] => {
+    const errors: string[] = [];
+    if (!validators.required(keywords)) errors.push('Les mots-clés sont requis');
+    if (!validators.required(category)) errors.push('La catégorie est requise');
+    if (!validators.required(description)) errors.push('La description est requise');
+    if (!validators.required(targetCustomer)) errors.push('La clientèle cible est requise');
+    if (!validators.required(affiliation)) errors.push('L\'affiliation est requise');
+    // Check for dangerous content
+    if (!validators.noScript(keywords) || !validators.noScript(description) || !validators.noScript(targetCustomer)) {
+      errors.push(errorMessages.invalidContent);
+    }
+    // Check max length
+    if (!validators.maxLength(description, 500)) {
+      errors.push(errorMessages.maxLength(500));
+    }
+    return errors;
+  };
+
+  const isStep1Valid = validateStep1().length === 0;
+  const isStep2Valid = validateStep2().length === 0;
+  const isStep3Valid = validateStep3().length === 0;
+
+  const handleStepValidation = (stepNumber: number): boolean => {
+    let errors: string[] = [];
+    switch (stepNumber) {
+      case 1: errors = validateStep1(); break;
+      case 2: errors = validateStep2(); break;
+      case 3: errors = validateStep3(); break;
+    }
+    setValidationErrors(errors);
+    return errors.length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("sending");
 
+    // Final validation before submission
+    const allErrors = [...validateStep1(), ...validateStep2(), ...validateStep3()];
+    if (allErrors.length > 0) {
+      setValidationErrors(allErrors);
+      setStatus("error");
+      return;
+    }
+
+    setStatus("sending");
+    setValidationErrors([]);
+
+    // Sanitize all inputs before submission
     const formBody = new URLSearchParams();
-    formBody.append("name", name);
-    formBody.append("email", email);
-    formBody.append("softwareName", softwareName);
-    formBody.append("website", website);
-    formBody.append("companyName", companyName);
-    formBody.append("siret", siret);
-    formBody.append("hqAddress", hqAddress);
-    formBody.append("phoneNumber", phoneNumber);
-    formBody.append("keywords", keywords);
-    formBody.append("category", category);
-    formBody.append("description", description);
-    formBody.append("targetCustomer", targetCustomer);
-    formBody.append("affiliation", affiliation);
+    formBody.append("name", sanitizeInput(name));
+    formBody.append("email", sanitizeInput(email));
+    formBody.append("softwareName", sanitizeInput(softwareName));
+    formBody.append("website", sanitizeInput(website));
+    formBody.append("companyName", sanitizeInput(companyName));
+    formBody.append("siret", sanitizeInput(siret));
+    formBody.append("hqAddress", sanitizeInput(hqAddress));
+    formBody.append("phoneNumber", sanitizeInput(phoneNumber));
+    formBody.append("keywords", sanitizeInput(keywords));
+    formBody.append("category", sanitizeInput(category));
+    formBody.append("description", sanitizeInput(description));
+    formBody.append("targetCustomer", sanitizeInput(targetCustomer));
+    formBody.append("affiliation", sanitizeInput(affiliation));
 
   try {
     const res = await fetch(WEB_APP_URL, {
@@ -216,17 +284,27 @@ const AddSoftware: React.FC = () => {
             </div>
           )}
 
+          {/* Validation errors display */}
+          {validationErrors.length > 0 && (
+            <div className="validation-errors" style={{ color: 'red', marginBottom: '1rem' }}>
+              <ul>
+                {validationErrors.map((error, idx) => (
+                  <li key={idx}>{error}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className="step-buttons">
-            {step > 1 && <button type="button" onClick={prev}>Précédent</button>}
+            {step > 1 && <button type="button" onClick={() => { setValidationErrors([]); prev(); }}>Précédent</button>}
             {step < 4 && (
               <button
                 type="button"
-                onClick={next}
-                disabled={
-                  (step === 1 && !isStep1Valid) ||
-                  (step === 2 && !isStep2Valid) ||
-                  (step === 3 && !isStep3Valid)
-                }
+                onClick={() => {
+                  if (handleStepValidation(step)) {
+                    next();
+                  }
+                }}
               >
                 Suivant
               </button>
@@ -241,7 +319,7 @@ const AddSoftware: React.FC = () => {
           {status === 'success' && (
             <p className="status success">Merci ! Votre logiciel a bien été ajouté.</p>
           )}
-          {status === 'error' && (
+          {status === 'error' && validationErrors.length === 0 && (
             <p className="status error">Oops, une erreur est survenue.</p>
           )}
         </form>

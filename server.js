@@ -2,6 +2,13 @@ const fs = require('fs');
 require('dotenv').config();
 const path = require('path');
 const express = require('express');
+const crypto = require('crypto');
+const cookieParser = require('cookie-parser');
+const helmet = require('helmet');
+const cors = require('cors');
+
+// In-memory session store (for production, use Redis or similar)
+const sessions = new Map();
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 // Polyfill fetch in Node environments where it's not available
@@ -29,6 +36,10 @@ const { fetchCompanies, fetchCategories } = require('./src/utils/api.ts');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+// Parse JSON bodies and cookies
+app.use(express.json());
+app.use(cookieParser());
+
 // WWW redirect and HTTPS redirect middleware
 app.use((req, res, next) => {
   const host = req.get('Host');
@@ -46,12 +57,44 @@ app.use((req, res, next) => {
   next();
 });
 
-// Security headers
-app.use((req, res, next) => {
-  if (process.env.NODE_ENV === 'production') {
-    // Force HTTPS for future requests
-    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+// Security headers with helmet
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com", "https://www.clarity.ms", "https://www.google-analytics.com"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+      imgSrc: ["'self'", "data:", "https:", "blob:"],
+      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      connectSrc: ["'self'", "https://docs.google.com", "https://script.google.com", "https://www.google-analytics.com", "https://www.clarity.ms"],
+      frameSrc: ["'none'"],
+      objectSrc: ["'none'"],
+      upgradeInsecureRequests: process.env.NODE_ENV === 'production' ? [] : null
+    }
+  },
+  crossOriginEmbedderPolicy: false, // Required for external images
+  hsts: {
+    maxAge: 31536000,
+    includeSubDomains: true
   }
+}));
+
+// CORS configuration
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production'
+    ? ['https://logicielfrance.com', 'https://www.logicielfrance.com']
+    : 'http://localhost:3000',
+  credentials: true,
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
+// Additional security headers
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'geolocation=(), microphone=(), camera=()');
   next();
 });
 
@@ -69,6 +112,98 @@ app.get('/robots.txt', (req, res) => {
 app.get('/sitemap.xml', (req, res) => {
   res.type('application/xml');
   res.sendFile(path.resolve('./build/sitemap.xml'));
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'healthy',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime()
+  });
+});
+
+// Admin authentication endpoints
+app.post('/api/admin/login', (req, res) => {
+  const { password } = req.body;
+
+  if (!password || !process.env.ADMIN_PASSWORD) {
+    return res.status(401).json({ error: 'Invalid credentials' });
+  }
+
+  // Compare password securely using timing-safe comparison
+  const inputHash = crypto.createHash('sha256').update(password).digest('hex');
+  const storedHash = crypto.createHash('sha256').update(process.env.ADMIN_PASSWORD).digest('hex');
+
+  if (crypto.timingSafeEqual(Buffer.from(inputHash), Buffer.from(storedHash))) {
+    // Create session
+    const sessionId = crypto.randomBytes(32).toString('hex');
+    const expiresAt = Date.now() + (24 * 60 * 60 * 1000); // 24 hours
+    sessions.set(sessionId, { createdAt: Date.now(), expiresAt });
+
+    // Set httpOnly cookie
+    res.cookie('adminSession', sessionId, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 24 * 60 * 60 * 1000
+    });
+
+    return res.json({ success: true });
+  }
+
+  return res.status(401).json({ error: 'Invalid credentials' });
+});
+
+app.post('/api/admin/logout', (req, res) => {
+  const sessionId = req.cookies?.adminSession;
+  if (sessionId) {
+    sessions.delete(sessionId);
+  }
+  res.clearCookie('adminSession');
+  return res.json({ success: true });
+});
+
+app.get('/api/admin/verify', (req, res) => {
+  const sessionId = req.cookies?.adminSession;
+  const session = sessions.get(sessionId);
+
+  if (session && session.expiresAt > Date.now()) {
+    return res.json({ authenticated: true });
+  }
+
+  return res.status(401).json({ authenticated: false });
+});
+
+// Blog API endpoints (server-side only, no API key exposure)
+app.get('/api/blog/posts', (req, res) => {
+  try {
+    const blogListPath = path.resolve('./build/blog-posts.json');
+    if (fs.existsSync(blogListPath)) {
+      const posts = JSON.parse(fs.readFileSync(blogListPath, 'utf8'));
+      const published = Array.isArray(posts)
+        ? posts.filter(p => (p.status || '').toLowerCase() === 'published')
+        : [];
+      return res.json(published);
+    }
+    return res.json([]);
+  } catch (err) {
+    console.error('Failed to load blog posts:', err);
+    return res.status(500).json({ error: 'Failed to load posts' });
+  }
+});
+
+app.get('/api/blog/posts/:slug', (req, res) => {
+  try {
+    const blogPostPath = path.resolve(`./build/posts/${req.params.slug}.json`);
+    if (fs.existsSync(blogPostPath)) {
+      return res.json(JSON.parse(fs.readFileSync(blogPostPath, 'utf8')));
+    }
+    return res.status(404).json({ error: 'Post not found' });
+  } catch (err) {
+    console.error('Failed to load blog post:', err);
+    return res.status(500).json({ error: 'Failed to load post' });
+  }
 });
 
 app.get('*', async (req, res) => {

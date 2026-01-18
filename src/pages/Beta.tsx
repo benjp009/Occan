@@ -6,6 +6,7 @@ import { Footer } from '../components/Footer';
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
 import { slugify } from '../utils/slugify';
+import { sanitizeHTML } from '../utils/sanitize';
 
 interface BetaProps {
   initialCategories?: CategoryRow[] | null;
@@ -63,7 +64,7 @@ export default function Beta({ initialCategories }: BetaProps) {
                       ) : null}
                     </div>
                     {cat.description ? (
-                      <p className="beta-section-desc" dangerouslySetInnerHTML={{ __html: cat.description }} />
+                      <p className="beta-section-desc" dangerouslySetInnerHTML={{ __html: sanitizeHTML(cat.description) }} />
                     ) : (
                       <p className="beta-section-desc">Découvrez les meilleurs logiciels français de cette catégorie.</p>
                     )}
