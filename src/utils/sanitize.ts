@@ -1,4 +1,9 @@
-import DOMPurify from 'dompurify';
+// DOMPurify requires a DOM environment - handle SSR gracefully
+let DOMPurify: { sanitize: (dirty: string, config?: object) => string } | null = null;
+if (typeof window !== 'undefined') {
+  // Only import in browser environment
+  DOMPurify = require('dompurify');
+}
 
 // Allowed HTML tags for rich text content
 const ALLOWED_TAGS = [
@@ -17,6 +22,9 @@ const ALLOWED_ATTR = ['href', 'target', 'rel', 'class', 'id'];
 export function sanitizeHTML(dirty: string | undefined | null): string {
   if (!dirty) return '';
 
+  // Return as-is during SSR (DOMPurify requires DOM)
+  if (!DOMPurify) return dirty;
+
   return DOMPurify.sanitize(dirty, {
     ALLOWED_TAGS,
     ALLOWED_ATTR,
@@ -32,6 +40,9 @@ export function sanitizeHTML(dirty: string | undefined | null): string {
  */
 export function sanitizeText(dirty: string | undefined | null): string {
   if (!dirty) return '';
+
+  // Return as-is during SSR (DOMPurify requires DOM)
+  if (!DOMPurify) return dirty;
 
   return DOMPurify.sanitize(dirty, {
     ALLOWED_TAGS: [],
