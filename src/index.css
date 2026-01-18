@@ -1999,8 +1999,19 @@ body {
 .step-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   gap: 0.5rem;
+}
+
+/* When only one button, push it to the right */
+.step-buttons .button:only-child {
+  margin-left: auto;
+}
+
+.step-buttons .button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .step-buttons button:disabled {
