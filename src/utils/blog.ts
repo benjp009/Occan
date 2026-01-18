@@ -216,30 +216,33 @@ function generateSlug(title: string): string {
     .replace(/^-+|-+$/g, ''); // Supprime les tirets en début/fin
 }
 
-// Version statique pour le build - lit depuis les fichiers JSON générés
+// Version statique pour le build - lit depuis les fichiers JSON générés via serveur API
+// Ceci garantit que les clés API Notion ne sont jamais exposées au client
 export async function getBlogPostsStatic(): Promise<BlogPost[]> {
   try {
-    const response = await fetch('/blog-posts.json');
+    // Use server API endpoint instead of direct static file access
+    const response = await fetch('/api/blog/posts');
     if (!response.ok) {
       throw new Error(`Erreur HTTP: ${response.status}`);
     }
     const data = await response.json();
-    
+
     // Vérifier que les données sont valides
     if (!Array.isArray(data)) {
       throw new Error('Format de données invalide');
     }
-    
+
     return data;
   } catch (error) {
-    console.error('Erreur lors du chargement des articles statiques:', error);
-    throw error; // Re-lancer l'erreur pour que le composant puisse l'afficher
+    console.error('Erreur lors du chargement des articles:', error);
+    throw error;
   }
 }
 
 export async function getBlogPostBySlugStatic(slug: string): Promise<BlogPost | null> {
   try {
-    const response = await fetch(`/posts/${slug}.json`);
+    // Use server API endpoint instead of direct static file access
+    const response = await fetch(`/api/blog/posts/${encodeURIComponent(slug)}`);
     if (!response.ok) {
       if (response.status === 404) {
         return null; // Article non trouvé
@@ -247,67 +250,25 @@ export async function getBlogPostBySlugStatic(slug: string): Promise<BlogPost | 
       throw new Error(`Erreur HTTP: ${response.status}`);
     }
     const data = await response.json();
-    
+
     // Vérifier que les données sont valides
     if (!data || typeof data !== 'object') {
       throw new Error('Format de données invalide');
     }
-    
+
     return data;
   } catch (error) {
-    console.error('Erreur lors du chargement de l\'article statique:', error);
+    console.error('Erreur lors du chargement de l\'article:', error);
     throw error;
   }
 }
 
-// Fonctions principales - utilisent la version appropriée selon l'environnement
-const getBlogPostsOriginal = getBlogPosts;
-const getBlogPostBySlugOriginal = getBlogPostBySlug;
-
-// Fonction avec fallback pour plus de robustesse
+// Fonctions principales - utilisent les endpoints serveur qui lisent les fichiers statiques
+// Les clés API Notion ne sont jamais exposées au client
 export const getBlogPostsMain = async (): Promise<BlogPost[]> => {
-  // En développement, on utilise aussi les fichiers statiques à cause des CORS
-  // L'API Notion ne peut être appelée que depuis le serveur, pas depuis le navigateur
-  try {
-    return await getBlogPostsStatic();
-  } catch (error) {
-    console.warn('Erreur lors du chargement des articles statiques:', error);
-    
-    // En production, on peut essayer un fallback vers l'API Notion server-side
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        return await getBlogPostsOriginal();
-      } catch (notionError) {
-        console.error('Erreur lors du chargement via Notion:', notionError);
-        throw error; // Renvoyer l'erreur originale
-      }
-    } else {
-      // En développement, pas de fallback possible à cause des CORS
-      console.error('Impossible de charger les articles en développement sans blog-posts.json');
-      throw error;
-    }
-  }
+  return getBlogPostsStatic();
 };
 
 export const getBlogPostBySlugMain = async (slug: string): Promise<BlogPost | null> => {
-  // En développement, on utilise aussi les fichiers statiques à cause des CORS
-  try {
-    return await getBlogPostBySlugStatic(slug);
-  } catch (error) {
-    console.warn('Erreur lors du chargement de l\'article statique:', error);
-    
-    // En production, on peut essayer un fallback vers l'API Notion server-side
-    if (process.env.NODE_ENV === 'production') {
-      try {
-        return await getBlogPostBySlugOriginal(slug);
-      } catch (notionError) {
-        console.error('Erreur lors du chargement via Notion:', notionError);
-        throw error;
-      }
-    } else {
-      // En développement, pas de fallback possible à cause des CORS
-      console.error('Impossible de charger l\'article en développement sans fichier statique');
-      throw error;
-    }
-  }
+  return getBlogPostBySlugStatic(slug);
 };
