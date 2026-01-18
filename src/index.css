@@ -2008,6 +2008,66 @@ body {
   cursor: not-allowed;
 }
 
+/* Input with prefix (e.g., https://) */
+.input-with-prefix {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.input-with-prefix .input-prefix {
+  padding: 0.5rem;
+  background-color: #f7fafc;
+  color: #666;
+  font-size: 0.9rem;
+  border-right: 1px solid #ccc;
+  white-space: nowrap;
+}
+
+.input-with-prefix input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.input-with-prefix:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* SIREN lookup states */
+.siren-loading {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+}
+
+.siren-error {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #e53e3e;
+}
+
+.siren-success {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #38a169;
+}
+
+/* Read-only input styling */
+.software-form input[readonly] {
+  background-color: #f7fafc;
+  color: #555;
+  cursor: not-allowed;
+}
+
 .container-all-categories {
   max-width: 1200px;
   margin: 60px auto;
