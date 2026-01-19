@@ -12,14 +12,17 @@ import { Cards } from '../components/Cards';
 
 interface SoftwareProps {
   initialCompany?: CompanyRow | null;
+  initialSimilarCompanies?: CompanyRow[];
 }
 
-export default function Software({ initialCompany }: SoftwareProps) {
+export default function Software({ initialCompany, initialSimilarCompanies }: SoftwareProps) {
   const { slug } = useParams<{ slug: string }>();
   const [company, setCompany] = useState<CompanyRow | null | undefined>(
     initialCompany === undefined ? undefined : initialCompany
   );
-  const [similarCompanies, setSimilarCompanies] = useState<CompanyRow[]>([]);
+  const [similarCompanies, setSimilarCompanies] = useState<CompanyRow[]>(
+    initialSimilarCompanies ?? []
+  );
 
   useEffect(() => {
     if (
@@ -47,8 +50,8 @@ export default function Software({ initialCompany }: SoftwareProps) {
           setSimilarCompanies(similar);
         }
       });
-    } else if (initialCompany) {
-      // Handle similar companies for initialCompany
+    } else if (initialCompany && !initialSimilarCompanies?.length) {
+      // Only fetch similar companies if not provided via SSR
       fetchCompanies().then(data => {
         if (initialCompany.categories) {
           const firstCategory = initialCompany.categories.split(',')[0].trim();
@@ -62,7 +65,7 @@ export default function Software({ initialCompany }: SoftwareProps) {
         }
       });
     }
-  }, [slug, initialCompany]);
+  }, [slug, initialCompany, initialSimilarCompanies]);
 
   if (company === undefined) {
     return (

@@ -907,6 +907,15 @@ max-width: 80px;
   margin: 0;                 /* reset default H2 margin */
 }
 
+.card-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title-link:hover .subtitle {
+  color: #000091;
+}
+
 .text {
   font-size: 0.9rem;    /* ~14px; adjust to match your design */
   color: #444444;
