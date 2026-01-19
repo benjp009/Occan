@@ -17,6 +17,8 @@ import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Refer from './pages/Refer';
+import Alternative from './pages/Alternative';
+import UseCase from './pages/UseCase';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -87,6 +89,25 @@ export default function App({ location, initialData }: AppProps) {
         <Route
           path="/conditions-utilisation"
           element={<ConditionsUtilisation />}
+        />
+        {/* Programmatic SEO pages */}
+        <Route
+          path="/alternative/:slug"
+          element={
+            <Alternative
+              initialCompetitor={initialData?.competitor}
+              initialAlternatives={initialData?.alternatives}
+            />
+          }
+        />
+        <Route
+          path="/meilleur-logiciel-pour/:slug"
+          element={
+            <UseCase
+              initialUseCase={initialData?.useCase}
+              initialCompanies={initialData?.companies}
+            />
+          }
         />
         {/* Catch-all route for 404 - must be last */}
         <Route path="*" element={<NotFound />} />

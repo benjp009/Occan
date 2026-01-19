@@ -20,6 +20,8 @@ const CATEGORIES_CSV =
 const COMPANIES_CSV =
   process.env.REACT_APP_SHEET_CSV_URL ||
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?output=csv';
+const COMPETITORS_CSV = process.env.REACT_APP_COMPETITORS_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1924297465&single=true&output=csv';
+const USECASES_CSV = process.env.REACT_APP_USECASES_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=620023561&single=true&output=csv';
 const BASE_URL = 'https://logicielfrance.com';
 
 function slugify(name) {
@@ -53,7 +55,7 @@ async function fetchBlogPosts() {
       console.log('Aucun fichier blog-posts.json trouvé');
       return [];
     }
-    
+
     const data = fs.readFileSync(blogPostsPath, 'utf8');
     const posts = JSON.parse(data);
     return posts.filter(post => post.status === 'published' && post.slug);
@@ -63,18 +65,52 @@ async function fetchBlogPosts() {
   }
 }
 
+async function fetchCompetitors() {
+  if (!COMPETITORS_CSV) {
+    console.log('No REACT_APP_COMPETITORS_CSV_URL configured, skipping competitors');
+    return [];
+  }
+  try {
+    const response = await fetch(COMPETITORS_CSV);
+    const text = await response.text();
+    const { data } = Papa.parse(text, { header: true });
+    return data.filter(r => r.competitor_name && r.slug);
+  } catch (err) {
+    console.error('Failed to fetch competitors:', err.message);
+    return [];
+  }
+}
+
+async function fetchUseCases() {
+  if (!USECASES_CSV) {
+    console.log('No REACT_APP_USECASES_CSV_URL configured, skipping use cases');
+    return [];
+  }
+  try {
+    const response = await fetch(USECASES_CSV);
+    const text = await response.text();
+    const { data } = Papa.parse(text, { header: true });
+    return data.filter(r => r.usecase_name && r.slug);
+  } catch (err) {
+    console.error('Failed to fetch use cases:', err.message);
+    return [];
+  }
+}
+
 async function generate() {
   let categories = [];
   let companies = [];
   let blogPosts = [];
-  
+  let competitors = [];
+  let useCases = [];
+
   try {
     categories = await fetchCategories();
   } catch (err) {
     console.error('Failed to fetch categories:', err.message);
   }
 
-   try {
+  try {
     companies = await fetchCompanies();
   } catch (err) {
     console.error('Failed to fetch companies:', err.message);
@@ -84,6 +120,18 @@ async function generate() {
     blogPosts = await fetchBlogPosts();
   } catch (err) {
     console.error('Failed to fetch blog posts:', err.message);
+  }
+
+  try {
+    competitors = await fetchCompetitors();
+  } catch (err) {
+    console.error('Failed to fetch competitors:', err.message);
+  }
+
+  try {
+    useCases = await fetchUseCases();
+  } catch (err) {
+    console.error('Failed to fetch use cases:', err.message);
   }
 
   const staticUrls = [
@@ -120,7 +168,25 @@ async function generate() {
     }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
-  const urls = staticUrls.concat(categoryUrls, softwareUrls, blogUrls);
+  const alternativeUrls = competitors
+    .filter(c => c.slug && typeof c.slug === 'string')
+    .map(c => ({
+      loc: `${BASE_URL}/alternative/${c.slug}`,
+      priority: '0.7',
+      lastmod: TODAY,
+    }))
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const useCaseUrls = useCases
+    .filter(u => u.slug && typeof u.slug === 'string')
+    .map(u => ({
+      loc: `${BASE_URL}/meilleur-logiciel-pour/${u.slug}`,
+      priority: '0.7',
+      lastmod: TODAY,
+    }))
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const urls = staticUrls.concat(categoryUrls, softwareUrls, blogUrls, alternativeUrls, useCaseUrls);
 
 
   const lines = [

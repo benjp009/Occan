@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { fetchCompanies } from '../utils/api';
@@ -23,6 +24,16 @@ export default function SearchResults() {
 
   return (
     <>
+      <Helmet>
+        <title>{query ? `Recherche : ${query} - Logiciel France` : 'Recherche - Logiciel France'}</title>
+        <meta name="description" content={query ? `Resultats de recherche pour "${query}" parmi les logiciels francais. Trouvez la solution ideale Made in France.` : 'Recherchez parmi les logiciels francais. Trouvez la solution ideale Made in France.'} />
+        <meta name="robots" content="noindex, follow" />
+        <meta property="og:title" content={query ? `Recherche : ${query}` : 'Recherche'} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://logicielfrance.com/recherche${query ? `?q=${encodeURIComponent(query)}` : ''}`} />
+        <meta property="og:site_name" content="Logiciel France" />
+        <meta property="og:locale" content="fr_FR" />
+      </Helmet>
       <Header />
       <main className="container-category">
         <nav className="breadcrumbs">

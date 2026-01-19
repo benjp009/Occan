@@ -21,7 +21,7 @@ const { HelmetProvider } = require('react-helmet-async');
 // Import pre-compiled modules from dist-server
 const App = require('./dist-server/App.js').default;
 const { slugify } = require('./dist-server/utils/slugify.js');
-const { fetchCompanies, fetchCategories } = require('./dist-server/utils/api.js');
+const { fetchCompanies, fetchCategories, fetchCompetitors, fetchUseCases } = require('./dist-server/utils/api.js');
 
 // In-memory session store (for production, use Redis or similar)
 const sessions = new Map();
@@ -222,6 +222,8 @@ app.get('*', async (req, res) => {
     const allSoftwaresMatch = req.url.startsWith('/tous-les-logiciels');
     const homeMatch = req.url === '/' || req.url.startsWith('/?');
     const allCategoriesMatch = req.url === '/categorie' || req.url.startsWith('/categorie?');
+    const alternativeMatch = req.url.match(/^\/alternative\/([^/?#]+)/);
+    const useCaseMatch = req.url.match(/^\/meilleur-logiciel-pour\/([^/?#]+)/);
     if (softwareMatch) {
       try {
         const companies = await fetchCompanies();
@@ -309,6 +311,44 @@ app.get('*', async (req, res) => {
         initialData = { categories };
       } catch (err) {
         console.error('Failed to fetch categories', err);
+      }
+    } else if (alternativeMatch) {
+      try {
+        const [competitors, companies] = await Promise.all([
+          fetchCompetitors(),
+          fetchCompanies(),
+        ]);
+        const competitor = competitors.find(c => c.slug === alternativeMatch[1]);
+        if (competitor) {
+          const competitorCategories = competitor.categories.split(',').map(c => c.trim().toLowerCase());
+          const alternatives = companies.filter(company => {
+            if (!company.categories) return false;
+            const companyCategories = company.categories.split(',').map(c => c.trim().toLowerCase());
+            return competitorCategories.some(cat => companyCategories.includes(cat));
+          });
+          initialData = { competitor, alternatives };
+        }
+      } catch (err) {
+        console.error('Failed to fetch alternative data', err);
+      }
+    } else if (useCaseMatch) {
+      try {
+        const [useCases, companies] = await Promise.all([
+          fetchUseCases(),
+          fetchCompanies(),
+        ]);
+        const useCase = useCases.find(u => u.slug === useCaseMatch[1]);
+        if (useCase) {
+          const useCaseCategories = useCase.categories.split(',').map(c => c.trim().toLowerCase());
+          const filteredCompanies = companies.filter(company => {
+            if (!company.categories) return false;
+            const companyCategories = company.categories.split(',').map(c => c.trim().toLowerCase());
+            return useCaseCategories.some(cat => companyCategories.includes(cat));
+          });
+          initialData = { useCase, companies: filteredCompanies };
+        }
+      } catch (err) {
+        console.error('Failed to fetch use case data', err);
       }
     }
 

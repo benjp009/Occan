@@ -64,3 +64,17 @@ export interface NotionBlock {
   content?: any;
   children?: NotionBlock[];
 }
+
+export interface CompetitorRow {
+  competitor_name: string;
+  slug: string;
+  categories: string; // comma-separated
+  description: string;
+}
+
+export interface UseCaseRow {
+  usecase_name: string;
+  slug: string;
+  categories: string; // comma-separated
+  description: string;
+}

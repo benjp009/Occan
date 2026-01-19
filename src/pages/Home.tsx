@@ -43,6 +43,34 @@ export default function Home({ initialCompanies, initialCategories }: HomeProps)
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://logicielfrance.com/" />
         <meta property="og:description" content="Découvrez les meilleurs logiciels français. Annuaire complet des solutions software made in France." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Logiciel France",
+            "url": "https://logicielfrance.com",
+            "logo": "https://logicielfrance.com/logo.png",
+            "description": "Le premier annuaire des logiciels et entreprises tech francaises",
+            "foundingLocation": {
+              "@type": "Place",
+              "name": "France"
+            },
+            "sameAs": []
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Logiciel France",
+            "url": "https://logicielfrance.com",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://logicielfrance.com/recherche?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       <Hero /> 
