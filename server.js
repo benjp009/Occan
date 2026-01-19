@@ -59,7 +59,16 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       imgSrc: ["'self'", "data:", "https:", "blob:"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
-      connectSrc: ["'self'", "https://docs.google.com", "https://script.google.com", "https://www.google-analytics.com", "https://www.clarity.ms"],
+      connectSrc: [
+        "'self'",
+        "https://docs.google.com",
+        "https://*.googleusercontent.com",
+        "https://script.google.com",
+        "https://www.google-analytics.com",
+        "https://*.google-analytics.com",
+        "https://www.clarity.ms",
+        "https://*.clarity.ms"
+      ],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: process.env.NODE_ENV === 'production' ? [] : null
