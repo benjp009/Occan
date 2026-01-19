@@ -80,7 +80,7 @@ export async function fetchMonthlySelection(month: string): Promise<string[]> {
 
 // Competitors CSV (for Alternative pages)
 const COMPETITORS_CSV = process.env.REACT_APP_COMPETITORS_CSV_URL ||
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1234567890&single=true&output=csv';
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1924297465&single=true&output=csv';
 
 export async function fetchCompetitors(): Promise<CompetitorRow[]> {
   try {
@@ -96,7 +96,7 @@ export async function fetchCompetitors(): Promise<CompetitorRow[]> {
 
 // Use Cases CSV (for Use Case pages)
 const USECASES_CSV = process.env.REACT_APP_USECASES_CSV_URL ||
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=0987654321&single=true&output=csv';
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=620023561&single=true&output=csv';
 
 export async function fetchUseCases(): Promise<UseCaseRow[]> {
   try {
