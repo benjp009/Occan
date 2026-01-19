@@ -1,4 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /refer/
+Disallow: /ajouter-un-nouveau-logiciel
+Disallow: /recherche
+
 Sitemap: https://logicielfrance.com/sitemap.xml
