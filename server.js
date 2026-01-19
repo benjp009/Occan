@@ -231,7 +231,17 @@ app.get('*', async (req, res) => {
           c => slugify(c.name) === softwareMatch[1] || c.id === softwareMatch[1]
         );
         if (company) {
-          initialData = { company };
+          // Pre-fetch similar companies for SSR
+          let similarCompanies = [];
+          if (company.categories) {
+            const firstCategory = company.categories.split(',')[0].trim();
+            similarCompanies = companies.filter(c =>
+              c.id !== company.id &&
+              c.categories &&
+              c.categories.split(',').some(cat => cat.trim() === firstCategory)
+            );
+          }
+          initialData = { company, similarCompanies };
         }
       } catch (err) {
         console.error('Failed to fetch company data', err);
