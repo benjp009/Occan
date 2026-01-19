@@ -69,7 +69,12 @@ export default function App({ location, initialData }: AppProps) {
         />
         <Route
           path="/logiciel/:slug"
-          element={<Software initialCompany={initialData?.company} />}
+          element={
+            <Software
+              initialCompany={initialData?.company}
+              initialSimilarCompanies={initialData?.similarCompanies}
+            />
+          }
         />
         <Route
           path="/tous-les-logiciels"
