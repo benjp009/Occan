@@ -2,8 +2,12 @@ import Papa from 'papaparse';
 import { CompanyRow } from '../types';
 import { CategoryRow } from '../types';
 
+// Fallback URL for companies CSV (used when env var is not available at runtime)
+const COMPANIES_CSV_FALLBACK =
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=0&single=true&output=csv';
+
 export async function fetchCompanies(): Promise<CompanyRow[]> {
-  const url = process.env.REACT_APP_SHEET_CSV_URL!;
+  const url = process.env.REACT_APP_SHEET_CSV_URL || COMPANIES_CSV_FALLBACK;
   const response = await fetch(url);
   const csv = await response.text();
   const { data } = Papa.parse<CompanyRow>(csv, { header: true });
