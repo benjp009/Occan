@@ -80,6 +80,54 @@ export default function Category({ initialCategory, initialCompanies, initialRel
         {category?.meta_description && (
           <meta name="twitter:description" content={category.meta_description.replace(/<[^>]*>/g, '').slice(0, 160)} />
         )}
+        {category && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": `${category.name} - Logiciels francais`,
+              "description": category.meta_description?.replace(/<[^>]*>/g, '').slice(0, 160) || `Decouvrez les meilleurs logiciels francais de ${category.name}`,
+              "url": `https://logicielfrance.com/categorie/${slug}`,
+              "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": filteredCompanies.slice(0, 10).map((company, index) => ({
+                  "@type": "ListItem",
+                  "position": index + 1,
+                  "name": company.name,
+                  "url": `https://logicielfrance.com/logiciel/${slugify(company.name)}`
+                }))
+              }
+            })}
+          </script>
+        )}
+        {category && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Accueil",
+                  "item": "https://logicielfrance.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Categories",
+                  "item": "https://logicielfrance.com/categorie"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": category.name,
+                  "item": `https://logicielfrance.com/categorie/${slug}`
+                }
+              ]
+            })}
+          </script>
+        )}
       </Helmet>
       <Header />
       <main className="container-category category-page">

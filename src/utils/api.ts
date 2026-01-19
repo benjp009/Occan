@@ -1,6 +1,5 @@
 import Papa from 'papaparse';
-import { CompanyRow } from '../types';
-import { CategoryRow } from '../types';
+import { CompanyRow, CategoryRow, CompetitorRow, UseCaseRow } from '../types';
 
 // Fallback URL for companies CSV (used when env var is not available at runtime)
 const COMPANIES_CSV_FALLBACK =
@@ -77,4 +76,36 @@ export async function fetchMonthlySelection(month: string): Promise<string[]> {
     if (name) names.push(name);
   }
   return names;
+}
+
+// Competitors CSV (for Alternative pages)
+const COMPETITORS_CSV = process.env.REACT_APP_COMPETITORS_CSV_URL ||
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1924297465&single=true&output=csv';
+
+export async function fetchCompetitors(): Promise<CompetitorRow[]> {
+  try {
+    const response = await fetch(COMPETITORS_CSV);
+    const csv = await response.text();
+    const { data } = Papa.parse<CompetitorRow>(csv, { header: true });
+    return (data as CompetitorRow[]).filter(row => row.competitor_name && row.slug);
+  } catch (error) {
+    console.error('Failed to fetch competitors:', error);
+    return [];
+  }
+}
+
+// Use Cases CSV (for Use Case pages)
+const USECASES_CSV = process.env.REACT_APP_USECASES_CSV_URL ||
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=620023561&single=true&output=csv';
+
+export async function fetchUseCases(): Promise<UseCaseRow[]> {
+  try {
+    const response = await fetch(USECASES_CSV);
+    const csv = await response.text();
+    const { data } = Papa.parse<UseCaseRow>(csv, { header: true });
+    return (data as UseCaseRow[]).filter(row => row.usecase_name && row.slug);
+  } catch (error) {
+    console.error('Failed to fetch use cases:', error);
+    return [];
+  }
 }
