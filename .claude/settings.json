@@ -3,6 +3,11 @@
     "allow": [
       "Bash(gcloud config:*)",
       "Bash(gcloud run services describe:*)"
-    ]
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Read"
+    ],
   }
 }

@@ -258,6 +258,7 @@ const AddSoftware: React.FC = () => {
           name="description"
           content="Ajoutez votre logiciel français à notre annuaire. Formulaire simple et rapide pour référencer votre solution Made in France."
         />
+        <meta name="robots" content="noindex, follow" />
       </Helmet>
       <Header />
       <div className="add-software-page">

@@ -161,6 +161,47 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
         {post.tags.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
         ))}
+
+        {/* JSON-LD Article Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": post.title,
+            "description": post.seo.metaDescription || post.excerpt,
+            "image": post.coverImage || "https://logicielfrance.com/logo.png",
+            "author": {
+              "@type": "Person",
+              "name": post.author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Logiciel France",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://logicielfrance.com/logo.png"
+              }
+            },
+            "datePublished": post.publishedAt,
+            "dateModified": post.updatedAt || post.publishedAt,
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://logicielfrance.com/blog/${post.slug}`
+            },
+            "keywords": post.seo.keywords.join(', ')
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://logicielfrance.com" },
+              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://logicielfrance.com/blog" },
+              { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://logicielfrance.com/blog/${post.slug}` }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Header />

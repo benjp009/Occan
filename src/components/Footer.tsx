@@ -4,15 +4,17 @@ import { slugify } from '../utils/slugify';
 import React from 'react';
 
 export function Footer() {
-  const categories = ['Automatisation', 'Email', 'Marketing', 'Réseaux sociaux', 'SEO'];
+  const categories = ['CRM', 'Marketing', 'Comptabilite', 'RH', 'Email', 'IA', 'Design', 'Gestion'];
   const resources = [
-    { label: 'À propos', path: '/a-propos' },
+    { label: 'A propos', path: '/a-propos' },
     { label: 'Blog', path: '/blog' },
-    { label: 'Contact', path: '/contact' }
+    { label: 'Contact', path: '/contact' },
+    { label: 'Toutes les categories', path: '/categorie' },
+    { label: 'Tous les logiciels', path: '/tous-les-logiciels' }
   ];
-  const legal      = [
-    { label: 'Mentions légales', path: '/mentions-legales' },
-    { label: 'Politique de confidentialité', path: '/politique-de-confidentialite' },
+  const legal = [
+    { label: 'Mentions legales', path: '/mentions-legales' },
+    { label: 'Politique de confidentialite', path: '/politique-de-confidentialite' },
     { label: "Conditions d'utilisation", path: '/conditions-utilisation' }
   ];
   const currentYear = new Date().getFullYear();
