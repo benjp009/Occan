@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
 const helmet = require('helmet');
 const cors = require('cors');
+const compression = require('compression');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const { HelmetProvider } = require('react-helmet-async');
@@ -89,7 +90,7 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com", "https://*.clarity.ms", "https://www.google-analytics.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com", "https://*.clarity.ms", "https://www.google-analytics.com", "https://analytics.ahrefs.com"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       imgSrc: ["'self'", "data:", "https:", "blob:"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
@@ -101,7 +102,8 @@ app.use(helmet({
         "https://www.google-analytics.com",
         "https://*.google-analytics.com",
         "https://www.clarity.ms",
-        "https://*.clarity.ms"
+        "https://*.clarity.ms",
+        "https://analytics.ahrefs.com"
       ],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
@@ -134,12 +136,33 @@ app.use((req, res, next) => {
   next();
 });
 
+// Enable gzip compression for all responses
+app.use(compression());
+
 const indexFile = path.resolve('./build/index.html');
-// Use index: false to prevent express.static from serving index.html
-// This ensures our SSR handler processes HTML requests
-app.use(express.static(path.resolve('./build'), { index: false }));
-app.use('/static', express.static(path.resolve('./build/static')));
-app.use('/asset', express.static(path.resolve('./build/asset')));
+
+// Static file serving with cache headers
+// Hashed static assets (JS/CSS) can be cached for 1 year
+app.use('/static', express.static(path.resolve('./build/static'), {
+  maxAge: '1y',
+  immutable: true
+}));
+
+// Company assets cached for 7 days
+app.use('/asset', express.static(path.resolve('./build/asset'), {
+  maxAge: '7d'
+}));
+
+// Icons cached for 7 days
+app.use('/icons', express.static(path.resolve('./build/icons'), {
+  maxAge: '7d'
+}));
+
+// Other static files with shorter cache
+app.use(express.static(path.resolve('./build'), {
+  index: false,
+  maxAge: '1h'
+}));
 
 // Serve robots.txt and sitemap.xml directly
 app.get('/robots.txt', (req, res) => {

@@ -18,7 +18,12 @@ export function Header() {
   };
 
   useEffect(() => {
-    fetchCompanies().then(data => setCompanies(data));
+    // Use SSR data if available to avoid redundant fetch
+    if (typeof window !== 'undefined' && (window as unknown as { __INITIAL_DATA__?: { companies?: CompanyRow[] } }).__INITIAL_DATA__?.companies) {
+      setCompanies((window as unknown as { __INITIAL_DATA__: { companies: CompanyRow[] } }).__INITIAL_DATA__.companies);
+    } else {
+      fetchCompanies().then(data => setCompanies(data));
+    }
   }, []);
 
 
