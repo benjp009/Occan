@@ -30,11 +30,7 @@ interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, ...props }) => {
   const webpSrc = getWebPImageUrl(src);
-  
-  return React.createElement(
-    'picture',
-    null,
-    webpSrc !== src ? React.createElement('source', { srcSet: webpSrc, type: 'image/webp' }) : null,
-    React.createElement('img', { src, alt, ...props })
-  );
+
+  // Use WebP directly since original files are deleted after conversion
+  return React.createElement('img', { src: webpSrc, alt, loading: 'lazy', ...props });
 };
