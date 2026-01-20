@@ -8,6 +8,7 @@ import Skeleton from 'react-loading-skeleton';
 import { Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
 import { sanitizeHTML } from '../utils/sanitize';
+import { getWebPImageUrl } from '../utils/imageUtils';
 
 
 
@@ -65,9 +66,10 @@ export default function AllCategory({ initialCategories }: AllCategoryProps) {
                     to={`/categorie/${slugify((category as CategoryRow).name)}`}
                   >
                     <img
-                      src={`/icons/${(category as CategoryRow).icon}`}
+                      src={getWebPImageUrl(`/icons/${(category as CategoryRow).icon}`)}
                       alt={`${(category as CategoryRow).name} icon`}
                       className="category-card__icon"
+                      loading="lazy"
                     />
                     <h3 className="category-card__title">{(category as CategoryRow).name}</h3>
                     <p
