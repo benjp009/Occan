@@ -50,6 +50,40 @@ app.use((req, res, next) => {
   next();
 });
 
+// SEO Redirects - Fix wrong URL patterns discovered by crawlers
+app.use((req, res, next) => {
+  const url = req.url;
+
+  // Redirect /category/* to /categorie/* (English to French)
+  if (url.startsWith('/category/')) {
+    const slug = url.replace('/category/', '').split('?')[0];
+    return res.redirect(301, `/categorie/${slug}`);
+  }
+
+  // Redirect English URLs to French equivalents
+  if (url === '/all-softwares' || url.startsWith('/all-softwares?')) {
+    return res.redirect(301, '/tous-les-logiciels');
+  }
+  if (url === '/all-categories' || url.startsWith('/all-categories?')) {
+    return res.redirect(301, '/categorie');
+  }
+  if (url === '/toutes-categories' || url.startsWith('/toutes-categories?')) {
+    return res.redirect(301, '/categorie');
+  }
+
+  // Redirect uppercase category slugs to lowercase
+  const categoryMatch = url.match(/^\/categorie\/([^/?#]+)/);
+  if (categoryMatch) {
+    const slug = categoryMatch[1];
+    const lowerSlug = slug.toLowerCase();
+    if (slug !== lowerSlug) {
+      return res.redirect(301, `/categorie/${lowerSlug}`);
+    }
+  }
+
+  next();
+});
+
 // Security headers with helmet
 app.use(helmet({
   contentSecurityPolicy: {
