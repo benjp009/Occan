@@ -4,6 +4,7 @@ import { CategoryRow } from '../types';
 import { NavLink, Link } from 'react-router-dom';
 import { slugify } from '../utils/slugify';
 import { sanitizeHTML } from '../utils/sanitize';
+import { getWebPImageUrl } from '../utils/imageUtils';
 
 
 interface CategoriesSectionProps {
@@ -50,9 +51,10 @@ export function CategoriesSection({ initialCategories }: CategoriesSectionProps)
                 to={`/categorie/${slugify(cat.name)}`}
               >
               <img
-                src={`/icons/${cat.icon}`}
+                src={getWebPImageUrl(`/icons/${cat.icon}`)}
                 alt={`${cat.name} icon`}
                 className="category-card__icon"
+                loading="lazy"
               />
               <h3 className="category-card__title">{cat.name}</h3>
               <p
