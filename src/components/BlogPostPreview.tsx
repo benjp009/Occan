@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../types';
+import { getWebPImageUrl } from '../utils/imageUtils';
 import './BlogPostPreview.css';
 
 interface BlogPostPreviewProps {
@@ -41,9 +42,10 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
     >
       <div className="blog-post-preview__image">
         {post.coverImage ? (
-          <img 
-            src={post.coverImage}
+          <img
+            src={getWebPImageUrl(post.coverImage)}
             alt={post.title}
+            loading="lazy"
           />
         ) : (
           <div className="blog-post-preview__placeholder" aria-hidden="true" />

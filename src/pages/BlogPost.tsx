@@ -7,6 +7,7 @@ import { BlogPost } from '../types';
 import { getBlogPostBySlugMain, getBlogPostsMain } from '../utils/blog';
 import NotionRenderer from '../components/NotionRenderer';
 import BlogPostPreview from '../components/BlogPostPreview';
+import { getWebPImageUrl } from '../utils/imageUtils';
 
 interface BlogPostPageProps {
   initialBlogPost?: BlogPost | null;
@@ -220,7 +221,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
             <header className="post-header">
               {post.coverImage && (
                 <div className="post-cover">
-                  <img src={post.coverImage} alt={post.title} />
+                  <img src={getWebPImageUrl(post.coverImage)} alt={post.title} loading="lazy" />
                 </div>
               )}
               

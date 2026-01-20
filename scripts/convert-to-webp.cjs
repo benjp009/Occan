@@ -5,7 +5,9 @@ const path = require('path');
 // Configuration
 const ASSET_DIR = path.join(__dirname, '..', 'public', 'asset');
 const ICONS_DIR = path.join(__dirname, '..', 'public', 'icons');
+const POSTS_IMAGES_DIR = path.join(__dirname, '..', 'public', 'posts', 'images');
 const QUALITY = 80; // Qualité WebP (1-100)
+const DELETE_ORIGINALS = true; // Supprimer les fichiers originaux après conversion
 
 /**
  * Convertit récursivement tous les fichiers PNG/JPEG en WebP
@@ -39,13 +41,24 @@ async function convertImagesInDirectory(dir) {
               await sharp(fullPath)
                 .webp({ quality: QUALITY })
                 .toFile(webpPath);
-              
+
               console.log(`✅ Converti: ${path.relative(process.cwd(), fullPath)} → ${path.relative(process.cwd(), webpPath)}`);
+
+              // Supprimer le fichier original après conversion réussie
+              if (DELETE_ORIGINALS) {
+                fs.unlinkSync(fullPath);
+                console.log(`🗑️  Supprimé: ${path.relative(process.cwd(), fullPath)}`);
+              }
             } catch (error) {
               console.error(`❌ Erreur lors de la conversion de ${fullPath}:`, error.message);
             }
           } else {
             console.log(`⏭️  Déjà à jour: ${path.relative(process.cwd(), webpPath)}`);
+            // Supprimer l'original si WebP existe déjà
+            if (DELETE_ORIGINALS && fs.existsSync(fullPath)) {
+              fs.unlinkSync(fullPath);
+              console.log(`🗑️  Supprimé (WebP existe): ${path.relative(process.cwd(), fullPath)}`);
+            }
           }
         }
       }
@@ -76,7 +89,15 @@ async function main() {
   } else {
     console.log('⚠️  Répertoire icons non trouvé');
   }
-  
+
+  // Conversion des images de blog
+  if (fs.existsSync(POSTS_IMAGES_DIR)) {
+    console.log('\n📁 Traitement du répertoire posts/images...');
+    await convertImagesInDirectory(POSTS_IMAGES_DIR);
+  } else {
+    console.log('⚠️  Répertoire posts/images non trouvé');
+  }
+
   console.log('\n✨ Conversion terminée !');
 }
 
