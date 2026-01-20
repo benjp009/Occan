@@ -1,5 +1,6 @@
 import React from 'react';
 import { NotionBlock } from '../types';
+import { getWebPImageUrl } from '../utils/imageUtils';
 
 interface NotionRendererProps {
   blocks: NotionBlock[];
@@ -76,10 +77,11 @@ const NotionRenderer: React.FC<NotionRendererProps> = ({ blocks }) => {
 
       case 'image':
         const imageUrl = content?.file?.url || content?.external?.url;
+        const webpImageUrl = getWebPImageUrl(imageUrl);
         const caption = content?.caption?.[0]?.plain_text;
         return (
           <figure key={block.id} className="notion-image">
-            <img src={imageUrl} alt={caption || ''} />
+            <img src={webpImageUrl} alt={caption || ''} loading="lazy" />
             {caption && <figcaption>{caption}</figcaption>}
           </figure>
         );
