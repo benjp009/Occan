@@ -72,13 +72,13 @@ app.use((req, res, next) => {
     return res.redirect(301, '/categorie');
   }
 
-  // Redirect uppercase category slugs to lowercase
+  // Redirect category slugs with accents or uppercase to normalized form
   const categoryMatch = url.match(/^\/categorie\/([^/?#]+)/);
   if (categoryMatch) {
-    const slug = categoryMatch[1];
-    const lowerSlug = slug.toLowerCase();
-    if (slug !== lowerSlug) {
-      return res.redirect(301, `/categorie/${lowerSlug}`);
+    const slug = decodeURIComponent(categoryMatch[1]);
+    const normalizedSlug = slugify(slug);
+    if (categoryMatch[1] !== normalizedSlug) {
+      return res.redirect(301, `/categorie/${normalizedSlug}`);
     }
   }
 
