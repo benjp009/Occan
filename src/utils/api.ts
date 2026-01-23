@@ -12,7 +12,7 @@ interface CacheEntry<T> {
 }
 
 const cache: Map<string, CacheEntry<unknown>> = new Map();
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+const CACHE_TTL = 60 * 1000; // 60 seconds (short TTL for multi-instance Cloud Run)
 
 function getCached<T>(key: string): T | null {
   const entry = cache.get(key);
