@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../types';
-import { getWebPImageUrl } from '../utils/imageUtils';
+import { OptimizedImage } from '../utils/imageUtils';
 import { calculateReadingTime, formatReadingTime } from '../utils/readingTime';
 
 interface BlogPostPreviewProps {
@@ -70,8 +70,8 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <img
-              src={getWebPImageUrl(post.coverImage)}
+            <OptimizedImage
+              src={post.coverImage}
               alt={post.title}
               loading="eager"
             />
@@ -139,10 +139,9 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <img
-              src={getWebPImageUrl(post.coverImage)}
+            <OptimizedImage
+              src={post.coverImage}
               alt={post.title}
-              loading="lazy"
             />
           ) : (
             <div className="blog-post-preview__placeholder" aria-hidden="true" />
@@ -191,10 +190,9 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <img
-              src={getWebPImageUrl(post.coverImage)}
+            <OptimizedImage
+              src={post.coverImage}
               alt={post.title}
-              loading="lazy"
             />
           ) : (
             <div className="blog-post-preview__placeholder" aria-hidden="true" />
@@ -247,10 +245,9 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <img
-              src={getWebPImageUrl(post.coverImage)}
+            <OptimizedImage
+              src={post.coverImage}
               alt={post.title}
-              loading="lazy"
             />
           ) : (
             <div className="blog-post-preview__placeholder" aria-hidden="true" />
@@ -282,10 +279,9 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <img
-              src={getWebPImageUrl(post.coverImage)}
+            <OptimizedImage
+              src={post.coverImage}
               alt={post.title}
-              loading="lazy"
             />
           ) : (
             <div className="blog-post-preview__placeholder" aria-hidden="true" />
@@ -309,10 +305,9 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
     >
       <div className="blog-post-preview__image">
         {post.coverImage ? (
-          <img
-            src={getWebPImageUrl(post.coverImage)}
+          <OptimizedImage
+            src={post.coverImage}
             alt={post.title}
-            loading="lazy"
           />
         ) : (
           <div className="blog-post-preview__placeholder" aria-hidden="true" />
