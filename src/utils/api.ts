@@ -1,5 +1,9 @@
 import Papa from 'papaparse';
 import { CompanyRow, CategoryRow, CompetitorRow, UseCaseRow } from '../types';
+import * as strapiApi from './strapi';
+
+// Feature flag: set to true to use Strapi CMS instead of Google Sheets
+const USE_STRAPI = process.env.REACT_APP_USE_STRAPI === 'true';
 
 // In-memory cache for API responses
 interface CacheEntry<T> {
@@ -27,6 +31,11 @@ const COMPANIES_CSV_FALLBACK =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=0&single=true&output=csv';
 
 export async function fetchCompanies(): Promise<CompanyRow[]> {
+  // Use Strapi if enabled
+  if (USE_STRAPI) {
+    return strapiApi.fetchCompanies();
+  }
+
   const cached = getCached<CompanyRow[]>('companies');
   if (cached) return cached;
 
@@ -65,6 +74,11 @@ export async function fetchBetaCompanies(): Promise<CompanyRow[]> {
 }
 
 export async function fetchCategories(): Promise<CategoryRow[]> {
+  // Use Strapi if enabled
+  if (USE_STRAPI) {
+    return strapiApi.fetchCategories();
+  }
+
   const cached = getCached<CategoryRow[]>('categories');
   if (cached) return cached;
 
