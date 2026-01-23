@@ -30,6 +30,11 @@ function setCache<T>(key: string, data: T): void {
   cache.set(key, { data, timestamp: Date.now() });
 }
 
+// Clear all cached data (used by webhook for cache invalidation)
+export function clearCache(): void {
+  cache.clear();
+}
+
 // Strapi response types
 interface StrapiResponse<T> {
   data: T[];
