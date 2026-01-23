@@ -2,15 +2,29 @@
   "permissions": {
     "allow": [
       "Bash(gcloud config:*)",
-      "Bash(gcloud run services describe:*)"
+      "Bash(gcloud run services describe:*)",
       "Bash(git:*)",
       "Bash(npm:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
       "Bash(grep:*)",
-      "Bash(ls:*)",
       "Bash(find:*)",
+      "Bash(mgrep:*)",
       "Read"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "python3 .claude/hooks/mgrep_watch.py"
+      }
     ],
+    "SessionEnd": [
+      {
+        "type": "command",
+        "command": "python3 .claude/hooks/mgrep_watch_kill.py"
+      }
+    ]
   }
 }
