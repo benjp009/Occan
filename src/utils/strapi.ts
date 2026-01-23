@@ -43,10 +43,6 @@ interface StrapiResponse<T> {
   };
 }
 
-interface StrapiSingleResponse<T> {
-  data: T;
-}
-
 interface StrapiSoftware {
   id: number;
   documentId: string;
