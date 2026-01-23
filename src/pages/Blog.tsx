@@ -15,7 +15,7 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
   const [loading, setLoading] = useState(!initialPosts);
   const [error, setError] = useState<string>('');
   const [selectedTag] = useState<string>('');
-  const [displayedCount, setDisplayedCount] = useState(8);
+  const [displayedCount, setDisplayedCount] = useState(12);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const loaderRef = useRef<HTMLDivElement>(null);
   const postsPerPage = 8;
@@ -31,7 +31,7 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
         setPosts(blogPosts.filter(post => post.status === 'published'));
       } catch (error) {
         console.error('Erreur lors du chargement des articles:', error);
-        setError('Erreur lors du chargement des articles. Veuillez réessayer plus tard.');
+        setError('Erreur lors du chargement des articles. Veuillez reessayer plus tard.');
       } finally {
         setLoading(false);
       }
@@ -44,8 +44,20 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
     ? posts.filter(post => post.tags.includes(selectedTag))
     : posts;
 
-  const currentPosts = filteredPosts.slice(0, displayedCount);
+  // Post distribution for editorial layout
+  const heroPost = filteredPosts[0] || null;
+  const featuredPosts = filteredPosts.slice(1, 4);
+  const remainingPosts = filteredPosts.slice(4);
+  const currentRemainingPosts = remainingPosts.slice(0, displayedCount - 4);
   const hasMore = displayedCount < filteredPosts.length;
+
+  // Asymmetric grid class assignment
+  const getGridItemClass = (index: number): string => {
+    // Every 7th item gets large treatment, every 5th gets wide
+    if (index % 7 === 0) return 'blog-grid-item--large';
+    if (index % 5 === 2) return 'blog-grid-item--wide';
+    return '';
+  };
 
   // Intersection Observer for infinite scroll
   const handleObserver = useCallback((entries: IntersectionObserverEntry[]) => {
@@ -55,7 +67,7 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
       setTimeout(() => {
         setDisplayedCount(prev => prev + postsPerPage);
         setIsLoadingMore(false);
-      }, 500); // Small delay to simulate loading
+      }, 500);
     }
   }, [hasMore, isLoadingMore, postsPerPage]);
 
@@ -86,61 +98,105 @@ const Blog: React.FC<BlogProps> = ({ initialPosts }) => {
         <title>Blog - Logiciel France</title>
         <meta
           name="description"
-          content="Découvrez les dernières actualités, analyses et conseils sur l'écosystème tech français et les logiciels Made in France."
+          content="Decouvrez les dernieres actualites, analyses et conseils sur l'ecosysteme tech francais et les logiciels Made in France."
         />
         <link rel="canonical" href={`${typeof window !== 'undefined' ? window.location.origin : 'https://logicielfrance.com'}/blog`} />
       </Helmet>
 
       <Header />
-      
-      <main className="blog-page">
-        <div className="container">
-          <div className="blog-header">
-            <h1>Blog</h1>
-            <p>Retrouvez ici tous les articles des outils 100% produits en France. Analyse, études, comparateurs pour vous aider à trouver le meilleur logiciel pour votre entreprise.</p>
-          </div>
+
+      <main className="blog-page blog-editorial">
+        <div className="blog-container">
+          {/* Editorial Header */}
+          <header className="blog-editorial-header">
+            <span className="blog-editorial-label">Le Magazine</span>
+            <h1 className="blog-editorial-title">Actualites Tech Francaise</h1>
+            <p className="blog-editorial-subtitle">
+              Analyses, etudes et comparatifs des logiciels 100% Made in France
+            </p>
+          </header>
 
           {loading ? (
             <div className="blog-loading">
+              <div className="blog-loading-spinner"></div>
               <p>Chargement des articles...</p>
             </div>
           ) : error ? (
             <div className="blog-error">
               <p>{error}</p>
               <button onClick={() => window.location.reload()} className="retry-button">
-                Réessayer
+                Reessayer
               </button>
             </div>
+          ) : filteredPosts.length === 0 ? (
+            <p className="no-posts">Aucun article trouve.</p>
           ) : (
             <>
-              <div className="blog-posts-grid">
-                {currentPosts.length === 0 ? (
-                  <p className="no-posts">Aucun article trouvé.</p>
-                ) : (
-                  currentPosts.map(post => (
-                    <BlogPostPreview
-                      key={post.id}
-                      post={post}
-                      variant="card"
-                    />
-                  ))
-                )}
-              </div>
+              {/* Hero Section - Latest Post */}
+              {heroPost && (
+                <section className="blog-hero-section">
+                  <BlogPostPreview
+                    post={heroPost}
+                    variant="hero"
+                    showDate
+                    showAuthor
+                    showReadingTime
+                    showTags
+                    showExcerpt
+                  />
+                </section>
+              )}
+
+              {/* Featured Section - Posts 2-4 */}
+              {featuredPosts.length > 0 && (
+                <section className="blog-featured-section">
+                  <h2 className="blog-section-title">A la une</h2>
+                  <div className="blog-featured-grid">
+                    {featuredPosts.map(post => (
+                      <BlogPostPreview
+                        key={post.id}
+                        post={post}
+                        variant="featured"
+                        showDate
+                        showAuthor
+                        showReadingTime
+                      />
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Main Editorial Grid - Remaining Posts */}
+              {currentRemainingPosts.length > 0 && (
+                <section className="blog-main-section">
+                  <h2 className="blog-section-title">Tous les articles</h2>
+                  <div className="blog-editorial-grid">
+                    {currentRemainingPosts.map((post, index) => (
+                      <BlogPostPreview
+                        key={post.id}
+                        post={post}
+                        variant="standard"
+                        showDate
+                        showTags
+                        className={getGridItemClass(index)}
+                      />
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {/* Infinite scroll loader */}
               {hasMore && (
                 <div ref={loaderRef} className="infinite-scroll-loader">
                   {isLoadingMore && (
-                    <div className="loader-spinner">
-                      <p>Chargement d'autres articles...</p>
-                    </div>
+                    <div className="blog-loading-spinner"></div>
                   )}
                 </div>
               )}
 
-              {!hasMore && currentPosts.length > 0 && (
+              {!hasMore && filteredPosts.length > 0 && (
                 <div className="all-posts-loaded">
-                  <p>Vous avez vu tous les articles ✨</p>
+                  <p>Vous avez vu tous les articles</p>
                 </div>
               )}
             </>
