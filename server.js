@@ -103,7 +103,8 @@ app.use(helmet({
         "https://*.google-analytics.com",
         "https://www.clarity.ms",
         "https://*.clarity.ms",
-        "https://analytics.ahrefs.com"
+        "https://analytics.ahrefs.com",
+        "https://cms.logicielfrance.com"
       ],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
