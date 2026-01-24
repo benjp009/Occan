@@ -103,8 +103,7 @@ app.use(helmet({
         "https://*.google-analytics.com",
         "https://www.clarity.ms",
         "https://*.clarity.ms",
-        "https://analytics.ahrefs.com",
-        "https://cms.logicielfrance.com"
+        "https://analytics.ahrefs.com"
       ],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"],
@@ -235,32 +234,6 @@ app.get('/api/admin/verify', (req, res) => {
   }
 
   return res.status(401).json({ authenticated: false });
-});
-
-// Webhook endpoint for cache invalidation (called by Strapi on publish)
-const WEBHOOK_SECRET = process.env.CACHE_WEBHOOK_SECRET;
-
-app.post('/api/webhook/cache-clear', (req, res) => {
-  // Verify webhook secret
-  const authHeader = req.headers.authorization;
-  if (!WEBHOOK_SECRET || authHeader !== `Bearer ${WEBHOOK_SECRET}`) {
-    return res.status(401).json({ error: 'Unauthorized' });
-  }
-
-  try {
-    // Import and call both cache clear functions
-    const strapiApi = require('./dist-server/utils/strapi.js');
-    const api = require('./dist-server/utils/api.js');
-
-    if (strapiApi.clearCache) strapiApi.clearCache();
-    if (api.clearCache) api.clearCache();
-
-    console.log('Cache cleared via webhook at', new Date().toISOString());
-    return res.json({ success: true, timestamp: new Date().toISOString() });
-  } catch (err) {
-    console.error('Cache clear error:', err);
-    return res.status(500).json({ error: 'Failed to clear cache' });
-  }
 });
 
 // Blog API endpoints (server-side only, no API key exposure)
