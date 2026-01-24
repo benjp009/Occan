@@ -33,8 +33,6 @@ jobs:
         run: npm run build
         env:
           CI: true
-          REACT_APP_USE_STRAPI: true
-          REACT_APP_STRAPI_URL: https://cms.logicielfrance.com
 
   security:
     runs-on: ubuntu-latest
