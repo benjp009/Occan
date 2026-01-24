@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
-import { OptimizedImage } from '../utils/imageUtils';
+import { OptimizedImage, getLocalAssetPaths } from '../utils/imageUtils';
 import { slugify } from '../utils/slugify';
 import { sanitizeHTML } from '../utils/sanitize';
 
@@ -31,6 +31,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
                   alt={`Logo ${company.name}`}
                   className="software-hero__logo"
                   itemProp="image"
+                  fallbackSrcs={getLocalAssetPaths(company.name, 'logo')}
                 />
               </div>
             )}
@@ -146,6 +147,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
                       src={company.asset_1}
                       alt={`${company.name} - Illustration 1`}
                       className="software-content__image"
+                      fallbackSrcs={getLocalAssetPaths(company.name, 'asset_1')}
                     />
                   </div>
                 )}
@@ -160,6 +162,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
                       src={company.asset_2}
                       alt={`${company.name} - Illustration 2`}
                       className="software-content__image"
+                      fallbackSrcs={getLocalAssetPaths(company.name, 'asset_2')}
                     />
                   </div>
                 )}
@@ -182,6 +185,7 @@ const Company: React.FC<CompanyProps> = ({ company }) => {
                       src={company.asset_3}
                       alt={`${company.name} - Illustration 3`}
                       className="software-content__image"
+                      fallbackSrcs={getLocalAssetPaths(company.name, 'asset_3')}
                     />
                   </div>
                 )}

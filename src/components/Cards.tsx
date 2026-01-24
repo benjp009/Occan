@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
-import { OptimizedImage } from '../utils/imageUtils';
+import { OptimizedImage, getLocalAssetPaths } from '../utils/imageUtils';
 import { slugify } from '../utils/slugify';
 import { sanitizeHTML } from '../utils/sanitize';
 
@@ -38,6 +38,7 @@ export function Cards({ company, highlight, internalTo }: CardsProps) {
               src={company.logo}
               alt={`${company.name} logo`}
               className="company-logo-img"
+              fallbackSrcs={getLocalAssetPaths(company.name, 'logo')}
             />
           </div>
         )}
