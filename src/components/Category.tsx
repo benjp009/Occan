@@ -54,6 +54,7 @@ export function CategoriesSection({ initialCategories }: CategoriesSectionProps)
                 src={getCategoryIconUrl(cat.icon)}
                 alt={`${cat.name} icon`}
                 className="category-card__icon"
+                fallbackSrc={`/icons/category-${slugify(cat.name)}.webp`}
               />
               <h3 className="category-card__title">{cat.name}</h3>
               <p
