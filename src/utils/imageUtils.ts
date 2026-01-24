@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 /**
  * Retourne l'URL correcte pour une icône de catégorie
@@ -14,28 +14,15 @@ export function getCategoryIconUrl(icon: string): string {
 }
 
 /**
- * Convertit les URLs d'images PNG/JPEG vers WebP si disponible
- * @param imageUrl - URL de l'image originale
- * @returns URL de l'image WebP ou originale
+ * NOTE: WebP conversion removed - Strapi CMS already serves optimized WebP images.
+ * URLs like "..._png_b4946ad5b3.webp" are already in WebP format.
+ * Client-side conversion was redundant and caused 404 errors when regex didn't match.
+ * See council analysis: 2026-01-24
  */
-export function getWebPImageUrl(imageUrl: string): string {
-  if (!imageUrl) return imageUrl;
-
-  // Vérifier si l'URL contient une extension d'image supportée
-  const supportedExtensions = ['.png', '.jpg', '.jpeg'];
-  const hasValidExtension = supportedExtensions.some(ext =>
-    imageUrl.toLowerCase().includes(ext)
-  );
-
-  if (!hasValidExtension) return imageUrl;
-
-  // Remplacer l'extension par .webp
-  return imageUrl.replace(/\.(png|jpe?g)$/i, '.webp');
-}
 
 /**
- * Composant Image avec fallback WebP automatique
- * Essaie d'abord WebP, puis fallback vers le format original si 404
+ * Composant Image optimisé avec lazy loading
+ * Strapi gère déjà l'optimisation des images - pas de conversion côté client nécessaire
  */
 interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -43,27 +30,10 @@ interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, ...props }) => {
-  const [imgSrc, setImgSrc] = useState(src ? getWebPImageUrl(src) : '');
-  const [hasError, setHasError] = useState(false);
-
-  useEffect(() => {
-    setImgSrc(src ? getWebPImageUrl(src) : '');
-    setHasError(false);
-  }, [src]);
-
-  const handleError = () => {
-    // Si WebP échoue, fallback vers la source originale
-    if (!hasError && src && imgSrc !== src) {
-      setHasError(true);
-      setImgSrc(src);
-    }
-  };
-
   return React.createElement('img', {
-    src: imgSrc,
+    src: src || '',
     alt,
     loading: 'lazy',
-    onError: handleError,
     ...props
   });
 };
