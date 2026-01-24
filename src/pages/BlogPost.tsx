@@ -7,7 +7,6 @@ import { BlogPost } from '../types';
 import { getBlogPostBySlugMain, getBlogPostsMain } from '../utils/blog';
 import NotionRenderer from '../components/NotionRenderer';
 import BlogPostPreview from '../components/BlogPostPreview';
-import { getWebPImageUrl } from '../utils/imageUtils';
 import { calculateReadingTime } from '../utils/readingTime';
 
 interface BlogPostPageProps {
@@ -314,7 +313,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
           {post.coverImage && (
             <div className="article-hero__image">
               <img
-                src={getWebPImageUrl(post.coverImage)}
+                src={post.coverImage}
                 alt={`Illustration de l'article : ${post.title}`}
                 loading="eager"
               />
