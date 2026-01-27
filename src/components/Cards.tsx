@@ -24,10 +24,11 @@ function highlightText(text: string, query?: string) {
 }
 
 export function Cards({ company, highlight, internalTo }: CardsProps) {
+  const description = company.description || '';
   const truncatedDescription =
-    company.description.length > 80
-      ? company.description.slice(0, 80).trimEnd() + '…'
-      : company.description;
+    description.length > 80
+      ? description.slice(0, 80).trimEnd() + '…'
+      : description;
 
   return (
     <div className="card">

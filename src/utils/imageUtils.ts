@@ -10,28 +10,30 @@ export function getCategoryIconUrl(icon: string): string {
   if (icon.startsWith('http://') || icon.startsWith('https://')) {
     return icon;
   }
-  return `/icons/${icon}`;
+  // Convert .png to .webp since icons are stored as .webp
+  const iconFile = icon.replace(/\.png$/, '.webp');
+  return `/icons/${iconFile}`;
 }
 
 /**
  * Génère les chemins locaux pour les assets d'une entreprise
- * Retourne un tableau de chemins possibles avec différentes extensions
+ * Retourne un tableau de chemins possibles avec différentes extensions et noms de dossiers
  * @param companyName - Nom de l'entreprise
  * @param type - Type d'asset: 'logo' | 'asset_1' | 'asset_2' | 'asset_3'
  */
 export function getLocalAssetPaths(companyName: string, type: 'logo' | 'asset_1' | 'asset_2' | 'asset_3' = 'logo'): string[] {
   if (!companyName) return [];
-  // Nom en minuscules sans espaces pour le fichier
-  const nameLower = companyName.toLowerCase().replace(/\s+/g, '').replace(/[-_]/g, '');
+  // Nom normalisé: minuscules, sans espaces ni caractères spéciaux
+  const normalized = companyName.toLowerCase().replace(/[^a-z0-9]/g, '');
   const extensions = ['webp', 'svg', 'png', 'jpg'];
 
   if (type === 'logo') {
-    // Pattern: /asset/[CompanyName]/[companyname]_logo.[ext]
-    return extensions.map(ext => `/asset/${companyName}/${nameLower}_logo.${ext}`);
+    // Pattern: /asset/[normalized]/[normalized]_logo.[ext]
+    return extensions.map(ext => `/asset/${normalized}/${normalized}_logo.${ext}`);
   } else {
-    // Pattern: /asset/[CompanyName]/[companyname]-[1|2|3].[ext]
+    // Pattern: /asset/[normalized]/[normalized]-[1|2|3].[ext]
     const num = type.replace('asset_', '');
-    return extensions.map(ext => `/asset/${companyName}/${nameLower}-${num}.${ext}`);
+    return extensions.map(ext => `/asset/${normalized}/${normalized}-${num}.${ext}`);
   }
 }
 
@@ -42,6 +44,14 @@ export function getLocalAssetPaths(companyName: string, type: 'logo' | 'asset_1'
 export function getLocalAssetPath(companyName: string, type: 'logo' | 'asset_1' | 'asset_2' | 'asset_3' = 'logo'): string {
   const paths = getLocalAssetPaths(companyName, type);
   return paths[0] || '';
+}
+
+/**
+ * Retourne la source du logo pour une entreprise
+ * Retourne simplement l'URL du logo telle quelle
+ */
+export function getCompanyLogoSrc(logo: string | undefined): string {
+  return logo || '';
 }
 
 /**
