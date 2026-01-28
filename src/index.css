@@ -2462,8 +2462,8 @@ body {
 
 .selection-month {
   max-width: 1400px;
-  margin: 0 auto;    
-  padding: 0 16px;     
+  margin: 0 auto 80px auto;
+  padding: 0 16px;
 }
 
 /* ───────────────────────────────────────────────────────
@@ -2471,19 +2471,19 @@ body {
    ─────────────────────────────────────────────────────── */
 
 .discover-beta {
-  margin: 3rem 0 0 0;
-  padding: 3rem clamp(1rem, 5vw, 10rem);
+  max-width: 1400px;
+  margin: 0 auto 80px auto;
+  padding: 0 16px;
   background-color: #fff;
-  align-self: center;
 }
 
 /* Header row: title + "Voir tous les logiciels" side by side */
 .discover-beta-header {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   width:100%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 1.5rem;
 }
 
@@ -2537,11 +2537,11 @@ body {
   margin: 40px 0;
 }
 
-/* Grid container: 3 columns for beta (fewer items), wrap if needed, with gap */
+/* Grid container: 3x3 layout */
 .discover-beta-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 0.5rem;             /* Space between cards */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
 /* Header row: title + “Voir tous les logiciels” side by side */
@@ -2567,11 +2567,11 @@ body {
   color: #444;
 }
 
-/* Grid container: 3 columns, wrap if needed, with gap */
+/* Grid container: 3x3 layout */
 .selection-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 0.5rem;             /* Space between cards */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -2755,6 +2755,7 @@ body {
   width: 100%;
 }
 .metrics-banner {
+  max-width: 1024px;
   margin: 60px auto;
   padding: 70px 0;
   display: flex;
