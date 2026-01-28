@@ -48,23 +48,23 @@ export default function Alternative({ initialCompetitor, initialAlternatives }: 
       <Helmet>
         <title>
           {competitor
-            ? `Alternative francaise a ${competitor.competitor_name} | Logiciel France`
-            : `Alternative francaise | Logiciel France`
+            ? `Alternative française a ${competitor.competitor_name} | Logiciel France`
+            : `Alternative française | Logiciel France`
           }
         </title>
         <meta
           name="description"
           content={competitor
-            ? `Decouvrez les meilleures alternatives francaises a ${competitor.competitor_name}. Solutions Made in France pour remplacer ${competitor.competitor_name}.`
-            : `Decouvrez les meilleures alternatives francaises aux logiciels etrangers.`
+            ? `Découvrez les meilleures alternatives françaises à ${competitor.competitor_name}. Solutions Made in France pour remplacer ${competitor.competitor_name}.`
+            : `Découvrez les meilleures alternatives françaises aux logiciels étrangers.`
           }
         />
-        <meta name="keywords" content={`alternative ${competitor?.competitor_name || ''}, logiciel francais, made in france, ${competitor?.categories || ''}`} />
+        <meta name="keywords" content={`alternative ${competitor?.competitor_name || ''}, logiciel français, made in france, ${competitor?.categories || ''}`} />
 
-        <meta property="og:title" content={`Alternative francaise a ${competitor?.competitor_name || 'logiciels etrangers'}`} />
+        <meta property="og:title" content={`Alternative française à ${competitor?.competitor_name || 'logiciels étrangers'}`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://logicielfrance.com/alternative/${slug}`} />
-        <meta property="og:description" content={competitor ? `Alternatives francaises a ${competitor.competitor_name}` : 'Alternatives francaises'} />
+        <meta property="og:description" content={competitor ? `Alternatives françaises a ${competitor.competitor_name}` : 'Alternatives françaises'} />
         <meta property="og:site_name" content="Logiciel France" />
         <meta property="og:locale" content="fr_FR" />
 
@@ -73,8 +73,8 @@ export default function Alternative({ initialCompetitor, initialAlternatives }: 
             {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CollectionPage",
-              "name": `Alternatives francaises a ${competitor.competitor_name}`,
-              "description": `Decouvrez les meilleures alternatives francaises a ${competitor.competitor_name}`,
+              "name": `Alternatives françaises a ${competitor.competitor_name}`,
+              "description": `Découvrez les meilleures alternatives françaises à ${competitor.competitor_name}`,
               "url": `https://logicielfrance.com/alternative/${slug}`,
               "mainEntity": {
                 "@type": "ItemList",
@@ -96,7 +96,7 @@ export default function Alternative({ initialCompetitor, initialAlternatives }: 
               "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://logicielfrance.com" },
                 { "@type": "ListItem", "position": 2, "name": "Alternatives", "item": "https://logicielfrance.com/alternative" },
-                { "@type": "ListItem", "position": 3, "name": `Alternative a ${competitor.competitor_name}`, "item": `https://logicielfrance.com/alternative/${slug}` }
+                { "@type": "ListItem", "position": 3, "name": `Alternative à ${competitor.competitor_name}`, "item": `https://logicielfrance.com/alternative/${slug}` }
               ]
             })}
           </script>
@@ -113,9 +113,9 @@ export default function Alternative({ initialCompetitor, initialAlternatives }: 
 
         {competitor ? (
           <>
-            <h1>Alternative francaise a {competitor.competitor_name}</h1>
+            <h1>Alternative française à {competitor.competitor_name}</h1>
             <p className="category-description">
-              {competitor.description || `Decouvrez les meilleures alternatives francaises a ${competitor.competitor_name}. Des solutions Made in France pour remplacer ce logiciel etranger.`}
+              {competitor.description || `Découvrez les meilleures alternatives françaises à ${competitor.competitor_name}. Des solutions Made in France pour remplacer ce logiciel étranger.`}
             </p>
           </>
         ) : (
@@ -133,7 +133,7 @@ export default function Alternative({ initialCompetitor, initialAlternatives }: 
               </div>
             ))
           ) : alternatives.length === 0 ? (
-            <p>Aucune alternative francaise trouvee pour le moment.</p>
+            <p>Aucune alternative française trouvée pour le moment.</p>
           ) : (
             alternatives.map(company => (
               <div key={company.id} className="card-wrapper">
