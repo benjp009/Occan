@@ -17,11 +17,15 @@
 
 # misc
 .DS_Store
+
+# environment files - catch all variants
 .env
+.env.*
 .env.local
 .env.development
 .env.development.local
 .env.test.local
+.env.production
 .env.production.local
 
 npm-debug.log*
