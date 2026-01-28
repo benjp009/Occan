@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from '../types';
-import { OptimizedImage } from '../utils/imageUtils';
+import { OptimizedPicture } from '../utils/imageUtils';
 import { calculateReadingTime, formatReadingTime } from '../utils/readingTime';
 
 interface BlogPostPreviewProps {
@@ -70,7 +70,7 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <OptimizedImage
+            <OptimizedPicture
               src={post.coverImage}
               alt={post.title}
               loading="eager"
@@ -139,7 +139,7 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <OptimizedImage
+            <OptimizedPicture
               src={post.coverImage}
               alt={post.title}
             />
@@ -190,7 +190,7 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <OptimizedImage
+            <OptimizedPicture
               src={post.coverImage}
               alt={post.title}
             />
@@ -245,7 +245,7 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <OptimizedImage
+            <OptimizedPicture
               src={post.coverImage}
               alt={post.title}
             />
@@ -279,7 +279,7 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
       >
         <div className="blog-post-preview__image">
           {post.coverImage ? (
-            <OptimizedImage
+            <OptimizedPicture
               src={post.coverImage}
               alt={post.title}
             />
@@ -305,7 +305,7 @@ export const BlogPostPreview: React.FC<BlogPostPreviewProps> = ({
     >
       <div className="blog-post-preview__image">
         {post.coverImage ? (
-          <OptimizedImage
+          <OptimizedPicture
             src={post.coverImage}
             alt={post.title}
           />
