@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import logo from '../logo.svg';
 import { fetchCompanies } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
@@ -31,7 +30,7 @@ export function Hero() {
     <section className="section-hero">
       <div className="hero-container container">
         <img
-          src={logo}
+          src="/logo.svg"
           alt="le logo de Logiciel France"
           className="logo"
         />
