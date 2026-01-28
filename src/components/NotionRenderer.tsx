@@ -1,6 +1,6 @@
 import React from 'react';
 import { NotionBlock } from '../types';
-import { getWebPImageUrl } from '../utils/imageUtils';
+import { OptimizedPicture } from '../utils/imageUtils';
 
 interface NotionRendererProps {
   blocks: NotionBlock[];
@@ -19,24 +19,25 @@ const NotionRenderer: React.FC<NotionRendererProps> = ({ blocks }) => {
         );
 
       case 'heading_1':
+        // Render as h2 to maintain proper hierarchy (page title is h1)
         return (
-          <h1 key={block.id}>
-            {renderRichText(content?.rich_text || [])}
-          </h1>
-        );
-
-      case 'heading_2':
-        return (
-          <h2 key={block.id}>
+          <h2 key={block.id} id={block.id}>
             {renderRichText(content?.rich_text || [])}
           </h2>
         );
 
-      case 'heading_3':
+      case 'heading_2':
         return (
-          <h3 key={block.id}>
+          <h3 key={block.id} id={block.id}>
             {renderRichText(content?.rich_text || [])}
           </h3>
+        );
+
+      case 'heading_3':
+        return (
+          <h4 key={block.id} id={block.id}>
+            {renderRichText(content?.rich_text || [])}
+          </h4>
         );
 
       case 'bulleted_list_item':
@@ -77,11 +78,10 @@ const NotionRenderer: React.FC<NotionRendererProps> = ({ blocks }) => {
 
       case 'image':
         const imageUrl = content?.file?.url || content?.external?.url;
-        const webpImageUrl = getWebPImageUrl(imageUrl);
         const caption = content?.caption?.[0]?.plain_text;
         return (
           <figure key={block.id} className="notion-image">
-            <img src={webpImageUrl} alt={caption || ''} loading="lazy" />
+            <OptimizedPicture src={imageUrl} alt={caption || ''} />
             {caption && <figcaption>{caption}</figcaption>}
           </figure>
         );

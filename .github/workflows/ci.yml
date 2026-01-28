@@ -33,9 +33,6 @@ jobs:
         run: npm run build
         env:
           CI: true
-          REACT_APP_SHEET_CSV_URL: ${{ secrets.REACT_APP_SHEET_CSV_URL }}
-          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-          NOTION_BLOG_DATABASE_ID: ${{ secrets.NOTION_BLOG_DATABASE_ID }}
 
   security:
     runs-on: ubuntu-latest
