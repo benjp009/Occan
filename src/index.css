@@ -2755,6 +2755,7 @@ body {
   width: 100%;
 }
 .metrics-banner {
+  max-width: 1024px;
   margin: 60px auto;
   padding: 70px 0;
   display: flex;
