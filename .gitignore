@@ -12,6 +12,9 @@
 /build
 /dist-server
 
+# build cache (WebP conversions)
+/.cache
+
 # misc
 .DS_Store
 .env

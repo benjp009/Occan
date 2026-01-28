@@ -1,6 +1,6 @@
 import React from 'react';
 import { NotionBlock } from '../types';
-import { OptimizedImage } from '../utils/imageUtils';
+import { OptimizedPicture } from '../utils/imageUtils';
 
 interface NotionRendererProps {
   blocks: NotionBlock[];
@@ -81,7 +81,7 @@ const NotionRenderer: React.FC<NotionRendererProps> = ({ blocks }) => {
         const caption = content?.caption?.[0]?.plain_text;
         return (
           <figure key={block.id} className="notion-image">
-            <OptimizedImage src={imageUrl} alt={caption || ''} />
+            <OptimizedPicture src={imageUrl} alt={caption || ''} />
             {caption && <figcaption>{caption}</figcaption>}
           </figure>
         );

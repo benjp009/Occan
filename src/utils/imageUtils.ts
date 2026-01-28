@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getWebpPath, isConvertibleImage } from './getWebpPath';
 
 /**
  * Retourne l'URL correcte pour une icône de catégorie
@@ -118,4 +119,61 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, fallba
     onError: handleError,
     ...props
   });
+};
+
+/**
+ * Composant Picture optimisé pour les images de blog
+ * Utilise <picture> avec WebP source et fallback JPG/PNG
+ * Fonctionne uniquement après le build (WebP généré par build-images.cjs)
+ */
+interface OptimizedPictureProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+  src: string;
+  alt: string;
+}
+
+export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({ src, alt, ...props }) => {
+  const [hasWebpError, setHasWebpError] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  // Reset state when src changes
+  React.useEffect(() => {
+    setHasWebpError(false);
+    setHasError(false);
+  }, [src]);
+
+  // Hide if all sources fail
+  if (hasError || !src) {
+    return null;
+  }
+
+  // Check if this is a convertible image (PNG/JPG)
+  const canUseWebp = isConvertibleImage(src);
+  const webpSrc = canUseWebp ? getWebpPath(src) : null;
+
+  // If WebP failed or not available, use standard img
+  if (!canUseWebp || hasWebpError) {
+    return React.createElement('img', {
+      src,
+      alt,
+      loading: 'lazy',
+      onError: () => setHasError(true),
+      ...props
+    });
+  }
+
+  // Use <picture> element with WebP source and fallback
+  return React.createElement('picture', null,
+    React.createElement('source', {
+      srcSet: webpSrc,
+      type: 'image/webp',
+      onError: () => setHasWebpError(true)
+    }),
+    React.createElement('img', {
+      src,
+      alt,
+      loading: 'lazy',
+      onError: () => setHasError(true),
+      ...props
+    })
+  );
 };
