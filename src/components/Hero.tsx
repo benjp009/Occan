@@ -32,7 +32,7 @@ export function Hero() {
       <div className="hero-container container">
         <img
           src={logo}
-          alt="Occan logo"
+          alt="le logo de Logiciel France"
           className="logo"
         />
         <h1 className="hero-title">
