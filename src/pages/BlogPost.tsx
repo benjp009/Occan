@@ -23,7 +23,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<BlogPost | null>(initialBlogPost ?? null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(!initialBlogPost);
   const [error, setError] = useState<string>('');
 
   // New state for editorial features
@@ -182,6 +182,9 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialBlogPost }) => {
   if (loading) {
     return (
       <>
+        <Helmet>
+          <title>Chargement... - Blog Logiciel France</title>
+        </Helmet>
         <Header />
         <main className="blog-post-page">
           <div className="container">
