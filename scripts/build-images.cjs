@@ -1,7 +1,7 @@
 /**
  * Build-time WebP Image Conversion Script
  *
- * Converts PNG/JPG images to WebP format without replacing originals.
+ * Resizes and converts PNG/JPG images to WebP format without replacing originals.
  * Uses MD5 content hashing for cache invalidation (reliable in CI/CD).
  *
  * Output: .cache/webp/ (gitignored)
@@ -17,8 +17,13 @@ const crypto = require('crypto');
 const SOURCE_DIR = path.join(__dirname, '..', 'public', 'posts', 'images');
 const CACHE_DIR = path.join(__dirname, '..', '.cache', 'webp');
 const MANIFEST_PATH = path.join(__dirname, '..', '.cache', 'image-manifest.json');
+
+// Processing settings - change VERSION to invalidate cache
+const PROCESSING_VERSION = 2; // Increment this to force re-processing all images
 const QUALITY = 80;
-const MAX_CONCURRENT = 4; // Limit concurrent conversions
+const MAX_WIDTH_COVER = 1600;  // Max width for cover images
+const MAX_WIDTH_INLINE = 1200; // Max width for inline content images
+const MAX_CONCURRENT = 4;
 
 /**
  * Compute MD5 hash of file content
@@ -34,12 +39,18 @@ function getFileHash(filePath) {
 function loadManifest() {
   try {
     if (fs.existsSync(MANIFEST_PATH)) {
-      return JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+      const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
+      // Invalidate cache if processing version changed
+      if (manifest._version !== PROCESSING_VERSION) {
+        console.log('🔄 Processing version changed, invalidating cache...\n');
+        return { _version: PROCESSING_VERSION };
+      }
+      return manifest;
     }
   } catch (error) {
     console.log('⚠️  Could not load manifest, starting fresh');
   }
-  return {};
+  return { _version: PROCESSING_VERSION };
 }
 
 /**
@@ -50,16 +61,51 @@ function saveManifest(manifest) {
   if (!fs.existsSync(cacheDir)) {
     fs.mkdirSync(cacheDir, { recursive: true });
   }
+  manifest._version = PROCESSING_VERSION;
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
 }
 
 /**
- * Convert a single image to WebP
+ * Determine max width based on filename
+ * Cover images get larger max width than inline images
  */
-async function convertImage(sourcePath, outputPath) {
-  await sharp(sourcePath)
-    .webp({ quality: QUALITY })
-    .toFile(outputPath);
+function getMaxWidth(filename) {
+  return filename.startsWith('cover-') ? MAX_WIDTH_COVER : MAX_WIDTH_INLINE;
+}
+
+/**
+ * Resize and convert a single image to WebP
+ */
+async function convertImage(sourcePath, outputPath, maxWidth) {
+  const image = sharp(sourcePath);
+  const metadata = await image.metadata();
+
+  // Only resize if image is wider than max width
+  if (metadata.width > maxWidth) {
+    await image
+      .resize(maxWidth, null, {
+        withoutEnlargement: true,
+        fit: 'inside'
+      })
+      .webp({ quality: QUALITY })
+      .toFile(outputPath);
+  } else {
+    // Just convert to WebP without resizing
+    await image
+      .webp({ quality: QUALITY })
+      .toFile(outputPath);
+  }
+
+  return metadata;
+}
+
+/**
+ * Format bytes to human readable
+ */
+function formatBytes(bytes) {
+  if (bytes < 1024) return bytes + ' B';
+  if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+  return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
 }
 
 /**
@@ -89,7 +135,9 @@ async function processWithConcurrency(tasks, limit) {
  * Main conversion function
  */
 async function buildImages() {
-  console.log('🖼️  Build-time WebP conversion starting...\n');
+  console.log('🖼️  Build-time image optimization starting...');
+  console.log(`   Max width: ${MAX_WIDTH_COVER}px (covers), ${MAX_WIDTH_INLINE}px (inline)`);
+  console.log(`   Quality: ${QUALITY}%\n`);
 
   // Check source directory exists
   if (!fs.existsSync(SOURCE_DIR)) {
@@ -121,6 +169,7 @@ async function buildImages() {
   let converted = 0;
   let skipped = 0;
   let errors = 0;
+  let totalSaved = 0;
 
   // Build conversion tasks
   const tasks = files.map(file => async () => {
@@ -129,6 +178,7 @@ async function buildImages() {
     const webpName = `${baseName}.webp`;
     const outputPath = path.join(CACHE_DIR, webpName);
     const relativeSource = `posts/images/${file}`;
+    const maxWidth = getMaxWidth(file);
 
     try {
       // Compute hash of source file
@@ -142,22 +192,31 @@ async function buildImages() {
         return;
       }
 
-      // Convert image
-      await convertImage(sourcePath, outputPath);
+      // Get source size before conversion
+      const sourceSize = fs.statSync(sourcePath).size;
+
+      // Convert image (with resize if needed)
+      const metadata = await convertImage(sourcePath, outputPath, maxWidth);
+
+      // Get output size
+      const webpSize = fs.statSync(outputPath).size;
+      const savings = Math.round((1 - webpSize / sourceSize) * 100);
+      totalSaved += (sourceSize - webpSize);
 
       // Update manifest
       manifest[relativeSource] = {
         hash,
         webp: webpName,
+        originalWidth: metadata.width,
+        originalHeight: metadata.height,
+        maxWidth,
         convertedAt: new Date().toISOString()
       };
 
-      // Get file sizes for reporting
-      const sourceSize = fs.statSync(sourcePath).size;
-      const webpSize = fs.statSync(outputPath).size;
-      const savings = Math.round((1 - webpSize / sourceSize) * 100);
-
-      console.log(`✅ Converted: ${file} → ${webpName} (${savings}% smaller)`);
+      // Log with size info
+      const resized = metadata.width > maxWidth ? ` (resized from ${metadata.width}px)` : '';
+      console.log(`✅ ${file}${resized}`);
+      console.log(`   ${formatBytes(sourceSize)} → ${formatBytes(webpSize)} (${savings}% smaller)`);
       converted++;
 
     } catch (error) {
@@ -178,7 +237,10 @@ async function buildImages() {
   console.log(`   Skipped (cached): ${skipped}`);
   console.log(`   Errors: ${errors}`);
   console.log(`   Total: ${files.length}`);
-  console.log('\n✨ WebP conversion complete!');
+  if (totalSaved > 0) {
+    console.log(`   Total saved: ${formatBytes(totalSaved)}`);
+  }
+  console.log('\n✨ Image optimization complete!');
 }
 
 // Run if called directly
