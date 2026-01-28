@@ -124,7 +124,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, fallba
 /**
  * Composant Picture optimisé pour les images de blog
  * Utilise <picture> avec WebP source et fallback JPG/PNG
- * Fonctionne uniquement après le build (WebP généré par build-images.cjs)
+ * Le navigateur gère automatiquement le fallback si WebP n'est pas disponible
  */
 interface OptimizedPictureProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -132,16 +132,14 @@ interface OptimizedPictureProps extends React.ImgHTMLAttributes<HTMLImageElement
 }
 
 export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({ src, alt, ...props }) => {
-  const [hasWebpError, setHasWebpError] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   // Reset state when src changes
   React.useEffect(() => {
-    setHasWebpError(false);
     setHasError(false);
   }, [src]);
 
-  // Hide if all sources fail
+  // Hide if source is empty or all sources failed
   if (hasError || !src) {
     return null;
   }
@@ -150,8 +148,8 @@ export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({ src, alt, ..
   const canUseWebp = isConvertibleImage(src);
   const webpSrc = canUseWebp ? getWebpPath(src) : null;
 
-  // If WebP failed or not available, use standard img
-  if (!canUseWebp || hasWebpError) {
+  // If not a convertible format, use standard img
+  if (!canUseWebp) {
     return React.createElement('img', {
       src,
       alt,
@@ -162,11 +160,11 @@ export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({ src, alt, ..
   }
 
   // Use <picture> element with WebP source and fallback
+  // Browser automatically falls back to <img> if WebP source fails
   return React.createElement('picture', null,
     React.createElement('source', {
       srcSet: webpSrc,
-      type: 'image/webp',
-      onError: () => setHasWebpError(true)
+      type: 'image/webp'
     }),
     React.createElement('img', {
       src,
