@@ -2,14 +2,5380 @@
   "id": "2464721e-1219-8026-9a11-f08e8a13839f",
   "title": "Qu’est-ce qu’un logiciel de marketing automation ? Avantages et exemples français",
   "slug": "quest-ce-quun-logiciel-de-marketing-automation-avantages-et-exemples-francais",
-  "excerpt": "",
-  "content": [],
-  "publishedAt": "2025-08-06T06:32:36.856Z",
+  "excerpt": "Le marketing automation automatise vos campagnes marketing pour qualifier les leads et personnaliser les parcours clients. Découvrez les meilleures solutions françaises pour PME et ETI.",
+  "content": [
+    {
+      "id": "2f64721e-1219-801f-a1d1-fcaa09b93427",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Automatiser ses actions marketing tout en personnalisant ses communications est devenu un enjeu majeur pour les entreprises françaises, qu'elles soient TPE, PME ou ETI. Les logiciels de marketing automation permettent de déclencher des campagnes ciblées, de qualifier automatiquement les prospects et d'accompagner chaque contact dans son parcours d'achat. Résultat : des équipes plus productives, des leads mieux travaillés et un retour sur investissement mesurable.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Automatiser ses actions marketing tout en personnalisant ses communications est devenu un enjeu majeur pour les entreprises françaises, qu'elles soient TPE, PME ou ETI. Les logiciels de marketing automation permettent de déclencher des campagnes ciblées, de qualifier automatiquement les prospects et d'accompagner chaque contact dans son parcours d'achat. Résultat : des équipes plus productives, des leads mieux travaillés et un retour sur investissement mesurable.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8097-a2a4-d8152b5e10e1",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Cet article vous explique concrètement ce qu'est le marketing automation, ses principaux avantages et vous présente une sélection de solutions françaises adaptées aux différents besoins des entreprises. L'objectif : vous donner les clés pour choisir un outil performant, conforme au RGPD et accompagné d'un support en français.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Cet article vous explique concrètement ce qu'est le marketing automation, ses principaux avantages et vous présente une sélection de solutions françaises adaptées aux différents besoins des entreprises. L'objectif : vous donner les clés pour choisir un outil performant, conforme au RGPD et accompagné d'un support en français.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80ea-afb0-c8fd41aab90c",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-8067-bb23-ca4b2bae704a",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Qu'est-ce que le marketing automation ? Définition et principes fondamentaux",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Qu'est-ce que le marketing automation ? Définition et principes fondamentaux",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80ab-ba5f-e3582ba6acd5",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le marketing automation désigne l'ensemble des technologies et pratiques permettant d'automatiser les tâches marketing répétitives et chronophages. Concrètement, un logiciel de marketing automation prend en charge :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le marketing automation désigne l'ensemble des technologies et pratiques permettant d'automatiser les tâches marketing répétitives et chronophages. Concrètement, un logiciel de marketing automation prend en charge :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80b2-85c0-e9f6ec7eea53",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'envoi automatique d'emails",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'envoi automatique d'emails",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " déclenchés par le comportement d'un prospect (téléchargement d'un document, visite d'une page produit, abandon de panier)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " déclenchés par le comportement d'un prospect (téléchargement d'un document, visite d'une page produit, abandon de panier)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80ba-81ea-f12a9e1db137",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La création de scénarios personnalisés",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La création de scénarios personnalisés",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " (workflows) qui guident le contact tout au long de son parcours d'achat",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " (workflows) qui guident le contact tout au long de son parcours d'achat",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8026-8c1b-f300e9198a40",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le scoring des leads",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le scoring des leads",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " pour identifier automatiquement les prospects les plus engagés",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " pour identifier automatiquement les prospects les plus engagés",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80a7-995d-f0fee706dc01",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La segmentation dynamique",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La segmentation dynamique",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " des bases de contacts selon des critères comportementaux et démographiques",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " des bases de contacts selon des critères comportementaux et démographiques",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80e0-9261-c5eb571446ec",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'intégration avec le CRM",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'intégration avec le CRM",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " pour synchroniser les données entre marketing et commercial",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " pour synchroniser les données entre marketing et commercial",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8082-9621-de6b5d90887b",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Marketing automation B2B vs B2C : quelles différences ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Marketing automation B2B vs B2C : quelles différences ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80af-a6f3-cc779f0df3fe",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "En B2B, le cycle de vente est généralement plus long et implique plusieurs décideurs. Le marketing automation sert principalement à :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "En B2B, le cycle de vente est généralement plus long et implique plusieurs décideurs. Le marketing automation sert principalement à :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8092-8ab1-d85cc4660d91",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Qualifier et scorer les leads avant transmission aux commerciaux",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Qualifier et scorer les leads avant transmission aux commerciaux",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8062-9098-d356f171bf14",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Déployer des stratégies de lead nurturing sur plusieurs semaines ou mois",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Déployer des stratégies de lead nurturing sur plusieurs semaines ou mois",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80c5-a42b-de54bc55057b",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Identifier les signaux d'achat (visites de pages tarifs, demandes de démo)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Identifier les signaux d'achat (visites de pages tarifs, demandes de démo)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8092-8e18-ef5912bf5ba7",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "En B2C, l'automation se concentre davantage sur :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "En B2C, l'automation se concentre davantage sur :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-800a-9f2b-c320f3cc8a8c",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les relances de paniers abandonnés",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les relances de paniers abandonnés",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f1-98cb-f853a4e13289",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les recommandations de produits personnalisées",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les recommandations de produits personnalisées",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8092-81bb-f2cf9d4c257c",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les programmes de fidélisation automatisés",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les programmes de fidélisation automatisés",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80a8-941d-d1bb456e1edb",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les solutions présentées dans cet article couvrent ces deux univers, avec des spécialisations selon les éditeurs.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les solutions présentées dans cet article couvrent ces deux univers, avec des spécialisations selon les éditeurs.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8050-87a5-f5d791fee161",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-8071-8072-dead13fa2258",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les 7 avantages clés du marketing automation pour votre entreprise",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les 7 avantages clés du marketing automation pour votre entreprise",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-804c-8395-c8199e40f963",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "1. Un gain de temps considérable pour les équipes marketing",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "1. Un gain de temps considérable pour les équipes marketing",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f9-ad9d-df130ae63e95",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'automatisation des tâches répétitives (envois d'emails, segmentation, reporting) libère un temps précieux. Selon une étude Venture Harbour, le gain de temps représente l'avantage numéro un cité par les marketeurs utilisant l'automation. Vos équipes peuvent se concentrer sur la stratégie, la création de contenus et l'analyse des résultats plutôt que sur l'exécution manuelle.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'automatisation des tâches répétitives (envois d'emails, segmentation, reporting) libère un temps précieux. Selon une étude Venture Harbour, le gain de temps représente l'avantage numéro un cité par les marketeurs utilisant l'automation. Vos équipes peuvent se concentrer sur la stratégie, la création de contenus et l'analyse des résultats plutôt que sur l'exécution manuelle.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-806f-b508-f6b93c354688",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "2. Une meilleure qualification des leads",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "2. Une meilleure qualification des leads",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80fa-99a1-f6112061583a",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le lead scoring automatisé attribue des points à chaque contact selon ses interactions (ouverture d'email, clic, visite de page, téléchargement). Seuls les prospects ayant atteint un score suffisant sont transmis aux commerciaux, qui gagnent ainsi en efficacité. Les études montrent une réduction de 50 % du temps passé à identifier les prospects chauds grâce à l'automation.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le lead scoring automatisé attribue des points à chaque contact selon ses interactions (ouverture d'email, clic, visite de page, téléchargement). Seuls les prospects ayant atteint un score suffisant sont transmis aux commerciaux, qui gagnent ainsi en efficacité. Les études montrent une réduction de 50 % du temps passé à identifier les prospects chauds grâce à l'automation.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8063-a94f-cbf377395be5",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "3. Des parcours client personnalisés à grande échelle",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "3. Des parcours client personnalisés à grande échelle",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8030-a373-e2bc9c239989",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Grâce aux scénarios de nurturing, chaque prospect reçoit des contenus adaptés à sa situation et à son niveau de maturité. Un visiteur téléchargeant un guide sur les fondamentaux recevra des contenus pédagogiques, tandis qu'un contact consultant vos tarifs sera orienté vers une prise de rendez-vous. Cette personnalisation, impossible manuellement sur des volumes importants, améliore significativement les taux de conversion.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Grâce aux scénarios de nurturing, chaque prospect reçoit des contenus adaptés à sa situation et à son niveau de maturité. Un visiteur téléchargeant un guide sur les fondamentaux recevra des contenus pédagogiques, tandis qu'un contact consultant vos tarifs sera orienté vers une prise de rendez-vous. Cette personnalisation, impossible manuellement sur des volumes importants, améliore significativement les taux de conversion.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80cf-bee5-fc6cf15942b3",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "4. Un alignement renforcé entre marketing et ventes",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "4. Un alignement renforcé entre marketing et ventes",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80be-b627-f58b267f5fac",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'intégration native avec les CRM permet de partager une vision commune du prospect. Les commerciaux accèdent à l'historique complet des interactions marketing et sont alertés automatiquement dès qu'un lead devient chaud. Cette synchronisation réduit les frictions entre équipes et accélère le cycle de vente.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'intégration native avec les CRM permet de partager une vision commune du prospect. Les commerciaux accèdent à l'historique complet des interactions marketing et sont alertés automatiquement dès qu'un lead devient chaud. Cette synchronisation réduit les frictions entre équipes et accélère le cycle de vente.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f4-a99d-d29147edca10",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "5. Une mesure précise du ROI marketing",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "5. Une mesure précise du ROI marketing",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-808f-9dee-f586ab89ea69",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les plateformes de marketing automation offrent des tableaux de bord détaillés : taux d'ouverture, taux de clic, taux de conversion par campagne, attribution des revenus. Cette visibilité permet d'identifier les actions les plus rentables et d'optimiser continuellement les budgets.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les plateformes de marketing automation offrent des tableaux de bord détaillés : taux d'ouverture, taux de clic, taux de conversion par campagne, attribution des revenus. Cette visibilité permet d'identifier les actions les plus rentables et d'optimiser continuellement les budgets.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80ad-8a42-e04ece47b877",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "6. Une conformité RGPD facilitée",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "6. Une conformité RGPD facilitée",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8063-bff0-faf070c29d46",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les solutions françaises et européennes intègrent nativement les mécanismes de consentement, de gestion des préférences et de suppression des données. Un avantage non négligeable face aux solutions américaines qui nécessitent souvent des paramétrages spécifiques.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les solutions françaises et européennes intègrent nativement les mécanismes de consentement, de gestion des préférences et de suppression des données. Un avantage non négligeable face aux solutions américaines qui nécessitent souvent des paramétrages spécifiques.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-808c-b421-f350b409c56b",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "7. Une scalabilité pour accompagner la croissance",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "7. Une scalabilité pour accompagner la croissance",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80a4-9e8b-c79a54992a13",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les outils de marketing automation s'adaptent au volume de contacts et à la complexité des scénarios. Une TPE peut démarrer avec des fonctionnalités simples puis activer progressivement des fonctions avancées (scoring, ABM, multicanal) sans changer de plateforme.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les outils de marketing automation s'adaptent au volume de contacts et à la complexité des scénarios. Une TPE peut démarrer avec des fonctionnalités simples puis activer progressivement des fonctions avancées (scoring, ABM, multicanal) sans changer de plateforme.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80ed-9a23-dfec098705c7",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-80d1-832d-d4a2bc2852b9",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Comment choisir son logiciel de marketing automation ? Les critères essentiels",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Comment choisir son logiciel de marketing automation ? Les critères essentiels",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-800d-984a-fc10c4db17c7",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fonctionnalités de base vs fonctionnalités avancées",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fonctionnalités de base vs fonctionnalités avancées",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8024-8d9a-f927402e031e",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Vérifiez que l'outil couvre vos besoins immédiats :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Vérifiez que l'outil couvre vos besoins immédiats :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8071-980c-dfc1552eb294",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Indispensable",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Indispensable",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : éditeur d'emails, création de scénarios, segmentation, formulaires, analytics de base",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : éditeur d'emails, création de scénarios, segmentation, formulaires, analytics de base",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80da-85cb-e53b03e8f746",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Avancé",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Avancé",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : lead scoring, intégration CRM bidirectionnelle, SMS marketing, landing pages, A/B testing",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : lead scoring, intégration CRM bidirectionnelle, SMS marketing, landing pages, A/B testing",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8023-8a74-ec488f77f295",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Expert",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Expert",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " : account-based marketing (ABM), analyse prédictive, multicanal (push, chat, publicité)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " : account-based marketing (ABM), analyse prédictive, multicanal (push, chat, publicité)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-808b-a35b-e0747dab896c",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Intégrations avec votre écosystème",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Intégrations avec votre écosystème",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8073-9133-f2c5b501af89",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Votre logiciel de marketing automation doit communiquer avec vos outils existants :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Votre logiciel de marketing automation doit communiquer avec vos outils existants :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80d5-aeaf-d2c22e8a1951",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "CRM (Salesforce, HubSpot, Pipedrive, ou solutions françaises comme ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "CRM (Salesforce, HubSpot, Pipedrive, ou solutions françaises comme ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Sellsy",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/sellsy"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sellsy",
+            "href": "https://logicielfrance.com/logiciel/sellsy"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " ou ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " ou ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Axonaut",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/axonaut"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Axonaut",
+            "href": "https://logicielfrance.com/logiciel/axonaut"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ")",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ")",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8066-a030-ce7bca260644",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Plateforme e-commerce (PrestaShop, Shopify, Magento)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Plateforme e-commerce (PrestaShop, Shopify, Magento)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-801b-9c8d-fcebba5bc835",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Outils de gestion (ERP, facturation)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Outils de gestion (ERP, facturation)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f1-b8b6-e90b2d6b46d0",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Webinaires et outils de contenu",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Webinaires et outils de contenu",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80c2-8696-e311ee658058",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Hébergement et conformité des données",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Hébergement et conformité des données",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8098-961f-ec88bbfb8496",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour les entreprises soumises à des contraintes réglementaires (secteur santé, finance, collectivités), privilégiez les solutions hébergeant les données en France ou en Europe. Les éditeurs français garantissent généralement une conformité RGPD native.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour les entreprises soumises à des contraintes réglementaires (secteur santé, finance, collectivités), privilégiez les solutions hébergeant les données en France ou en Europe. Les éditeurs français garantissent généralement une conformité RGPD native.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8030-b616-efcb43e01505",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Qualité de l'accompagnement",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Qualité de l'accompagnement",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8011-a3b3-f1f3896c1822",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Un logiciel puissant sans support adapté peut devenir un frein. Évaluez :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Un logiciel puissant sans support adapté peut devenir un frein. Évaluez :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-802b-838c-f56b0d9e3181",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La disponibilité du support (téléphone, chat, email)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La disponibilité du support (téléphone, chat, email)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8004-bb76-dffb67d94939",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'existence de formations et certifications",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'existence de formations et certifications",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-802e-86fd-e5111e660798",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La documentation en français",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La documentation en français",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8087-b2c1-c7f99ce1c5ae",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les services d'accompagnement à la mise en place",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les services d'accompagnement à la mise en place",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80a8-8d1c-d71d1ebfc865",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Budget et modèle tarifaire",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Budget et modèle tarifaire",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-807d-a7c4-cff3369239ae",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les tarifs varient selon :",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les tarifs varient selon :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8023-ace9-d04c62314ef5",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le nombre de contacts dans la base",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le nombre de contacts dans la base",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8000-824b-c461637fcb31",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le volume d'emails envoyés",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le volume d'emails envoyés",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8097-be8d-e4f440ae6989",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le niveau de fonctionnalités",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le niveau de fonctionnalités",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-800e-b1a7-e4c58ea1de17",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les options d'accompagnement",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les options d'accompagnement",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8048-a659-c88c7daeae5b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Comptez de 50 € à 600 €/mois pour une PME, avec des écarts importants selon les éditeurs et les options choisies.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Comptez de 50 € à 600 €/mois pour une PME, avec des écarts importants selon les éditeurs et les options choisies.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80b7-9d4f-fe72be6d75d5",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-803c-a02d-cd48de37cff8",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Sélection de logiciels de marketing automation « Made in France »",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sélection de logiciels de marketing automation « Made in France »",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8034-8cf0-e5a20b55b5a3",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Solutions pour le B2B",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Solutions pour le B2B",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8095-ad69-f314b5360d50",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Plezi",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Plezi",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – Le spécialiste du marketing automation B2B",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – Le spécialiste du marketing automation B2B",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8056-8daa-ea9fb1cc3dbe",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Plezi",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/plezi"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Plezi",
+            "href": "https://logicielfrance.com/logiciel/plezi"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est une solution 100 % dédiée au marketing B2B, fondée en 2015 à Marseille. La plateforme se distingue par sa simplicité de prise en main et son approche centrée sur la génération de leads qualifiés.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est une solution 100 % dédiée au marketing B2B, fondée en 2015 à Marseille. La plateforme se distingue par sa simplicité de prise en main et son approche centrée sur la génération de leads qualifiés.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8071-b910-f77b6b4300ed",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Points forts :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Points forts :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-805e-8ae5-c7a9e8e03179",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fonctionnalité de « campagne intelligente » qui envoie automatiquement le bon contenu au bon moment",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fonctionnalité de « campagne intelligente » qui envoie automatiquement le bon contenu au bon moment",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8092-a374-f786dd5e3c7d",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Lead scoring natif et profilage progressif des contacts",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Lead scoring natif et profilage progressif des contacts",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-809e-969e-ec3aee438442",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Intégrations avec les principaux CRM du marché (Salesforce, Pipedrive, Microsoft Dynamics, Sellsy)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Intégrations avec les principaux CRM du marché (Salesforce, Pipedrive, Microsoft Dynamics, Sellsy)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8095-a6b3-f2057ff6b1a5",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Support client français réputé pour sa réactivité",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Support client français réputé pour sa réactivité",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8014-a087-f81a82c8b1af",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tarifs :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tarifs :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " À partir de 169 €/mois pour 1 000 contacts (plan Plus), 599 €/mois pour accéder aux fonctions d'automation avancées (plan Star).",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " À partir de 169 €/mois pour 1 000 contacts (plan Plus), 599 €/mois pour accéder aux fonctions d'automation avancées (plan Star).",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8054-820b-f3963139e14f",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour qui ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour qui ?",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " PME et ETI B2B souhaitant structurer leur stratégie inbound marketing avec un outil intuitif.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " PME et ETI B2B souhaitant structurer leur stratégie inbound marketing avec un outil intuitif.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-808b-a336-c0160b3abc55",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Webmecanik",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Webmecanik",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – L'alternative open source française",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – L'alternative open source française",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-802d-98d6-f17c421d9d26",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Webmecanik",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/webmecanik"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Webmecanik",
+            "href": "https://logicielfrance.com/logiciel/webmecanik"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " propose une plateforme de marketing automation basée sur Mautic, le logiciel open source de référence. Implantée à Annecy, l'entreprise accompagne plus de 350 sociétés et 70 agences partenaires.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " propose une plateforme de marketing automation basée sur Mautic, le logiciel open source de référence. Implantée à Annecy, l'entreprise accompagne plus de 350 sociétés et 70 agences partenaires.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8033-8495-e77437e7a3ec",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Points forts :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Points forts :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80a3-82f5-d8142e14a6d3",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Hébergement 100 % européen (serveurs en France)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Hébergement 100 % européen (serveurs en France)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f9-8c63-e7a974043456",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tracking des visiteurs anonymes et identification progressive",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tracking des visiteurs anonymes et identification progressive",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8094-bfea-d94bad508e73",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Services de délégation pour la création de campagnes",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Services de délégation pour la création de campagnes",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-805a-9bd4-c4b689abe630",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Flexibilité technique grâce à la base open source",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Flexibilité technique grâce à la base open source",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8000-b28e-f9af7cf26137",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tarifs :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tarifs :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " À partir de 400 €/mois pour l'offre Business, avec accompagnement inclus.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " À partir de 400 €/mois pour l'offre Business, avec accompagnement inclus.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8083-9296-e50e4eb7c0a4",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour qui ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour qui ?",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Entreprises B2B et B2C ayant des besoins de personnalisation technique ou souhaitant un hébergement souverain.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Entreprises B2B et B2C ayant des besoins de personnalisation technique ou souhaitant un hébergement souverain.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f4-9090-c2064e4bd354",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Solutions polyvalentes (B2B et B2C)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Solutions polyvalentes (B2B et B2C)",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80bf-bc1c-f6e394910c0c",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Brevo",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Brevo",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " (ex-Sendinblue) – Le leader français accessible",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " (ex-Sendinblue) – Le leader français accessible",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8056-bac5-d9450d6ee863",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Brevo s'est imposé comme la référence française de l'emailing et du marketing automation, avec plus de 500 000 clients dans le monde. La plateforme tout-en-un couvre l'emailing, le SMS, le chat, le CRM et l'automation.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Brevo s'est imposé comme la référence française de l'emailing et du marketing automation, avec plus de 500 000 clients dans le monde. La plateforme tout-en-un couvre l'emailing, le SMS, le chat, le CRM et l'automation.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8068-bb00-ed088b16e1ea",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Points forts :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Points forts :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8017-b66c-dc8d3af67812",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Version gratuite généreuse (300 emails/jour, fonctions de base)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Version gratuite généreuse (300 emails/jour, fonctions de base)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80e2-a3c2-c83335f644cc",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Interface intuitive, adaptée aux débutants",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Interface intuitive, adaptée aux débutants",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-801a-a6ea-eba53da2d0d5",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tarification compétitive basée sur le volume d'envois",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tarification compétitive basée sur le volume d'envois",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8071-abf3-f64669500d1e",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fonctionnalités e-commerce (relance panier, recommandations)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fonctionnalités e-commerce (relance panier, recommandations)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8048-95ea-d5560e9c43b2",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Limites à connaître :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Limites à connaître :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Le support client peut être moins réactif que chez des concurrents premium. Les fonctionnalités d'automation avancée nécessitent les plans payants.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Le support client peut être moins réactif que chez des concurrents premium. Les fonctionnalités d'automation avancée nécessitent les plans payants.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80c6-a795-f4a3b60e6455",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tarifs :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tarifs :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Gratuit pour démarrer, puis à partir de 7 €/mois. Plans Business avec automation complète à partir de 49 €/mois.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Gratuit pour démarrer, puis à partir de 7 €/mois. Plans Business avec automation complète à partir de 49 €/mois.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f5-a040-d97fbf1e5394",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour qui ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour qui ?",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " TPE, PME, e-commerçants recherchant un bon rapport qualité-prix.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " TPE, PME, e-commerçants recherchant un bon rapport qualité-prix.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8088-b995-f7325ade1dae",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Sarbacane",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sarbacane",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – L'expertise française et l'accompagnement premium",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – L'expertise française et l'accompagnement premium",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80fe-8d72-f33b6a55cab4",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Sarbacane est un pionnier de l'emailing en France, qui a évolué vers une suite marketing complète : email, SMS, automation, landing pages, chat et prospection B2B (module Engage).",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Sarbacane est un pionnier de l'emailing en France, qui a évolué vers une suite marketing complète : email, SMS, automation, landing pages, chat et prospection B2B (module Engage).",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f2-a511-c6c6427bfaed",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Points forts :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Points forts :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80bc-ae09-dbf230cc4485",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Accompagnement personnalisé par des experts joignables par téléphone",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Accompagnement personnalisé par des experts joignables par téléphone",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80bf-9f66-f6b3ea22e444",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fonctionnalités IA (Smart Templates, envoi prédictif, eye-tracking)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fonctionnalités IA (Smart Templates, envoi prédictif, eye-tracking)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8008-9103-fc6c31dbb247",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Hébergement des données en France",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Hébergement des données en France",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-806e-865a-fe42512b6f73",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Connecteurs avec les principales plateformes e-commerce et CRM",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Connecteurs avec les principales plateformes e-commerce et CRM",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-806a-9e86-c2ac5d05a850",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tarifs :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tarifs :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Sur devis selon les besoins, généralement positionnés dans la fourchette haute du marché, justifiés par le niveau d'accompagnement.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Sur devis selon les besoins, généralement positionnés dans la fourchette haute du marché, justifiés par le niveau d'accompagnement.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80fa-afc6-cc1b4afa19a6",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour qui ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour qui ?",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " PME et grands comptes cherchant un accompagnement humain et une solution complète pilotée en français.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " PME et grands comptes cherchant un accompagnement humain et une solution complète pilotée en français.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-806e-a907-f20d9762ff09",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mailjet",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mailjet",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – L'emailing collaboratif et l'API robuste",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – L'emailing collaboratif et l'API robuste",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-807f-85ff-c8e26b281894",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mailjet se positionne sur l'emailing marketing et transactionnel, avec une approche orientée collaboration (éditeur multi-utilisateurs) et développeurs (API puissante).",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mailjet se positionne sur l'emailing marketing et transactionnel, avec une approche orientée collaboration (éditeur multi-utilisateurs) et développeurs (API puissante).",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-809e-8f2c-ffc565e35150",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Points forts :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Points forts :",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8090-a043-c1af709bad85",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Éditeur drag & drop collaboratif avec gestion des rôles",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Éditeur drag & drop collaboratif avec gestion des rôles",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-805b-8c05-ea9bd234a111",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "API performante pour les envois transactionnels",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "API performante pour les envois transactionnels",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8077-b274-f86ad2b3552b",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Version gratuite disponible (200 emails/jour)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Version gratuite disponible (200 emails/jour)",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-805f-8239-c99440f58552",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Bon choix pour les équipes techniques",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Bon choix pour les équipes techniques",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80c9-9087-f960374acf80",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Tarifs :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Tarifs :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Gratuit pour démarrer, plans payants à partir de 15 €/mois.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Gratuit pour démarrer, plans payants à partir de 15 €/mois.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80f7-88ba-fd7092cb4f18",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour qui ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour qui ?",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Startups, équipes techniques ou agences ayant besoin de fonctionnalités collaboratives et d'intégrations API.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Startups, équipes techniques ou agences ayant besoin de fonctionnalités collaboratives et d'intégrations API.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80d7-9e71-cc51e5810e36",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Solutions complémentaires pour enrichir votre stack marketing",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Solutions complémentaires pour enrichir votre stack marketing",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-805d-b22f-d44d153d436f",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Agorapulse",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Agorapulse",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – La gestion des réseaux sociaux made in France",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – La gestion des réseaux sociaux made in France",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80c7-8f7b-d9925385ef46",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Agorapulse",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/agorapulse"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Agorapulse",
+            "href": "https://logicielfrance.com/logiciel/agorapulse"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " n'est pas un outil de marketing automation au sens strict, mais il s'intègre parfaitement dans une stratégie d'inbound marketing. La plateforme française permet de planifier, publier et analyser les performances sur les réseaux sociaux.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " n'est pas un outil de marketing automation au sens strict, mais il s'intègre parfaitement dans une stratégie d'inbound marketing. La plateforme française permet de planifier, publier et analyser les performances sur les réseaux sociaux.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-800d-8a80-e6872d0f88f7",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Utilité dans le marketing automation :",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Utilité dans le marketing automation :",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " Centraliser la présence sociale pour alimenter vos scénarios de nurturing en trafic qualifié.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " Centraliser la présence sociale pour alimenter vos scénarios de nurturing en trafic qualifié.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-806d-b28c-f334e138c9d5",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Vuzzion",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Vuzzion",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – La prise de rendez-vous intelligente",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – La prise de rendez-vous intelligente",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-804a-9a5a-f78bf2892104",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Vuzzion",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/vuzzion"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Vuzzion",
+            "href": "https://logicielfrance.com/logiciel/vuzzion"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " optimise la conversion des visiteurs en rendez-vous grâce à un système de relance automatique des abandons. Intégré à vos scénarios de marketing automation, il maximise le passage à l'action des prospects chauds.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " optimise la conversion des visiteurs en rendez-vous grâce à un système de relance automatique des abandons. Intégré à vos scénarios de marketing automation, il maximise le passage à l'action des prospects chauds.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-809b-9aab-d98984e87c2c",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Skoatch",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Skoatch",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – La génération de contenu automatisée",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – La génération de contenu automatisée",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8000-8ea7-e3e4cdba2644",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Skoatch",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/skoatch"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Skoatch",
+            "href": "https://logicielfrance.com/logiciel/skoatch"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " permet de générer, illustrer et publier automatiquement des contenus optimisés SEO. Un atout pour alimenter vos campagnes de nurturing en contenus frais sans mobiliser de ressources rédactionnelles importantes.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " permet de générer, illustrer et publier automatiquement des contenus optimisés SEO. Un atout pour alimenter vos campagnes de nurturing en contenus frais sans mobiliser de ressources rédactionnelles importantes.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80af-9395-cab6bd7f340a",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pletor",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pletor",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – Les agents IA pour les marketeurs",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – Les agents IA pour les marketeurs",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8040-8094-cd55c35008bf",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pletor",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/pletor"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pletor",
+            "href": "https://logicielfrance.com/logiciel/pletor"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " propose une plateforme d'agents IA dédiée aux équipes marketing et créatives. Ces agents peuvent automatiser des tâches de veille, de création de contenus ou d'analyse, en complément de votre solution de marketing automation.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " propose une plateforme d'agents IA dédiée aux équipes marketing et créatives. Ces agents peuvent automatiser des tâches de veille, de création de contenus ou d'analyse, en complément de votre solution de marketing automation.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80bb-8ebd-ee97d03790c4",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fresh Scan",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fresh Scan",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – L'optimisation des contenus existants",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – L'optimisation des contenus existants",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-801c-af14-c6a9639158a0",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Fresh Scan",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/fresh-scan"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Fresh Scan",
+            "href": "https://logicielfrance.com/logiciel/fresh-scan"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " détecte et corrige les contenus obsolètes de votre site. En maintenant vos ressources à jour, vous améliorez l'efficacité de vos scénarios de nurturing qui s'appuient sur ces contenus.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " détecte et corrige les contenus obsolètes de votre site. En maintenant vos ressources à jour, vous améliorez l'efficacité de vos scénarios de nurturing qui s'appuient sur ces contenus.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8014-89f9-c23586814c9b",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ad Creative",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ad Creative",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " – La création publicitaire automatisée",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " – La création publicitaire automatisée",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80b3-8cf1-c7ff263677ae",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ad Creative",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/ad-creative"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ad Creative",
+            "href": "https://logicielfrance.com/logiciel/ad-creative"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " génère des bannières publicitaires, textes et visuels optimisés. Utile pour compléter vos campagnes d'automation par des actions de retargeting publicitaire cohérentes.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " génère des bannières publicitaires, textes et visuels optimisés. Utile pour compléter vos campagnes d'automation par des actions de retargeting publicitaire cohérentes.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8049-bf5b-d6fd7aaba4a4",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-80c5-9cfe-d1d667b050af",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Procédure recommandée pour choisir et déployer votre solution",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Procédure recommandée pour choisir et déployer votre solution",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-800d-8d12-fb0711a33eb9",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Auditez vos besoins actuels et futurs",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Auditez vos besoins actuels et futurs",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2f64721e-1219-80a6-9293-fd2cfb4ede9b",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Listez vos cas d'usage prioritaires (nurturing, scoring, relance panier, etc.)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Listez vos cas d'usage prioritaires (nurturing, scoring, relance panier, etc.)",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-804a-b301-fa60d9c8f6f6",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Évaluez le volume de contacts et d'emails mensuels",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Évaluez le volume de contacts et d'emails mensuels",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-8001-8b4f-f597edfe8d43",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Identifiez les intégrations indispensables avec votre écosystème",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Identifiez les intégrations indispensables avec votre écosystème",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2f64721e-1219-8006-9903-ce2136a819cb",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Établissez une shortlist de 3-4 solutions",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Établissez une shortlist de 3-4 solutions",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2f64721e-1219-8008-b7ed-fc77a4bf34db",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Privilégiez les outils correspondant à votre secteur (B2B, B2C, e-commerce)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Privilégiez les outils correspondant à votre secteur (B2B, B2C, e-commerce)",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-80c3-bd39-c085c432a0d1",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Vérifiez la localisation des serveurs et la conformité RGPD",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Vérifiez la localisation des serveurs et la conformité RGPD",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-807c-aef2-d342f009cd23",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Consultez les avis clients sur des plateformes indépendantes",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Consultez les avis clients sur des plateformes indépendantes",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2f64721e-1219-8014-b3d4-e3d057c1f73f",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Testez les solutions présélectionnées",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Testez les solutions présélectionnées",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2f64721e-1219-804f-b198-d693fb51ac21",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "La plupart des éditeurs proposent des essais gratuits ou des démos personnalisées",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "La plupart des éditeurs proposent des essais gratuits ou des démos personnalisées",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-809c-aa4d-f53e7190d612",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Impliquez les utilisateurs finaux (marketing, commercial, technique)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Impliquez les utilisateurs finaux (marketing, commercial, technique)",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-8018-9e7f-d7203a69bca6",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Évaluez la courbe d'apprentissage et la qualité du support",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Évaluez la courbe d'apprentissage et la qualité du support",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2f64721e-1219-8037-b7ff-cf15030c83e0",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Définissez vos critères de go/no-go",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Définissez vos critères de go/no-go",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2f64721e-1219-808f-9e22-d1984996809f",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Budget validé sur 12-24 mois",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Budget validé sur 12-24 mois",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-805c-af17-da93dabe553e",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Disponibilité des ressources internes pour la mise en place",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Disponibilité des ressources internes pour la mise en place",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-80a9-9990-e33f93ae1d19",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Validation technique des intégrations critiques",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Validation technique des intégrations critiques",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2f64721e-1219-8030-b0a3-ffcb9224df99",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Planifiez le déploiement par phases",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Planifiez le déploiement par phases",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2f64721e-1219-801b-b32f-eab91c7cacdf",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Phase 1 : migration des contacts et paramétrage de base",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Phase 1 : migration des contacts et paramétrage de base",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-80b4-9a4c-d2bb044f8578",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Phase 2 : création des premiers scénarios simples",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Phase 2 : création des premiers scénarios simples",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-8065-a8d6-e6ea269c29c8",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Phase 3 : déploiement progressif des fonctionnalités avancées",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Phase 3 : déploiement progressif des fonctionnalités avancées",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2f64721e-1219-8024-b881-c82464a54eff",
+      "type": "numbered_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Formez vos équipes et mesurez les résultats",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Formez vos équipes et mesurez les résultats",
+            "href": null
+          }
+        ],
+        "color": "default"
+      },
+      "children": [
+        {
+          "id": "2f64721e-1219-806a-ba93-f5f50ef22edf",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Prévoyez des sessions de formation initiale et continue",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Prévoyez des sessions de formation initiale et continue",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-8063-9b73-ee59c1306c04",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Définissez des KPIs clairs (taux de conversion, leads qualifiés, CAC)",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Définissez des KPIs clairs (taux de conversion, leads qualifiés, CAC)",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        },
+        {
+          "id": "2f64721e-1219-80cc-ae6f-cba8117d5c9f",
+          "type": "bulleted_list_item",
+          "content": {
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Organisez des points réguliers d'optimisation",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Organisez des points réguliers d'optimisation",
+                "href": null
+              }
+            ],
+            "color": "default"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2f64721e-1219-80c2-876c-cc1c9280d9a6",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-807c-98ab-f39310ed930b",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "FAQ – Questions fréquentes sur le marketing automation",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "FAQ – Questions fréquentes sur le marketing automation",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8063-be08-f3f184fd5574",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Quelle différence entre emailing et marketing automation ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Quelle différence entre emailing et marketing automation ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8022-a9aa-fc0370e335f9",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'emailing classique consiste à envoyer des campagnes ponctuelles à une liste de contacts. Le marketing automation va plus loin en déclenchant des envois automatiques selon le comportement du prospect, en orchestrant des scénarios multicanaux et en intégrant des fonctions de scoring et segmentation dynamique.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'emailing classique consiste à envoyer des campagnes ponctuelles à une liste de contacts. Le marketing automation va plus loin en déclenchant des envois automatiques selon le comportement du prospect, en orchestrant des scénarios multicanaux et en intégrant des fonctions de scoring et segmentation dynamique.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-804d-9864-e313f796c028",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le marketing automation est-il réservé aux grandes entreprises ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le marketing automation est-il réservé aux grandes entreprises ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8081-ac97-f3cf05adc43f",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Non. Les solutions françaises comme Brevo ou Plezi proposent des offres adaptées aux TPE et PME, avec des tarifs accessibles et des fonctionnalités progressives. L'essentiel est de démarrer avec des scénarios simples et d'évoluer avec la maturité de l'équipe.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Non. Les solutions françaises comme Brevo ou Plezi proposent des offres adaptées aux TPE et PME, avec des tarifs accessibles et des fonctionnalités progressives. L'essentiel est de démarrer avec des scénarios simples et d'évoluer avec la maturité de l'équipe.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-804a-94de-f2bdbdd5c997",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Combien de temps faut-il pour voir des résultats ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Combien de temps faut-il pour voir des résultats ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8083-970b-db7998fc3f1d",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les premiers résultats (amélioration des taux d'ouverture, premiers leads scorés) apparaissent généralement en 1 à 3 mois. L'impact sur le chiffre d'affaires se mesure plutôt sur 6 à 12 mois, le temps de construire et optimiser les scénarios de nurturing.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les premiers résultats (amélioration des taux d'ouverture, premiers leads scorés) apparaissent généralement en 1 à 3 mois. L'impact sur le chiffre d'affaires se mesure plutôt sur 6 à 12 mois, le temps de construire et optimiser les scénarios de nurturing.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80c8-aac4-ede7847a8227",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Peut-on utiliser le marketing automation sans CRM ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Peut-on utiliser le marketing automation sans CRM ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8073-b00a-d0b581bcd951",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Oui, la plupart des plateformes intègrent des fonctions de gestion de contacts. Cependant, l'association avec un CRM décuple l'efficacité en permettant un suivi complet du prospect, du premier contact jusqu'à la signature.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Oui, la plupart des plateformes intègrent des fonctions de gestion de contacts. Cependant, l'association avec un CRM décuple l'efficacité en permettant un suivi complet du prospect, du premier contact jusqu'à la signature.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80fa-8715-f006c8d2b0b5",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Les solutions françaises sont-elles aussi performantes que HubSpot ou Marketo ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Les solutions françaises sont-elles aussi performantes que HubSpot ou Marketo ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8016-bee5-f24601f03abb",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour la majorité des PME françaises, les solutions locales couvrent largement les besoins fonctionnels, avec des avantages significatifs : support en français, conformité RGPD native, tarifs plus accessibles, intégrations avec l'écosystème français (Sellsy, PrestaShop, etc.). Les solutions américaines restent pertinentes pour les grands comptes internationaux ayant des besoins très avancés.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour la majorité des PME françaises, les solutions locales couvrent largement les besoins fonctionnels, avec des avantages significatifs : support en français, conformité RGPD native, tarifs plus accessibles, intégrations avec l'écosystème français (Sellsy, PrestaShop, etc.). Les solutions américaines restent pertinentes pour les grands comptes internationaux ayant des besoins très avancés.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8001-9032-ee27f8b3e8ce",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Comment garantir la délivrabilité de mes emails automatisés ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Comment garantir la délivrabilité de mes emails automatisés ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8071-a451-f704790f5cec",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Choisissez un éditeur reconnu pour la qualité de ses infrastructures d'envoi, respectez les bonnes pratiques (double opt-in, nettoyage régulier des listes, personnalisation des objets) et surveillez vos indicateurs de réputation. Les solutions françaises comme Sarbacane ou Brevo disposent d'équipes dédiées à la délivrabilité.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Choisissez un éditeur reconnu pour la qualité de ses infrastructures d'envoi, respectez les bonnes pratiques (double opt-in, nettoyage régulier des listes, personnalisation des objets) et surveillez vos indicateurs de réputation. Les solutions françaises comme Sarbacane ou Brevo disposent d'équipes dédiées à la délivrabilité.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8049-b17a-f52a422dad1d",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Quelle est la différence entre un scénario de nurturing et un scénario de scoring ?",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Quelle est la différence entre un scénario de nurturing et un scénario de scoring ?",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-80b9-a220-fc24a658eb16",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le nurturing vise à faire progresser le prospect dans son parcours d'achat en lui envoyant des contenus adaptés à son niveau de maturité. Le scoring attribue des points à chaque interaction pour identifier les contacts les plus engagés. Les deux fonctionnent ensemble : le scoring détermine quand un contact est prêt à être transmis aux commerciaux, le nurturing l'y amène progressivement.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le nurturing vise à faire progresser le prospect dans son parcours d'achat en lui envoyant des contenus adaptés à son niveau de maturité. Le scoring attribue des points à chaque interaction pour identifier les contacts les plus engagés. Les deux fonctionnent ensemble : le scoring détermine quand un contact est prêt à être transmis aux commerciaux, le nurturing l'y amène progressivement.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8009-89d6-ccf524cee41a",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2f64721e-1219-80ea-83b6-fd6eaf73e21f",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Conclusion : passez à l'action avec une solution française",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Conclusion : passez à l'action avec une solution française",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-806b-a0b9-e709b5688ebe",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le marketing automation n'est plus réservé aux grandes entreprises disposant de budgets conséquents. Les éditeurs français proposent aujourd'hui des solutions matures, accessibles et conformes aux exigences réglementaires européennes. Que vous cherchiez une plateforme spécialisée B2B comme ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le marketing automation n'est plus réservé aux grandes entreprises disposant de budgets conséquents. Les éditeurs français proposent aujourd'hui des solutions matures, accessibles et conformes aux exigences réglementaires européennes. Que vous cherchiez une plateforme spécialisée B2B comme ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Plezi",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/plezi"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Plezi",
+            "href": "https://logicielfrance.com/logiciel/plezi"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", une solution open source comme ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", une solution open source comme ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Webmecanik",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/webmecanik"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Webmecanik",
+            "href": "https://logicielfrance.com/logiciel/webmecanik"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ", ou un outil polyvalent comme Brevo ou Sarbacane, l'écosystème français offre des alternatives crédibles aux géants américains.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ", ou un outil polyvalent comme Brevo ou Sarbacane, l'écosystème français offre des alternatives crédibles aux géants américains.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-805d-ab09-fe80a20f91cc",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'essentiel est de démarrer avec des objectifs clairs, de tester les solutions avant de vous engager et de prévoir un accompagnement adapté à la maturité de vos équipes. Le retour sur investissement se construit dans la durée, avec des scénarios progressivement affinés.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'essentiel est de démarrer avec des objectifs clairs, de tester les solutions avant de vous engager et de prévoir un accompagnement adapté à la maturité de vos équipes. Le retour sur investissement se construit dans la durée, avec des scénarios progressivement affinés.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2f64721e-1219-8088-ab28-d113911363c0",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Pour découvrir d'autres solutions marketing françaises et comparer les fonctionnalités, consultez notre ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Pour découvrir d'autres solutions marketing françaises et comparer les fonctionnalités, consultez notre ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "catégorie Marketing",
+              "link": {
+                "url": "https://logicielfrance.com/categorie/marketing"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "catégorie Marketing",
+            "href": "https://logicielfrance.com/categorie/marketing"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " ou lisez notre ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " ou lisez notre ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "comparatif détaillé des solutions de marketing automation en 2025",
+              "link": {
+                "url": "https://logicielfrance.com/blog/comparatif-des-solutions-francaises-de-marketing-automation-en-2025"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "comparatif détaillé des solutions de marketing automation en 2025",
+            "href": "https://logicielfrance.com/blog/comparatif-des-solutions-francaises-de-marketing-automation-en-2025"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    }
+  ],
+  "publishedAt": "2026-01-28",
   "author": "Équipe Logiciel France",
   "tags": [],
-  "status": "draft",
+  "coverImage": "/posts/images/cover-2464721e-1219-8026-9a11-f08e8a13839f.jpg",
+  "status": "published",
   "seo": {
-    "metaDescription": "",
-    "keywords": []
+    "metaDescription": "Découvrez ce qu'est le marketing automation, ses 7 avantages clés et notre sélection de logiciels français : Plezi, Webmecanik, Brevo, Sarbacane et plus.",
+    "keywords": [
+      "marketing automation",
+      "logiciel marketing automation français",
+      "automatisation marketing B2B",
+      "Plezi",
+      "Webmecanik",
+      "Brevo",
+      "marketing automation",
+      "Sarbacane",
+      "lead nurturing",
+      "scoring leads",
+      "emailing automatisé",
+      "marketing automation PME"
+    ]
   }
 }
