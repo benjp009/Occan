@@ -1,15 +1,21 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { fetchCompanies } from '../utils/api';
+import { fetchCompanies, fetchUseCases, fetchCompetitors } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { slugify } from '../utils/slugify';
-import { CompanyRow } from '../types';
+import { CompanyRow, UseCaseRow, CompetitorRow } from '../types';
 
 export function Header() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
   const [search, setSearch] = useState('');
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [useCases, setUseCases] = useState<UseCaseRow[]>([]);
+  const [useCasesLoading, setUseCasesLoading] = useState(true);
+  const [useCaseDropdownOpen, setUseCaseDropdownOpen] = useState(false);
+  const [competitors, setCompetitors] = useState<CompetitorRow[]>([]);
+  const [competitorsLoading, setCompetitorsLoading] = useState(true);
+  const [competitorDropdownOpen, setCompetitorDropdownOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,6 +32,23 @@ export function Header() {
     }
   }, []);
 
+  useEffect(() => {
+    fetchUseCases()
+      .then(data => {
+        setUseCases(data);
+        setUseCasesLoading(false);
+      })
+      .catch(() => setUseCasesLoading(false));
+  }, []);
+
+  useEffect(() => {
+    fetchCompetitors()
+      .then(data => {
+        setCompetitors(data);
+        setCompetitorsLoading(false);
+      })
+      .catch(() => setCompetitorsLoading(false));
+  }, []);
 
   const results = filterCompanies(search, companies);
   const show = search.trim() && results.length > 0;
@@ -84,6 +107,95 @@ export function Header() {
             >
               Logiciels
             </Link>
+
+            {/* Dropdown for Cas d'usage */}
+            <div className="nav-dropdown">
+              <button
+                className={`nav-link nav-dropdown-trigger ${location.pathname.startsWith('/meilleur-logiciel-pour') ? 'nav-link-active' : ''}`}
+                aria-haspopup="true"
+              >
+                Cas d'usage
+                <svg
+                  className="nav-dropdown-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div className="nav-dropdown-menu">
+                {useCasesLoading ? (
+                  <div className="nav-dropdown-loading">Chargement...</div>
+                ) : useCases.length === 0 ? (
+                  <div className="nav-dropdown-empty">Aucun cas d'usage</div>
+                ) : (
+                  <ul className="nav-dropdown-list">
+                    {useCases.map(useCase => (
+                      <li key={useCase.slug}>
+                        <Link
+                          to={`/meilleur-logiciel-pour/${useCase.slug}`}
+                          className="nav-dropdown-item"
+                        >
+                          {useCase.usecase_name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+
+            {/* Dropdown for Alternatives */}
+            <div className="nav-dropdown">
+              <button
+                className={`nav-link nav-dropdown-trigger ${location.pathname.startsWith('/alternative') ? 'nav-link-active' : ''}`}
+                aria-haspopup="true"
+              >
+                Alternatives
+                <svg
+                  className="nav-dropdown-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div className="nav-dropdown-menu">
+                {competitorsLoading ? (
+                  <div className="nav-dropdown-loading">Chargement...</div>
+                ) : competitors.length === 0 ? (
+                  <div className="nav-dropdown-empty">Aucune alternative</div>
+                ) : (
+                  <ul className="nav-dropdown-list">
+                    {competitors.map(comp => (
+                      <li key={comp.slug}>
+                        <Link
+                          to={`/alternative/${comp.slug}`}
+                          className="nav-dropdown-item"
+                        >
+                          {comp.competitor_name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+
             <Link
               to="/blog"
               className={`nav-link ${location.pathname.startsWith('/blog') ? 'nav-link-active' : ''}`}
@@ -125,6 +237,93 @@ export function Header() {
           >
             Catégories
           </Link>
+
+          {/* Mobile Accordion for Cas d'usage */}
+          <div className="mobile-nav-accordion">
+            <button
+              className={`mobile-nav-link mobile-nav-accordion-trigger ${location.pathname.startsWith('/meilleur-logiciel-pour') ? 'mobile-nav-link-active' : ''}`}
+              onClick={() => setUseCaseDropdownOpen(!useCaseDropdownOpen)}
+              aria-expanded={useCaseDropdownOpen}
+            >
+              Cas d'usage
+              <svg
+                className={`mobile-nav-accordion-chevron ${useCaseDropdownOpen ? 'open' : ''}`}
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div className={`mobile-nav-accordion-content ${useCaseDropdownOpen ? 'open' : ''}`}>
+              {useCasesLoading ? (
+                <div className="mobile-nav-loading">Chargement...</div>
+              ) : useCases.length === 0 ? (
+                <div className="mobile-nav-empty">Aucun cas d'usage</div>
+              ) : (
+                useCases.map(useCase => (
+                  <Link
+                    key={useCase.slug}
+                    to={`/meilleur-logiciel-pour/${useCase.slug}`}
+                    className="mobile-nav-sub-link"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {useCase.usecase_name}
+                  </Link>
+                ))
+              )}
+            </div>
+          </div>
+
+          {/* Mobile Accordion for Alternatives */}
+          <div className="mobile-nav-accordion">
+            <button
+              className={`mobile-nav-link mobile-nav-accordion-trigger ${location.pathname.startsWith('/alternative') ? 'mobile-nav-link-active' : ''}`}
+              onClick={() => setCompetitorDropdownOpen(!competitorDropdownOpen)}
+              aria-expanded={competitorDropdownOpen}
+            >
+              Alternatives
+              <svg
+                className={`mobile-nav-accordion-chevron ${competitorDropdownOpen ? 'open' : ''}`}
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div className={`mobile-nav-accordion-content ${competitorDropdownOpen ? 'open' : ''}`}>
+              {competitorsLoading ? (
+                <div className="mobile-nav-loading">Chargement...</div>
+              ) : competitors.length === 0 ? (
+                <div className="mobile-nav-empty">Aucune alternative</div>
+              ) : (
+                competitors.map(comp => (
+                  <Link
+                    key={comp.slug}
+                    to={`/alternative/${comp.slug}`}
+                    className="mobile-nav-sub-link"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {comp.competitor_name}
+                  </Link>
+                ))
+              )}
+            </div>
+          </div>
+
           <Link
             to="/blog"
             className={`mobile-nav-link ${location.pathname.startsWith('/blog') ? 'mobile-nav-link-active' : ''}`}
