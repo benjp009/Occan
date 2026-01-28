@@ -711,11 +711,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://logicielfrance.com/alternative/asana</loc>
-    <lastmod>2026-01-28</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://logicielfrance.com/alternative/hubspot</loc>
     <lastmod>2026-01-28</lastmod>
     <priority>0.7</priority>
@@ -731,17 +726,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/alternative/sage</loc>
+    <lastmod>2026-01-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/alternative/salesforce</loc>
     <lastmod>2026-01-28</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://logicielfrance.com/alternative/slack</loc>
-    <lastmod>2026-01-28</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://logicielfrance.com/alternative/trello</loc>
     <lastmod>2026-01-28</lastmod>
     <priority>0.7</priority>
   </url>
