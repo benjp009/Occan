@@ -51,22 +51,22 @@ export default function UseCase({ initialUseCase, initialCompanies }: UseCasePro
         <title>
           {useCase
             ? `Meilleur logiciel pour ${useCase.usecase_name} | Logiciel France`
-            : `Meilleur logiciel français | Logiciel France`
+            : `Meilleur logiciel francais | Logiciel France`
           }
         </title>
         <meta
           name="description"
           content={useCase
-            ? `Découvrez les meilleurs logiciels français pour ${useCase.usecase_name}. Solutions Made in France adaptées à vos besoins.`
-            : `Découvrez les meilleurs logiciels français pour vos besoins professionnels.`
+            ? `Decouvrez les meilleurs logiciels francais pour ${useCase.usecase_name}. Solutions Made in France adaptees a vos besoins.`
+            : `Decouvrez les meilleurs logiciels francais pour vos besoins professionnels.`
           }
         />
-        <meta name="keywords" content={`meilleur logiciel ${formattedName}, logiciel français, made in france, ${useCase?.categories || ''}`} />
+        <meta name="keywords" content={`meilleur logiciel ${formattedName}, logiciel francais, made in france, ${useCase?.categories || ''}`} />
 
         <meta property="og:title" content={`Meilleur logiciel pour ${formattedName}`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://logicielfrance.com/meilleur-logiciel-pour/${slug}`} />
-        <meta property="og:description" content={useCase ? `Meilleurs logiciels français pour ${useCase.usecase_name}` : 'Meilleurs logiciels français'} />
+        <meta property="og:description" content={useCase ? `Meilleurs logiciels francais pour ${useCase.usecase_name}` : 'Meilleurs logiciels francais'} />
         <meta property="og:site_name" content="Logiciel France" />
         <meta property="og:locale" content="fr_FR" />
 
@@ -76,7 +76,7 @@ export default function UseCase({ initialUseCase, initialCompanies }: UseCasePro
               "@context": "https://schema.org",
               "@type": "CollectionPage",
               "name": `Meilleurs logiciels pour ${useCase.usecase_name}`,
-              "description": `Découvrez les meilleurs logiciels français pour ${useCase.usecase_name}`,
+              "description": `Decouvrez les meilleurs logiciels francais pour ${useCase.usecase_name}`,
               "url": `https://logicielfrance.com/meilleur-logiciel-pour/${slug}`,
               "mainEntity": {
                 "@type": "ItemList",
@@ -116,7 +116,7 @@ export default function UseCase({ initialUseCase, initialCompanies }: UseCasePro
           <>
             <h1>Meilleur logiciel pour {useCase.usecase_name}</h1>
             <p className="category-description">
-              {useCase.description || `Découvrez les meilleurs logiciels français pour ${useCase.usecase_name}. Des solutions Made in France adaptées à vos besoins professionnels.`}
+              {useCase.description || `Decouvrez les meilleurs logiciels francais pour ${useCase.usecase_name}. Des solutions Made in France adaptees a vos besoins professionnels.`}
             </p>
           </>
         ) : (
@@ -134,7 +134,7 @@ export default function UseCase({ initialUseCase, initialCompanies }: UseCasePro
               </div>
             ))
           ) : filteredCompanies.length === 0 ? (
-            <p>Aucun logiciel français trouvé pour ce cas d'usage.</p>
+            <p>Aucun logiciel francais trouve pour ce cas d'usage.</p>
           ) : (
             filteredCompanies.map(company => (
               <div key={company.id} className="card-wrapper">

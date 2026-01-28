@@ -90,9 +90,13 @@ async function main() {
     console.log('⚠️  Répertoire icons non trouvé');
   }
 
-  // Skip blog images - they should keep their original format from Notion
-  // to match the references in the JSON files
-  console.log('\n⏭️  Répertoire posts/images ignoré (garder format original Notion)');
+  // Conversion des images de blog
+  if (fs.existsSync(POSTS_IMAGES_DIR)) {
+    console.log('\n📁 Traitement du répertoire posts/images...');
+    await convertImagesInDirectory(POSTS_IMAGES_DIR);
+  } else {
+    console.log('⚠️  Répertoire posts/images non trouvé');
+  }
 
   console.log('\n✨ Conversion terminée !');
 }

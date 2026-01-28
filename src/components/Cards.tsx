@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
-import { OptimizedImage, getLocalAssetPaths } from '../utils/imageUtils';
+import { OptimizedImage } from '../utils/imageUtils';
 import { slugify } from '../utils/slugify';
 import { sanitizeHTML } from '../utils/sanitize';
 
@@ -24,11 +24,10 @@ function highlightText(text: string, query?: string) {
 }
 
 export function Cards({ company, highlight, internalTo }: CardsProps) {
-  const description = company.description || '';
   const truncatedDescription =
-    description.length > 80
-      ? description.slice(0, 80).trimEnd() + '…'
-      : description;
+    company.description.length > 80
+      ? company.description.slice(0, 80).trimEnd() + '…'
+      : company.description;
 
   return (
     <div className="card">
@@ -39,7 +38,6 @@ export function Cards({ company, highlight, internalTo }: CardsProps) {
               src={company.logo}
               alt={`${company.name} logo`}
               className="company-logo-img"
-              fallbackSrcs={getLocalAssetPaths(company.name, 'logo')}
             />
           </div>
         )}

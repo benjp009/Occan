@@ -102,19 +102,12 @@ export default function Software({ initialCompany, initialSimilarCompanies }: So
         {company.meta_description ? (
           <meta name="description" content={company.meta_description.length > 160 ? `${company.meta_description.substring(0, 157)}...` : company.meta_description} />
         ) : (
-          <meta name="description" content={`Découvrez ${company.name}, logiciel français${firstCategory ? ` de ${firstCategory.toLowerCase()}` : ''}. Solution innovante Made in France, conforme RGPD.`} />
+          <meta name="description" content={`Découvrez ${company.name}, logiciel français${firstCategory ? ` de ${firstCategory.toLowerCase()}` : ''}. Solution innovante développée en France.`} />
         )}
         {company.keywords && (
           <meta name="keywords" content={company.keywords} />
         )}
-
-        {/* Canonical URL */}
-        <link rel="canonical" href={`https://logicielfrance.com/logiciel/${slugify(company.name)}`} />
-
-        {/* Language declarations */}
-        <link rel="alternate" hrefLang="fr" href={`https://logicielfrance.com/logiciel/${slugify(company.name)}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://logicielfrance.com/logiciel/${slugify(company.name)}`} />
-
+        
         {/* Open Graph tags for social media */}
         <meta property="og:title" content={`${company.name} - Logiciel français`} />
         <meta property="og:type" content="website" />
@@ -201,7 +194,12 @@ export default function Software({ initialCompany, initialSimilarCompanies }: So
               },
               ...(company.keywords && {
                 "keywords": company.keywords.split(',').map(k => k.trim())
-              })
+              }),
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "1"
+              }
             },
             {
               "@context": "https://schema.org",
@@ -226,36 +224,6 @@ export default function Software({ initialCompany, initialSimilarCompanies }: So
                   "item": `https://logicielfrance.com/logiciel/${slugify(company.name)}`
                 }
               ]
-            },
-            {
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": `Qu'est-ce que ${company.name} ?`,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": company.meta_description || company.description?.substring(0, 300) || `${company.name} est un logiciel français${firstCategory ? ` de ${firstCategory.toLowerCase()}` : ''}.`
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": `${company.name} est-il un logiciel français ?`,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": `Oui, ${company.name} est un logiciel développé en France${company.hq_city ? `, basé à ${company.hq_city}` : ''}. Il respecte les normes RGPD et garantit la souveraineté des données.`
-                  }
-                },
-                ...(firstCategory ? [{
-                  "@type": "Question",
-                  "name": `Quelles sont les alternatives françaises à ${company.name} ?`,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": `Découvrez d'autres logiciels français de ${firstCategory.toLowerCase()} sur Logiciel France. Nous référençons uniquement des solutions Made in France.`
-                  }
-                }] : [])
-              ]
             }
           ])}
         </script>
@@ -277,23 +245,18 @@ export default function Software({ initialCompany, initialSimilarCompanies }: So
         {similarCompanies.length > 0 && (
           <section className="similar-software-section">
             <div className="similar-software-header">
-              <h2 className="similar-software-title">
-                Logiciels similaires
-                {firstCategory && (
-                  <span className="similar-software-category"> en {firstCategory}</span>
-                )}
-              </h2>
-              {firstCategory && similarCompanies.length > 6 && (
+              <h2 className="similar-software-title">Logiciels similaires</h2>
+              {firstCategory && (
                 <Link
                   to={`/categorie/${slugify(firstCategory)}`}
                   className="secondary-button"
                 >
-                  Voir les {similarCompanies.length} logiciels
+                  Voir tous les logiciels
                 </Link>
               )}
             </div>
             <div className="similar-software-grid">
-              {similarCompanies.slice(0, 6).map(similar => (
+              {similarCompanies.map(similar => (
                 <Cards
                   key={similar.id}
                   company={similar}

@@ -40,7 +40,7 @@ const MetricsBanner: React.FC<MetricsBannerProps> = ({
 }) => {
   const animatedSoftwares = useCountUp(totalSoftwares, 1.5);
   const animatedCategories = useCountUp(totalCategories, 1.5);
-  // const animatedVisits = useCountUp(visitsPerMonth, 1.5); // Hidden for now
+  const animatedVisits = useCountUp(visitsPerMonth, 1.5);
   // parse percentage number, animate, then append "%"
   const pctNumber = parseInt(frenchPercentage, 10) || 100;
   const animatedPct = useCountUp(pctNumber, 1.5);
@@ -57,12 +57,10 @@ const MetricsBanner: React.FC<MetricsBannerProps> = ({
         <div className="metric-label">catégories</div>
       </div>
 
-      {/* Hidden for now
       <div className="metric">
         <div className="metric-value">{animatedVisits.toLocaleString()}</div>
         <div className="metric-label">visits / mois</div>
       </div>
-      */}
 
       <div className="metric">
         <div className="metric-value">{animatedPct}%</div>

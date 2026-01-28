@@ -10,9 +10,7 @@ export function Footer() {
     { label: 'Blog', path: '/blog' },
     { label: 'Contact', path: '/contact' },
     { label: 'Toutes les categories', path: '/categorie' },
-    { label: 'Tous les logiciels', path: '/tous-les-logiciels' },
-    { label: "Tous les cas d'usage", path: '/cas-d-usage' },
-    { label: 'Toutes les alternatives', path: '/alternatives' }
+    { label: 'Tous les logiciels', path: '/tous-les-logiciels' }
   ];
   const legal = [
     { label: 'Mentions legales', path: '/mentions-legales' },

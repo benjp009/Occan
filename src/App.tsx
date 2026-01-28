@@ -19,8 +19,6 @@ import NotFound from './pages/NotFound';
 import Refer from './pages/Refer';
 import Alternative from './pages/Alternative';
 import UseCase from './pages/UseCase';
-import AllUseCases from './pages/AllUseCases';
-import AllAlternatives from './pages/AllAlternatives';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -98,8 +96,6 @@ export default function App({ location, initialData }: AppProps) {
           element={<ConditionsUtilisation />}
         />
         {/* Programmatic SEO pages */}
-        <Route path="/cas-d-usage" element={<AllUseCases initialUseCases={initialData?.useCases} />} />
-        <Route path="/alternatives" element={<AllAlternatives initialCompetitors={initialData?.competitors} />} />
         <Route
           path="/alternative/:slug"
           element={

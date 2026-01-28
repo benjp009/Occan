@@ -1,4 +1,8 @@
 import { BlogPost, NotionBlock } from '../types';
+import * as strapiApi from './strapi';
+
+// Feature flag: set to true to use Strapi CMS instead of Notion
+const USE_STRAPI = process.env.REACT_APP_USE_STRAPI === 'true';
 
 const NOTION_API_URL = 'https://api.notion.com/v1';
 const NOTION_VERSION = '2022-06-28';
@@ -263,8 +267,18 @@ export async function getBlogPostBySlugStatic(slug: string): Promise<BlogPost | 
   }
 }
 
-// Fonctions principales - utilisent les endpoints serveur (JSON statique via Notion)
+// Fonctions principales - utilisent Strapi si activé, sinon les endpoints serveur
 // Les clés API Notion ne sont jamais exposées au client
-export const getBlogPostsMain = getBlogPostsStatic;
+export const getBlogPostsMain = async (): Promise<BlogPost[]> => {
+  if (USE_STRAPI) {
+    return strapiApi.getBlogPosts();
+  }
+  return getBlogPostsStatic();
+};
 
-export const getBlogPostBySlugMain = getBlogPostBySlugStatic;
+export const getBlogPostBySlugMain = async (slug: string): Promise<BlogPost | null> => {
+  if (USE_STRAPI) {
+    return strapiApi.getBlogPostBySlug(slug);
+  }
+  return getBlogPostBySlugStatic(slug);
+};
