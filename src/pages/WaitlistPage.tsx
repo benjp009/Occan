@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-
-import '../WaitlistPage.css';
 import logo from '../Logo-long.svg';
 
 const SCRIPT_URL =

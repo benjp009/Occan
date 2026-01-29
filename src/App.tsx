@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { StaticRouter } from 'react-router-dom/server';
 import Home from './pages/Home';
@@ -9,7 +10,7 @@ import AllSoftwares from './pages/AllSoftwares';
 import Category from './pages/Category';
 import SearchResults from './pages/SearchResults';
 import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
+import BlogPostPage from './pages/BlogPost';
 import MentionsLegales from './pages/MentionsLegales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import ConditionsUtilisation from './pages/ConditionsUtilisation';
@@ -21,22 +22,41 @@ import Alternative from './pages/Alternative';
 import UseCase from './pages/UseCase';
 import AllUseCases from './pages/AllUseCases';
 import AllAlternatives from './pages/AllAlternatives';
+import Glossary from './pages/Glossary';
+import AllGlossary from './pages/AllGlossary';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
+import { CompanyRow, CategoryRow, BlogPost as BlogPostData, UseCaseRow, CompetitorRow, GlossaryRow } from './types';
 
-
-
+interface InitialData {
+  companies?: CompanyRow[] | null;
+  categories?: CategoryRow[] | null;
+  category?: CategoryRow | null;
+  company?: CompanyRow | null;
+  similarCompanies?: CompanyRow[];
+  blogPosts?: BlogPostData[];
+  blogPost?: BlogPostData | null;
+  relatedPosts?: BlogPostData[] | null;
+  useCases?: UseCaseRow[] | null;
+  useCase?: UseCaseRow | null;
+  competitors?: CompetitorRow[] | null;
+  competitor?: CompetitorRow | null;
+  alternatives?: CompanyRow[] | null;
+  glossary?: GlossaryRow[] | null;
+  glossaryEntry?: GlossaryRow | null;
+  relatedTerms?: GlossaryRow[] | null;
+}
 
 interface AppProps {
   location?: string;
-  initialData?: any;
+  initialData?: InitialData;
 }
 
 export default function App({ location, initialData }: AppProps) {
-
+   // Router type assertion needed since StaticRouter and BrowserRouter have different prop signatures
+   // eslint-disable-next-line @typescript-eslint/no-explicit-any
    const Router: any = location ? StaticRouter : BrowserRouter;
    const routerProps = location ? { location } : {};
-
 
   return (
 
@@ -85,7 +105,7 @@ export default function App({ location, initialData }: AppProps) {
         <Route path="/recherche" element={<SearchResults />} />
         <Route path="/refer/:slug" element={<Refer />} />
         <Route path="/blog" element={<Blog initialPosts={initialData?.blogPosts} />} />
-        <Route path="/blog/:slug" element={<BlogPost initialBlogPost={initialData?.blogPost} />} />
+        <Route path="/blog/:slug" element={<BlogPostPage initialBlogPost={initialData?.blogPost} />} />
         <Route path="/a-propos" element={<APropos />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
@@ -115,6 +135,18 @@ export default function App({ location, initialData }: AppProps) {
             <UseCase
               initialUseCase={initialData?.useCase}
               initialCompanies={initialData?.companies}
+            />
+          }
+        />
+        {/* Glossary pages */}
+        <Route path="/glossaire" element={<AllGlossary initialGlossary={initialData?.glossary} />} />
+        <Route
+          path="/glossaire/:slug"
+          element={
+            <Glossary
+              initialGlossaryEntry={initialData?.glossaryEntry}
+              initialCompanies={initialData?.companies}
+              initialRelatedTerms={initialData?.relatedTerms}
             />
           }
         />

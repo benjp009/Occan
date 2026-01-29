@@ -22,6 +22,7 @@ const COMPANIES_CSV =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?output=csv';
 const COMPETITORS_CSV = process.env.REACT_APP_COMPETITORS_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1924297465&single=true&output=csv';
 const USECASES_CSV = process.env.REACT_APP_USECASES_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=620023561&single=true&output=csv';
+const GLOSSARY_CSV = process.env.REACT_APP_GLOSSARY_CSV_URL || 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1020178758&single=true&output=csv';
 const BASE_URL = 'https://logicielfrance.com';
 
 function slugify(name) {
@@ -97,12 +98,29 @@ async function fetchUseCases() {
   }
 }
 
+async function fetchGlossary() {
+  if (!GLOSSARY_CSV) {
+    console.log('No REACT_APP_GLOSSARY_CSV_URL configured, skipping glossary');
+    return [];
+  }
+  try {
+    const response = await fetch(GLOSSARY_CSV);
+    const text = await response.text();
+    const { data } = Papa.parse(text, { header: true });
+    return data.filter(r => r.term_name && r.slug && r.status === 'published');
+  } catch (err) {
+    console.error('Failed to fetch glossary:', err.message);
+    return [];
+  }
+}
+
 async function generate() {
   let categories = [];
   let companies = [];
   let blogPosts = [];
   let competitors = [];
   let useCases = [];
+  let glossary = [];
 
   try {
     categories = await fetchCategories();
@@ -134,11 +152,18 @@ async function generate() {
     console.error('Failed to fetch use cases:', err.message);
   }
 
+  try {
+    glossary = await fetchGlossary();
+  } catch (err) {
+    console.error('Failed to fetch glossary:', err.message);
+  }
+
   const staticUrls = [
     { loc: `${BASE_URL}/`, priority: '1.0', lastmod: TODAY },
     { loc: `${BASE_URL}/categorie`, priority: '0.8', lastmod: TODAY },
     { loc: `${BASE_URL}/blog`, priority: '0.8', lastmod: TODAY },
     { loc: `${BASE_URL}/tous-les-logiciels`, priority: '0.8', lastmod: TODAY },
+    { loc: `${BASE_URL}/glossaire`, priority: '0.8', lastmod: TODAY },
   ];
 
   const categoryUrls = categories
@@ -186,7 +211,16 @@ async function generate() {
     }))
     .sort((a, b) => a.loc.localeCompare(b.loc));
 
-  const urls = staticUrls.concat(categoryUrls, softwareUrls, blogUrls, alternativeUrls, useCaseUrls);
+  const glossaryUrls = glossary
+    .filter(g => g.slug && typeof g.slug === 'string')
+    .map(g => ({
+      loc: `${BASE_URL}/glossaire/${g.slug}`,
+      priority: '0.8',
+      lastmod: TODAY,
+    }))
+    .sort((a, b) => a.loc.localeCompare(b.loc));
+
+  const urls = staticUrls.concat(categoryUrls, softwareUrls, blogUrls, alternativeUrls, useCaseUrls, glossaryUrls);
 
 
   const lines = [

@@ -1452,7 +1452,73 @@ img {
 .legal-section {
   align-self: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  margin-bottom: var(--space-xl);
+}
+
+.legal-section h2 {
+  color: var(--color-french-navy);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.legal-section h3 {
+  color: var(--color-text-dark);
+  font-size: 1.1rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.legal-section ul {
+  margin: var(--space-md) 0;
+  padding-left: var(--space-xl);
+}
+
+.legal-section li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.legal-intro {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2xl);
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+  font-size: 0.95rem;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.legal-table th {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.legal-table tr:nth-child(even) {
+  background-color: var(--color-bg-light);
+}
+
+.legal-update {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 /* Lists inside columns */
@@ -4613,7 +4679,7 @@ body {
   border-radius: var(--radius-lg);
 }
 
-/* ─────────────────────────────────────────────────────────────────────
+/* ────────────────────────────────────────��────────────────────────────
    Trust Signals Section
    ───────────────────────────────────────────────────────────────────── */
 .software-trust {
@@ -4839,4 +4905,469 @@ body {
     border-radius: var(--radius-md);
     justify-content: center;
   }
+}
+
+/* ========================================
+   Waitlist Page (Legacy)
+   ======================================== */
+
+.waitlist-page .logo-long {
+  width: 30%;
+  height: auto;
+}
+
+.waitlist-page .left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 2vw;
+  padding-right: 5vw;
+  height: 100vh;
+}
+
+.waitlist-page .right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.waitlist-page .email-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: stretch;
+}
+
+.waitlist-page .email-input {
+  width: 40%;
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 10px 0 0 10px;
+  border-style: none;
+  margin: 0%;
+}
+
+.waitlist-page .submit-button {
+  margin-left: 0.5rem;
+  padding: 12px;
+  font-size: 12px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  border-style: none;
+  margin: 0%;
+}
+
+.waitlist-page .image-placeholder {
+  width: 80%;
+  height: 40vh;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waitlist-page .preview-image {
+  width: 120%;
+  height: auto;
+}
+
+/* ========================================
+   GLOSSARY PAGES
+   ======================================== */
+
+/* All Glossary Index Page */
+.container-all-glossary {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 1rem;
+}
+
+.container-all-glossary .page-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.glossary-search {
+  margin-bottom: 2rem;
+}
+
+.glossary-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glossary-search-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 0, 145, 0.1);
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .glossary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .glossary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.glossary-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glossary-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 145, 0.1);
+}
+
+.glossary-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: #1e293b;
+}
+
+.glossary-card__desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+}
+
+.glossary-card__link {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.glossary-empty {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+}
+
+/* Individual Glossary Page */
+.glossary-page {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 1rem;
+}
+
+.glossary-hero {
+  margin-bottom: 2rem;
+}
+
+.glossary-hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.glossary-quick-answer {
+  background: var(--color-primary-light);
+  border-left: 4px solid var(--color-primary);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.definition-highlight {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1e293b;
+  margin: 0;
+}
+
+.definition-highlight strong {
+  color: var(--color-primary);
+}
+
+/* Table of Contents */
+.glossary-toc {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.glossary-toc h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+}
+
+.glossary-toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.glossary-toc li {
+  margin-bottom: 0.5rem;
+}
+
+.glossary-toc a {
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.glossary-toc a:hover {
+  color: var(--color-primary);
+}
+
+/* Main Content */
+.glossary-content {
+  margin-bottom: 3rem;
+}
+
+.glossary-content section {
+  margin-bottom: 2.5rem;
+}
+
+.glossary-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+}
+
+.glossary-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #475569;
+  margin: 0 0 1rem 0;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.advantages-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Examples Section */
+.glossary-examples {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.glossary-examples h2 {
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+.glossary-examples > p {
+  margin-bottom: 1.5rem;
+}
+
+.glossary-examples .selection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .glossary-examples .selection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .glossary-examples .selection-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.glossary-cta {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #000070;
+}
+
+/* FAQ Section */
+.glossary-faq {
+  margin-bottom: 2.5rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  background: #fff;
+  transition: background 0.2s ease;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "+";
+  display: inline-block;
+  width: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.faq-item[open] summary::before {
+  content: "−";
+}
+
+.faq-item summary:hover {
+  background: #f8fafc;
+}
+
+.faq-item p {
+  padding: 1rem 1.25rem;
+  margin: 0;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* Related Terms Sidebar */
+.glossary-related {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.glossary-related h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 1rem 0;
+}
+
+.glossary-related ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.glossary-related li a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.glossary-related li a:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* Partner Badge for Cards */
+.card--partner {
+  position: relative;
+  border-color: var(--color-primary);
+}
+
+.card-badge {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }

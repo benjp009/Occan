@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { CompanyRow, CategoryRow, CompetitorRow, UseCaseRow } from '../types';
+import { CompanyRow, CategoryRow, CompetitorRow, UseCaseRow, GlossaryRow } from '../types';
 
 // In-memory cache for API responses
 interface CacheEntry<T> {
@@ -161,6 +161,28 @@ export async function fetchUseCases(): Promise<UseCaseRow[]> {
     return useCases;
   } catch (error) {
     console.error('Failed to fetch use cases:', error);
+    return [];
+  }
+}
+
+// Glossary CSV (for definition/glossary pages)
+const GLOSSARY_CSV = process.env.REACT_APP_GLOSSARY_CSV_URL ||
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=1020178758&single=true&output=csv';
+
+export async function fetchGlossary(): Promise<GlossaryRow[]> {
+  const cached = getCached<GlossaryRow[]>('glossary');
+  if (cached) return cached;
+
+  try {
+    const response = await fetch(GLOSSARY_CSV);
+    const csv = await response.text();
+    const { data } = Papa.parse<GlossaryRow>(csv, { header: true });
+    const glossary = (data as GlossaryRow[]).filter(row => row.term_name && row.slug && row.status === 'published');
+
+    setCache('glossary', glossary);
+    return glossary;
+  } catch (error) {
+    console.error('Failed to fetch glossary:', error);
     return [];
   }
 }
