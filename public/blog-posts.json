@@ -23807,8 +23807,8 @@
   },
   {
     "id": "2924721e-1219-8014-b7ec-f5298e85237d",
-    "title": "🕵️‍♂️ J'ai dit adieu aux liens brisés : Mon aventure avec LinkaVist",
-    "slug": "jai-dit-adieu-aux-liens-brises-mon-aventure-avec-linkavist",
+    "title": "J'ai dit adieu aux liens brisés : Mon aventure avec Linkavista",
+    "slug": "jai-dit-adieu-aux-liens-brises-mon-aventure-avec-linkavista",
     "excerpt": "Découvrez mon expérience personnelle avec LinkaVista, l'outil indispensable pour traquer les liens brisés, identifier les opportunités de netlinking et booster votre SEO. Fini le temps perdu !",
     "content": [
       {
@@ -24108,7 +24108,7 @@
               "text": {
                 "content": "Logicielfrance.com",
                 "link": {
-                  "url": "http://logicielfrance.com/"
+                  "url": "https://logicielfrance.com/"
                 }
               },
               "annotations": {
@@ -24120,7 +24120,7 @@
                 "color": "default"
               },
               "plain_text": "Logicielfrance.com",
-              "href": "http://logicielfrance.com/"
+              "href": "https://logicielfrance.com/"
             },
             {
               "type": "text",
@@ -24876,6 +24876,7 @@
       }
     ],
     "publishedAt": "2025-10-17",
+    "updatedAt": "2026-01-29",
     "author": "Équipe Logiciel France",
     "tags": [],
     "coverImage": "/posts/images/cover-2924721e-1219-8014-b7ec-f5298e85237d.jpg",

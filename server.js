@@ -283,6 +283,8 @@ app.get('*', async (req, res) => {
     const useCaseMatch = req.url.match(/^\/meilleur-logiciel-pour\/([^/?#]+)/);
     const glossaryMatch = req.url.match(/^\/glossaire\/([^/?#]+)/);
     const allGlossaryMatch = req.url === '/glossaire' || req.url.startsWith('/glossaire?');
+    const allUseCasesMatch = req.url === '/cas-d-usage' || req.url.startsWith('/cas-d-usage?');
+    const allAlternativesMatch = req.url === '/alternatives' || req.url.startsWith('/alternatives?');
     if (softwareMatch) {
       try {
         const companies = await fetchCompanies();
@@ -460,6 +462,20 @@ app.get('*', async (req, res) => {
         initialData = { glossary };
       } catch (err) {
         console.error('Failed to fetch glossary list', err);
+      }
+    } else if (allUseCasesMatch) {
+      try {
+        const useCases = await fetchUseCases();
+        initialData = { useCases };
+      } catch (err) {
+        console.error('Failed to fetch use cases list', err);
+      }
+    } else if (allAlternativesMatch) {
+      try {
+        const competitors = await fetchCompetitors();
+        initialData = { competitors };
+      } catch (err) {
+        console.error('Failed to fetch competitors list', err);
       }
     }
 
