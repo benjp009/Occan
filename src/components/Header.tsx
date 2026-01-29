@@ -1,5 +1,5 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { fetchCompanies, fetchUseCases, fetchCompetitors } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { slugify } from '../utils/slugify';
@@ -16,8 +16,32 @@ export function Header() {
   const [competitors, setCompetitors] = useState<CompetitorRow[]>([]);
   const [competitorsLoading, setCompetitorsLoading] = useState(true);
   const [competitorDropdownOpen, setCompetitorDropdownOpen] = useState(false);
+  const [desktopUseCaseOpen, setDesktopUseCaseOpen] = useState(false);
+  const [desktopCompetitorOpen, setDesktopCompetitorOpen] = useState(false);
+  const useCaseDropdownRef = useRef<HTMLDivElement>(null);
+  const competitorDropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const closeAllDesktopDropdowns = useCallback(() => {
+    setDesktopUseCaseOpen(false);
+    setDesktopCompetitorOpen(false);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      if (
+        useCaseDropdownRef.current && !useCaseDropdownRef.current.contains(target) &&
+        competitorDropdownRef.current && !competitorDropdownRef.current.contains(target)
+      ) {
+        closeAllDesktopDropdowns();
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [closeAllDesktopDropdowns]);
 
   const handleSearchIconClick = () => {
     setMobileSearchOpen(true);
@@ -109,10 +133,19 @@ export function Header() {
             </Link>
 
             {/* Dropdown for Cas d'usage */}
-            <div className="nav-dropdown">
+            <div
+              className={`nav-dropdown ${desktopUseCaseOpen ? 'is-open' : ''}`}
+              ref={useCaseDropdownRef}
+            >
               <button
                 className={`nav-link nav-dropdown-trigger ${location.pathname.startsWith('/meilleur-logiciel-pour') ? 'nav-link-active' : ''}`}
                 aria-haspopup="true"
+                aria-expanded={desktopUseCaseOpen}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setDesktopCompetitorOpen(false);
+                  setDesktopUseCaseOpen(!desktopUseCaseOpen);
+                }}
               >
                 Cas d'usage
                 <svg
@@ -153,10 +186,19 @@ export function Header() {
             </div>
 
             {/* Dropdown for Alternatives */}
-            <div className="nav-dropdown">
+            <div
+              className={`nav-dropdown ${desktopCompetitorOpen ? 'is-open' : ''}`}
+              ref={competitorDropdownRef}
+            >
               <button
                 className={`nav-link nav-dropdown-trigger ${location.pathname.startsWith('/alternative') ? 'nav-link-active' : ''}`}
                 aria-haspopup="true"
+                aria-expanded={desktopCompetitorOpen}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setDesktopUseCaseOpen(false);
+                  setDesktopCompetitorOpen(!desktopCompetitorOpen);
+                }}
               >
                 Alternatives
                 <svg

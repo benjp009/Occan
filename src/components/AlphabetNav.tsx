@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CompanyRow } from '../types';
 
 interface AlphabetNavProps {
@@ -11,17 +11,34 @@ export default function AlphabetNav({ companies }: AlphabetNavProps) {
   ).sort();
 
   const [start, setStart] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(10);
 
-  const visible = letters.slice(start, start + 10);
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 480) {
+        setVisibleCount(6);
+      } else if (window.innerWidth < 768) {
+        setVisibleCount(8);
+      } else {
+        setVisibleCount(10);
+      }
+    };
 
-  const showArrows = letters.length > 10;
+    updateVisibleCount();
+    window.addEventListener('resize', updateVisibleCount);
+    return () => window.removeEventListener('resize', updateVisibleCount);
+  }, []);
+
+  const visible = letters.slice(start, start + visibleCount);
+
+  const showArrows = letters.length > visibleCount;
 
   return (
     <div className="alphabet-nav">
       {showArrows && (
         <button
           className="alphabet-arrow"
-          onClick={() => setStart(Math.max(0, start - 10))}
+          onClick={() => setStart(Math.max(0, start - visibleCount))}
           disabled={start === 0}
         >
           {'<'}
@@ -37,10 +54,10 @@ export default function AlphabetNav({ companies }: AlphabetNavProps) {
           className="alphabet-arrow"
           onClick={() =>
             setStart(
-              Math.min(start + 10, Math.max(letters.length - 10, 0))
+              Math.min(start + visibleCount, Math.max(letters.length - visibleCount, 0))
             )
           }
-          disabled={start + 10 >= letters.length}
+          disabled={start + visibleCount >= letters.length}
         >
           {'>'}
         </button>
