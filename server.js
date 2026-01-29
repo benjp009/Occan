@@ -443,7 +443,13 @@ app.get('*', async (req, res) => {
               return 0;
             });
           }
-          initialData = { glossaryEntry, companies: filteredCompanies };
+          // Compute related terms for SSR
+          let relatedTerms = [];
+          if (glossaryEntry.related_terms) {
+            const relatedSlugs = glossaryEntry.related_terms.split(',').map(s => s.trim());
+            relatedTerms = glossaryEntries.filter(e => relatedSlugs.includes(e.slug));
+          }
+          initialData = { glossaryEntry, companies: filteredCompanies, relatedTerms };
         }
       } catch (err) {
         console.error('Failed to fetch glossary data', err);

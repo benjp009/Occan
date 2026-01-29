@@ -13,13 +13,14 @@ import Skeleton from 'react-loading-skeleton';
 interface GlossaryProps {
   initialGlossaryEntry?: GlossaryRow | null;
   initialCompanies?: CompanyRow[] | null;
+  initialRelatedTerms?: GlossaryRow[] | null;
 }
 
-export default function Glossary({ initialGlossaryEntry, initialCompanies }: GlossaryProps) {
+export default function Glossary({ initialGlossaryEntry, initialCompanies, initialRelatedTerms }: GlossaryProps) {
   const { slug } = useParams<{ slug: string }>();
   const [glossaryEntry, setGlossaryEntry] = useState<GlossaryRow | null>(initialGlossaryEntry ?? null);
   const [relatedCompanies, setRelatedCompanies] = useState<CompanyRow[] | null>(initialCompanies ?? null);
-  const [relatedTerms, setRelatedTerms] = useState<GlossaryRow[]>([]);
+  const [relatedTerms, setRelatedTerms] = useState<GlossaryRow[]>(initialRelatedTerms ?? []);
 
   useEffect(() => {
     if (!initialGlossaryEntry) {
@@ -33,6 +34,13 @@ export default function Glossary({ initialGlossaryEntry, initialCompanies }: Glo
           const related = entries.filter(e => relatedSlugs.includes(e.slug));
           setRelatedTerms(related);
         }
+      });
+    } else if (!initialRelatedTerms && initialGlossaryEntry.related_terms) {
+      // SSR case: entry provided but not related terms - fetch them
+      fetchGlossary().then(entries => {
+        const relatedSlugs = initialGlossaryEntry.related_terms.split(',').map(s => s.trim());
+        const related = entries.filter(e => relatedSlugs.includes(e.slug));
+        setRelatedTerms(related);
       });
     }
     if (!initialCompanies) {
@@ -55,7 +63,7 @@ export default function Glossary({ initialGlossaryEntry, initialCompanies }: Glo
         }
       });
     }
-  }, [slug, initialGlossaryEntry, initialCompanies]);
+  }, [slug, initialGlossaryEntry, initialCompanies, initialRelatedTerms]);
 
   const termName = glossaryEntry?.term_name || slug?.replace(/-/g, ' ') || '';
   const advantages = glossaryEntry?.advantages ? glossaryEntry.advantages.split('|').map(a => a.trim()) : [];
@@ -90,6 +98,11 @@ export default function Glossary({ initialGlossaryEntry, initialCompanies }: Glo
         <meta property="og:description" content={glossaryEntry?.meta_description || `Decouvrez ce qu'est ${termName}`} />
         <meta property="og:site_name" content="Logiciel France" />
         <meta property="og:locale" content="fr_FR" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href={`https://logicielfrance.com/glossaire/${slug}`} />
+        <link rel="alternate" hrefLang="fr" href={`https://logicielfrance.com/glossaire/${slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://logicielfrance.com/glossaire/${slug}`} />
 
         {/* DefinedTerm Schema */}
         {glossaryEntry && (

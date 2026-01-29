@@ -44,6 +44,7 @@ interface InitialData {
   alternatives?: CompanyRow[] | null;
   glossary?: GlossaryRow[] | null;
   glossaryEntry?: GlossaryRow | null;
+  relatedTerms?: GlossaryRow[] | null;
 }
 
 interface AppProps {
@@ -145,6 +146,7 @@ export default function App({ location, initialData }: AppProps) {
             <Glossary
               initialGlossaryEntry={initialData?.glossaryEntry}
               initialCompanies={initialData?.companies}
+              initialRelatedTerms={initialData?.relatedTerms}
             />
           }
         />

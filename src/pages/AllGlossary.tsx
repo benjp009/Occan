@@ -45,6 +45,11 @@ export default function AllGlossary({ initialGlossary }: AllGlossaryProps) {
         <meta property="og:site_name" content="Logiciel France" />
         <meta property="og:locale" content="fr_FR" />
 
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://logicielfrance.com/glossaire" />
+        <link rel="alternate" hrefLang="fr" href="https://logicielfrance.com/glossaire" />
+        <link rel="alternate" hrefLang="x-default" href="https://logicielfrance.com/glossaire" />
+
         {/* DefinedTermSet Schema */}
         {glossary && (
           <script type="application/ld+json">
