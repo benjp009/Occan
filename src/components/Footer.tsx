@@ -4,7 +4,7 @@ import { slugify } from '../utils/slugify';
 import React from 'react';
 
 export function Footer() {
-  const categories = ['CRM', 'Marketing', 'Comptabilite', 'RH', 'Email', 'IA', 'Design', 'Gestion'];
+  const categories = ['API', 'Marketing', 'Comptabilite', 'RH', 'Email', 'IA', 'Prospection', 'SEO'];
   const resources = [
     { label: 'A propos', path: '/a-propos' },
     { label: 'Blog', path: '/blog' },
