@@ -1,0 +1,1089 @@
+{
+  "id": "2924721e-1219-8014-b7ec-f5298e85237d",
+  "title": "J'ai dit adieu aux liens brisés : Mon aventure avec Linkavista",
+  "slug": "jai-dit-adieu-aux-liens-brises-mon-aventure-avec-linkavista",
+  "excerpt": "Découvrez mon expérience personnelle avec LinkaVista, l'outil indispensable pour traquer les liens brisés, identifier les opportunités de netlinking et booster votre SEO. Fini le temps perdu !",
+  "content": [
+    {
+      "id": "2924721e-1219-8052-91fe-edf1a252c69d",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Le Problème qui me rongeait : Quand le SEO devient un cauchemar",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Le Problème qui me rongeait : Quand le SEO devient un cauchemar",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8032-8548-cac40df40f17",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Il y a quelques mois, ma mission de responsable contenu et SEO prenait des allures de cauchemar. Malgré des heures passées à produire du contenu de qualité, mes performances stagnaient. Le diagnostic ? Des ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Il y a quelques mois, ma mission de responsable contenu et SEO prenait des allures de cauchemar. Malgré des heures passées à produire du contenu de qualité, mes performances stagnaient. Le diagnostic ? Des ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "liens brisés",
+              "link": null
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "liens brisés",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " qui pénalisaient l'expérience utilisateur et mon référencement, et une prospection de netlinking aussi efficace qu'une bouteille à la mer.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " qui pénalisaient l'expérience utilisateur et mon référencement, et une prospection de netlinking aussi efficace qu'une bouteille à la mer.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-802b-8571-c6fa30c327e4",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Je passais mes journées à vérifier manuellement des listes interminables, à envoyer des emails de prospection qui restaient sans réponse, et à rater des opportunités en or. Mon site perdait de sa crédibilité, et moi, je perdais mon temps. J'avais besoin d'un ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Je passais mes journées à vérifier manuellement des listes interminables, à envoyer des emails de prospection qui restaient sans réponse, et à rater des opportunités en or. Mon site perdait de sa crédibilité, et moi, je perdais mon temps. J'avais besoin d'un ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "super-héros",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "super-héros",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " numérique.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " numérique.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80b6-8e41-cd7453aedaca",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La Découverte : Un nom qui sonne comme une promesse",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La Découverte : Un nom qui sonne comme une promesse",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80a2-923c-f1d25c45b1ae",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "C'est lors d'un webinaire sur les techniques de ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "C'est lors d'un webinaire sur les techniques de ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "link building",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "link building",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " avancées que j'ai entendu parler pour la première fois de ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " avancées que j'ai entendu parler pour la première fois de ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ". Le nom m'a intrigué : une \"vista\" sur les \"links\". La promesse était simple : simplifier l'analyse des liens et la prospection. J'étais sceptique, mais désespéré, j'ai décidé de creuser un peu.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ". Le nom m'a intrigué : une \"vista\" sur les \"links\". La promesse était simple : simplifier l'analyse des liens et la prospection. J'étais sceptique, mais désespéré, j'ai décidé de creuser un peu.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80d5-879d-faca5920cb64",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "En explorant le site de ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "En explorant le site de ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Logicielfrance.com",
+              "link": {
+                "url": "https://logicielfrance.com/"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Logicielfrance.com",
+            "href": "https://logicielfrance.com/"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " (pour d'autres pépites, vous pouvez consulter notre section ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " (pour d'autres pépites, vous pouvez consulter notre section ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "Logiciels de Marketing Digital",
+              "link": {
+                "url": "https://logicielfrance.com/categorie/marketing-digital"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Logiciels de Marketing Digital",
+            "href": "https://logicielfrance.com/categorie/marketing-digital"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "), les avis sur ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "), les avis sur ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " étaient unanimement positifs. Il fallait que j'essaie.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " étaient unanimement positifs. Il fallait que j'essaie.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80f0-a215-da5ed5076291",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "L'Essai : De la peur à l'illumination",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "L'Essai : De la peur à l'illumination",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-804c-b9e5-cf9a4228f94b",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Téléchargement, installation, et c'est parti. L'interface de ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Téléchargement, installation, et c'est parti. L'interface de ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est étonnamment claire.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est étonnamment claire.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-801a-8a76-e99593f6b3d2",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "1. La Traque des Liens Brisé (Broken Link Building)",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "1. La Traque des Liens Brisé (Broken Link Building)",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80a0-bfa9-f456c0b0a900",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "J'ai commencé par l'audit. En quelques minutes, ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "J'ai commencé par l'audit. En quelques minutes, ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " a scanné mon site et ses concurrents, crachant une liste précise des URLs et des ancres qui pointaient vers des erreurs 404. J'ai pu contacter les webmasters avec une proposition de remplacement pertinente pour mon contenu. Le taux de réponse a explosé ! (Pour gérer ces contacts, un bon ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " a scanné mon site et ses concurrents, crachant une liste précise des URLs et des ancres qui pointaient vers des erreurs 404. J'ai pu contacter les webmasters avec une proposition de remplacement pertinente pour mon contenu. Le taux de réponse a explosé ! (Pour gérer ces contacts, un bon ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "logiciel de CRM",
+              "link": {
+                "url": "https://logicielfrance.com/categorie/crm"
+              }
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "logiciel de CRM",
+            "href": "https://logicielfrance.com/categorie/crm"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " peut être votre allié).",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " peut être votre allié).",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80d8-b3ba-cb0067fdaf0b",
+      "type": "heading_3",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "2. L'Analyse des Opportunités",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "2. L'Analyse des Opportunités",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80d5-994e-dc5d2cfe70d5",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Là où l'outil est devenu magique, c'est dans l'analyse de l'environnement concurrentiel. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Là où l'outil est devenu magique, c'est dans l'analyse de l'environnement concurrentiel. ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " m'a permis d'identifier les sites qui liaient à mes concurrents, mais pas encore à moi, en croisant des métriques de qualité (DA, TF, etc.). C'était comme avoir une carte au trésor du netlinking.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " m'a permis d'identifier les sites qui liaient à mes concurrents, mais pas encore à moi, en croisant des métriques de qualité (DA, TF, etc.). C'était comme avoir une carte au trésor du netlinking.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-803d-bd8d-e917ffedf52c",
+      "type": "heading_2",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "La Résolution : Mon SEO est sauvé !",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "La Résolution : Mon SEO est sauvé !",
+            "href": null
+          }
+        ],
+        "is_toggleable": false,
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8075-acaa-ced50465d553",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Aujourd'hui, ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Aujourd'hui, ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est mon copilote indispensable.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est mon copilote indispensable.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8036-a587-d857c17d4c94",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon taux de liens brisés est proche de zéro.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon taux de liens brisés est proche de zéro.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80bf-afa9-fb5a4402107d",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ma prospection de netlinking est ciblée, professionnelle et ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ma prospection de netlinking est ciblée, professionnelle et ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "scalable",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "scalable",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": ".",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": ".",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8053-bbc5-f85eaf91a58a",
+      "type": "bulleted_list_item",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mes métriques SEO (trafic, autorité de domaine) sont en constante progression.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mes métriques SEO (trafic, autorité de domaine) sont en constante progression.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-80f1-9cbd-f9c5dcf4c441",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Si vous êtes dans le même pétrin que moi, si vous gaspillez votre temps en tâches répétitives et si vous voulez vraiment booster votre SEO par un netlinking intelligent et propre, ne cherchez plus. ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Si vous êtes dans le même pétrin que moi, si vous gaspillez votre temps en tâches répétitives et si vous voulez vraiment booster votre SEO par un netlinking intelligent et propre, ne cherchez plus. ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " est l'outil qu'il vous faut.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " est l'outil qu'il vous faut.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8069-a71f-c6aa2b3e2eec",
+      "type": "quote",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Mon conseil d'expert : Ne vous contentez pas de l'essayer. Intégrez LinkaVista à votre routine hebdomadaire. C'est l'investissement le plus rentable que j'ai fait cette année. Vous trouverez de nombreux autres outils puissants dans notre Sélection du mois.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Mon conseil d'expert : Ne vous contentez pas de l'essayer. Intégrez LinkaVista à votre routine hebdomadaire. C'est l'investissement le plus rentable que j'ai fait cette année. Vous trouverez de nombreux autres outils puissants dans notre Sélection du mois.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "id": "2924721e-1219-8065-acc2-cb8584060039",
+      "type": "divider",
+      "content": {}
+    },
+    {
+      "id": "2924721e-1219-800c-b289-ee8b3b100f94",
+      "type": "paragraph",
+      "content": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Ce récit est basé sur mon expérience personnelle de l'intégration du logiciel ",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Ce récit est basé sur mon expérience personnelle de l'intégration du logiciel ",
+            "href": null
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": "LinkaVista",
+              "link": {
+                "url": "https://logicielfrance.com/logiciel/linkavista"
+              }
+            },
+            "annotations": {
+              "bold": true,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "LinkaVista",
+            "href": "https://logicielfrance.com/logiciel/linkavista"
+          },
+          {
+            "type": "text",
+            "text": {
+              "content": " dans ma stratégie SEO quotidienne.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": true,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": " dans ma stratégie SEO quotidienne.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    }
+  ],
+  "publishedAt": "2025-10-17",
+  "updatedAt": "2026-01-29",
+  "author": "Équipe Logiciel France",
+  "tags": [],
+  "coverImage": "/posts/images/cover-2924721e-1219-8014-b7ec-f5298e85237d.jpg",
+  "status": "published",
+  "seo": {
+    "metaDescription": "Fatigué des liens morts et d'une prospection inefficace ? Découvrez comment LinkaVista a révolutionné ma stratégie de netlinking. Un récit personnel d'un problème résolu.",
+    "keywords": [
+      "LinkaVista",
+      "Netlinking",
+      "Liens brisés",
+      "SEO",
+      "Prospection",
+      "Outil SEO",
+      "Logiciel analyse de liens"
+    ]
+  }
+}
