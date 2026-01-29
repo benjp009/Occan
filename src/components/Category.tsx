@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { fetchCategories } from '../utils/api';
 import { CategoryRow } from '../types';
 import { NavLink, Link } from 'react-router-dom';
@@ -71,5 +71,3 @@ export function CategoriesSection({ initialCategories }: CategoriesSectionProps)
     </section>
   );
 }
-
-export {};

@@ -4840,3 +4840,71 @@ body {
     justify-content: center;
   }
 }
+
+/* ========================================
+   Waitlist Page (Legacy)
+   ======================================== */
+
+.waitlist-page .logo-long {
+  width: 30%;
+  height: auto;
+}
+
+.waitlist-page .left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 2vw;
+  padding-right: 5vw;
+  height: 100vh;
+}
+
+.waitlist-page .right-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.waitlist-page .email-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: stretch;
+}
+
+.waitlist-page .email-input {
+  width: 40%;
+  padding: 12px;
+  font-size: 12px;
+  border-radius: 10px 0 0 10px;
+  border-style: none;
+  margin: 0%;
+}
+
+.waitlist-page .submit-button {
+  margin-left: 0.5rem;
+  padding: 12px;
+  font-size: 12px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 0 10px 10px 0;
+  border-style: none;
+  margin: 0%;
+}
+
+.waitlist-page .image-placeholder {
+  width: 80%;
+  height: 40vh;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.waitlist-page .preview-image {
+  width: 120%;
+  height: auto;
+}
