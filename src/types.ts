@@ -78,3 +78,24 @@ export interface UseCaseRow {
   categories: string; // comma-separated
   description: string;
 }
+
+export interface GlossaryRow {
+  slug: string;
+  term_name: string;
+  title: string;
+  meta_description: string;
+  keywords: string;
+  short_definition: string;
+  long_definition: string;
+  how_it_works: string;
+  advantages: string; // pipe-separated
+  faq_1_question: string;
+  faq_1_answer: string;
+  faq_2_question: string;
+  faq_2_answer: string;
+  faq_3_question: string;
+  faq_3_answer: string;
+  related_categories: string; // comma-separated
+  related_terms: string; // comma-separated slugs
+  status: string;
+}

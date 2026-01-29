@@ -22,7 +22,7 @@ const { HelmetProvider } = require('react-helmet-async');
 // Import pre-compiled modules from dist-server
 const App = require('./dist-server/App.js').default;
 const { slugify } = require('./dist-server/utils/slugify.js');
-const { fetchCompanies, fetchCategories, fetchCompetitors, fetchUseCases } = require('./dist-server/utils/api.js');
+const { fetchCompanies, fetchCategories, fetchCompetitors, fetchUseCases, fetchGlossary } = require('./dist-server/utils/api.js');
 
 // In-memory session store (for production, use Redis or similar)
 const sessions = new Map();
@@ -281,6 +281,8 @@ app.get('*', async (req, res) => {
     const allCategoriesMatch = req.url === '/categorie' || req.url.startsWith('/categorie?');
     const alternativeMatch = req.url.match(/^\/alternative\/([^/?#]+)/);
     const useCaseMatch = req.url.match(/^\/meilleur-logiciel-pour\/([^/?#]+)/);
+    const glossaryMatch = req.url.match(/^\/glossaire\/([^/?#]+)/);
+    const allGlossaryMatch = req.url === '/glossaire' || req.url.startsWith('/glossaire?');
     if (softwareMatch) {
       try {
         const companies = await fetchCompanies();
@@ -416,6 +418,42 @@ app.get('*', async (req, res) => {
         }
       } catch (err) {
         console.error('Failed to fetch use case data', err);
+      }
+    } else if (glossaryMatch) {
+      try {
+        const [glossaryEntries, companies] = await Promise.all([
+          fetchGlossary(),
+          fetchCompanies(),
+        ]);
+        const glossaryEntry = glossaryEntries.find(g => g.slug === glossaryMatch[1]);
+        if (glossaryEntry) {
+          // Filter companies by related categories
+          let filteredCompanies = [];
+          if (glossaryEntry.related_categories) {
+            const entryCategories = glossaryEntry.related_categories.split(',').map(c => c.trim().toLowerCase());
+            filteredCompanies = companies.filter(company => {
+              if (!company.categories) return false;
+              const companyCategories = company.categories.split(',').map(c => c.trim().toLowerCase());
+              return entryCategories.some(cat => companyCategories.includes(cat));
+            });
+            // Sort: companies with referral link first (sponsors)
+            filteredCompanies.sort((a, b) => {
+              if (a.referral && !b.referral) return -1;
+              if (!a.referral && b.referral) return 1;
+              return 0;
+            });
+          }
+          initialData = { glossaryEntry, companies: filteredCompanies };
+        }
+      } catch (err) {
+        console.error('Failed to fetch glossary data', err);
+      }
+    } else if (allGlossaryMatch) {
+      try {
+        const glossary = await fetchGlossary();
+        initialData = { glossary };
+      } catch (err) {
+        console.error('Failed to fetch glossary list', err);
       }
     }
 

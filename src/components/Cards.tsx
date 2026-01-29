@@ -9,6 +9,7 @@ interface CardsProps {
   company: CompanyRow;
   highlight?: string;
   internalTo?: string; // internal route for card click
+  showBadge?: boolean; // show "Partenaire" badge for affiliate partners
 }
 
 function escapeRegExp(str: string) {
@@ -23,7 +24,7 @@ function highlightText(text: string, query?: string) {
   );
 }
 
-export function Cards({ company, highlight, internalTo }: CardsProps) {
+export function Cards({ company, highlight, internalTo, showBadge }: CardsProps) {
   const description = company.description || '';
   const truncatedDescription =
     description.length > 80
@@ -31,7 +32,8 @@ export function Cards({ company, highlight, internalTo }: CardsProps) {
       : description;
 
   return (
-    <div className="card">
+    <div className={`card${showBadge ? ' card--partner' : ''}`}>
+      {showBadge && <span className="card-badge">Partenaire</span>}
       <div className="card-header">
         {company.logo && (
           <div className="company-logo">

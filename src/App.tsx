@@ -22,9 +22,11 @@ import Alternative from './pages/Alternative';
 import UseCase from './pages/UseCase';
 import AllUseCases from './pages/AllUseCases';
 import AllAlternatives from './pages/AllAlternatives';
+import Glossary from './pages/Glossary';
+import AllGlossary from './pages/AllGlossary';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
-import { CompanyRow, CategoryRow, BlogPost as BlogPostData, UseCaseRow, CompetitorRow } from './types';
+import { CompanyRow, CategoryRow, BlogPost as BlogPostData, UseCaseRow, CompetitorRow, GlossaryRow } from './types';
 
 interface InitialData {
   companies?: CompanyRow[] | null;
@@ -40,6 +42,8 @@ interface InitialData {
   competitors?: CompetitorRow[] | null;
   competitor?: CompetitorRow | null;
   alternatives?: CompanyRow[] | null;
+  glossary?: GlossaryRow[] | null;
+  glossaryEntry?: GlossaryRow | null;
 }
 
 interface AppProps {
@@ -129,6 +133,17 @@ export default function App({ location, initialData }: AppProps) {
           element={
             <UseCase
               initialUseCase={initialData?.useCase}
+              initialCompanies={initialData?.companies}
+            />
+          }
+        />
+        {/* Glossary pages */}
+        <Route path="/glossaire" element={<AllGlossary initialGlossary={initialData?.glossary} />} />
+        <Route
+          path="/glossaire/:slug"
+          element={
+            <Glossary
+              initialGlossaryEntry={initialData?.glossaryEntry}
               initialCompanies={initialData?.companies}
             />
           }

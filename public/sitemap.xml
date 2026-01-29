@@ -21,6 +21,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://logicielfrance.com/glossaire</loc>
+    <lastmod>2026-01-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://logicielfrance.com/categorie/achat</loc>
     <lastmod>2026-01-29</lastmod>
     <priority>0.7</priority>

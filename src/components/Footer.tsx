@@ -8,6 +8,7 @@ export function Footer() {
   const resources = [
     { label: 'A propos', path: '/a-propos' },
     { label: 'Blog', path: '/blog' },
+    { label: 'Glossaire', path: '/glossaire' },
     { label: 'Contact', path: '/contact' },
     { label: 'Toutes les categories', path: '/categorie' },
     { label: 'Tous les logiciels', path: '/tous-les-logiciels' },
