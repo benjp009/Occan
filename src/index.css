@@ -1452,7 +1452,73 @@ img {
 .legal-section {
   align-self: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+  margin-bottom: var(--space-xl);
+}
+
+.legal-section h2 {
+  color: var(--color-french-navy);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.legal-section h3 {
+  color: var(--color-text-dark);
+  font-size: 1.1rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.legal-section ul {
+  margin: var(--space-md) 0;
+  padding-left: var(--space-xl);
+}
+
+.legal-section li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.legal-intro {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2xl);
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
+  font-size: 0.95rem;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.legal-table th {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.legal-table tr:nth-child(even) {
+  background-color: var(--color-bg-light);
+}
+
+.legal-update {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 /* Lists inside columns */
@@ -4613,7 +4679,7 @@ body {
   border-radius: var(--radius-lg);
 }
 
-/* ─────────────────────────────────────────────────────────────────────
+/* ────────────────────────────────────────��────────────────────────────
    Trust Signals Section
    ───────────────────────────────────────────────────────────────────── */
 .software-trust {
