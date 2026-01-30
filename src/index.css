@@ -5887,3 +5887,165 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+
+/* ===========================================
+   Refer Page - Sponsor Ad Styles
+   =========================================== */
+
+.refer-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f3ff 100%);
+  padding: var(--space-lg);
+  font-family: var(--font-family);
+  z-index: 9999;
+}
+
+.refer-container {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2xl);
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.refer-loading {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+/* Sponsor Ad */
+.sponsor-ad {
+  position: relative;
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.sponsor-ad-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sponsor-ad-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.sponsor-ad-content:hover {
+  transform: scale(1.02);
+}
+
+.sponsor-ad-logo {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.sponsor-ad-text {
+  margin-bottom: var(--space-md);
+}
+
+.sponsor-ad-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-dark);
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.sponsor-ad-tagline {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.sponsor-ad-cta {
+  display: inline-block;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.sponsor-ad-content:hover .sponsor-ad-cta {
+  color: var(--color-secondary);
+}
+
+/* Redirect Info */
+.refer-redirect-info {
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.refer-destination {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.refer-destination strong {
+  color: var(--color-text-dark);
+}
+
+.refer-countdown {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.refer-skip {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+  transition: color var(--transition-fast);
+}
+
+.refer-skip:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .refer-container {
+    padding: var(--space-lg);
+  }
+
+  .sponsor-ad {
+    padding: var(--space-md);
+  }
+
+  .sponsor-ad-logo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
