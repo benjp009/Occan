@@ -99,3 +99,14 @@ export interface GlossaryRow {
   related_terms: string; // comma-separated slugs
   status: string;
 }
+
+export interface SponsorRow {
+  id: string;
+  name: string;
+  logo: string;
+  tagline: string;
+  url: string;
+  active: string; // "true" or "false" from CSV
+  border_color?: string; // optional hex color for border
+  bg_color?: string; // optional hex color for background
+}

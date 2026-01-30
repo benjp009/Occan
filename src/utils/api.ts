@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import { CompanyRow, CategoryRow, CompetitorRow, UseCaseRow, GlossaryRow } from '../types';
+import { CompanyRow, CategoryRow, CompetitorRow, UseCaseRow, GlossaryRow, SponsorRow } from '../types';
 
 // In-memory cache for API responses
 interface CacheEntry<T> {
@@ -185,4 +185,52 @@ export async function fetchGlossary(): Promise<GlossaryRow[]> {
     console.error('Failed to fetch glossary:', error);
     return [];
   }
+}
+
+// Sponsors CSV (for refer page ads)
+const SPONSORS_CSV = process.env.REACT_APP_SPONSORS_CSV_URL ||
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQuHiS0jgp1NpIHZdALbnQxrqF1aWnEVkI2w-ZHZojfbRsdEGgOXeW4Et7L3B6pMuW2wMOvMc97M210/pub?gid=SPONSORS_GID&single=true&output=csv';
+
+// Default sponsor to use when no sponsors are configured yet
+const DEFAULT_SPONSOR: SponsorRow = {
+  id: 'default',
+  name: 'Logiciel France',
+  logo: '/logo.svg',
+  tagline: 'Découvrez les meilleurs logiciels français',
+  url: '/',
+  active: 'true'
+};
+
+export async function fetchSponsors(): Promise<SponsorRow[]> {
+  const cached = getCached<SponsorRow[]>('sponsors');
+  if (cached) return cached;
+
+  // If no sponsors CSV is configured, return default sponsor
+  if (!process.env.REACT_APP_SPONSORS_CSV_URL) {
+    return [DEFAULT_SPONSOR];
+  }
+
+  try {
+    const response = await fetch(SPONSORS_CSV);
+    const csv = await response.text();
+    const { data } = Papa.parse<SponsorRow>(csv, { header: true, transformHeader: (h) => h.trim() });
+    const sponsors = (data as SponsorRow[]).filter(row => {
+      const active = row.active?.toLowerCase().trim();
+      return row.id && row.name && (active === 'true' || active === 'yes');
+    });
+
+    if (sponsors.length === 0) {
+      return [DEFAULT_SPONSOR];
+    }
+
+    setCache('sponsors', sponsors);
+    return sponsors;
+  } catch (error) {
+    console.error('Failed to fetch sponsors:', error);
+    return [DEFAULT_SPONSOR];
+  }
+}
+
+export function getRandomSponsor(sponsors: SponsorRow[]): SponsorRow {
+  return sponsors[Math.floor(Math.random() * sponsors.length)];
 }
