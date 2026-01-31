@@ -1,0 +1,58 @@
+steps:
+  # Build the Docker image with environment variables
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--build-arg=REACT_APP_SPONSORS_CSV_URL=${_REACT_APP_SPONSORS_CSV_URL}'
+      - '--build-arg=REACT_APP_SHEET_CSV_URL=${_REACT_APP_SHEET_CSV_URL}'
+      - '--build-arg=REACT_APP_COMPETITORS_CSV_URL=${_REACT_APP_COMPETITORS_CSV_URL}'
+      - '--build-arg=REACT_APP_USECASES_CSV_URL=${_REACT_APP_USECASES_CSV_URL}'
+      - '--build-arg=REACT_APP_GLOSSARY_CSV_URL=${_REACT_APP_GLOSSARY_CSV_URL}'
+      - '-t'
+      - '${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:$COMMIT_SHA'
+      - '-t'
+      - '${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:latest'
+      - '.'
+
+  # Push the image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:$COMMIT_SHA'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:latest'
+
+  # Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - '${_SERVICE_NAME}'
+      - '--image=${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:$COMMIT_SHA'
+      - '--region=${_DEPLOY_REGION}'
+      - '--platform=${_PLATFORM}'
+      - '--allow-unauthenticated'
+
+images:
+  - '${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:$COMMIT_SHA'
+  - '${_AR_HOSTNAME}/${_AR_PROJECT_ID}/${_AR_REPOSITORY}/occan/hello:latest'
+
+# Substitution variables - existing ones from your trigger + new env var ones
+substitutions:
+  # Existing variables from your trigger (will be overridden by trigger settings)
+  _PLATFORM: 'managed'
+  _AR_HOSTNAME: 'europe-west1-docker.pkg.dev'
+  _AR_PROJECT_ID: 'logiciel-france-n8n'
+  _AR_REPOSITORY: 'cloud-run-source-deploy'
+  _SERVICE_NAME: 'hello'
+  _DEPLOY_REGION: 'europe-west1'
+  # New variables for React build (add these to your trigger)
+  _REACT_APP_SPONSORS_CSV_URL: ''
+  _REACT_APP_SHEET_CSV_URL: ''
+  _REACT_APP_COMPETITORS_CSV_URL: ''
+  _REACT_APP_USECASES_CSV_URL: ''
+  _REACT_APP_GLOSSARY_CSV_URL: ''

@@ -11,11 +11,23 @@ COPY package*.json ./
 # Install all dependencies (including devDependencies for build)
 RUN npm ci
 
+# Build arguments for React environment variables
+ARG REACT_APP_SPONSORS_CSV_URL
+ARG REACT_APP_SHEET_CSV_URL
+ARG REACT_APP_COMPETITORS_CSV_URL
+ARG REACT_APP_USECASES_CSV_URL
+ARG REACT_APP_GLOSSARY_CSV_URL
+
 # Copy source code
 COPY . .
 
-# Build the application (generates production build, sitemap, blog posts)
-RUN npm run build
+# Build the application with environment variables
+RUN REACT_APP_SPONSORS_CSV_URL=$REACT_APP_SPONSORS_CSV_URL \
+    REACT_APP_SHEET_CSV_URL=$REACT_APP_SHEET_CSV_URL \
+    REACT_APP_COMPETITORS_CSV_URL=$REACT_APP_COMPETITORS_CSV_URL \
+    REACT_APP_USECASES_CSV_URL=$REACT_APP_USECASES_CSV_URL \
+    REACT_APP_GLOSSARY_CSV_URL=$REACT_APP_GLOSSARY_CSV_URL \
+    npm run build
 
 # ============================
 # Production stage
