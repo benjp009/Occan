@@ -7,7 +7,7 @@ const ASSET_DIR = path.join(__dirname, '..', 'public', 'asset');
 const ICONS_DIR = path.join(__dirname, '..', 'public', 'icons');
 const POSTS_IMAGES_DIR = path.join(__dirname, '..', 'public', 'posts', 'images');
 const QUALITY = 80; // Qualité WebP (1-100)
-const DELETE_ORIGINALS = true; // Supprimer les fichiers originaux après conversion
+const DELETE_ORIGINALS = false; // Garder les fichiers originaux pour fallback
 
 /**
  * Convertit récursivement tous les fichiers PNG/JPEG en WebP
