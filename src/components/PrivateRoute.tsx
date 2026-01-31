@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 interface PrivateRouteProps {
   children: React.ReactNode;
 }
 
+// Original PrivateRoute for legacy admin system (password-based)
 export function PrivateRoute({ children }: PrivateRouteProps) {
   const [authState, setAuthState] = useState<'loading' | 'authenticated' | 'unauthenticated'>('loading');
 
@@ -27,4 +29,40 @@ export function PrivateRoute({ children }: PrivateRouteProps) {
   }
 
   return authState === 'authenticated' ? <>{children}</> : <Navigate to="/login" replace />;
+}
+
+// New Firebase-based PrivateRoute for publisher dashboard
+interface FirebasePrivateRouteProps {
+  children: React.ReactNode;
+  requireAdmin?: boolean;
+}
+
+export function FirebasePrivateRoute({ children, requireAdmin = false }: FirebasePrivateRouteProps) {
+  const { user, loading, isAdmin } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="loading-page">
+        <p>Chargement...</p>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Navigate to="/espace-editeur" replace />;
+  }
+
+  if (requireAdmin && !isAdmin) {
+    return (
+      <div className="unauthorized-page">
+        <div className="unauthorized-container">
+          <h1>Accès non autorisé</h1>
+          <p>Vous n'avez pas les permissions nécessaires pour accéder à cette page.</p>
+          <Link to="/dashboard" className="btn btn-primary">Retour au tableau de bord</Link>
+        </div>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
 }

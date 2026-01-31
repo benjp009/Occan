@@ -4,6 +4,7 @@ import { fetchCompanies, fetchUseCases, fetchCompetitors } from '../utils/api';
 import { filterCompanies } from '../utils/search';
 import { slugify } from '../utils/slugify';
 import { CompanyRow, UseCaseRow, CompetitorRow } from '../types';
+import { useAuth } from '../contexts/AuthContext';
 
 export function Header() {
   const [companies, setCompanies] = useState<CompanyRow[]>([]);
@@ -22,6 +23,7 @@ export function Header() {
   const competitorDropdownRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const { user, userProfile } = useAuth();
 
   const closeAllDesktopDropdowns = useCallback(() => {
     setDesktopUseCaseOpen(false);
@@ -246,7 +248,7 @@ export function Header() {
             </Link>
           </nav>
 
-          {/* Right section: Search + Submit button */}
+          {/* Right section: Search + User + Submit button */}
           <div className="header-right">
             <div className="header-actions">
               <button
@@ -259,6 +261,25 @@ export function Header() {
                 </svg>
               </button>
             </div>
+            {user ? (
+              <Link to="/dashboard" className="user-button">
+                {userProfile?.photoURL ? (
+                  <img src={userProfile.photoURL} alt="" className="user-avatar-small" />
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                )}
+              </Link>
+            ) : (
+              <Link to="/espace-editeur" className="user-button" title="Espace Éditeur">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </Link>
+            )}
             <Link to="/ajouter-un-nouveau-logiciel" className="submit-button">
               <span className="submit-text">Ajouter</span>
             </Link>

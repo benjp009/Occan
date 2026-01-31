@@ -27,6 +27,14 @@ import AllGlossary from './pages/AllGlossary';
 import Canonical from './components/Canonical';
 import ScrollToTop from './components/ScrollToTop';
 import { CompanyRow, CategoryRow, BlogPost as BlogPostData, UseCaseRow, CompetitorRow, GlossaryRow } from './types';
+import { AuthProvider } from './contexts/AuthContext';
+import { FirebasePrivateRoute } from './components/PrivateRoute';
+import UserLogin from './pages/UserLogin';
+import Dashboard from './pages/Dashboard';
+import ClaimRequest from './pages/ClaimRequest';
+import EditCompany from './pages/EditCompany';
+import AdminClaims from './pages/AdminClaims';
+import AdminEditRequests from './pages/AdminEditRequests';
 
 interface InitialData {
   companies?: CompanyRow[] | null;
@@ -61,11 +69,12 @@ export default function App({ location, initialData }: AppProps) {
   return (
 
     <Router {...routerProps}>
+      <AuthProvider>
       <Canonical />
       <Helmet>
         <meta
           name="description"
-          content="Le premier annuaire des logiciels & entreprises tech françaises : explorez l’offre Made in France, comparez les solutions SaaS et trouvez votre partenaire local."
+          content="Le premier annuaire des logiciels & entreprises tech françaises : explorez l'offre Made in France, comparez les solutions SaaS et trouvez votre partenaire local."
         />
       </Helmet>
       <ScrollToTop />
@@ -150,9 +159,53 @@ export default function App({ location, initialData }: AppProps) {
             />
           }
         />
+        {/* Publisher dashboard routes */}
+        <Route path="/espace-editeur" element={<UserLogin />} />
+        <Route
+          path="/dashboard"
+          element={
+            <FirebasePrivateRoute>
+              <Dashboard />
+            </FirebasePrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/claim/:id"
+          element={
+            <FirebasePrivateRoute>
+              <ClaimRequest />
+            </FirebasePrivateRoute>
+          }
+        />
+        <Route
+          path="/dashboard/edit/:id"
+          element={
+            <FirebasePrivateRoute>
+              <EditCompany />
+            </FirebasePrivateRoute>
+          }
+        />
+        {/* Admin routes for Firebase-based management */}
+        <Route
+          path="/admin/claims"
+          element={
+            <FirebasePrivateRoute requireAdmin>
+              <AdminClaims />
+            </FirebasePrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/edits"
+          element={
+            <FirebasePrivateRoute requireAdmin>
+              <AdminEditRequests />
+            </FirebasePrivateRoute>
+          }
+        />
         {/* Catch-all route for 404 - must be last */}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </AuthProvider>
     </Router>
   );
 }
