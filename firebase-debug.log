@@ -1,0 +1,222 @@
+[debug] [2026-01-31T21:09:09.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:09.916Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:09.904Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:09.905Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:09.905Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:09.907Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.907Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.908Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.908Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.908Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:09.909Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:09.909Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.909Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.910Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:09.986Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:09.988Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:09.921Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:09.921Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:09.922Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:09.923Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.924Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.924Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.924Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.925Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:09.925Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:09.925Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.925Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:09.927Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:10.000Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:10.002Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:10.334Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:10.337Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:10.334Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:10.342Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.342Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.343Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.343Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.358Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.360Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.360Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.362Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.362Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.364Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [none]
+[debug] [2026-01-31T21:09:10.364Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.337Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:10.343Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.343Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.343Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.344Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.358Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.359Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.359Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.360Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.360Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.362Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.362Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.364Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [none]
+[debug] [2026-01-31T21:09:10.364Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.481Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:10.485Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:10.485Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:10.492Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.492Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.493Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.493Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.498Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.498Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.498Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.498Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.499Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.499Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.500Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.501Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.505Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.505Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.509Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [none]
+[debug] [2026-01-31T21:09:10.509Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.481Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:10.489Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.489Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.489Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.489Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.494Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.494Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.494Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.494Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.495Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.495Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.496Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.496Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.499Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.499Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.501Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [none]
+[debug] [2026-01-31T21:09:10.501Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.623Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:10.624Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:10.624Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.624Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.625Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.625Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.629Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.629Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.629Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.629Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.629Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.629Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.630Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.631Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.632Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.632Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.633Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [none]
+[debug] [2026-01-31T21:09:10.633Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.766Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:10.766Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:10.767Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.768Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.768Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.768Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.772Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.772Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.772Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.772Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:10.773Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.773Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.774Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.774Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.775Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [none]
+[debug] [2026-01-31T21:09:10.775Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:10.777Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [none]
+[debug] [2026-01-31T21:09:10.777Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com  x-goog-user-project=logiciel-france
+[debug] [2026-01-31T21:09:11.314Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com 403
+[debug] [2026-01-31T21:09:11.315Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [omitted]
+[debug] [2026-01-31T21:09:11.316Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-31T21:09:11.317Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:11.320Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-01-31T21:09:11.320Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:11.330Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-31T21:09:11.331Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:11.333Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:11.334Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:11.334Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:11.334Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:11.334Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:11.482Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com 403
+[debug] [2026-01-31T21:09:11.483Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [omitted]
+[debug] [2026-01-31T21:09:11.519Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:11.520Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:11.523Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:11.523Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:11.727Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-31T21:09:11.727Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:11.728Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-31T21:09:11.728Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:11.815Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com 403
+[debug] [2026-01-31T21:09:11.815Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [omitted]
+[debug] [2026-01-31T21:09:11.832Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com 403
+[debug] [2026-01-31T21:09:11.833Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [omitted]
+[debug] [2026-01-31T21:09:11.833Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com 403
+[debug] [2026-01-31T21:09:11.833Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [omitted]
+[debug] [2026-01-31T21:09:11.834Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com 403
+[debug] [2026-01-31T21:09:11.835Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseio.com [omitted]
+[debug] [2026-01-31T21:09:12.019Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-01-31T21:09:12.019Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.021Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-31T21:09:12.021Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.023Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-01-31T21:09:12.023Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.025Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-31T21:09:12.025Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-31T21:09:12.025Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.026Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-31T21:09:12.027Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.027Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-01-31T21:09:12.028Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.028Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-01-31T21:09:12.025Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.028Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:12.028Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:12.028Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:12.028Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:12.029Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:12.030Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-31T21:09:12.030Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.028Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.031Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:12.032Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:12.032Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:12.032Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:12.032Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:12.033Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-31T21:09:12.033Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.034Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com 200
+[debug] [2026-01-31T21:09:12.034Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.035Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com 200
+[debug] [2026-01-31T21:09:12.035Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.044Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com 200
+[debug] [2026-01-31T21:09:12.045Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/logiciel-france/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2026-01-31T21:09:12.046Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:12.047Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:12.047Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:12.047Z] Checked if tokens are valid: true, expires at: 1769895788636
+[debug] [2026-01-31T21:09:12.047Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo [none]
+[debug] [2026-01-31T21:09:12.193Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:12.194Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:12.195Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:12.196Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:12.210Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:12.210Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:12.212Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:12.212Z] > authorizing via signed-in user (patin.benjamin@gmail.com)
+[debug] [2026-01-31T21:09:12.657Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo 200
+[debug] [2026-01-31T21:09:12.658Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/logiciel-france/billingInfo {"name":"projects/logiciel-france/billingInfo","projectId":"logiciel-france","billingAccountName":"","billingEnabled":false}
+[debug] [2026-01-31T21:09:12.661Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-31T21:09:12.661Z] > authorizing via signed-in user (patin.benjamin@gmail.com)

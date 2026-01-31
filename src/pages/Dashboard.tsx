@@ -95,7 +95,7 @@ export default function Dashboard() {
             </div>
             <div className="dashboard-actions">
               {isAdmin && (
-                <Link to="/admin" className="btn btn-secondary">
+                <Link to="/admin/claims" className="btn btn-secondary">
                   Administration
                 </Link>
               )}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
 interface PrivateRouteProps {
@@ -58,7 +58,7 @@ export function FirebasePrivateRoute({ children, requireAdmin = false }: Firebas
         <div className="unauthorized-container">
           <h1>Accès non autorisé</h1>
           <p>Vous n'avez pas les permissions nécessaires pour accéder à cette page.</p>
-          <a href="/dashboard" className="btn btn-primary">Retour au tableau de bord</a>
+          <Link to="/dashboard" className="btn btn-primary">Retour au tableau de bord</Link>
         </div>
       </div>
     );
