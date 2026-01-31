@@ -7,7 +7,6 @@ import { slugify } from '../utils/slugify';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import Company from '../components/Company';
-import CompanySkeleton from '../components/CompanySkeleton';
 import { Cards } from '../components/Cards';
 
 interface SoftwareProps {
@@ -72,7 +71,7 @@ export default function Software({ initialCompany, initialSimilarCompanies }: So
       <>
         <Header />
         <main className="container-category">
-          <CompanySkeleton />
+          <Company isLoading />
         </main>
         <Footer />
       </>

@@ -1,6 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
+import { initializeApp, FirebaseApp } from 'firebase/app';
+import { getAuth, GoogleAuthProvider, Auth } from 'firebase/auth';
+import { getFirestore, Firestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -11,16 +11,48 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Lazy initialization for SSR compatibility
+// Firebase is only initialized when accessed in browser environment
+let _app: FirebaseApp | null = null;
+let _auth: Auth | null = null;
+let _googleProvider: GoogleAuthProvider | null = null;
+let _db: Firestore | null = null;
 
-// Initialize Firebase Authentication
-export const auth = getAuth(app);
+function getApp(): FirebaseApp {
+  if (typeof window === 'undefined') {
+    throw new Error('Firebase cannot be initialized on the server');
+  }
+  if (!_app) {
+    _app = initializeApp(firebaseConfig);
+  }
+  return _app;
+}
 
-// Initialize Google Auth Provider
-export const googleProvider = new GoogleAuthProvider();
+export function getAuthInstance(): Auth {
+  if (!_auth) {
+    _auth = getAuth(getApp());
+  }
+  return _auth;
+}
 
-// Initialize Cloud Firestore
-export const db = getFirestore(app);
+export function getGoogleProvider(): GoogleAuthProvider {
+  if (!_googleProvider) {
+    _googleProvider = new GoogleAuthProvider();
+  }
+  return _googleProvider;
+}
 
-export default app;
+export function getDbInstance(): Firestore {
+  if (!_db) {
+    _db = getFirestore(getApp());
+  }
+  return _db;
+}
+
+// For backward compatibility, export getters that lazily initialize
+// These will throw on SSR but work fine on client
+export const auth = typeof window !== 'undefined' ? getAuthInstance() : (null as unknown as Auth);
+export const googleProvider = typeof window !== 'undefined' ? getGoogleProvider() : (null as unknown as GoogleAuthProvider);
+export const db = typeof window !== 'undefined' ? getDbInstance() : (null as unknown as Firestore);
+
+export default typeof window !== 'undefined' ? getApp() : null;

@@ -8,7 +8,6 @@ import { Footer } from '../components/Footer';
 import { fetchCategories, fetchCompanies } from '../utils/api';
 import { CategoryRow, CompanyRow, BlogPost } from '../types';
 import { Cards } from '../components/Cards';
-import CardSkeleton from '../components/CardSkeleton';
 import Skeleton from 'react-loading-skeleton';
 import RelatedArticles from '../components/RelatedArticles';
 
@@ -152,18 +151,13 @@ export default function Category({ initialCategory, initialCompanies, initialRel
         )}
         <div className="selection-grid">
           {(companies ? filteredCompanies : Array.from({ length: 6 })).map((company, idx) => (
-            companies ? (
-              <div key={(company as CompanyRow).id} className="card-wrapper">
-                <Cards
-                  company={company as CompanyRow}
-                  internalTo={`/logiciel/${slugify((company as CompanyRow).name)}`}
-                />
-              </div>
-            ) : (
-              <div key={idx} className="card-wrapper">
-                <CardSkeleton />
-              </div>
-            )
+            <div key={companies ? (company as CompanyRow).id : idx} className="card-wrapper">
+              <Cards
+                company={companies ? (company as CompanyRow) : undefined}
+                isLoading={!companies}
+                internalTo={companies ? `/logiciel/${slugify((company as CompanyRow).name)}` : undefined}
+              />
+            </div>
           ))}
         </div>
 

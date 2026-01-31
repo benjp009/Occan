@@ -6,7 +6,7 @@ import {
   signOut as firebaseSignOut,
 } from 'firebase/auth';
 import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { auth, googleProvider, db } from '../firebase';
+import { getAuthInstance, getGoogleProvider, getDbInstance } from '../firebase';
 
 export interface UserProfile {
   uid: string;
@@ -47,6 +47,15 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Skip Firebase initialization on server
+    if (typeof window === 'undefined') {
+      setLoading(false);
+      return;
+    }
+
+    const auth = getAuthInstance();
+    const db = getDbInstance();
+
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       setUser(firebaseUser);
 
@@ -93,7 +102,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
   }, []);
 
   const signInWithGoogle = async () => {
+    if (typeof window === 'undefined') return;
     try {
+      const auth = getAuthInstance();
+      const googleProvider = getGoogleProvider();
       await signInWithPopup(auth, googleProvider);
     } catch (error) {
       console.error('Erreur de connexion Google:', error);
@@ -102,7 +114,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
   };
 
   const signOut = async () => {
+    if (typeof window === 'undefined') return;
     try {
+      const auth = getAuthInstance();
       await firebaseSignOut(auth);
       setUserProfile(null);
     } catch (error) {

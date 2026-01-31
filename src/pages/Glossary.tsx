@@ -7,7 +7,6 @@ import { fetchGlossary, fetchCompanies } from '../utils/api';
 import { GlossaryRow, CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
-import CardSkeleton from '../components/CardSkeleton';
 import Skeleton from 'react-loading-skeleton';
 
 interface GlossaryProps {
@@ -302,7 +301,7 @@ export default function Glossary({ initialGlossaryEntry, initialCompanies, initi
             <div className="selection-grid">
               {Array.from({ length: 6 }).map((_, idx) => (
                 <div key={idx} className="card-wrapper">
-                  <CardSkeleton />
+                  <Cards isLoading />
                 </div>
               ))}
             </div>
