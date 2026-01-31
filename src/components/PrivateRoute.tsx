@@ -38,7 +38,7 @@ interface FirebasePrivateRouteProps {
 }
 
 export function FirebasePrivateRoute({ children, requireAdmin = false }: FirebasePrivateRouteProps) {
-  const { user, userProfile, loading, isAdmin } = useAuth();
+  const { user, loading, isAdmin } = useAuth();
 
   if (loading) {
     return (
