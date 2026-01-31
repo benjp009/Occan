@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { CompanyRow } from '../types';
 import { slugify } from '../utils/slugify';
 import { Cards } from './Cards';
-import CardSkeleton from './CardSkeleton';
 import { fetchBetaCompanies } from '../utils/api';
 
 interface DiscoverBetaSoftwareProps {
@@ -68,18 +67,13 @@ export const DiscoverBetaSoftware: React.FC<DiscoverBetaSoftwareProps> = () => {
 
       <div className="discover-beta-grid">
         {betaSoftware.map((company, idx) => (
-          company ? (
-            <div key={company.id} className="card-wrapper">
-              <Cards
-                company={company}
-                internalTo={`/logiciel/${slugify(company.name)}`}
-              />
-            </div>
-          ) : (
-            <div key={idx} className="card-wrapper">
-              <CardSkeleton />
-            </div>
-          )
+          <div key={company ? company.id : idx} className="card-wrapper">
+            <Cards
+              company={company || undefined}
+              isLoading={!company}
+              internalTo={company ? `/logiciel/${slugify(company.name)}` : undefined}
+            />
+          </div>
         ))}
       </div>
     </section>

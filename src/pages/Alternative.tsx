@@ -7,7 +7,6 @@ import { fetchCompetitors, fetchCompanies } from '../utils/api';
 import { CompetitorRow, CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
-import CardSkeleton from '../components/CardSkeleton';
 import Skeleton from 'react-loading-skeleton';
 
 interface AlternativeProps {
@@ -129,7 +128,7 @@ export default function Alternative({ initialCompetitor, initialAlternatives }: 
           {alternatives === null ? (
             Array.from({ length: 6 }).map((_, idx) => (
               <div key={idx} className="card-wrapper">
-                <CardSkeleton />
+                <Cards isLoading />
               </div>
             ))
           ) : alternatives.length === 0 ? (

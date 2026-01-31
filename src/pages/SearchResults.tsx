@@ -8,7 +8,6 @@ import { filterCompanies } from '../utils/search';
 import { CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
-import CardSkeleton from '../components/CardSkeleton';
 
 export default function SearchResults() {
   const [companies, setCompanies] = useState<CompanyRow[] | null>(null);
@@ -44,7 +43,7 @@ export default function SearchResults() {
           <div className="selection-grid">
             {Array.from({ length: 6 }).map((_, idx) => (
               <div key={idx} className="card-wrapper">
-                <CardSkeleton />
+                <Cards isLoading />
               </div>
             ))}
           </div>

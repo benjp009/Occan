@@ -11,7 +11,7 @@ import {
   serverTimestamp,
   Timestamp,
 } from 'firebase/firestore';
-import { db } from '../firebase';
+import { getDbInstance } from '../firebase';
 
 // Types
 export interface ClaimRequest {
@@ -54,6 +54,7 @@ export async function createClaimRequest(
   companyName: string,
   justification: string
 ): Promise<string> {
+  const db = getDbInstance();
   const claimRef = await addDoc(collection(db, 'claimRequests'), {
     userId,
     userEmail,
@@ -67,40 +68,43 @@ export async function createClaimRequest(
 }
 
 export async function getClaimRequestsByUser(userId: string): Promise<ClaimRequest[]> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'claimRequests'),
     where('userId', '==', userId),
     orderBy('createdAt', 'desc')
   );
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+  return snapshot.docs.map((docSnap) => ({
+    id: docSnap.id,
+    ...docSnap.data(),
   })) as ClaimRequest[];
 }
 
 export async function getPendingClaimRequests(): Promise<ClaimRequest[]> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'claimRequests'),
     where('status', '==', 'pending'),
     orderBy('createdAt', 'desc')
   );
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+  return snapshot.docs.map((docSnap) => ({
+    id: docSnap.id,
+    ...docSnap.data(),
   })) as ClaimRequest[];
 }
 
 export async function getAllClaimRequests(): Promise<ClaimRequest[]> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'claimRequests'),
     orderBy('createdAt', 'desc')
   );
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+  return snapshot.docs.map((docSnap) => ({
+    id: docSnap.id,
+    ...docSnap.data(),
   })) as ClaimRequest[];
 }
 
@@ -110,6 +114,7 @@ export async function updateClaimRequestStatus(
   adminId: string,
   adminNotes?: string
 ): Promise<void> {
+  const db = getDbInstance();
   const requestRef = doc(db, 'claimRequests', requestId);
   await updateDoc(requestRef, {
     status,
@@ -139,6 +144,7 @@ export async function createEditRequest(
   companyName: string,
   changes: { field: string; oldValue: string; newValue: string }[]
 ): Promise<string> {
+  const db = getDbInstance();
   const editRef = await addDoc(collection(db, 'editRequests'), {
     userId,
     userEmail,
@@ -152,40 +158,43 @@ export async function createEditRequest(
 }
 
 export async function getEditRequestsByUser(userId: string): Promise<EditRequest[]> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'editRequests'),
     where('userId', '==', userId),
     orderBy('createdAt', 'desc')
   );
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+  return snapshot.docs.map((docSnap) => ({
+    id: docSnap.id,
+    ...docSnap.data(),
   })) as EditRequest[];
 }
 
 export async function getPendingEditRequests(): Promise<EditRequest[]> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'editRequests'),
     where('status', '==', 'pending'),
     orderBy('createdAt', 'desc')
   );
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+  return snapshot.docs.map((docSnap) => ({
+    id: docSnap.id,
+    ...docSnap.data(),
   })) as EditRequest[];
 }
 
 export async function getAllEditRequests(): Promise<EditRequest[]> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'editRequests'),
     orderBy('createdAt', 'desc')
   );
   const snapshot = await getDocs(q);
-  return snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
+  return snapshot.docs.map((docSnap) => ({
+    id: docSnap.id,
+    ...docSnap.data(),
   })) as EditRequest[];
 }
 
@@ -195,6 +204,7 @@ export async function updateEditRequestStatus(
   adminId: string,
   adminNotes?: string
 ): Promise<void> {
+  const db = getDbInstance();
   const requestRef = doc(db, 'editRequests', requestId);
   await updateDoc(requestRef, {
     status,
@@ -206,6 +216,7 @@ export async function updateEditRequestStatus(
 
 // Check if company is already claimed
 export async function isCompanyClaimed(companyId: string): Promise<boolean> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'claimRequests'),
     where('companyId', '==', companyId),
@@ -217,6 +228,7 @@ export async function isCompanyClaimed(companyId: string): Promise<boolean> {
 
 // Check if user has pending claim for company
 export async function hasPendingClaim(userId: string, companyId: string): Promise<boolean> {
+  const db = getDbInstance();
   const q = query(
     collection(db, 'claimRequests'),
     where('userId', '==', userId),

@@ -7,7 +7,6 @@ import { fetchUseCases, fetchCompanies } from '../utils/api';
 import { UseCaseRow, CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
-import CardSkeleton from '../components/CardSkeleton';
 import Skeleton from 'react-loading-skeleton';
 
 interface UseCaseProps {
@@ -130,7 +129,7 @@ export default function UseCase({ initialUseCase, initialCompanies }: UseCasePro
           {filteredCompanies === null ? (
             Array.from({ length: 6 }).map((_, idx) => (
               <div key={idx} className="card-wrapper">
-                <CardSkeleton />
+                <Cards isLoading />
               </div>
             ))
           ) : filteredCompanies.length === 0 ? (

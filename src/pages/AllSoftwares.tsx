@@ -7,7 +7,6 @@ import { CompanyRow } from '../types';
 import { Cards } from '../components/Cards';
 import { slugify } from '../utils/slugify';
 import { Link } from 'react-router-dom';
-import CardSkeleton from '../components/CardSkeleton';
 import AlphabetNav from '../components/AlphabetNav';
 
 interface AllSoftwaresProps {
@@ -54,32 +53,27 @@ export default function AllSoftwares({ initialCompanies }: AllSoftwaresProps) {
           {companies && <AlphabetNav companies={companies} />}
           <div className="selection-grid software-list-grid">
             {(companies || Array.from({ length: 9 })).map((company, idx) => (
-              companies ? (
-                <div
-                  key={(company as CompanyRow).id}
-                  className="card-wrapper"
-                  id={(() => {
-                    const letter = (company as CompanyRow).name
-                      .charAt(0)
-                      .toUpperCase();
-                    const prev = idx > 0
-                      ? (companies as CompanyRow[])[idx - 1].name
-                          .charAt(0)
-                          .toUpperCase()
-                      : '';
-                    return letter !== prev ? `letter-${letter}` : undefined;
-                  })()}
-                >
-                  <Cards
-                    company={company as CompanyRow}
-                    internalTo={`/logiciel/${slugify((company as CompanyRow).name)}`}
-                  />
-                </div>
-              ) : (
-                <div key={idx} className="card-wrapper">
-                  <CardSkeleton />
-                </div>
-              )
+              <div
+                key={companies ? (company as CompanyRow).id : idx}
+                className="card-wrapper"
+                id={companies ? (() => {
+                  const letter = (company as CompanyRow).name
+                    .charAt(0)
+                    .toUpperCase();
+                  const prev = idx > 0
+                    ? (companies as CompanyRow[])[idx - 1].name
+                        .charAt(0)
+                        .toUpperCase()
+                    : '';
+                  return letter !== prev ? `letter-${letter}` : undefined;
+                })() : undefined}
+              >
+                <Cards
+                  company={companies ? (company as CompanyRow) : undefined}
+                  isLoading={!companies}
+                  internalTo={companies ? `/logiciel/${slugify((company as CompanyRow).name)}` : undefined}
+                />
+              </div>
             ))}
           </div>
         </div>
