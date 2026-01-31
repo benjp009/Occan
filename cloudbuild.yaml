@@ -6,6 +6,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
+      - '--no-cache'
       - '--build-arg=REACT_APP_SPONSORS_CSV_URL=${_REACT_APP_SPONSORS_CSV_URL}'
       - '--build-arg=REACT_APP_SHEET_CSV_URL=${_REACT_APP_SHEET_CSV_URL}'
       - '--build-arg=REACT_APP_COMPETITORS_CSV_URL=${_REACT_APP_COMPETITORS_CSV_URL}'
